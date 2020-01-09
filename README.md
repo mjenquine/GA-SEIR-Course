@@ -1,24 +1,24 @@
-![ga](ga_cog.png) <br> 
+![ga](ga_cog.png) <br>
 
 # SEIR-1-21
 
 <!--![avocado](https://imgur.com/ReUOJ33.png)-->
 
-## Licensing 
+## Licensing
 
 1. All content is licensed under a CC­BY­NC­SA 4.0 license.
 1. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
 
 # Schedule
 
-### Unit 1 
+### Unit 1
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w01d1 |[](./unit_1/w01d01/morning_exercise)| [Intro and Expectations, Navigating in the Terminal, Intro to Javascript and programming, Conditionals, Booleans, Loops](./unit_1/w01d01/instructor_notes)| [Just the Beginning (errors, terminal, while loops, for loops)](./unit_1/w01d01/student_labs)|[Terminal, Booleans, Loops](./unit_1/w01d01/homework)|
-| w01d2 |[Setting up for success](./unit_1/w01d02/morning_exercise)| [Git and Github, Class Repo setup & practice submitting homework, CSS Lesson](./unit_1/w01d02/instructor_notes)| [Github Lab, Booleans & Loops](./unit_1/w01d02/student_labs)|[Github Practice and Resume Page](./unit_1/w01d02/homework)|
-| w01d3 |[Git Pull Upstream Master](./unit_1/w01d03/morning_exercise)| [Intro to Conditionals and Loops, Arrays & Iteration](./unit_1/w01d03/instructor_notes)| [Loops and Conditionals, Arrays and Conditionals](./unit_1/w01d03/student_labs)|[Arrays, Loops, Conditionals Drills](./unit_1/w01d03/homework)|
-| w01d4 |[Intro To Flexbox](./unit_1/w01d04/morning_exercise)| [Functions, Scope](./unit_1/w01d04/instructor_notes)| [Problem Solving with Functions](./unit_1/w01d04/student_labs)|[Function Drills](./unit_1/w01d04/homework)|
-| w01d5 |[Flexbox Froggy](./unit_1/w01d05/morning_exercise)| [Program design, Objects](./unit_1/w01d05/instructor_notes)| [Waffles Pseudo-Code, Objects](./unit_1/w01d05/student_labs)|[Landscaper + Oscar](./unit_1/w01d05/homework)|
+| w01d2 |[](./unit_1/w01d02/morning_exercise)| [Intro and Expectations, Navigating in the Terminal, Intro to Javascript and programming, Conditionals, Booleans, Loops](./unit_1/w01d02/instructor_notes)| [Just the Beginning (errors, terminal, while loops, for loops)](./unit_1/w01d02/student_labs)|[Terminal, Booleans, Loops](./unit_1/w01d02/homework)|
+| w01d3 |[Setting up for success](./unit_1/w01d03/morning_exercise)| [Git and Github, Class Repo setup & practice submitting homework, CSS Lesson](./unit_1/w01d03/instructor_notes)| [Github Lab, Booleans & Loops](./unit_1/w01d03/student_labs)|[Github Practice and Resume Page](./unit_1/w01d03/homework)|
+| w01d4 |[Git Pull Upstream Master](./unit_1/w01d04/morning_exercise)| [Intro to Conditionals and Loops, Arrays & Iteration](./unit_1/w01d04/instructor_notes)| [Loops and Conditionals, Arrays and Conditionals](./unit_1/w01d04/student_labs)|[Arrays, Loops, Conditionals Drills](./unit_1/w01d04/homework)|
+| w01d5 |[Intro To Flexbox](./unit_1/w01d05/morning_exercise)| [Functions, Scope](./unit_1/w01d05/instructor_notes)| [Problem Solving with Functions](./unit_1/w01d05/student_labs)|[Function Drills](./unit_1/w01d05/homework)|
+| w02d1 |[Flexbox Froggy](./unit_1/w02d01/morning_exercise)| [Program design, Objects](./unit_1/w02d01/instructor_notes)| [Waffles Pseudo-Code, Objects](./unit_1/w02d01/student_labs)|[Landscaper + Oscar](./unit_1/w01d05/homework)|
 | w02d1 |[Supply Walkthrough](./unit_1/w02d01/morning_exercise)| [Object-ception, Combining datatypes](./unit_1/w02d01/instructor_notes)| [Objectception, Avengers, Assemble!](./unit_1/w02d01/student_labs)|[JS Potpourri & MadLibs](./unit_1/w02d01/homework)|
 | w02d2 |[VSSL HTML](./unit_1/w02d02/morning_exercise)| [Callbacks, Array Methods w. Call Backs](./unit_1/w02d02/instructor_notes)| [Callbacks, Minions](./unit_1/w02d02/student_labs)|[Datatype and Callback Drills](./unit_1/w02d02/homework)|
 | w02d3 |[VSSL CSS](./unit_1/w02d03/morning_exercise)| [OOP - object methods, OOP - Classes](./unit_1/w02d03/instructor_notes)| [Westworld (object methods, constructors), Classes](./unit_1/w02d03/student_labs)|[Classes, Donut Adventure](./unit_1/w02d03/homework)|

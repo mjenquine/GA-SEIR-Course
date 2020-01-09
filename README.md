@@ -1,6 +1,6 @@
 ![ga](ga_cog.png) <br>
 
-# SEIR-1-21
+# SEIR-White-Claw
 
 ![white-claw](https://emilyandrassy.files.wordpress.com/2012/02/waves.jpg)
 

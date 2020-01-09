@@ -2,7 +2,7 @@
 
 # SEIR-1-21
 
-<!--![avocado](https://imgur.com/ReUOJ33.png)-->
+![white-claw](https://emilyandrassy.files.wordpress.com/2012/02/waves.jpg)
 
 ## Licensing
 

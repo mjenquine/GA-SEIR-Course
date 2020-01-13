@@ -1,8 +1,8 @@
 ![ga](ga_cog.png) <br>
 
-# SEIR-White-Claw
+# SEIR-Waverider
 
-![white-claw](https://emilyandrassy.files.wordpress.com/2012/02/waves.jpg)
+![waverider](https://res.cloudinary.com/teepublic/image/private/s--UI0J4c-9--/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1542233390/production/designs/3504528_0.jpg)
 
 ## Licensing
 

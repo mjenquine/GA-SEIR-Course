@@ -1,194 +1,269 @@
-![ga](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/blob/master/ga_cog.png)
+![](/ga_cog.png)
 
 ---
-Title: Bootstrap - CSS Frameworks <br>
+Title: Forms<br>
 Type: Morning Exercise<br>
-Duration: "0:45"<br>
-Creator:<br>
-    Original creators: Kristyn Bryan & Greg Dunn, WDI-Funke<br>
-    Adapted by: Jerrica Bobadilla<br>
-Competencies: CSS Frameworks, Bootstrap<br>
-Prerequisites: CSS, HTML <br>
+Creator: Jerrica Bobadilla <br>
+Competencies: CSS, HTML
 
 ---
 
-# Morning Exercise
+# HTML/CSS Forms 
 
-## CSS Frameworks
+When making CRUD apps, you'll be using plenty of forms but they can be a bit tricky to style. So let's get some practice and see what kind of styling you can do with them by coding along with me. 
 
-A CSS framework can save you time when styling applications. A framework is really just a stylesheet that has been designed by someone else that you are implementing into your code.
+## ACTIVITY 
 
-To implement these styles, you simply add a class to the html element that you'd like to style and give it the class name stated in your framework's documentation.
+![](https://i.imgur.com/HWMBASw.png)
 
-In addition, you can make changes to the styles using your own stylesheet. Combine and conquer!
+Perhaps one of the most common uses for forms out there, today we'll be building out a registration form to look like the mockup above. 
 
-You can use Bootstrap to jazz up your projects, but we also want you to be familiar with it because, a lot of times when you jump into a company that has a pre-existing codebase, you will encounter the use of a CSS framework.
+### Setup 
 
+Starter code has been provided for you with all necessary files linked together. 
 
-### The framework that we will be looking at today:
+1. `git pull upstream master`
+1. Navigate to the `morning_exercise/registration-form` folder for today.
+1. Open the entire folder in atom to follow along.
+1. Open the `index.html` in your browser.
 
-[Bootstrap](http://getbootstrap.com/)<br>
-  _Probably the most popular framework out there right now. Originally created by some guys who were working at Twitter._
+Follow along while I style it live. Additionally, anytime you see a :sparkles:emoji in the notes below, that indicates a styling block for the activity! 
 
-## Activity
+## FIELDSET, LEGENDS, AND LABELS 
 
-We're going to style this page using Bootstrap:
+The `<fieldset>`, `<legend>` and `<label>` tags are designed for web accessibility and aiding screen readers to properly interpret the form. 
+  
+  - *Fieldsets* let you group parts of a form together.
+  - *Legend* defines what a fieldset is for. 
+  - *Labels* define what a specific input is looking for. 
+  
+#### More on Labels 
 
-![unstyled page](https://i.imgur.com/sdRQg2x.png)
+You can either _nest_ your input inside a label or you can _put the label first and then as a sibling put the corresponding input_, if you do it the second way the `<label>` must have a `for` attribute in the label tag and then the `<input>` must have an `id` attribute with a value that matches the value of the label's `for` attribute.
 
-To look something like this:
+  - NESTED EXAMPLE: 
+    ```
+    <label>
+      Username
+      <input type="text"/>
+    </label>
+    ```
+  - SIBLING EXAMPLE: Note the matching `for="username"` & `id="username"` attributes to 'connect' the label to the input
+    ```
+    <label for="username">USERNAME</label>
+    <input type="text" id="username"/>
+    ```
+#### :sparkles:Let's Style Our Fieldsets, Legends, and Labels!
 
-![styled page](https://i.imgur.com/9imBki4.png)
+**In our HTML:** Update all our inputs, textareas, and labels so that they have matching variables
+```
+<!-- username -->
+<label for="username">USERNAME</label>
+<input type="text" id="username"/>
+<!-- password -->
+<label for="password">PASSWORD</label>
+<input type="text" id="password">
+<!-- email -->
+<label for="email">E-MAIL</label>
+<input type="text" id="email"/>
 
-## Setup
+/* further down */
+<!-- biography -->
+<label for="biography">BIOGRAPHY</label>
+<!-- textarea for larger bodies of text -->
+<textarea id="biography"></textarea>
+```
 
-1. Use the files inside the `bootstrap_example` folder to code along with this morning's exercise.
+**In our CSS:**
+```
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+legend {
+  padding: 0px 10px;
+  font-family: 'Oswald';
+  font-weight: 500;
+  color: var(--purple);
+}
+label {
+  font-family: 'Oswald';
+  font-weight: 200;
+  color: var(--bright-pink);
+  display: block;
+}
+```
 
-1. Open the folder in VS Code and open `index.html` in your browser
+## INPUT TYPES, STYLING INPUTS, AND PSEUDO CLASSES
 
-## Let's Look at Bootstrap
+There are a lot of different input types (see the resources below), but for today let's just focus on some of the most common ones: 
 
-Bootstrap's website catalogs everything that you can use to style your application. Note that their styles are responsive. 
+  - _text_ is just the default input type text box that you've all grown used to so far, it accepts any string.
+  - _password_ makes it so that whatever the user types into the input field is hidden like a password should be!
+  - _email_ makes it so that the form will automatically validate if the user actually entered an email upon submission.
+  - _submit_ makes the input a button and indicates that when the user clicks this button, the form should be submitted.
+    - Note: The default text inside a submit button is "submit", if you want it to say something different, add an attribute of `value="whatever you want the button to say"`
+  
+#### Styling Inputs 
 
-To use Bootstrap, you can download a file and keep it in your application or use a link to their CDN.
+There are a few ways to style inputs. 
 
-Bootstrap is a very robust framework! It has pretty much everything that you need (plus more). After this lesson, take some time to explore the site to see more of the offerings. Consider using it in your homework or projects.
+  - The simplest way is to just select `input`:
+    ```
+    input {
+      /* styles in here */
+    }
+    ```
+  - Since there are several types of inputs, we don't always want to style them all the same way using `input`. Instead, you can _select_ specific attributes using the following notation: `input[attribute="value"]`
+    ```
+    input[type="submit"] { 
+      /* styles in here */
+    }
+    ```
 
-## Code along:
+#### Pseudo Classes 
 
-1. Go to [Bootstrap's framework page](http://getbootstrap.com/) to get their stylesheets.
+Pseudo classes are keywords tacked onto an element that specifies a special state of the element. They are not exclusive to forms (they can be used on almost any HTML element you want!), but they're very useful when trying to style forms. Let's take a look at two of the more common ones. 
 
->Direct link to documentation:
-https://getbootstrap.com/docs/4.2/getting-started/download/
-
-2. You could download the files (but let's not do that for this exercise):
-![](https://i.imgur.com/Y2bjh8G.png)
-
-3. Let's use the Bootstrap CDN link to get the style's to our page. Add the CDN link into your `index.html` file
-
-`<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">`
-
-6. Refresh your browser and take a look at what happened after just initially linking Bootstrap.
-
-7. We'll be using classes from the `Layout`, `Content`, and `Components` section. You can browse through these sections in the sidebar on Bootstrap's page to see some options for what we can do.
-
-## Nav bar
-
->Direct link to documentation:
-https://getbootstrap.com/docs/4.2/components/navs/
-
-1. Add the `class="nav"` to the `ul` of your nav bar
-
-2. We also have to specify which `li` elements are nav items by adding the class `nav-item` 
-
-3. Further, we need to specify which `a` elements are nav links by adding the class `nav-link`
-
-4. We can add additional styling to this. Let's add the class `nav-tabs` to our`ul` to adjust the formatting and turn our links into navigation tabs.
-
-![nav](https://i.imgur.com/AXLSUlS.png)
-
-## Adjust the image
-
->Direct link to documentation:
-https://getbootstrap.com/docs/4.2/content/images/
-
-1. If we wanted our image to be responsive, we could add the `class="img-fluid"`
-
-2. If we always want it to stay centered, tack on `class="text-center"` onto the image's parent `div`
-
-## Container
-
->Direct link to documentation:
-https://getbootstrap.com/docs/4.2/layout/overview/
-
-1. Let's start by wrapping our site content in a container: `class = "container"`. What does this do?
-
-We can use .container for a responsive fixed width container.
-
-![container](https://i.imgur.com/VQT8U0F.png)
-
-If we want the container to span the entire width of the viewport, we can use `class="container-fluid"`
-
-![container fluid](https://i.imgur.com/nbdIF1f.png)
-
-## Bootstrap's grid
-Let's use the built-in grid system that Bootstrap supplies.
-
->Direct link  to documentation: 
-https://getbootstrap.com/docs/4.2/layout/grid/
-
-1. On the three paragraphs below the Example header, let's put `class="row"` on a div that surrounds all three.
-
-2. Let's give each of these paragraphs a `class="col-sm"`
-
-![grid](https://i.imgur.com/DmpDs9U.png)
-
-## Update a button
-
->Direct link  to documentation:
-https://getbootstrap.com/docs/4.2/components/buttons/
-
-Bootstrap has multiple button options:
-
-  - The primary button style:
-  `class="btn btn-primary"`
-
-  ![primary button](https://i.imgur.com/5UYSelU.png)
-
-  - Quickly style to denote an action (success, danger, warning, etc.)
-    - `class="btn btn-success"`
+  - _:hover_ adds style onto whatever element you tack it onto when the user hovers over it 
+    ```
+    input[type="submit"]:hover {
+      /* styles entered here will be applied to the submit button only when the user hovers over it */
+    }
+    ```
+  - _:focus_ adds style onto whatever element you tack it onto whenever the user "focuses" on the element (typically when the user clicks on the element or selects it using tab)
+    ```
+    input[type="text"]:focus {
+      /* styles entered here will be applied to the text input form only when the user is focused on it */
+    }
+    ```
     
-      ![button success](https://i.imgur.com/hdZdrF0.png)
-      
-    - `class="btn btn-danger"`
+#### :sparkles:Let's Style Our Input Boxes! 
+
+**In our HTML:** Update the input type of our password and email fields
+```
+<input type="password" id="password">
+
+<input type="email" id="email"/>
+```
+
+**In our CSS:**
+```
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--dusty-blue);
+}
+input:focus {
+  /* the outline property selects the default blue border that shows up on inputs. giving it a value of 0 gets rid of it */
+  outline: 0;
+  border: 1px solid var(--purple);
+}
+```
+
+_NOTE:_ Want to keep the outline blur effect? You can just change the color of the outline instead of getting rid of it by using the `outline-color` property! See more on outline [here](https://css-tricks.com/almanac/properties/o/outline/)
+
+#### :sparkles:Let's Style Our Submit Button! 
+
+**In our HTML:** Update the submit button so that it has a value of REGISTER
+```
+<input type="submit" value="REGISTER">
+```
+
+**In our CSS:**
+```
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: var(--purple);
+  box-shadow: 2px 2px var(--bright-blue);
+  font-family: 'Oswald';
+  font-size: 1.3em;
+  color: whitesmoke;
+  border: 0px;
+  transition: 0.2s ease-in-out;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: var(--bright-blue);
+  box-shadow: 2px 2px var(--purple);
+}
+```
+
+## TEXTAREA 
+
+Textarea is essentially just another type of input box, but is not an actual input element. Rather, it's its own element `<textarea>` and requires a closing tag `</textarea>` that inputs do not. Textareas are meant for larger bodies of text that shouldn't go in regular text inputs, for example: profile information, a review, etc. 
+
+#### Styling Textareas 
+
+  - Textareas are relatively difficult to style because, typically, they can be resized by the user which may mess with the styling of your page. One way to mitigate that is by using the `resize` property
+    - `resize: none` makes it so that the user cannot resize the textarea at all 
+    - `resize: vertical` makes it so that the user can only resize it vertically 
+    - `resize: horizontal` makes it so that the user can only resize it horizontally
+    - If you don't set any of these, textareas are defaulted to resize both vertically and horizontally
+  - Alternatively, you can set a `max-height` or `max-width` so that the user cannot resize beyond a certain width
+    - Note, you may have to set a default height and width to get it to the size you originally want the textarea to be at when they first load the page
+  - Examples:
+     ```  
+     /* using resize none to make sure the textarea always stays a specific width/height */
+     textarea {
+      width: 200px;
+      height: 100px;
+      resize: none;
+     }
+     
+     /* using max-heights and max-widths to make it so that the user can only resize up to that point */
+     textarea {
+      width: 200px;
+      height: 100px;
+      max-width: 400px;
+      max-height: 150px;
+     }
+     ```
+ 
+ #### :sparkles: Let's Style Our Textarea!
+ 
+ **In our CSS**: We want our textarea to look identical to our `input` elements from earlier, so let's just tack on `textarea` to those styles instead of repeating ourselves! Then, specific to just our textarea, we don't want it to resize and we want a specific height:
+ ```
+ textarea {
+  resize: none;
+  height: 75px;
+ }
+ ```
+
+## VALUE VS. PLACEHOLDER 
+
+`value` and `placeholder` are both attributes that you can add on to `input` and, to an extent, `textarea` elements. They're similar in that they place text into the forms, but different in how they do so. Let's see how: 
+
+  - _value_ pre-fills out an input form with text that the user can actually manipulate or keep as is. 
+  - _placeholder_ is grayed out on the input form with text that typically should guide the user as to what type of info they should put inside of the input form. The user _cannot_ manipulate this text, in fact once they start typing into the input form, the placeholder should disappear completely.
+  
+#### Textarea "values" 
+
+  - `<textarea>` elements, unlike inputs, do _not_ recognize the `value` attribute. If you want to pre-fill a textarea with text for the user to manipulate, you have to put the value between the `<textarea></textarea>` tags
+  - EXAMPLE: 
+    ```
+     /* input with pre-filled value */
+     <input type="text" value="hello world!">
+
+     /* textarea with pre-filled value */
+     <textarea>hello world!</textarea>
+    ```
+#### :sparkles: Let's Add a Placeholder to our Textarea!
+
+**In our HTML:** Update it so that it has a placeholder with a value of whatever you want it to say.
+```
+<textarea id="biography" placeholder="Say something about yourself (e.g. Hi, my name is Connor. I'm the android sent by CyberLife)"></textarea>
+```
     
-       ![button danger](https://i.imgur.com/8tSt2l4.png)
-       
-  - Change the style to an outlined button instead of filled
-    - `class="btn btn-outline-primary"`
-    
-        ![button outline](https://i.imgur.com/RikDvpo.png)
 
-  - Or change the size of the button
-      - `class="btn btn-primary btn-lg"`
+## RESOURCES
 
-      ![button large](https://i.imgur.com/UCkuKtI.png)
+There's an overwhelming amount of form types and attributes that you can use, and we barely scratched the surface today. Text, textarea, password, and submit are the most common that you'll probably use in your apps, but if you'd like to see what else HTML forms have to offer, take a look at the resources below: 
 
-1. Choose one and add it in the `a` tag to turn the `Learn More` link to a button.
-
-#### Style the table
-
->Direct link  to documentation:
-https://getbootstrap.com/docs/4.2/content/tables/
-
-1. Add Bootstrap's default table style: `class="table"`
-
-![table](https://i.imgur.com/h8zEAQU.png)
-
-2. Add the class `table-striped` to give our table zebra stripes
-
-![striped table](https://i.imgur.com/DHPEEsi.png)
-
-#### Sections that you want to showcase
-
->Direct link  to documentation:
-https://getbootstrap.com/docs/4.2/components/jumbotron/
-
-Bootstrap has something called `jumbotron` which has styling to showcase a section.
-
-1. Let's add `class="jumbotron"` to the section marked as `callout` in our index.html.
-
-![jumbotron](https://i.imgur.com/2bPaxXf.png)
-
-NOTE: Bootstrap is fully responsive! Change the sizes of your screen to check it out.
-
-# Other CSS frameworks:
-
-[Skeleton](http://getskeleton.com/)<br>
-  _Lightweight framework that has a nice, simple grid system._
-
-[Materialize](http://materializecss.com/)<br>
-_This framework is difficult to manipulate, but I like it for the parralax and the cards._
-
-[Pure CSS](http://purecss.io/)<br>
-_Similar to skeleton, this is a light framework with a grid system and responsive design._
+  - [Our student wiki page with a quick cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Stan-Lee/wiki/HTML-Forms-Cheatsheet)
+  - [W3Schools HTML Forms](https://www.w3schools.com/html/html_forms.asp)
+  - [MDN's entry on HTML Forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms)

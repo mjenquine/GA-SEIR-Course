@@ -1,308 +1,120 @@
 
-Title:Intro to Recursion<br>
-Type: Morning Exercise <br>
+Title: EJS Partials  <br>
+Type: Morning Exercise<br>
 Duration: "0:45"<br>
-Creator: Karolin Rafalski <br>
-Competencies:  Writing a Recursive function <br>
-Prerequisites: JavaScript or Ruby Fundamentals<br>
+Creator: Karolin Rafalski<br>
+Competencies: EJS Forms <br>
+Prerequisites: EJS , Node, Express, MongoDB<br>
 
 ---
-# Recursion
 
-♻️ To understand recursion, you must understand recursion ♻️
+## EJS Partials
+
+## Intro
+EJS allows you to create reusable elements that can go on multiple pages and will allow you to streamline your ejs page creation and updates.
+
+### EJS Partials
+
+#### Set Up
+
+We'll go back to Mongoose Store.
+
+-  `cd` into the directory `ejs-partials-mognoose-store` that is in the morning exercise folder for today
+- `npm install`
+- open two more Terminal tabs (one for `mongod` and one for `nodemon`)
+- start `mongod` in a new terminal window
+- start `nodemon`
+- `code .` in the last tab
+- go to `http://localhost:3000/products` in the browser - You should see an empty mongo store!
+- organize your windows so you can easily go between the browser, terminal and VS Code
+- go to `http://localhost:3000/products/seed/newproducts/viaseedfile` you should see JSON of the seed data
+- go back to `http://localhost:3000/products` (may need to reload page to see data/products)
+- now the mongoose store should have products!
 
 
-## Recursion definition
+**Note**: if you made a mistake, repopulated your db twice or just want to get my mongoose store out of your mongodb go here `http://localhost:3000/products/dropdatabase/cannotundo/areyoursure/reallysure/okthen`
 
-A function that calls itself is called recursive.
+#### First Partial
 
-A recursive function calls itself to reduce a larger problem into a smaller one until it can be solved.
+EJS partials let you create reusable EJS that you only have to edit in one place and it will update across all your pages where the partial is included
 
-A recursive function must have two properties
-1. a simple base case (or cases) - which is a terminating scenario that does not use recursion to produce an answer
-2. A set of rules that reduce all other cases towards the base case
+- in the views folder: `mkdir partials`
+- then in the partials folder: `touch head.ejs`
 
-Recursion is found in mathematics and can look really scary. But we can use recursion with ease.
-
-
-
-## Recursion Example #1
-
-Let’s think about adding the following numbers
-
-1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10
-
-
-### Solving it by hand
-Average humans, do not add all the numbers all at once.  We add two numbers together, store that number, and then add the next number, until we are left with one number. When we have one number, that is our answer.
-
-So we do:
+Right now, only the `index` route has the CSS linked. Let's cut that code out of the head and paste it into our `head.ejs` file (don't forget to save all the files!)
 ```
-1  + 2   = 3
-3  + 3   = 6
-6  + 4   = 10
-10 + 5   = 15
-15 + 6   = 21
-21 + 7   = 28
-28 + 8   = 36
-36 + 9   = 45
-45 + 1   = 55
-55 + no numbers left means our answer is 55
-```
+    <meta charset="utf-8">
+    <title>Mongoose Store</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/assets/$.png">
+ ```
 
-### Solving it recursively
-We can express this with a recursive function that follows our above pattern really easily
-
-1. First, since we have a list of numbers (our test case), let’s express them as an array
-2. Second, define a function
-
-```js
-const numsToSum = [ 1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10 ];
-
-const sumNumbers = ( numsArr ) => {
-
-}
-```
-
-3. we need a base case
-
-```js
-const sumNumbers = ( numsArr ) => {
- if ( numsArr.length === 0 ){
- return sum;
- }
-}
-```
-
-4. Holding onto our sum value
-
-We have to define our sum variable and we have to be able to access it over and over again, let’s pass it in our function
-If it isn’t defined, let’s give it a value of 0, otherwise it will equal the sum of the previous numbers.
-
-```js
-const sumNumbers = ( numsArr , sum ) => {
-sum = sum || 0;
- if  (numsArr.length === 0 ){
- return sum;
- }
-}
-```
-
-5. Define a way (or rules) to decrease our complex problem down to the base case <br>
-Each time we add a number we have to remove it from the array, thus decreasing the array length and bring us closer to our base case. We’ll use the `shift()` method so it is taking the number from the start of the array, to match our previous calculations, but one could just as easily use `.pop()`
-
-```js
-const sumNumbers = ( numsArr , sum) => {
-sum = sum || 0;
- if (numsArr.length === 0){
- return sum;
- }
- sum += numsArr.shift();
-}
-```
-
-6.  Now that we’ve established our base case and a way to get down to our base case, we can now call our function
-
-```js
-const sumNumbers = ( numsArr , sum) => {
-sum = sum || 0;
- if (numsArr.length === 0){
- return sum;
- }
- sum += numsArr.shift();
-return sumNumbers ( numsArr , sum );
-}
-```
-7. Let’s test it!
+- Save and reload the page
+- Goodbye CSS!
+- Let's add it back into `index.ejs` as a partial
 
 ```
-sumNumbers (numsToSum);
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+```
+- don't forget to save and reload the page
+- cool! Now let's copy paste that code onto the other three ejs pages: `edit.ejs`, `new.ejs`, and `show.ejs`
+- navigate to the index, show, edit and new routes and see that our css has returned Hooray!
 
+
+#### Header partial
+- Right now only our index page has a nav bar, let's follow the above steps and create a partial for the header
+- `touch nav.ejs` inside the `partials` folder
+- cut (out of `index.ejs`)
+```
+      <div class="row nav">
+        <a href="/products"><h1 id="store" class="six columns">The Mongoose Store</h1></a>
+        <span class="three columns">&nbsp;</span>
+        <a href="/products/new"><button type="button" name="button" class="new-product three columns">New Product</button></a>
+        <span class="one column">&nbsp;</span>
+      </div>
 ```
 
-## Recursion Example #2
-
-We can figure out if a positive integer is even or odd, if we keep subtracting 2 from the number.
-If the value 0 is reached, the number is even.
-If the value 1 is reached, the number is odd.
-
-```
-6
-6 - 2 = 4
-4 - 2 = 2
-2 - 2 = 0
-0 means the number is even
-
-5
-5 - 2 = 3
-3 - 2 = 1
-1 means the number is odd
-```
-
-
-Let's follow our steps above to write this recursive function
-
-1. define a number/test case
-Let's go with `10`
-
-2. define a function
-
-```js
-const testCase1 = 10;
-const isEven = ( num ) => {
-
-}
-```
-
-3. Define our base case(s)
-
-```js
-const testCase1 = 10;
-const isEven = ( num ) => {
-  if ( num === 0 ) {
-    return "the number is even";
-  }
-  if ( num === 1 ){
-    return "the number is odd";
-  }
-}
-```
-
-4. We're going to 'hold on' to our progress a little differently this time, we're just going to keep calling the function with the num - 2 over and over again.
-5. This will also define the rules to decrease our complex problem down to our base case
-6. And call our function!
-
-```js
-const testCase1 = 10;
-const isEven = ( num ) => {
-  if ( num === 0 ) {
-    return "the number is even";
-  }
-  if ( num === 1 ){
-    return "the number is odd";
-  }
-  return isEven( num - 2 );
-}
-```
-
-7. Let's test it!
-
-```js
-isEven( testCase1 );
-isEven( 101 );
-```
-
-Problem from [Eloquent JavaScript](https://eloquentjavascript.net/03_functions.html) towards the bottom.
-
-## Your turn
-
-Sometimes, it is scary to do things that might cause an infinite loop or blow the stack- because it may be difficult to stop and cause your computer to freeze and you might have to restart it.
-
-[repl.it](https://repl.it/) is really nice because if you cause an infinite loop or try to blow the stack it'll stop pretty quickly and give you an error. You are welcome to do this in node, but if you are afraid of creating infinite loops, go on over to `repl.it` and get coding there.
-
-### Factorial
-
-The factorial of a positive integer, n, is the product of all positive integers less than or equal to to n.
-
-The factorial of 5 is 120
-> 5 x 4 x 3 x 2 x 1 = 120
-
-Write a recursive function `factorial` that returns the factorial of a given number
-
-Remember, you can get started with Karolin's 7 easy steps to writing a recursive function
-
-1. Establish a test case (for this example, you can choose 5, since we know the result will be 120)
-2. Write an empty function
-3. Define your base case(s) - What is our base case for this problem?
-4. Figure out how you will 'hold on' to your progress as you call the funtion again and again
-5. Define a way to reduce your complex case down to the base case (you may be able to combine step 4 into this)
-6. Call your function inside your function
-7. Test it!
-
-### Step Counting
-
-Suppose you want climb a staircase of N steps, and on each step you can take either 1 or 2 steps. How many distinct ways are there to climb the staircase? For example, if you wanted to climb 4 steps, you can take the following distinct number of steps:
+- paste it into `nav.ejs`
+- in your 4 ejs files:
+ ```
+ <% include ../partials/nav.ejs %>
 
 ```
-1) 1, 1, 1, 1
-2) 1, 1, 2
-3) 1, 2, 1
-4) 2, 1, 1
-5) 2, 2
+- be sure to save save save all your files
+
+#### Footer partial
+- `touch footer.ejs` inside the `partials folder`
+- add
 ```
-
-So there are 5 distinct ways to climb 4 steps. We want to write a function, using recursion, that will produce the answer for any number of steps.
-
-Problem from [Coderbyte](https://coderbyte.com/algorithm/step-by-step-solution-step-walking-using-recursion)
-
-### Fibonacci Sequence
-
-Fibonacci sequence
-The Fibonacci sequence is a sequence of integers in which the first and second terms are both equal to 1 and each subsequent term is the sum of the two preceding it. The first few terms are $1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...
-
-Write a function where you take a number and determine whether or not it is a Fibonacci number (return true/false)
-
-**Note** : This is a popular recursion problem that comes up often
-
-### Recursion "Branches"
-
-Consider this puzzle: by starting from the number 1 and repeatedly either adding 5 or multiplying by 3, an infinite amount of new numbers can be produced. How would you write a function that, given a number, tries to find a sequence of such additions and multiplications that produce that number? For example, the number 13 could be reached by first multiplying by 3 and then adding 5 twice, whereas the number 15 cannot be reached at all.
-
-Source:
-[Eloquent JavaScript](https://eloquentjavascript.net/03_functions.html) about 2/3 down
-
-### Hungry for More
-
-
-#### Array Flattener
-
-Create a function that takes a multi-level array (of any depth) and flattens it to one level
-
+    <footer>
+        all rights reversed
+    </footer>
 ```
-const arr = [1 ,2 ,[3 ,4, [5,[6]],7],8, [9, 10]];
+- now add the partials to the four ejs files using the same pattern we've used in our previous two partials
+- don't forget to save
 
-flatten (arr);
 
-// [ 1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10 ];
+#### Editing a partial
+Whoops! Our footer says `all rights reversed` it should say `all rights reserved`.
 
-```
+Let's update our `footer.ejs` file
+- click around the mongoose store, did the footer change on all your pages now?
+- If so sweet! If not, let's troubleshoot
 
-#### Total Recall
 
-It is now time to push you understanding of functional programming to
-the next level. Write a function `recall(word)` which can be chain
-called like so
+<hr>
 
-```javascript
-recall(‘Sorry,’)(‘Your’)(‘whole’)(‘life’)(‘is’)(‘just’)(‘a’)(‘dream.’)(‘I’)(‘have’)(‘been’)(‘trying’)(‘to’)(‘tell’)(‘you,’)(‘someone’)(‘has’)(‘erased’)(‘your’)(‘memory.’)();
+## Got Some Time Left? Let's work on a Hackerrank Challenge!
+<br>
+Some companies use HackerRank challenges as part of their interview process. Try one out to practice!
 
-// => “Sorry, Your whole life is just a dream. I have been trying to tell you, someone has erased your memory. ”
-```
+- [Min Max Sum](https://www.hackerrank.com/challenges/mini-max-sum/problem)
 
-Notice that if you pass a string as an argument the function *saves*
-it. If you invoke it with no argument at the end it will log to the
-console all of the previous arguments concatenated together.
 
-### The Call Stack
+HackerRank's code submission process can take a little getting used to
 
-![call stack with recursion example](https://i.stack.imgur.com/P56ru.jpg)
-
-#### References
-
-[Eloquent JavaScript](https://eloquentjavascript.net/03_functions.html)
-
-[Coderbyte](https://coderbyte.com/algorithm/step-by-step-solution-step-walking-using-recursion)
-
-[Free Code Camp](https://medium.freecodecamp.org/how-recursion-works-explained-with-flowcharts-and-a-video-de61f40cb7f9)
-
-[CMSC 214](https://www.cs.umd.edu/class/fall2002/cmsc214/Tutorial/recursion.html)
-
-[Art of Problem Solving](http://artofproblemsolving.com/wiki/index.php?title=Fibonacci_sequence)
-
-[Wikipedia](https://en.wikipedia.org/wiki/Recursion)
-
-[Mooreccac](http://mooreccac.com/kcppdoc/Recursion.htm)
-
-[Stack Overflow Call Stack Concept](https://stackoverflow.com/questions/10057443/explain-the-concept-of-a-stack-frame-in-a-nutshell)
-
-Additional thanks to Thom Page!
+- [How to Solve HackerRank Problems](https://www.hackerrank.com/domains/algorithms/warmup)

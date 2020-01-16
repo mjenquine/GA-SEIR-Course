@@ -1,96 +1,51 @@
 ![](/ga_cog.png)
 
 ---
-Title:WORD FREQUENCY<br>
+Title: Loop the Loop! Two Dimensional Sums<br>
 Type: Morning Exercise <br>
 Duration: "0:45"<br>
-Creator: Thom Page<br>
-Competencies:  Problem Solving, <br>
+Creator: Karolin Rafalski<br>
+Competencies:  Arrays, Loops, Breaking down a problem into smaller steps<br>
 Prerequisites: JavaScript or Ruby Fundamentals<br>
 
 ---
 
+### Loop the Loop: 2D Array Additon
+
+**Make a function that returns the greatest sum of a row, column or diagonal from a two dimensional array**
 
 
-# WORD FREQUENCY
+Make a function that takes one argument, a two dimensional array, where all the arrays are the same length, and returns the greatest sum of the numbers by row, column and diagonal.
+```
+const arr = [ [10, 20, 30],
+            [40, 50, 60],
+            [70, -80, 90] ];
 
-## 1
-
-Write a function `findWordFrequencies` that takes in a sentence (string), and returns an object with each word as a key, with a value of how many times that word appears in the sentence.
-
-eg: `{ I: 1, love: 1, lamp: 1 }`
-
-Make it work just for sentences without commas, apostrophes, and periods. Capital letters and lowercase letters should be treated as equals: 'The' and 'the' are the same word.
-
-## 2
-
-Write a function `findHighestFrequency` that takes in an object and returns an object with the key that has the highest value. With this function we can see which word appeared in the sentence with the highest frequency.
-
-If there is a tie between the two most frequent words, the first appearing one is returned.
-
-## Examples
-
-**"The world is all that is the case"**
-
-```javascript
-const freqs = findWordFrequencies('The world is all that is the case'));
-
-console.log(freqs);
+greatestSum(arr); //180
 ```
 
-> => { the: 2, world: 1, is: 2, all: 1, that: 1, case: 1 }
+#### Hungry for More?
 
 
-```javascript
-const freqs = findWordFrequencies('The world is all that is the case');
+Test your function on this data set and let me know if it was a row, column or diagonal that had the greatest sum!
 
-console.log(findHighestFrequency(freqs));
+```
+const bigArray =
+[ [ 887, -541, -430, -590, 117, 172, -319, -18 ],
+  [ -269, 964, 209, 840, -456, 156, 365, -568 ],
+  [ 289, -41, 488, 198, 240, 124, -427, 214 ],
+  [ 452, 894, 968, -149, 683, 977, 741, -805 ],
+  [ 181, -714, -950, 107, 800, 751, -143, 380 ],
+  [ 152, 493, 707, 914, 37, 356, -625, 608 ],
+  [ -345, 906, 83, 676, 723, 381, 557, -183 ],
+  [ 199, -943, -710, 565, 193, 315, 281, 245 ] ];
 ```
 
-> => { the: 2 }
+**Still Hungry?**<br>
 
-**"That that is is that that is not is not"**
+Create a function that takes one argument, an integer, that makes a 2D array of random integers between 0  and 1000 where the length of the rows and columns is determined by the argument.
 
-```javascript
-const freqs = findWordFrequencies('That that is is that that is not is not');
+Add a 30% chance that the integer will become negative.
 
-console.log(freqs);
-```
-
-> => { that: 4, is: 4, not: 2 }
-
-```javascript
-const freqs = findWordFrequencies('That that is is that that is not is not');
-
-console.log(findHighestFrequency(freqs));
-```
-
-> => { that: 4 }
-
-**"hi"**
-
-```javascript
-const freqs = findWordFrequencies('hi');
-
-console.log(freqs);
-```
-
-> => { hi: 1 }
-
-
-```javascript
-const freqs = findWordFrequencies('hi');
-
-console.log(findHighestFrequency(freqs));
-```
-
-> => { hi: 1 }
-
-
-## Hungry for More
-
-#### Try these Kata
-
-[Coin Calculator](https://www.codewars.com/kata/calculator-coin-combination)
-
-[Bob's Short Forms](https://www.codewars.com/kata/bobs-short-forms)
+**Still Moar Hungry?**
+Sign up for [codewars](codewars.com) and choose a code challenge (in JavaScript) or three and solve them. Found a fun one? Share it in slack!

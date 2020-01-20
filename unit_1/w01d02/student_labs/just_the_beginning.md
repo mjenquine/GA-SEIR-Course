@@ -17,7 +17,7 @@ Let's get some practice with everything you've learned today! Using terminal and
 #### Prerequisites
 
 - Terminal
-- JavaScript 
+- JavaScript
 
 ---
 
@@ -41,7 +41,7 @@ Let's get some practice with everything you've learned today! Using terminal and
 
 1. Press the up arrow to retrieve the node first_lab.js command. That way, you don't have to type it each time to run the file.
 
-## Errors 
+## Errors
 
 **Fix the code by following the errors in Terminal**
 
@@ -76,7 +76,7 @@ console.log("Your name.");
 
 Make it so you do not get any more errors!
 
-## Boolean Expressions 
+## Boolean Expressions
 *... and arithmetic*
 
 By just looking at the following expressions, determine in your mind whether or not each will evaluate to **true** or **false**
@@ -90,7 +90,7 @@ By just looking at the following expressions, determine in your mind whether or 
 7. `81 / 9 == 9`
 8. `9 != 8 + 1`
 
-## Assignment Operator vs. Equality Operator 
+## Assignment Operator vs. Equality Operator
 
 Write: What is the difference between:
 
@@ -98,7 +98,7 @@ the **assignment operator** `=`
 
 and the **equality operator** `==`
 
-## While Loops: Reps and Reps 
+## While Loops: Reps and Reps
 
 ### 1
 
@@ -142,7 +142,7 @@ Write another *while* loop that prints a message to the console _and_ concatenat
 
 **NOTE:** You should not need to see the 'correct answers' in this markdown for these loops. Either they work, or they don't. **Test** them thoroughly to make sure they are giving you the desired output.
 
-## For Loops 
+## For Loops
 
 ### 1
 * Write a **for loop** that counts from 0 to 100 and console.logs each number.
@@ -223,6 +223,14 @@ If you want more to do, tomorrow we will be getting into git and Github. Use you
 * cloning a repo from Github
 * What does `git push origin master` do?
 * What would `git pull upstream master` do?
+
+Rather than burning out on code on your first day, set yourself up for success:
+ - find some videos for some good stretches/desk exercises
+ - write a letter to yourself with what you hope to get out of this course and look back at it when things get rough
+ - reach out to a classmate and start getting to know them, see if they need some help
+ - Tweak your setup to be more comfortable
+ - Go back and practice some of the new keyboard shortcuts you've learned today.
+ 
 
 ---
 

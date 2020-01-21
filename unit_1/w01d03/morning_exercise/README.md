@@ -164,7 +164,8 @@ If you would learn any two - learn these!
     - `touch test.html`
     - You can name your file whatever you want, but it must end with `.html`!
     - press the up arrow `touch test.html` should reappear
-    - `control-u` clear the line of text
+    - `control u` clear the line of text
+    - `command l` clear the previous command
     - `command k` clear the window
     - `ls` - make sure you're still in the right place
 

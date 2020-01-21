@@ -247,6 +247,8 @@ Code is indented to show parent/child relationships and emphasize hierarchy.  It
 
 ![indented code](https://i.imgur.com/RBTvNpo.png)
 
+- If you'd like to increase the size of your indents, go to atom > preferences > editor then scroll down to tab length and choose your desired tab length (4 recommended)
+
 :book: When you have time, check out the [AirBnB style guide](https://github.com/airbnb/javascript)
 
 ### Tabs Over Spaces

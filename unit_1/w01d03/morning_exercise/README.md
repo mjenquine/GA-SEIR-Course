@@ -3,7 +3,7 @@ Title: Shortcuts & Setting You Up for Success <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
 Creator: Kristyn Bryan<br>
-Adapted by: Cathleen Wright, Karolin Rafalski<br>
+Adapted by: Cathleen Wright, Karolin Rafalski, Ayla Ex<br>
 Competencies: Spectacle, Atom shortcuts, Command Line & Keyboard shortcuts <br>
 Prerequisites: None<br>
 
@@ -97,31 +97,29 @@ Monitors
 |:---:|:----:|
 |Command-A| Select **All** Items |
 |Command-C| **Copy** the selected item to the Clipboard. This also works for files in Finder|
-|Command-S| **Save** file |
-|Command-V| **Paste** the contents of the Clipboard into the current document or app. This also works for files in Finder |
 |Command-X| **Cut** (remove) the selected item and copy it to the Clipboard|
-|Command-Y| **Redo** - redo something you undid (when you've used Command-Z)|
+|Command-V| **Paste** the contents of the Clipboard into the current document or app. This also works for files in Finder |
 |Command-Z| **Undo** the previous command/typing|
+|Command-Y| **Redo** - redo something you undid (when you've used Command-Z)|
+|Command-S| **Save** file |
 |Command-Shift-4| Take a screenshot |
 |Command-Spacebar| Open Spotlight |
 
 #### :hourglass: Activity (5 minutes)
-- Open your Desktop or Documents in atom
-- Make a file
-- Copy ALL (command A)the text from this file (you can copy from the browser)
-- Paste (command V) the text into your new file
-- Save (command S) - there is a blue dot on the top tab of your file that should disappear once your file has successfully saved
-- Undo (command Z)  - your text should go away
-- Redo (command Y) - your text should come back
-- Cut (Command X) - the title of your copy of this document
-- Paste (Command V) - to the bottom of your copy the document
-- Save (Command S) - one final time
-- take a screenshot of something
+- In terminal, navigate to your desktop or documents folder
+- Make a file (index.html)
+- In index.html type Lorem and hit tab ([Lorem Ipsum](https://www.lipsum.com/) is industry standard dummy text)
+- SELECT ALL (command A) the text in the file
+- COPY ALL (command A) the selected text
+- CUT (Command X) - the selected text
+- PASTE (command V) the text back into the file
+- UNDO (command Z) the last command - your text should go away
+- REDO (command Y) the last command - your text should come back
+- Stop and notice the blue dot on the top tab of your file - this means you have unsaved changes
+- SAVE (command S) your changes to the file - the blue dot should go away
+- Take a screenshot (command shift 4) of something
 
 :computer:  [Additional Mac Keyboard Shortcuts](https://support.apple.com/en-us/HT201236)
-
-#### :hourglass: Activity (2 minutes)
-
 
 <hr>
 

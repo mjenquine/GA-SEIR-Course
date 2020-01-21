@@ -145,6 +145,7 @@ If you would learn any two - learn these!
 |Control-U| Clear the current line |
 |Control-C| Stop the running process (works for many, but not all) |
 |Command-K| Clear the window |
+|Command-L| Clear the last command |
 
 
 

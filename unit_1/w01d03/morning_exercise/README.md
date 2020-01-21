@@ -161,7 +161,7 @@ If you would learn any two - learn these!
     - `mkdir deleteme`
 2. Inside `deleteme`, create a file `test.html`.  
     - `cd deleteme` **Tab it** only type `cd de` and then press tab
-    - `touch testing.html`
+    - `touch test.html`
     - You can name your file whatever you want, but it must end with `.html`!
     - press the up arrow `touch test.html` should reappear
     - `control-u` clear the line of text

@@ -543,8 +543,8 @@ Safia    Hirsi
 John    Hitz
 Evan    James
 Mark    Jenquine
-Vincent    Lanzilotti) 
-or 
+Vincent    Lanzilotti)
+or
 Ayla Ex(
 justin    marx
 Jamal    McDowell
@@ -563,9 +563,9 @@ Xiaolin    Yin)
 
 A new view will appear and this is the direct Slack conversation between you and the homework grader.
 
-5) Click on the `+` next to the message bar and choose `Code or text snippet`
+5) Click on the paperclip symbol under the message bar, hover over `Create new...` and choose `Code or text snippet`
 
-![snippet](https://i.imgur.com/kJBH4L3.png)
+![snippet](https://i.imgur.com/4KoVsry.jpg)
 
 6) Paste a copy of all of the text / code from your homework file to this snippet, add a description in the title with your name and click `Create Snippet`
 

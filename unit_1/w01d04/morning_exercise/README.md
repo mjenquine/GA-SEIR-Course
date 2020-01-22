@@ -45,7 +45,7 @@ Let's take some time to make sure we all submitted hw correctly and we are able 
 
 - `git pull upstream master` - get the latest instructor stuff
 
-- `git add .` or `git add -A` (they both do the same thing) - select the files you want to track/save to github (called `staging`)
+- `git add .` or `git add -A` (they do almost the same thing) - select the files you want to track/save to github (called `staging`)
     - you may not always want to add all of your files all the time.
     - the command `git add .` or `git add -A` specifies 'all the files and folders in this directory' - so anything at this level and below. It will not select files that are in a higher directory
     - if you want to get files that are elsewhere, the easiest thing to do is to navigate to that place and use the above command

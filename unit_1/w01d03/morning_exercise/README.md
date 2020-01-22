@@ -108,6 +108,7 @@ Monitors
 #### :hourglass: Activity (5 minutes)
 - In terminal, navigate to your desktop or documents folder
 - Make a file (index.html)
+- Open index.html in atom (atom index.html)
 - In index.html type Lorem and hit tab ([Lorem Ipsum](https://www.lipsum.com/) is industry standard dummy text)
 - SELECT ALL (command A) the text in the file
 - COPY ALL (command A) the selected text

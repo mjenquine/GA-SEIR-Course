@@ -565,7 +565,7 @@ A new view will appear and this is the direct Slack conversation between you and
 
 5) Click on the paperclip symbol under the message bar, hover over `Create new...` and choose `Code or text snippet`
 
-![snippet](https://i.imgur.com/4KoVsry.jpg)
+![snippet](https://i.imgur.com/YxXCJ6g.png)
 
 6) Paste a copy of all of the text / code from your homework file to this snippet, add a description in the title with your name and click `Create Snippet`
 

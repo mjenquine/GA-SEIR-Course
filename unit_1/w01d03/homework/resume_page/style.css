@@ -1,0 +1,11 @@
+h1  {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+h3  {
+  color: Red;
+}
+body  {
+  text-align: center;
+  list-style-position: inside;
+}

@@ -23,7 +23,7 @@ Let's take some time to make sure we all submitted hw correctly and we are able 
       - you can look at the repo in the browser by going to the url: `https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Avocado-Toast`
       - you can get the contents onto your computer (local version) by `git pull upstream master` (we set this up yesterday)
         - `pull` means bring the changes 'here'
-        - `upstream` is just an alias (another name) for the url location of our repo. Computer programers love to work smarter and not harder. By renaming the url to something short, informative and memorable it is much easier to type `upstream` than having to type `https://git.generalassemb.ly/Web-Development-Immersive-Remote/SEIR-Avocado-Toast/tree/master/unit_1/w01d04/morning_exercise` every single time you want to get the changes
+        - `upstream` is just an alias (another name) for the url location of our repo. Computer programers love to work smarter and not harder. By renaming the url to something short, informative and memorable it is much easier to type `upstream` than having to type `https://git.generalassemb.ly/Web-Development-Immersive-Remote/SEIR-Waverider/tree/master/unit_1/w01d04/morning_exercise` every single time you want to get the changes
         - `master` is the name of the branch. `master` is the default name of the first branch created. We will learn about branches later. For now, we'll only work with master
 2. Your remote version
  - accessible to you on github by going to the url

@@ -49,32 +49,47 @@
 //   console.log(element.toUpperCase());
 // }
 
-const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
-
-favMovies.sort()
-//.sort permanently sorts the array in alphabetical order
-favMovies.pop()
-favMovies.push('Guardians of the Galaxy')
-favMovies.reverse()
-let firstElement = favMovies.shift()
-favMovies.unshift('The Incredibles')
+// const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 //
-// // unshift returns an array with The Incredibles in the first position
-favMovies.splice(15, 1, 'Avatar') // splice permanently alters the array
-// //I couldn't figure out how to get the element without using index. I tried playing around with //getElementById but could not figure it out
+// favMovies.sort()
+// //.sort permanently sorts the array in alphabetical order
+// favMovies.pop()
+// favMovies.push('Guardians of the Galaxy')
+// favMovies.reverse()
+// let firstElement = favMovies.shift()
+// favMovies.unshift('The Incredibles')
+// //
+// // // unshift returns an array with The Incredibles in the first position
+// favMovies.splice(15, 1, 'Avatar') // splice permanently alters the array
+// // //I couldn't figure out how to get the element without using index. I tried playing around with //getElementById but could not figure it out
+// // console.log(favMovies);
+// let half = favMovies.slice(Math.floor(favMovies.length / 2))
+// console.log(half);
+// // // slice does not permanently alter an array
+// // // slice returns a copy of elements from the original myArray
 // console.log(favMovies);
-let half = favMovies.slice(Math.floor(favMovies.length / 2))
-console.log(half);
-// // slice does not permanently alter an array
-// // slice returns a copy of elements from the original myArray
-console.log(favMovies);
-console.log(favMovies.indexOf('Fast and Furious'));
-//I still have 'fast and furios' it was sliced on line 66 but that did not permanently alter the array - correct?
-// we were fine because we were only changing elements within the array not the array itself
+// console.log(favMovies.indexOf('Fast and Furious'));
+// //I still have 'fast and furios' it was sliced on line 66 but that did not permanently alter the array - correct?
+// // we were fine because we were only changing elements within the array not the array itself
+//
+// const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",["Lucinda", "Jacc", "Neff", "Snoop"],["Petunia", ["Baked Goods", "Waldo"]]];
+// whereIsWaldo.splice([1][0], 1)
+// console.log(whereIsWaldo);
+// whereIsWaldo[1][2] = 'No One'
+// console.log(whereIsWaldo);
+// console.log(whereIsWaldo[2][1][1]);
 
-const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",["Lucinda", "Jacc", "Neff", "Snoop"],["Petunia", ["Baked Goods", "Waldo"]]];
-whereIsWaldo.splice([1][0], 1)
-console.log(whereIsWaldo);
-whereIsWaldo[1][2] = 'No One'
-console.log(whereIsWaldo);
-console.log(whereIsWaldo[2][1][1]);
+// let kittyTalk = ['...human...why you taking pictures of me?...', '...the catnip made me do it...', '...why does the red dot always get away...']
+// for (var i = 1; i <= 20; i++) {
+//   if (i % 2 === 0) {
+//     meow = kittyTalk[Math.floor(Math.random() * kittyTalk.length)]
+//     console.log(meow);
+//   } else {
+//     console.log(i);
+//   }
+// }
+/// with this I get an undefined 20% of the time. I'll reach out to someone for a 1 on 1 in the Am
+
+// // meow = kittyTalk[Math.round(Math.random() * kittyTalk.length)]
+// // console.log(meow);
+///above I'm just testing my meow before entering it into the for loop

@@ -43,8 +43,31 @@
 // wolfy[0] = 'Gameboy'
 // console.log(wolfy);
 
-let turtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
+// let turtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
+//
+// for (let element of turtles) {
+//   console.log(element.toUpperCase());
+// }
 
-for (let element of turtles) {
-  console.log(element.toUpperCase());
-}
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+favMovies.sort()
+//.sort permanently sorts the array in alphabetical order
+favMovies.pop()
+favMovies.push('Guardians of the Galaxy')
+favMovies.reverse()
+let firstElement = favMovies.shift()
+favMovies.unshift('The Incredibles')
+//
+// // unshift returns an array with The Incredibles in the first position
+favMovies.splice(15, 1, 'Avatar') // splice permanently alters the array
+// //I couldn't figure out how to get the element without using index. I tried playing around with //getElementById but could not figure it out
+// console.log(favMovies);
+let half = favMovies.slice(Math.floor(favMovies.length / 2))
+console.log(half);
+// // slice does not permanently alter an array
+// // slice returns a copy of elements from the original myArray
+console.log(favMovies);
+console.log(favMovies.indexOf('Fast and Furious'));
+//I still have 'fast and furios' it was sliced on line 66 but that did not permanently alter the array - correct?
+// we were fine because we were only changing elements within the array not the array itself 

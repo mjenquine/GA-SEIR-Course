@@ -93,3 +93,18 @@
 // // meow = kittyTalk[Math.round(Math.random() * kittyTalk.length)]
 // // console.log(meow);
 ///above I'm just testing my meow before entering it into the for loop
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+median = nums.sort()
+//median = Math.floor(sorted.lenght /2)
+console.log(Math.floor(median[median.length / 2]))
+
+
+// median = nums[nums.length / 2]
+// console.log(median);
+//
+
+
+// Expected output:
+// => 15

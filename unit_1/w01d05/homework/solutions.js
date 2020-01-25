@@ -10,10 +10,11 @@
 ///////////// Palindrome
 //////////////////////////////////////////
 
-
-
-
-
+const checkPalindrome = (str) => {
+  return str.toLowerCase() == str.split('').reverse().join('').toLowerCase()
+}
+console.log(checkPalindrome('Radar'));
+console.log(checkPalindrome('Borscht'));
 
 
 

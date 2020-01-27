@@ -18,7 +18,7 @@ You'll be creating a simple, browser-based JavaScript game that utilizes `alert(
 
 ## Getting Started
 
-1. Inside today's homework folder, there's  a `landscaper` folder. Inside the landscaper folder, create `index.html` and `app.js` files
+1. Inside today's homework folder, create a `landscaper` folder. Inside the landscaper folder, create `index.html` and `app.js` files
 
 1. Connect your `app.js` file to your `index.html` file. Write some sort of `console.log()` in your `app.js` and open up your `index.html` file in the browser to check if you've connected your files correctly
 

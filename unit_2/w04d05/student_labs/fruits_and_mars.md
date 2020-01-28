@@ -26,7 +26,7 @@
     
 ### Resources
 
-- [__jsx-documentation__](https://reactjs.org/docs/jsx-in-depth.html)
+- [__jsx md from SEIR Repo__](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_2/w04d05/instructor_notes/2.%20INTRO-TO-JSX.md)
 
 ---
 

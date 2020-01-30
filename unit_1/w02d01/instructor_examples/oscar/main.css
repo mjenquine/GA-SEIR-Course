@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif|Poppins&display=swap');
+
+/* * {
+  border: 1px solid gold;
+} */
+
+/*******************************************
+* General
+********************************************/
+
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  width: 100%;
+}
+
+button {
+  padding: 3% 6%;
+  font-family: Poppins, sans-serif;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+ /*******************************************
+ * Header
+ ********************************************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo  {
+  flex-basis: 50%;
+  padding-left: 4em;
+  color: #0C40C8;
+}
+
+.top-nav {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-nav h2 {
+  color: silver;
+  padding: 0;
+  margin-top: 2em;
+  font-size: 1em;
+}
+
+.top-nav h3 {
+  padding: 0;
+  margin-top: 2em;
+  font-size: 1em;
+}
+
+.menu p {
+  border: 1px solid silver;
+  color: #0C40C8;
+}
+
+/*******************************************
+* Main
+********************************************/
+
+main h5 {
+  color: silver;
+}
+main .hero-text {
+  width: 42%;
+  color: white;
+  padding-top: 15vw;
+  padding-left: 10vw;
+}
+
+main h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 3em;
+  margin: 0;
+}
+
+.hero {
+  background-image: url("./images/OscarCover.png");
+  background-repeat:no-repeat;
+  height: 62vw;
+  background-size: cover;
+  margin-bottom: 1em;
+}
+
+.hero button  {
+  color: #0C40C8;
+}
+
+.learn-more {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.learn-more button {
+  font-size: .7em;
+  opacity: .7;
+}
+
+.card {
+  flex-basis: 30%;
+  border: 1px solid silver;
+  padding: 2em 2em 0 2em;
+  box-sizing: border-box;
+}
+
+.card h6  {
+  font-size: 1em;
+}
+
+.card img {
+  width: 100%;
+}
+
+.select-plan {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.select-plan h2 {
+  font-size: 1.5em;
+  font-family: Poppins;
+  color: silver;
+}
+
+.select-plan h3 {
+  font-family: 'PT Serif', serif;
+  font-size: 2.5em;
+}
+
+.choose-plan {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12em;
+}
+
+.choose-plan button:first-of-type {
+  background-color: #0C40C8;
+  color: white;
+  padding: 2% 10%;
+}
+
+.choose-plan button:last-of-type {
+  color: #0C40C8;
+  padding: 2% 10%;
+}
+
+/*******************************************
+* Footer
+********************************************/
+
+hr {
+  width: 95%;
+  opacity: .7;
+}
+
+footer {
+ display: flex;
+ justify-content: space-around;
+ margin-bottom: 2em;
+}
+
+.site-map {
+  flex-basis: 19%;
+}
+
+.site-map h4 {
+  font-weight: bold;
+}
+
+.site-map ul {
+  list-style: none;
+  padding : .2em;
+}
+
+.site-map li {
+  color: silver;
+  margin-bottom: .5em;
+}

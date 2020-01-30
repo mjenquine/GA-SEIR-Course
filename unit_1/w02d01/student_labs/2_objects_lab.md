@@ -16,7 +16,7 @@
 
 1. In today's `student_labs` folder, create an `objects.js` file and work in this file for the rest of this lab.
 
-## Syntax 
+## Syntax
 
 1. List and describe each individual piece of syntax that we use to construct an object. Don't leave anything out! The list is finite.
 
@@ -43,15 +43,15 @@ console.log(me) // returns => {firstName: "Nani", lastName: "Pelekai",  age: 21,
 6. Add a key to this object called: "place of residence" and give it a value of your hometown. Note that the key has spaces, therefore you cannot use dot notation.
 7. Access the value of "place of residence"
 
-## Fancy Greeting 
+## Fancy Greeting
 
-Write a function called `fancyGreeting` that accepts your `me` object as an argument. The function should `console.log` a greeting using the firstName and lastName values from the `me` object. For example: 
+Write a function called `fancyGreeting` that accepts your `me` object as an argument. The function should `console.log` a greeting using the firstName and lastName values from the `me` object. For example:
 
 ```js
 fancyGreeting(me) => // returns "Greetings, Nani Pelekai"
 ```
 
-## Slimer 
+## Slimer
 
 ```javascript
 const monster = {
@@ -67,22 +67,22 @@ const monster = {
     - What would you write to add a key to the object called `age`, and set the age to 6?
     - console.log the object to make sure `type` is creature, and `age` is 6
 
-## Ogres 
+## Ogres
 
 Let's say you want to make an adventure game where you are an adventurer and you are going to fight **ogres**.
 
 Using **objects**, create **models** and have them interact.
 
-* how would you model your `adventurer`? Your adventurer will want a **name** and **hitpoints**. What else would your adventurer need?
+* how would you model your `adventurer`? Your adventurer will want a **name** and **hitpoints**. What else would your adventurer need (maybe some restorative medicine like Pepto Bismol)?
 * how would you model an `ogre`? Your ogre will want **hitpoints**.
 
 * Write a very small program that will simulate a battle between your adventurer and an ogre.
 	* When your adventurer's hitpoints reach 0 the game is over.
 	* When your ogre's hitpoints reach 0 the game is over.
 
-* Bonus: Try to accept user input for the game by running it in the Chrome console and using alerts and prompts 
+* Bonus: Try to accept user input for the game by running it in the Chrome console and using alerts and prompts
 
-## Cat Combinator 
+## Cat Combinator
 
 ### 1. Mama cat
 * Define an object called `cat1` that contains the following properties:
@@ -147,7 +147,7 @@ Result:
 
 **This is to demonstrate that a function can return an object**
 
-## Cat Brain Bender 
+## Cat Brain Bender
 
 If `catCombinator` returns an **object**, and if `catCombinator` takes **objects** as **arguments**, then it stands to reason that:
 
@@ -171,11 +171,11 @@ Your output should look something like:
 
 ![](https://i.imgur.com/zuTzm5X.png)
 
-## Hungry for More? 
+## Hungry for More?
 
 <details><summary><strong>Profiler</strong></summary><p>
-	
-Write a function named `profiler` that takes three arguments that are all strings: your username, hometown and favorite color. The function should return an object with those as properties. 
+
+Write a function named `profiler` that takes three arguments that are all strings: your username, hometown and favorite color. The function should return an object with those as properties.
 
 **Example expected output:**
 
@@ -183,12 +183,12 @@ Write a function named `profiler` that takes three arguments that are all string
 profiler("stitches13", "new leaf", "orange")
 // returns the object => { username: "stitches13", hometown: "new leaf", favColor: "orange" }
 ```
-	
+
 </p></details>
 
 <details><summary><strong>Profiler Plus (Requires Profiler)</strong></summary><p>
-	
-Write a function named `profilerPlus` that takes two arguments: a key name (e.g. age), and a value for the key (e.g. 100). The function should use an object created from `profiler` to add on the key-value pair from the parameters. At the end of the function, return the now updated objected. 
+
+Write a function named `profilerPlus` that takes two arguments: a key name (e.g. age), and a value for the key (e.g. 100). The function should use an object created from `profiler` to add on the key-value pair from the parameters. At the end of the function, return the now updated objected.
 
 **Example expected output:**
 
@@ -196,7 +196,7 @@ Write a function named `profilerPlus` that takes two arguments: a key name (e.g.
 profilerPlus("age", 100)
 // returns the object => { username: "stitches13", hometown: "new leaf", favColor: "orange", age: 100 }
 ```
-	
+
 </p></details>
 
 <details><summary><strong>User Object Data Structure</strong></summary>
@@ -237,8 +237,8 @@ If we want to give our user a `friend` with a `name` and `age`, we could write:
 
 ```javascript
 user.friend = {
-	name: "Grace Hopper",
-	age: 85
+	name: "Sean Dudley",
+	age: 32
 }
 ```
 

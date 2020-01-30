@@ -5,7 +5,7 @@
 #### Learning Objectives
 
 - Adding a view layer to your express server 
-- MVC file organization and EJS 
+- MVC file organization and JSX
 
 #### Prerequisites
 
@@ -17,7 +17,7 @@
 
 ## Getting Started
 
-1. First, finish up the fruits app you've built in class so that the index route uses EJS to render all the fruits into HTML
+1. First, finish up the fruits app you've built in class so that the index route uses JSX to render all the fruits into HTML
     - Each fruit that is displayed should have a link to that fruit's show page
     - Each fruit's show page should have a link back to the index page
 1. Once you're done with that, move on to the Misson on Mars section of this lab 
@@ -26,13 +26,13 @@
     
 ### Resources
 
-- [EJS documentation](http://ejs.co/)
+- [__jsx md from SEIR Repo__](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_2/w04d05/instructor_notes/2.%20INTRO-TO-JSX.md)
 
 ---
 
 ## Hungry for More?
 
-1. Now that you know how to add view layers to express servers, go back to the superheroes lab and refactor it so that instead of using HTML within res.send, you res.render EJS pages instead.  
+1. Now that you know how to add view layers to express servers, go back to the superheroes lab and refactor it so that instead of using HTML within res.send, you res.render JSX pages instead.  
 1. We're sending HTML to our browser, but how do we send and link CSS? Research and try to implement it! 
 1. Keep working on the X-Files super bonus 
 

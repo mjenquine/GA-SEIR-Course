@@ -19,8 +19,7 @@ Minimum Functionality Required for this homework to be considered complete:
 1. Refer to the original [markdown](../instructor_notes/space_battle.md) for more details
 
 ## *If You Collaborated With a Classmate*
-We want to be sure we are seeing an accurate representation of your technical ability so we can support your learning and growth
-if you collaborated on this assignment, we don’t want you to fall into a weird plagiarism gray area.
+We want to be sure we are seeing an accurate representation of your technical ability so we can support your learning and growth. If you collaborated on this assignment, we don’t want you to fall into a weird plagiarism gray area.
 
 *Follow These Guidelines*
 1. Each person should still submit the homework issue independently.

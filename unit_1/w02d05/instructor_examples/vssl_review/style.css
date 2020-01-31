@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.image-container {
+  background-image: url('img/sailboat.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-size: 65px;
+}
+
+.header-bottom {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.middle {
+  text-align: center;
+  padding: 40px;
+  line-height: 80px;
+  font-size: 40px;
+  border-bottom: 1px solid grey;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 150px;
+}
+
+.column {
+  margin: 15px;
+}
+
+.column img {
+  width: 100%;
+}
+
+.row p {
+  color: lightgrey;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.banner {
+  color: lightgrey;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid grey;
+}

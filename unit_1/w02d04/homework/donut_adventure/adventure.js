@@ -1,5 +1,5 @@
 class Hero {
-  constructor (name, ) {
+  constructor (name) {
     this.name = name
     this.health = 100
     this.weapons = {
@@ -14,17 +14,18 @@ class Hero {
   announceHealth () {
     console.log(this.health);
   }
-  fight () {
+  fight (enemy) {
     console.log('i\'m ready to rumble');
+    let arr = Object.keys(this.weapons)
+    let randomKey = arr[Math.floor(Math.random() * arr.length)]
+    console.log(this.weapons[randomKey]);
+    enemy.health -= this.weapons[randomKey]
   }
 }
 const dougie = new Hero ('Dougie')
-// dougie.talkSass()
-// dougie.announceHealth()
-// dougie.fight()
 
 class Enemy {
-  constructor (name, ) {
+  constructor (name) {
     this.name = name
     this.health = 100
     this.weapons = {
@@ -39,12 +40,20 @@ class Enemy {
   announceHealth () {
     console.log(this.health);
   }
-  fight () {
+  fight (enemy) {
     console.log('i\'m going to flatten you like a slice of pepperoni');
+    let arr = Object.keys(this.weapons)
+    let randomKey = arr[Math.floor(Math.random() * arr.length)]
+    console.log(this.weapons[randomKey]);
+    enemy.health -= this.weapons[randomKey]
   }
 }
 const pizzaRat = new Enemy ('Pizza Rat')
-console.log(pizzaRat);
+dougie.talkSass()
 pizzaRat.talkSmack()
+dougie.announceHealth()
 pizzaRat.announceHealth()
-pizzaRat.fight()
+pizzaRat.fight(dougie)
+dougie.fight(pizzaRat)
+dougie.announceHealth()
+pizzaRat.announceHealth()

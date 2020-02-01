@@ -1,11 +1,11 @@
-* {
+/* * {
   margin: 0;
-  border: 1px solid gold;
+  border: 1px solid gold; */
 }
 body {
   font-family: 'DM Sans', sans-serif;
   padding: 1em 4em;
-  background-color: whitesmoke;
+  background-color: red;
 }
 main {
   display: flex;
@@ -21,7 +21,19 @@ main>section {
   width: 13em;
   margin-bottom: 2em;
 }
-
+.main-tags {
+  font-size: 7px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1px;
+}
+.main-tags-each {
+  padding: 1.5px;
+  margin: 1.5px;
+  background-color: #eeeeee;
+  color: #777777;
+}
 
 
 

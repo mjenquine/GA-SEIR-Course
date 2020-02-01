@@ -1,11 +1,11 @@
-/* * {
+* {
   margin: 0;
-  border: 1px solid gold; */
+/* border: 1px solid gold; */
 }
 body {
   font-family: 'DM Sans', sans-serif;
   padding: 1em 4em;
-  background-color: red;
+  background-color: whitesmoke;
 }
 main {
   display: flex;
@@ -20,6 +20,8 @@ main img {
 main>section {
   width: 13em;
   margin-bottom: 2em;
+  background-color: white;
+  box-shadow: 1.5px 1.5px .5px #eeeeee;
 }
 .main-tags {
   font-size: 7px;
@@ -27,6 +29,8 @@ main>section {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 1px;
+  margin-left: .3em;
+  margin-bottom: .5em;
 }
 .main-tags-each {
   padding: 1.5px;
@@ -34,18 +38,23 @@ main>section {
   background-color: #eeeeee;
   color: #777777;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+.main-titles-and-prices {
+  display: flex;
+  justify-content: space-between;
+  padding-left: .5em;
+  padding-right: .5em;
+  font-size: 10px;
+  margin-bottom: .25em;
+}
+.main-titles {
+  color: #92b2ba;
+}
+.prices {
+  background-color: #f0a8bb;
+  color: white;
+  padding: 1px;
+  font-size: 9px;
+}
 a {
   text-decoration: none;
 }
@@ -67,7 +76,7 @@ a:hover {
   background-image:url('imgs/banner.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 20em;
+  height: 18em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +111,7 @@ footer {
   background-color: #eeeeee;
 }
 footer img {
-  width: 25%;
+  width: 40%;
   height: auto;
 }
 footer section {

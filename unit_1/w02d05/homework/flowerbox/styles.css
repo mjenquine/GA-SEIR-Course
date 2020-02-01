@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  border: 1px solid gold;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  padding: 1em 4em;
+  background-color: whitesmoke;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main img {
+  width: 100%;
+  height: auto;
+}
+main>section {
+  width: 13em;
+  margin-bottom: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.navigation {
+  background-color: #92b2ba;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+.navigation a {
+  color: white;
+}
+.hero-section {
+  background-image:url('imgs/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 2em;
+}
+#hero-section-title {
+  color: #92b2ba;
+  font-size: 3em;
+  padding-right: .5em;
+  text-shadow: 1px 1px .5px white;
+}
+#hero-section-subtitle {
+  padding: .25em .5em;
+  background-color: white;
+  color: #f0a8bb;
+  margin-right: 2em;
+  font-size: .75em;
+}
+footer a {
+  color: #777777;
+}
+footer p {
+  color: #f9dde0;
+  font-weight: bold;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2em 8em;
+  font-size: 12px;
+  background-color: #eeeeee;
+}
+footer img {
+  width: 25%;
+  height: auto;
+}
+footer section {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+footer ion-icon {
+  color: #92b2ba;
+}
+#footer-left-third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer-middle-third {
+  padding: 0 2em;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#footer-right-third {
+  padding-left: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-headings {
+  color: #92b2ba;
+  font-weight: bold;
+  font-size: 14px;
+}

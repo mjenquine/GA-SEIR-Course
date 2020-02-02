@@ -68,43 +68,42 @@ spaceShipsArray.push(spaceShip = new SpaceShip());
 //This will start the game
 ///////////////////////////////////////////////////
 playGame = () => {
-
+  alert('Welcome Captain. You made it to the flight deck just in time. There seems to be hostile foriegn objects on the radar ahead. There heading in our direction at an alarming rate')
+  askForAction(spaceShipsArray[0], alienShipsArray[0])
+}
+/////////////////////////////////////////////////
+      Question / Response Prompt
+/////////////////////////////////////////////////
+askForAction = (player, enemy) => {
+  let choice = prompt ('Alien droids are approaching fast. What would you like to do?', '(a)ttack / (r)etreat')
+  if (!choice) {
+    alert('I\'m sorry. Try again')
+    return
+  }
+  if (choice === 'a') {
+    player.attack(player, enemy);
+    checkHealth(player, enemy)
+    //askForAction(player, enemy);
+  }
+  if (choice === 'r') {
+    alert('You can\'t run forever. They\'re too fast')
+    askForAction(player, enemy);
+  }
+  else {
+    alert ('You\'d better act fast. They\'re approaching quickly')
+    askForAction(player, enemy);
+  }
 }
 ///////////////////////////////////////////////////
-//       Question / Response Prompt
-///////////////////////////////////////////////////
-// askForAction = (player, enemy) => {
-//   let choice = prompt ('Alien droids are approaching fast. What would you like to do?', '(a)ttack / (r)etreat')
-//   if (!choice) {
-//     alert('I\'m sorry. Try again')
-//     return
-//   }
-//   if (choice === 'a') {
-//     player.attack(player, enemy);
-//     checkHealth(player, enemy)
-//     //askForAction(player, enemy);
-//   }
-//   if (choice === 'r') {
-//     alert('You can\'t run forever. They\'re too fast')
-//     askForAction(player, enemy);
-//   }
-//   else {
-//     alert ('You\'d better act fast. They\'re approaching quickly')
-//     askForAction(player, enemy);
-//   }
-// }
-
-///////////////////////////////////////////////////
-//     Check Health of Both Player and Enemy
+//     Check Health of Enemy
 ///////////////////////////////////////////////////
 
 const checkHealth = (player, enemy) => {
   if (enemy.hull <= 0) {
-    shiftAlienArray(player, enemy)
+    shiftAlienArray()
     alert('You\'ve destroyed an alien ship')
   }
 }
-
 
 ////////////////////////////////////////////////////
 //    Shift Alien Array
@@ -116,12 +115,17 @@ const shiftAlienArray = () => {
   }
 }
 
+///////////////////////////////////////////////////
+//     Check Health of Player
+///////////////////////////////////////////////////
 
-
-
-
+const checkHealth = (player, enemy) => {
+  if (player.hull <= 0) {
+    alert('You\'ve been destroyed by an alien ship!!! Game Over')
+    return
+  }
+}
 
 
 buildAlienShipArray();
-shiftAlienArray();
-askForAction(spaceShipsArray[0], alienShipsArray[0])
+playGame();

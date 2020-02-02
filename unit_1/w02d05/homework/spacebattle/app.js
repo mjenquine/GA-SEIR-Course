@@ -27,6 +27,9 @@ class SpaceShip {
     let rng = Math.random();
     if(rng <= this.accuracy){
       enemy.hull -= player.firepower;
+      alert('Our lasers struck an alien droid')
+    } else {
+      alert ('Commander, steady those cannons. Your attempt missed the alien vessel')
     }
   }
 }
@@ -45,6 +48,10 @@ class AlienShip {
     let rng = Math.random();
     if(rng <= this.accuracy){
       player.hull -= enemy.firepower;
+      alert(`We\'re hit. The aliens have depleted our sheilds by ${enemy.firepower}. Our hull can sustain ${player.hull} more damage.`)
+    } else {
+      alert(`The aliens have attacked,
+      but missed our vessel`)
     }
   }
 }
@@ -121,28 +128,49 @@ const shiftAlienArray = () => {
 
 const checkForWin = (player, enemy) => {
   if (alienShipsArray.length === 0) {
-    alert('Captian, you\'ve destroyed all alien vessels. You\'ve saved the fleet!!!'')
+    alert('Captian, you\'ve destroyed all alien vessels. You\'ve saved the fleet!!!')
+    alert('Game Over')
     return
   } else {
-    alert('There\'s more alien ships on the radar. Reload sonic blast canons')
-    askForAction(player, enemy)
+    alert(`There\'s ${alienShipsArray.length} more alien ships on the radar. We need to reload the sonic blast canon`)
+    enemy.attack(player, enemy)
+    checkPlayerHealth(player, enemy)
   }
 }
-
-
-
 
 ///////////////////////////////////////////////////
 //     Check Health of Player
 ///////////////////////////////////////////////////
 
 const checkPlayerHealth = (player, enemy) => {
-  if (player.hull <= 0) {
-    alert('You\'ve been destroyed by an alien ship!!! Game Over')
-    return
-  }
+  if (player.hull <= 12) {
+    alert('We\'re sustaining too much damage act fast captain or the entire federation faces annihilation')
+    askForAction(player, enemy)
+    } else if (player.hull <= 0) {
+        alert('You\'ve been destroyed by an alien ship!!! Game Over')
+        return
+        } else {
+            askForAction(player, enemy)
+            }
 }
+
+
+///////////////////////////////////////////////////
+////          Enemy Attack Function
+///////////////////////////////////////////////////
+
+const enemyAttack = (player, enemy) => {
+  enemy.attack(player, enemy)
+  prompt('Captain, an alien vessel is within it\'s weapon range!!!! We\'re about to take fire')
+  checkPlayerHealth(player, enemy)
+}
+
+///////////////////////////////////////////////////
+////
+///////////////////////////////////////////////////
 
 
 buildAlienShipArray();
 playGame();
+
+//While working in groups Eduardo and I mob coded the class functions and value randomizer. After class break and finding that we should not code together we did not produce any other like code.

@@ -6,6 +6,8 @@ Creator: jQuery Magic:Karolin Rafalski<br>
 Competencies: create, append/remove elements in the DOM using jQuery, traverse the DOM, add/remove attributes, html tables <br>
 Prerequisites: JavaScript, HTML, CSS <br>
 
+![hallows](https://ichef.bbci.co.uk/news/976/cpsprodpb/BE66/production/_98524784_8da854f5-071b-438d-8888-28a5b23d1304.jpg)
+
 # jQuery Magic
 ## Intro
 

@@ -20,6 +20,7 @@ Intro to CSS rules:
 
 
 Transform is static - it immediately changes the element and it stays that way.
+![transform](https://i.redd.it/vxi8nqmxrpe41.jpg)
 
 Transition - You determine the start and end state, the computer handles the tweening (the states in between the beginning and the end).
 

@@ -42,12 +42,7 @@
 - Give each alternating div a different class somehow
 - Constrain the number of squares on each row by putting them all in a container of fixed width.
 
-1. Challenge: Make your grid a perfect checkerboard, like so:
 
-![](https://i.imgur.com/7UfIlHR.png)
-
-- The checkerboard alternates colors on each row and each column.
-- Remove the whitespace between rows (if it exists).
 
 ## Pyramids
 
@@ -91,6 +86,13 @@ Note: if you do not center the triangles, it is ok if your output is this:
 }
 ```
 
+### Hungry for More
+1. Challenge: Make your grid a perfect checkerboard, like so:
+
+![](https://i.imgur.com/7UfIlHR.png)
+
+- The checkerboard alternates colors on each row and each column.
+- Remove the whitespace between rows (if it exists).
 ---
 
 *Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*

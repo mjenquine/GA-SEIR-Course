@@ -1,0 +1,13 @@
+* {
+  border: 1px solid gold;
+}
+
+footer  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#middle-footer {
+  padding-top: 1em;
+}

@@ -36,6 +36,7 @@ body {
 .top-nav {
   display: flex;
   justify-content: space-evenly;
+
 }
 #phone-number {
   margin-left: 400px;

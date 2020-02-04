@@ -166,8 +166,15 @@ $secrets.show('slow')
 $li5.addClass('cabbage')
 $li5.removeClass('cabbage')
 
+/////////////////////////////////////////
+//           Year Seven
+/////////////////////////////////////////
 
+$h5.text('Fall 2018')
 
-
+const $moreButterBeer = $('<li>')
+$moreButterBeer.text('Butter beer')
+$ul.prepend($moreButterBeer)
+$ul.attr('storage', 'chest')
 
 })

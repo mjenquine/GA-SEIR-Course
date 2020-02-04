@@ -1,10 +1,10 @@
 [![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
 
 # Part 1
-![Grids and Pyramids](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_1/w03d02/student_labs/grids_and_pyramids.md)
+[Grids and Pyramids](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_1/w03d02/student_labs/grids_and_pyramids.md)
 
 # Part 2
-![Random Imager](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_1/w03d02/student_labs/random_imager.md)
+[Random Imager](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_1/w03d02/student_labs/random_imager.md)
 
 # Part 3 HTML + CSS Practice
 1. Spend 5 - 10 minutes finding a calculator you find aesthetically pleasing or interesting (it can be in google images, in your house, on your phone). Draw a wireframe and take some notes.

@@ -156,10 +156,15 @@ $h2Name.append($h4Pet)
 
 $h3House.append($h4Pet)
 
+/////////////////////////////////////////
+//           Year Six
+/////////////////////////////////////////
 
-
-
-
+const $secrets = $('.secret')
+$secrets.delay(2000).hide('slow')
+$secrets.show('slow')
+$li5.addClass('cabbage')
+$li5.removeClass('cabbage')
 
 
 

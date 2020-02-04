@@ -53,15 +53,14 @@ const cards = [
 ```
 
 - Make it so that when you click the "Add random image" div, one random image from your array will appear on the page.
-- Make it so that each image is re-sized to the same proportions as the square div (100 x 100). Or, you could use Google images -> Tools -> Size to source images at the size you want.
 - Make it so an image is added rather than replaced.
 - Make it so the images are added horizontally.
-- Make it so that when you click on one of the added images, it will be removed from the page.
 - Each added image can run the same function to achieve this goal.
 
 ## Hungry for More? 
 - Add an input element that takes a new URL that allows you to add a new URL string to your array
 - Use the URL to make a human readable alt attribute. ex: `https://www.trustedtarot.com/img/cards/the-fool.png` to be `The Fool`
+- Make it so that when you click on one of the added images, it will be removed from the page.
 
 ## Even Hungrier for More?
 

@@ -61,7 +61,7 @@ const cards = [
 
 ## Hungry for More? 
 - Add an input element that takes a new URL that allows you to add a new URL string to your array
-- Make a human readable alt attribute eg. `https://www.trustedtarot.com/img/cards/the-fool.png` to be `The Fool`
+- Use the URL to make a human readable alt attribute. ex: `https://www.trustedtarot.com/img/cards/the-fool.png` to be `The Fool`
 
 ## Even Hungrier for More?
 

@@ -49,7 +49,8 @@ const cards = [
   'https://www.trustedtarot.com/img/cards/temperance.png',
   'https://www.trustedtarot.com/img/cards/the-tower.png',
   'https://www.trustedtarot.com/img/cards/the-moon.png'
-]```
+]
+```
 
 - Make it so that when you click the "Add random image" div, one random image from your array will appear on the page.
 - Make it so that each image is re-sized to the same proportions as the square div (100 x 100). Or, you could use Google images -> Tools -> Size to source images at the size you want.

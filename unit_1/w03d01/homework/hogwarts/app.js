@@ -61,7 +61,7 @@ $ul.append($li6)
 
 /////////////////////////////////////////
 //           Year Four
-////////////////////////////////////////
+/////////////////////////////////////////
 
 const $h5 = $('<h5>')
 $h5.text('Spring 2017')
@@ -138,13 +138,23 @@ $tr6.append($td12)
 $tr7.append($td13)
 $tr7.append($td14)
 
+/////////////////////////////////////////
+//           Year Five
+/////////////////////////////////////////
 
 
+$h4Wand.remove()
+$li1.remove()
 
+const $h4Wand2 = $('<h4>')
+$h4Wand2.text('Earth Shaker')
+$h4Pet.append($h4Wand2)
 
+$h4Wand2.css('color', 'indigo')
 
+$h2Name.append($h4Pet)
 
-
+$h3House.append($h4Pet)
 
 
 

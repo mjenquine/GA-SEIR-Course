@@ -1,0 +1,21 @@
+body {
+  background-color: lightblue;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.owl {
+  font-family: fantasy;
+}
+
+table, th, td {
+  border: 1px solid gray;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.cabbage {
+  color: chartreuse;
+}

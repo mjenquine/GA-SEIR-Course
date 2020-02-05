@@ -1,0 +1,32 @@
+/* mobile */
+* {
+  border: 1px solid aqua;
+  margin: 0;
+}
+body {
+  background: red;
+}
+p {
+  height: 60px;
+  text-align: center;
+
+}
+.p2 {
+  height: 120px
+}
+
+/* desktop */
+@media (min-width: 520px) {
+  body {
+    background: blue;
+  }
+  .bottom-boxes {
+    display: flex;
+    flex-direction: row;
+  }
+  .p2, .p3 {
+    background-color: red;
+    height: 120px;
+    width: 50%;
+  }
+}

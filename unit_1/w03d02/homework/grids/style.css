@@ -1,0 +1,19 @@
+body {
+ max-width: 160px;
+ display: flex;
+ flex-wrap: wrap;
+
+}
+.red-box {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+.black-box {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+div {
+  margin-bottom: 2px;
+}

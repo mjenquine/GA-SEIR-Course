@@ -18,6 +18,9 @@ Intro to CSS rules:
 - Animation
 
 
+![transform](https://i.redd.it/vxi8nqmxrpe41.jpg)
+
+
 
 Transform is static - it immediately changes the element and it stays that way.
 

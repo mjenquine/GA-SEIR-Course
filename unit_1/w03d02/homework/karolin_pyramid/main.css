@@ -1,0 +1,18 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row  {
+  display: flex;
+  justify-content: center;
+}
+
+.triangle {
+    display: flex;
+    width: 0;
+    height: 0;
+    border-left: 2vh solid transparent;
+    border-right: 2vh solid transparent;
+    border-bottom: 4vh solid cadetblue;
+}

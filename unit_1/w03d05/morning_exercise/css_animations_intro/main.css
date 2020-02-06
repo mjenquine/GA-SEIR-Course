@@ -1,80 +1,47 @@
 /*************************
 * General
 *************************/
-
 body {
   background: ghostwhite;
 }
-
 .container {
   width: 90%;
   margin:auto;
-  /* border: 1px solid gold; */
+  border: 1px solid gold;
   margin-top: 2.5em;
 }
-
 .demo {
   display: inline-block;
   width: 100px;
   height: 100px;
 }
-
 /*************************
 * Transform
 *************************/
-
 .transform {
   background-color: thistle;
-  /* transform: translate(100px,100px);
-  transform: rotate(45deg);
-  transform: scale(2);
-  transform: skew(20deg); */
-  transform: skew(10deg) rotate(45deg) translate( 50px, 50px) scale(.5);
 }
-
-
 /*************************
 * Transition
 *************************/
-
 .transition {
   background: red;
-  /* moved duration to hover because faded-in */
-  /* transform: translate(-100px); */
-  /* border: 5px solid black; */
-  transition-duration: 4s;
-  transition-timing-function: linear;
-
 }
-
 .transition:hover {
   background:  blue;
-  transform: translate(300px);
-  /* border: 10px solid gold; */
-
-
 }
-
 /*************************
 * Animation
 *************************/
-
 .animation {
   background: black;
   position: relative;
-  animation-name: rainbow-move-change;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-
 }
-
-
 /*simple start*/
 @keyframes black-to-white {
   0% {background: black}
   100% {background: ghostwhite}
 }
-
 /*just colors*/
 @keyframes rainbow {
   0% { background: black; }
@@ -89,7 +56,6 @@ body {
   90% { background: black; }
   100% { background: ghostwhite; }
 }
-
 /*colors and movement*/
 @keyframes rainbow-move {
   0% {background: black; left:0%; top:0%;}
@@ -104,7 +70,6 @@ body {
   90% {background: black; }
   100% {background: ghostwhite; left:0px; top:0px; }
 }
-
 /*colors, movement and rotation*/
 @keyframes rainbow-move-change {
   0% {background: black; left:0%; top:0%;}

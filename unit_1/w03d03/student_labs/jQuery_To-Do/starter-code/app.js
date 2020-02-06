@@ -14,18 +14,17 @@ $(() => {
 //=============================================================
 })
 const render = () => {
-
-  $('#to-do-list').empty()
-  console.log(list);
-
+  $('ul').empty()
   list.forEach((toDo) => {
-    const $div = $('<div>').text(toDo).addClass('to-do-item')
-    $('#to-do-list').append($div)
+    const $li = $('<li>').text(toDo).addClass('to-do-item')
+    $('#things-to-do-list').append($li)
     const $statusButton = $('<button>').attr('type', 'button').text('Complete')
-    $statusButton.appendTo($div)
-    // $statusButton.on('click', (event) => {
-    //   $(event.currentTarget).text('Remove')
-    //   console.log($(event.parent));
-    // })
+    $statusButton.appendTo($li)
+    $statusButton.on('click', (event) => {
+      $(event.currentTarget).text('Remove').parent().appendTo('#things-done-list')
+      $statusButton.on('click', (event) => {
+        $(event.currentTarget).parent().remove()
+      })
+    })
   })
 }

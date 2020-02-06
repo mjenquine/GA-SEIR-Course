@@ -87,6 +87,7 @@ input:focus {
 
 /* style list items, common styles */
 .to-do-item, .done-item {
+  padding: 1em;
   margin: .5em;
   border-radius: 1em;
   animation: zoom-in .3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
@@ -96,6 +97,8 @@ input:focus {
 /* Style list item specific to done-item */
 .to-do-item {
   background:var(--calm-teal);
+  display: flex;
+  
 }
 
 /* Style list item specific to done-item */

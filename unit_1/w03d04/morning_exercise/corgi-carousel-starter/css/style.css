@@ -36,6 +36,7 @@ body {
 .carousel-images img {
   width: 100%;
   border-radius: 10px;
+  display: none;
 }
 .carousel-button {
   align-self: center;
@@ -51,4 +52,7 @@ body {
   background: #fa8d8e;
   box-shadow: 1px 1px #f2cd99;
   color: white;
+}
+.carousel-images img:first-of-type {
+  display: block;
 }

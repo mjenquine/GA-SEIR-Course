@@ -1,9 +1,14 @@
+body {
+  /* remove vertical space between rows of inline block elements */
+  font-size: 0;
+}
+
 .square {
     display:inline-block;
     background: ivory;
     width: 20px;
     height: 20px;
-    border: 1px solid black;
+    border: 1px dotted rgba(200,200,200,.5);
 }
 .pink {
     background: pink;

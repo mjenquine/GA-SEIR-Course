@@ -1,0 +1,21 @@
+# Improving at code alongs
+
+- **CLOSE** every single app and tab you are not using (start with just for lectures! )
+  - **NEED** the tabs? Do your builds in ONE chrome window. Use a totally different one Safari/Firefox/Brave etc for looking stuff up. If you open up an extra tab in chrome - grab the URL and open the tab in your other browser, close the tab in chrome down
+  - restart your computer every morning - give yourself a fresh start
+  - use bookmarks/learn to use bookmarks
+    - make an html folder, a css one, a js one, a good reading one, reference, tutorial… etc… use the folders
+  - look into pocket if bookmarks are not cutting it for you
+- **ORGANIZE** your windows. You should not have to resize anything, nor minimize/maximize anything during a code along - do this BEFORE the code along starts
+  - ideas
+    - same layout as the instructor
+    - remember to use spectacle
+    - remember to change font sizes, as appropriate
+    - toggle the project tree in your text editor, as needed
+    - split the panes in your text editor
+- **BUILD SPEED WITH YOUR WORKFLOW**
+  - Go to typing.io or google ‘free typing practice’ and practice typing 5 minutes every morning - Commit to doing it 5 days in 1 week - if you see results keep at it. 5 minutes can do a lot for you
+  - You don’t have to be fully awake to practice typing - it is a good brain stretch/ ease into the day activity
+  - Go back to setting up for success - make a card with the shortcuts you know you should be using them. Take 5 minutes and practice them. Then try to use them while you code. I know it doesn’t feel like you have time. But speeding up your workflow will help you increase your overall speed and decrease mental overload
+- \*ASK FOR HELP\*\*
+  - During lab time you can ask for help to organize your windows, ask how to improve your workflow

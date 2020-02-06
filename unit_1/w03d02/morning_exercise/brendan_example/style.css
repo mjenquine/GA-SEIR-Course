@@ -1,0 +1,25 @@
+/* Default mobile styles */
+
+body {
+  background: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Desktop desigin */
+@media (min-width: 600px){
+  body {
+    background: blue;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+}

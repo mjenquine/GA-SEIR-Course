@@ -7,8 +7,8 @@ There are no full day classes during project weeks, but we do expect you to be w
 
 There are **no attendance checks during this project week, except:**
 
-  - **Wednesday, Feb 12**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM Eastern
-    - You will also have Outcomes as normal on Tuesday at the end of the day starting at 4:30 PM Eastern
+  - **Thursday, Feb 13**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM Eastern
+    - You will also have Outcomes as normal on Wednesday at the end of the day starting at 4:30 PM Eastern
 
 _Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
 
@@ -116,7 +116,7 @@ _How to prepare for your project approval_
 - You will have to make changes and adjust/adapt as you build
 
 ## How to Submit Your Project
-Your project is due on Wednesday, Feb 12 at 10:00 am EST. You will present your project and show your code to classmates and instructors.
+Your project is due on Thursday, Feb 13 at 10:00 am EST. You will present your project and show your code to classmates and instructors.
 
 :heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1vwNAo9YW9Il0H_MhkDDXh4esbw0XcS5lZ58aILxs7Uc/edit#gid=0). Note that this will be the order you present your projects!
 
@@ -126,7 +126,7 @@ Your project is due on Wednesday, Feb 12 at 10:00 am EST. You will present your 
 3. Seek out help with our class TA
 
 **TA Hours** (all times EST): 
-- TBD
+- Normal Hours!
 
 ## Suggested Ways to Get Started
 

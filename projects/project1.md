@@ -8,7 +8,7 @@ There are no full day classes during project weeks, but we do expect you to be w
 There are **no attendance checks during this project week, except:**
 
   - **Thursday, Feb 13**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM Eastern
-    - You will also have Outcomes as normal on Tuesday at the end of the day starting at 4:30 PM Eastern
+    - You will also have Outcomes as normal on Wednesday at the end of the day starting at 4:30 PM Eastern
 
 _Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
 

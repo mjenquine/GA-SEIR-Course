@@ -164,6 +164,6 @@ Consider framing your project around a problem. For example, if I were to create
 * **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
 * **[jQuery Docs](http://api.jquery.com)**
 * **[GitHub Pages](https://pages.github.com)**
-* **[Trello](trello.com)**
+* **[Trello](https://trello.com)**
 
 <hr>  

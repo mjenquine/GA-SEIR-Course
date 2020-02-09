@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.spacer {
+  height: 3em;
+  width: 3em;
+}
+
+.reports {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  text-align: center;
+  background: thistle;
+  padding: 1em;
+  align-items: flex-end;
+}
+
+.policeButton {
+  width: 5px;
+}
+
+.reports > button {
+  width: 50%;
+}
+
+dd {
+  align-items: flex-start;
+  padding: 2em;
+  font-size: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  background: ghostwhite;
+}
+
+p {
+  font-size: 1em;
+}

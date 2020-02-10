@@ -12,7 +12,7 @@
 
 ## Dependencies (recommended NPM Packages)
 - Express
-- JSX
+- EJS
 - Request (make requests to other web sites in order to get data back)
 - Morgan (more informative info on request/responses logging in terminal)
 
@@ -37,7 +37,7 @@ Both sets of data will be in JSON format:
  There are a lot of extra data, the user simply doesn't need to see all of it and we're mostly interested in the description and location information.
 
 
- #### 1a (Bonus, don't need to complete this step to keep going, you will be 'filtering' via what you choose to display with JSX in the next step):
+ #### 1a (Bonus, don't need to complete this step to keep going, you will be 'filtering' via what you choose to display with EJS in the next step):
 
  Filter out the unnecessary key-value pairs and only return the following:
 
@@ -53,8 +53,8 @@ Both sets of data will be in JSON format:
  #### 1b:
  Make these views:
 
- `RatSightings.jsx`
- `Violations.jsx`
+ `rat_sighting_results.ejs`
+ `violation_results.ejs`
 
  Now that we have the right data for each request let's style it and make it more user friendly.
 
@@ -126,7 +126,7 @@ Both sets of data will be in JSON format:
 
  #### 2c
 
- Create a view `Restaurants.jsx` which displays cards for each restaurant, which matches your query. Keep in mind that each restaurant has violations, each of which is its own card. CARDCEPTION!
+ Create a view `restaurants.ejs` which displays cards for each restaurant, which matches your query. Keep in mind that each restaurant has violations, each of which is its own card. CARDCEPTION!
 
  ![cardception](cardception.jpg)
 

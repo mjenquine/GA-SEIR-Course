@@ -1,118 +1,170 @@
-# Rat-to-Restaurant
+# First Contact
 
-#### Origins: NYC Campus ~ Spring 2016
+##### Origins: NYC Campus ~2015
+##### Modified by Peter Petrov
+##### Hints and clarifications by Karolin Rafalski
 
- The new Tourist of NYC Department has commissioned you to find the out how well restaurants in NYC are dealing with the ever-powerful, ever-clever rat population.
+![XFiles](./xfiles.jpeg)
 
- New York City has a web site with open data. [NYC Open Data](https://opendata.cityofnewyork.us/)
+The FBI has resurrected the X-Files. Agent Mulder has resurfaced and his search for the truth remains unabated. *It is out there*.
 
- You can search for all sorts of things there and there is a lot of great data that can be put to great use!
+In the years since Mulder's disappearance the digital age has brought with it treasure troves of information, both government and citizen. The FBI is still reluctant to invest too many resources into their investigations forcing Mulder and Skully to recruit a junior developer out of a bootcamp to help them make sense of all the newly available data.
 
- We'll be using restaurant violations and rat sightings data.
+You have been contracted by the scientifically rigorous Agent Skully to help in the quest for truth. You not only fit their aggressively mediocre budget, but also your profile is low enough that you can be eliminated without any repercussions—a dangerous combination.
 
+<<<<<<< HEAD
 ## Dependencies (recommended NPM Packages)
 - Express
 - EJS
 - Request (make requests to other web sites in order to get data back)
 - Morgan (more informative info on request/responses logging in terminal)
+=======
+## Part 1
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4
 
-## Data
+![XFilesOffice](./xfiles-office.jpg)
 
-Both sets of data will be in JSON format:
+Walking into the office you make yourself comfortable and start exploring their systems. Agent Scully has asked you to provide them with a way in which they would be able to list all UFO sightings in a given location. In your search you stumble upon a file called `sightings.json`. It looks promising and, after some investigation, it appears to have data about UFO sightings over the past year or so.
 
-(large data sets, will take a while to load)
+Write a command line application called `helper.js` which Scully can use to find all sightings within a given state. Have the application take one command line argument which contains the name of the state and log to the console a summary of each sighting in that state. For example:
 
-- [Rat Signtings](https://data.cityofnewyork.us/resource/3q43-55fe.json)
+<br>
 
-- [Restaurant Violations](https://data.cityofnewyork.us/resource/9w7m-hzhe.json)
+<details><summary>Hints</summary>
+1. require the `sightings.json` file as data
 
-### Step 0
-- Build an express app with the above dependencies
+**helper.js**
 
-### Step 1
- Build two routes, `/rats` and `/violations`. Each will render a separate view that has a form. That form will allow the user to search each dataset by zipcode. (You'll have to look at the data for the key, it might be under `zip`, `zipcode`, `incident_zip` etc.)
+```js
+// access the data in this file
+const sightingsData = require('./sightings.json')
 
- The pure JSON response from the NYC Open Data API will be returned in another route called `/rats/results` or `/violations/results`
+// test it
+console.log(sightingsData[0])
 
- There are a lot of extra data, the user simply doesn't need to see all of it and we're mostly interested in the description and location information.
+// expected output
+// { date: '1/31/15 22:00',
+//  city: 'Lancaster',
+//  state: 'CA',
+//  shape: 'Sphere',
+//  duration: 'several minutes',
+ // description: 'Orange lights.' }
 
+```
 
+<<<<<<< HEAD
  #### 1a (Bonus, don't need to complete this step to keep going, you will be 'filtering' via what you choose to display with EJS in the next step):
+=======
+1. Access the firsts argument from terminal
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4
 
- Filter out the unnecessary key-value pairs and only return the following:
-
-     Rats: boro, location, incident zip, lat, long, descriptor
-
-     Violations: boro, dba, zip code, grade, street, action, violation_description
-
- (If you want to include other data go right ahead)
-
- At this point we are just rendering json!
+**Bash:** `node helper.js state=SC`
 
 
- #### 1b:
- Make these views:
+```js
+// access the argument
+const state = process.argv[2]
 
+// test it
+console.log(state)
+
+// expected output
+// state=SC
+```
+
+
+</details>
+
+<<<<<<< HEAD
  `rat_sighting_results.ejs`
  `violation_results.ejs`
+=======
+<br>
+<hr>
+<br>
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4
 
- Now that we have the right data for each request let's style it and make it more user friendly.
+```
+=====================
+Date: 1/31/15/ 21:30
+City: Conway
+State: SC
+Shape: Fireball
+Duration: 5 Minutes
+====================
+Date: 1/27/15 20:00
+City: Myrtle Beach
+State: SC
+Shape: Changing
+Duration: 10 Seconds
+====================
+.
+.
+.
+```
 
- We're going to use the concept of cards. Each rat sighting or restaurant violation will have it's own card.
+Excited after immersing yourself in a beautiful combination of javascript and the possibilities of extraterrestrial visitation you decide to call it a job well done. But just as the sun begins to creep through the basement window your phone buzzes. Mulder and Skully are in Arkansas investigating the disappearance of man in a town where the residents really are what they eat. Mulder insists on an extraterrestrial connection based on reports of Foxfire near where the missing mans car was located. Also sometimes called "fairy fire", it is the bioluminescence created by some species of fungi present in decaying wood, *but* is often reported in conjunction with UFO sightings.
 
- A card is simply a div that styles and displays the information in a sane and readable way. You can style the card however you like, but for example a bare bones rat sightings card might look like this:
+Find all the UFO sightings in that state for the past year to help out your new colleagues.
 
- ![card](card.png)
+Mulder and Skully, after some hesitation, have decided to accept you as a valuable resource and are as sure as they can be that your not bought by the Syndicate. They've requested that you extend your script to make the data even more accessible.
 
- You can read about cards here:
- https://econsultancy.com/blog/64646-15-delicious-examples-of-card-based-web-design/
+**BONUS**
+Extend your application to accept different queries. Allow Scully to look for sightings by city, shape, duration.
 
- ### [CHECK IN] What should we have now!?
+For example
 
- We should now have a web application that has two initial views at `/rats` and `/violations` that each display a form that allows us to search for all rat sightings or all restaurant violations by zip code.
+```sh
+node helper.js shape=sphere
+node helper.js city=Sherwood
+```
 
- When the user clicks the button attached to the form it should direct the user to a new view (our results views) and new route that displays that parsed data using the `card` design pattern.
+**BONUS BONUS**
 
- But our cards are all stacked on top of each other!?
+Recommended: skip this bonus and come back to it after you've implemented Part 2
 
- ![card](card_results.png)
+Implement composite query functionality, to incorporate `&` and date range functionality
 
- #### 1c
-
- If you surround all of your card results in a div with a class of container.
-
- Add this css
-
- 	.container {
- 	    display: flex;
-     	flex-wrap: wrap;
- 	}
-
- What is [flexbox!?](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) It's super cool!
-
- >[Flexbox provides] a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word "flex"). The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow."
-
- Those two css properites will now display our cards dynamically so they stretch across the screen inline and will wrap depending on the width of the screen!
-
- ![success](success.gif)
+For Example
+```sh
+node helper.js shape=sphere&date>05/01/2015
+```
+should give you all sphere sightings after May 2015.
 
 
- ## Step 2 Restaurants
 
- Build a separate route `/restaurants` which will be used to display all relevant information for restaurants. It should be a form, which allows you to search for a zip code. It should take you to `/restaurants/results` which will display information about all restaurant in that respective zip code.
+## Part 2
+Scully has finally taken pregnancy leave, working till the very last possible minute. Things have been going great until now and Scully has used your app to solve a multitude of cases. Unfortunately for you, Mulder has never touched a terminal in his life, "Is there any way I can get it off my fingers without betraying my cool exterior?"
 
- #### 2a
+He does, however, know how to use a browser and understands url query parameters. He wants you to implement the same functionality from before on a server, so he can access the information through the browser. He's given you the following spec:
 
- First start with the violations data you already have / know how to retrieve. There are many `violations` for each restaurant. Combine them in a `restaurants` data structure which is an array of `restaurant` objects. Each `restaurant` object should have at minimum the following properties:
+The users request should go to `youripaddress/sightings[query]`. The user should be able to:
 
- - `name`
- - `street`
- - `violations`
+1. Request a list of UFOs by state
+2. Request a list of UFOs by city
+2. Request a list of UFOs by date
+3. Request a list of UFOs by shape
 
- The violations property should be an array of the violation object you built previously, which pertain to the particular restaurant. Render your `restaurants` array as pure JSON in the browser.
 
- ![success](combined_data.png =350x100)
 
+### Bonus
+1. Allow the user to send multiple parameters in their query string and return a list of sightings which matches only those parameters. If the user sends a request to
+`youripaddress/sightings?shape=sphere&city=henderson&state nv` your server should respond with a list of all of the sphere shaped UFOs in Henderson, NV.
+2. Format you response with html and css, so Mulder can go to Agent Skinner and justify the meager salary they've been paying you.
+3. Use HTML inputs that update the URL
+
+
+<details><summary>Hints</summary>
+
+
+  ![html query params form hint](https://i.imgur.com/AHn9H5O.png)
+
+</details>
+
+## Ultra Bonus
+Scully and Mulder have encountered a bizarre case of a serial killer which could date back tens of years. They would like you to give them access to sighting information from the 80s. The file you luckily stumbled on only contains sightings from the last year. Agent Skinner has given you his personal guarantee that if you complete this assignment he will pull some strings and get you into the FBI field training program, so you can become a fully functioning member of the team. Soon you will be able to carry a gun and experience the paranormal first hand.
+
+<<<<<<< HEAD
 
  #### 2b
 
@@ -138,3 +190,9 @@ Both sets of data will be in JSON format:
  ## Bonus
 
  Finished Everything?! Congratulations! You just built something society can benefit from! Make it pretty and go talk to some investors. This can be the next Yelp!
+=======
+1. Your job is to find the information of all UFO sightings online (google might help).
+2. Research how to use node to send http requests to that webpage (the `request` module might be useful)
+3. Figure how to parse the html and get the relevant information for the sightings from there. (`cheerio` module might be useful here)
+4. Allow for users to query your server and dynamically generate the responses by using the online resources directly.
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4

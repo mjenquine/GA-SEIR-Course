@@ -2,36 +2,54 @@ $(() => {
   $('.button').on('click', (event) => {
     event.preventDefault()
 
+    //Grab the number from the input box
     let userInput = $('input[type="text"]').val() || 10
+    //Grap the borough based on the id of the button
     let borough = $(event.target).attr('id')
-    // console.log(userInput)
-    // console.log(borough)
-    // let link =
+    //Set the link with dynamically changing the borough using the var we made above
+    let link = `https://data.cityofnewyork.us/resource/fhrw-4uyv.json?borough=${borough}&agency=NYPD`
 
+    //AJAX request
     $.ajax({
-      url: `https://data.cityofnewyork.us/resource/fhrw-4uyv.json?borough=${borough}&agency=NYPD`,
+      url: link,
       type: "GET",
       data: {
         "$limit": userInput
       }
-    }).then((data) => {
-      console.log(data);
-      for (let i = 0; i < userInput; i++) {
-        const $descriptor = $('<dd>').attr('class', 'descriptor' + [i])
-        $('.reports').append($descriptor)
-        $descriptor.html("INCIDENT: " + data[i].descriptor)
-        const $policeButton = $('<button>').attr('class', 'policeButton').text('Check Response')
-        $('.reports').append($policeButton)
-        const $newText = $('<p>')
-        $newText.text("Police Response" + data[i].resolution_description)
-        $descriptor.append($newText)
-        $newText.hide()
-        $policeButton.on('click', (event) => {
-          event.preventDefault()
-          $newText.toggle()
-        })
+      //Define the data as rerports
+    }).then((reports) => {
+      // For of loop that loops through the data (reports)
+      for (let report of reports) {
+        // Select class of reports
+        const $reports = $('.reports')
 
+        //Append 1 div per report
+        const $div = $('<div>')
+          .appendTo($reports)
+
+        //Create an h3 add the descriptor from reports and append it to the div
+        const $h3 = $('<h3>')
+          .text(report.descriptor)
+          .appendTo($div)
+
+        //Create a p tag with the description and append it to the div (hide initally)
+        const $text = $('<p>')
+          .text(report.resolution_description)
+          .appendTo($div)
+          .hide()
+
+        //Create police button add text and append it to the div.
+        const $policeButton = $('<button>')
+          .text("What did the police do?")
+          .appendTo($div)
+          //Add an on click to the button that selects the p tag and toggles it
+          .on('click', (event) => {
+            $(event.currentTarget).parent().children().eq(1).toggle()
+        })
       }
     })
   })
+
+
+
 })

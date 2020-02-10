@@ -1,0 +1,22 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.square {
+  width: 8vh;
+  height: 8vh;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+
+.row  {
+  display: flex;
+  justify-content: center;
+}

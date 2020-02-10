@@ -1,96 +1,92 @@
 ![](/ga_cog.png)
 
----
-Title:WORD FREQUENCY<br>
-Type: Morning Exercise <br>
-Duration: "0:45"<br>
-Creator: Thom Page<br>
-Competencies:  Problem Solving, <br>
-Prerequisites: JavaScript or Ruby Fundamentals<br>
+<hr>
 
----
+Title: C.R.A.P. Web Design <br>
+Type: Morning Exercise<br>
+Creator: Kristyn Bryan<br>
+Adapted By: Cathleen Wright<br>
 
+<hr>
 
+## C.R.A.P. Web Design
 
-# WORD FREQUENCY
+The four principals that may be the most important for graphic designers are:
 
-## 1
+**C**ontrast<br>
+**R**epetition<br>
+**A**lignment<br>
+**P**roximity<br>
 
-Write a function `findWordFrequencies` that takes in a sentence (string), and returns an object with each word as a key, with a value of how many times that word appears in the sentence.
+### Contrast
+Contrast is the most effective way to add visual interest to your page. Contrast is also crucial to the organization of information - a reader should always be able to glance at a document and instantly understand what's going on.
 
-eg: `{ I: 1, love: 1, lamp: 1 }`
+![contrast](https://i.imgur.com/iY9Erkh.png)
 
-Make it work just for sentences without commas, apostrophes, and periods. Capital letters and lowercase letters should be treated as equals: 'The' and 'the' are the same word.
+#### Contrast using color
+The famous adverts for the iPod expertly used contrast to focus the viewers attention on the music player. The ads featured a silhouetted character on a brightly colored background. The iPod and earphones appear in white and stand out clearly against the silhouettes and colored backgrounds.
 
-## 2
+![contrast2](https://i.imgur.com/BKZTLyV.png)
 
-Write a function `findHighestFrequency` that takes in an object and returns an object with the key that has the highest value. With this function we can see which word appeared in the sentence with the highest frequency.
+A quick way to know if your design has optimum contrast is by looking at its grayscale version.
 
-If there is a tie between the two most frequent words, the first appearing one is returned.
+![grayscale](https://i.imgur.com/cokSB0c.png)
 
-## Examples
+## Repetition
+Repetition is simply the process of repeating elements throughout a design, or several pieces of design collateral to give a unified look. Repetition can be practiced with the color, shape, texture, size, and other attributes of the elements in a design. It helps users familiarize with the way information is presented to them.
 
-**"The world is all that is the case"**
+![repetition](https://i.imgur.com/rv5uDCc.png)
 
-```javascript
-const freqs = findWordFrequencies('The world is all that is the case'));
+### Alignment
+Nothing should be placed on the page arbitrarily. Every item should have a visual connection with something else on the page. When items are aligned, the result is a stronger cohesive unit.
 
-console.log(freqs);
-```
+Always find something else on the page to align with, even if the two objects are physically far away from each other.
 
-> => { the: 2, world: 1, is: 2, all: 1, that: 1, case: 1 }
+![alignment](https://i.imgur.com/6SXipqD.png)
 
+### Proximity
+Unity helps all the elements look like they belong together.  The concept of unity describes the relationship between the individual parts and the whole of a composition. Unity in design is a concept that stems from theories of visual perception and psychology, specifically those dealing with how the human brain organizes visual information into categories, or groups.
 
-```javascript
-const freqs = findWordFrequencies('The world is all that is the case');
+When you create something, you already know which pieces of information are logically connected, you know which information should be emphasized and what can be de-emphasized. Express that information graphically by grouping it.
 
-console.log(findHighestFrequency(freqs));
-```
+![proximity](https://i.imgur.com/nuqubJn.png)
 
-> => { the: 2 }
+![proximity2](https://i.imgur.com/ItQ6ujU.png)
 
-**"That that is is that that is not is not"**
+## Exercise
 
-```javascript
-const freqs = findWordFrequencies('That that is is that that is not is not');
+You've been given starter code for a pretty awful looking website (`unit_2/w05d02/morning_exercise/starter_code/`).  Fix it up and make it C.R.A.P.!  
 
-console.log(freqs);
-```
+_Don't modify any actual content of the html_, except to change the `src` of the `<img>` tag.  Feel free to add `<span>` tags, or classes and id's to call upon the content.  
 
-> => { that: 4, is: 4, not: 2 }
+Completely stuck for ideas?  Pick your favorite hobby or season to theme your page.  
 
-```javascript
-const freqs = findWordFrequencies('That that is is that that is not is not');
+## Resources
 
-console.log(findHighestFrequency(freqs));
-```
-
-> => { that: 4 }
-
-**"hi"**
-
-```javascript
-const freqs = findWordFrequencies('hi');
-
-console.log(freqs);
-```
-
-> => { hi: 1 }
+#### Colors
+- [clrs.css](http://clrs.cc/)
+- [Coolors.co](https://coolors.co/)
+- [Trendy Web Color Palettes](https://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html)
 
 
-```javascript
-const freqs = findWordFrequencies('hi');
+#### Fonts and Icons
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](http://fontawesome.io/)
+- [20 Best Web Fonts](https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html)
 
-console.log(findHighestFrequency(freqs));
-```
+#### Images
+- [Pixabay](https://pixabay.com/)
+- [Unsplash](https://unsplash.com/)
+- [Pexels](https://www.pexels.com/royalty-free-images/)
 
-> => { hi: 1 }
+#### CSS
+- [Psuedo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
+#### Chrome Extensions
+- [Eye Dropper](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en)
+- [Palette Creator](https://chrome.google.com/webstore/detail/palette-creator/oolpphfmdmjbojolagcbgdemojhcnlod?hl=en)
+- [High Contrast](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en)
 
-## Hungry for More
+### And remember...
 
-#### Try these Kata
-
-[Coin Calculator](https://www.codewars.com/kata/calculator-coin-combination)
-
-[Bob's Short Forms](https://www.codewars.com/kata/bobs-short-forms)
+![fonts matter](https://i.imgur.com/oprAaYd.png)

@@ -12,7 +12,15 @@ In the years since Mulder's disappearance the digital age has brought with it tr
 
 You have been contracted by the scientifically rigorous Agent Skully to help in the quest for truth. You not only fit their aggressively mediocre budget, but also your profile is low enough that you can be eliminated without any repercussions—a dangerous combination.
 
+<<<<<<< HEAD
+## Dependencies (recommended NPM Packages)
+- Express
+- EJS
+- Request (make requests to other web sites in order to get data back)
+- Morgan (more informative info on request/responses logging in terminal)
+=======
 ## Part 1
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4
 
 ![XFilesOffice](./xfiles-office.jpg)
 
@@ -32,7 +40,7 @@ Write a command line application called `helper.js` which Scully can use to find
 const sightingsData = require('./sightings.json')
 
 // test it
-console.log(sightingsData[0]) 
+console.log(sightingsData[0])
 
 // expected output
 // { date: '1/31/15 22:00',
@@ -44,7 +52,11 @@ console.log(sightingsData[0])
 
 ```
 
+<<<<<<< HEAD
+ #### 1a (Bonus, don't need to complete this step to keep going, you will be 'filtering' via what you choose to display with EJS in the next step):
+=======
 1. Access the firsts argument from terminal
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4
 
 **Bash:** `node helper.js state=SC`
 
@@ -54,7 +66,7 @@ console.log(sightingsData[0])
 const state = process.argv[2]
 
 // test it
-console.log(state) 
+console.log(state)
 
 // expected output
 // state=SC
@@ -63,9 +75,14 @@ console.log(state)
 
 </details>
 
+<<<<<<< HEAD
+ `rat_sighting_results.ejs`
+ `violation_results.ejs`
+=======
 <br>
 <hr>
 <br>
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4
 
 ```
 =====================
@@ -147,7 +164,35 @@ The users request should go to `youripaddress/sightings[query]`. The user should
 ## Ultra Bonus
 Scully and Mulder have encountered a bizarre case of a serial killer which could date back tens of years. They would like you to give them access to sighting information from the 80s. The file you luckily stumbled on only contains sightings from the last year. Agent Skinner has given you his personal guarantee that if you complete this assignment he will pull some strings and get you into the FBI field training program, so you can become a fully functioning member of the team. Soon you will be able to carry a gun and experience the paranormal first hand.
 
+<<<<<<< HEAD
+
+ #### 2b
+
+ Now that you have your array of `restaurants`, fetch all the rat sightings for the same zipcode. Add a new property to each `restaurant` object named `rats` and set it to `0` by default. For each rat sighting on the **same street** as a restaurant increment that restaurants `rats` property by one.
+
+ ---
+
+ *At this point you should be able to make a get request `/restaurants`, search for a zip code and see JSON data in the browser which is an array of `restaurants` each of which have `name`, `street`, `violations` and `rats` as properties*
+
+ ---
+
+ #### 2c
+
+ Create a view `restaurants.ejs` which displays cards for each restaurant, which matches your query. Keep in mind that each restaurant has violations, each of which is its own card. CARDCEPTION!
+
+ ![cardception](cardception.jpg)
+
+
+ ### Step 3
+
+ A great metric for the cleanliness of a restaurant is the RAT-O-METER™, which is the ratio of nearby rats to the number of violations. A high RAT-O-METER indicates that a restaurant manages to keep an acceptable level of cleanliness relative to the number of rats around. Sort your results based on their RAT-O-METER rating!
+
+ ## Bonus
+
+ Finished Everything?! Congratulations! You just built something society can benefit from! Make it pretty and go talk to some investors. This can be the next Yelp!
+=======
 1. Your job is to find the information of all UFO sightings online (google might help).
 2. Research how to use node to send http requests to that webpage (the `request` module might be useful)
 3. Figure how to parse the html and get the relevant information for the sightings from there. (`cheerio` module might be useful here)
 4. Allow for users to query your server and dynamically generate the responses by using the online resources directly.
+>>>>>>> a5fe330bc6e7381f3a6325d4f666bad929e83cf4

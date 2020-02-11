@@ -3,7 +3,11 @@
 } */
 
 div {
+<<<<<<< HEAD
     border: 1px solid lightsalmon;
+=======
+   1px solid lightsalmon;
+>>>>>>> 0d6d1efdd192d5a6dc6830f8d5ae308e4a89625d
 }
 
 #container {

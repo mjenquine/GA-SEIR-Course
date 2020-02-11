@@ -1,3 +1,5 @@
+console.log('Hey You are connected')
+
 const data = [
   { name: "Megatron", address: "Cybertron" },
   { name: "Some guy", address: "Some street" },
@@ -11,22 +13,33 @@ const data = [
   { name: "Jem", address: "Starlight Music" }
 ];
 
+
 const populateData = (list) => {
-  for (let i = 0; i < data.length; i++) {
-    console.log(list[i]);
-    const $infoContainer = $('<div>').addClass('info-container');
+  for (let i = 0; i < list.length; i++){
+    console.log(list[i])
+    const $infoContainer = $('<div>').addClass('infoContainer');
     const $nameDiv = $('<div>').addClass('name').text(list[i].name);
     const $addressDiv = $('<div>').addClass('address').text(list[i].address);
-    $infoContainer.append($nameDiv);
-    $infoContainer.append($addressDiv);
+    $infoContainer.append($nameDiv, $addressDiv);
     $('body').append($infoContainer);
   }
 }
 
-const addData = ({ name, address }) => {
+const addData = ({ address, name }) => {
   data.push({ name: name, address: address });
   $('body').empty();
   populateData(data);
+  const $btn = $('<button>').addClass('click-me').text('Click Me Please')
+  $btn.on('click', ()=> {addData(ric)})
+  $('body').append($btn);
+}
+const addDataCallback = ({ address, name }, callback) => {
+  data.push({ name: name, address: address });
+  $('body').empty();
+  populateData(data);
+  const $btn = $('<button>').addClass('click-me').text('Click Me Please')
+  $btn.on('click', callback)
+  $('body').append($btn);
 }
 
 const ric = {
@@ -35,21 +48,30 @@ const ric = {
   other: 'other',
   address: 'Cool Mershon Million Dollar Estate',
 }
-// const { name } = ric; // creates a variable - name - that pulls name (key) from ric (object)
-// console.log(name)
 
+const { name } = ric;
 
-
-$(() => {
-///////////////////////////////////////////////////////////////////////////////////////////
+console.log(name)
+$(()=> {
   populateData(data);
-  addData({address: 'Cool Mershon Million Dollar Estate', name: 'Ric Mershon'});
 
-  //Here we are adding a button
-  const $btn = $('<button>').addClass('click-me').text('Click Me Please');
-  $btn.on('click', () => { addData(ric)})//on click we are executing function addData with a parameter of ric
-  $('body').append($btn);
-  /////////////////////////////
 
-//////////////////////////////////////////////////////////////////////////////////////////
-});
+  // populateData([{name: 'Crsti', address: 'coolest place on earth'}, {name:'Eric', address:'Van meter Mansion'}]);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('end')

@@ -1,4 +1,4 @@
-/********************************** 
+/**********************************
 General
 *********************************/
 body {
@@ -28,7 +28,7 @@ body {
     justify-content: center;
 }
 
-/********************************** 
+/**********************************
 Newspaper details
 *********************************/
 h1, h3 {
@@ -81,6 +81,8 @@ p:first-child:first-letter {
   max-height: 200px;
   overflow: scroll;
   box-shadow: 2px 2px 4px black, -2px -2px 4px black;
+  animation-name: spin;
+  animation-duration: 10s;
 }
 
 .size-in {
@@ -92,6 +94,30 @@ p:first-child:first-letter {
 
 }
 
-/********************************** 
+/**********************************
 Add animations here
 *********************************/
+
+@keyframes spin {
+0% {transform: scale(.2)}
+transform: rotate(0deg);
+transform: rotate(180deg);
+transform: rotate(360deg);
+transform: rotate(720deg);
+25% {transform: scale(.4)}
+transform: rotate(1200deg)
+transform: rotate(2000deg)
+transform: rotate(3000deg)
+transform: rotate(3600deg)
+transform: rotate(4600deg)
+55% {transform: scale(.6)}
+transform: rotate(5600deg)
+transform: rotate(7000deg)
+transform: rotate(8000deg)
+transform: rotate(9000deg)
+transform: scale(.8)}
+transform: rotate(10000deg)
+transform: rotate(11000deg)
+transform: rotate(12000deg)
+100% {transform: scale(1)}
+}

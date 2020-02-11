@@ -1,0 +1,24 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 300vh;
+  font-family: Verdana;
+}
+
+.infoContainer{
+  background-color: azure;
+  border: 1px solid grey;
+  margin-bottom: 5px;
+  padding: 20px;
+}
+
+
+.name , .address{
+  border: 1px solid grey;
+  display: inline-block;
+  margin-right: 20px;
+  padding: 5px;
+}

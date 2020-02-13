@@ -10,3 +10,9 @@
 
 ## define http
 - http is HyperText Transfer Protocol. This protocol defines how messages are formatted and transmitted.
+
+## Define Front End
+- The front end of the web is the what you see and interact with. It consists of two parts: web design and web development. Html, css, javascript or jQuery make up the web development portion of the frontend
+
+## According to the article, what are the three parts of the backend?
+- The server, application and database make up the backend. 

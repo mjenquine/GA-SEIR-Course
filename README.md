@@ -41,18 +41,18 @@
 ## Unit 2
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w04d3 |[**Project Presentations**](./unit_2/w04d03/morning_exercise)| [Mongo install](./unit_2/w04d03/instructor_notes)| [](./unit_2/w04d03/student_labs)|[Intro to the Internet](./unit_2/w04d03/homework)|
-| w04d4 |[Intro to Bootstrap/CSS Frameworks](./unit_2/w04d04/morning_exercise)| [Intro to Express, Params and Routing](./unit_2/w04d04/instructor_notes)| [TV Shows, Express Calc](./unit_2/w04d04/student_labs)|[Tip Calculator, Magic 8 Ball, 99 Bottles of Beer](./unit_2/w04d04/homework)|
-| w04d5 |[C.R.A.P Web Design](./unit_2/w04d05/morning_exercise)| [REST: Index and Show, MVC and EJS](./unit_2/w04d05/instructor_notes)| [Super Heroes, Mission on Mars](./unit_2/w04d05/student_labs)|[Poke Express](./unit_2/w04d05/homework)|
-| w05d1 |[Word Frequency](./unit_2/w05d01/morning_exercise)| [REST: New and Create, cURL, Static Assets](./unit_2/w05d01/instructor_notes)| [Biscoff Bakery, CLI App](./unit_2/w05d01/student_labs)|[Budgtr + CSS Mondrain](./unit_2/w05d01/homework)|
-| w05d2|[Forms](./unit_2/w05d02/morning_exercise)| [REST: Delete, Edit, Update](./unit_2/w05d02/instructor_notes)| [Exobiology](./unit_2/w05d02/student_labs)|[Pokedex](./unit_2/w05d02/homework)|
-| w05d3 |[Recursion](./unit_2/w05d03/morning_exercise)| [Mongo, Mongoose and Schemas](./unit_2/w05d03/instructor_notes)| [Intergalactic Bounty Hunters, Mongoose Vampires](./unit_2/w05d03/student_labs)|[Hamburgers 'n Hotels](./unit_2/w05d03/homework)|
-| w05d4 |[Loop the Loop](./unit_2/w05d04/morning_exercise)| [CRUD: Read, New, Create](./unit_2/w05d04/instructor_notes)| [Captain's Log](./unit_2/w05d04/student_labs)|[Mongoose Store](./unit_2/w05d04/homework)|
-| w06d1 |[N/A](./unit_2/w06d01/morning_exercise)| [CRUD: Delete, Edit, Update](./unit_2/w06d01/instructor_notes)| [Captain's Log con't](./unit_2/w06d01/student_labs)|[Mongoose Store con't](./unit_2/w06d01/homework)|
-| w06d2 |[EJS Partials](./unit_2/w06d02/morning_exercise)| [Sessions, Authentication](./unit_2/w06d02/instructor_notes)| [Auth Rep](./unit_2/w06d02/student_labs)|[Kingsmen](./unit_2/w06d02/homework)|
-| w06d3 |[](./unit_2/w06d03/morning_exercise)| [Heroku](./unit_2/w06d03/instructor_notes)| [](./unit_2/w06d03/student_labs)|[](./unit_2/w06d03/homework)|
-| w06d4 |[](./unit_2/w06d04/morning_exercise)| [BONUS - just share notes: Relational Data](./unit_2/w06d04/instructor_notes)| [](./w06d04/student_labs)|[](./w06d04/homework)|
-| w06d5 |[](./w06d05/morning_exercise)| [](./w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
+| w04d4 |[**Project Presentations**](./unit_2/w04d04/morning_exercise)| [Mongo install](./unit_2/w04d04/instructor_notes)| [](./unit_2/w04d04/student_labs)|[Intro to the Internet](./unit_2/w04d04/homework)|
+| w04d5 |[Intro to Bootstrap/CSS Frameworks](./unit_2/w04d05/morning_exercise)| [Intro to Express, Params and Routing](./unit_2/w04d05/instructor_notes)| [TV Shows, Express Calc](./unit_2/w04d05/student_labs)|[Tip Calculator, Magic 8 Ball, 99 Bottles of Beer](./unit_2/w04d05/homework)|
+| w05d2 |[C.R.A.P Web Design](./unit_2/w05d02/morning_exercise)| [REST: Index and Show, MVC and EJS](./unit_2/w05d02/instructor_notes)| [Super Heroes, Mission on Mars](./unit_2/w05d02/student_labs)|[Poke Express](./unit_2/w05d02/homework)|
+| w05d3 |[Word Frequency](./unit_2/w05d03/morning_exercise)| [REST: New and Create, cURL, Static Assets](./unit_2/w05d03/instructor_notes)| [Biscoff Bakery, CLI App](./unit_2/w05d03/student_labs)|[Budgtr + CSS Mondrain](./unit_2/w05d03/homework)|
+| w05d4|[Forms](./unit_2/w05d04/morning_exercise)| [REST: Delete, Edit, Update](./unit_2/w05d04/instructor_notes)| [Exobiology](./unit_2/w05d04/student_labs)|[Pokedex](./unit_2/w05d04/homework)|
+| w05d5 |[Recursion](./unit_2/w05d05/morning_exercise)| [Mongo, Mongoose and Schemas](./unit_2/w05d05/instructor_notes)| [Intergalactic Bounty Hunters, Mongoose Vampires](./unit_2/w05d05/student_labs)|[Hamburgers 'n Hotels](./unit_2/w05d05/homework)|
+| w06d1 |[Loop the Loop](./unit_2/w06d01/morning_exercise)| [CRUD: Read, New, Create](./unit_2/w06d01/instructor_notes)| [Captain's Log](./unit_2/w06d01/student_labs)|[Mongoose Store](./unit_2/w06d01/homework)|
+| w06d2 |[N/A](./unit_2/w06d02/morning_exercise)| [CRUD: Delete, Edit, Update](./unit_2/w06d02/instructor_notes)| [Captain's Log con't](./unit_2/w06d02/student_labs)|[Mongoose Store con't](./unit_2/w06d02/homework)|
+| w06d3 |[EJS Partials](./unit_2/w06d03/morning_exercise)| [Sessions, Authentication](./unit_2/w06d03/instructor_notes)| [Auth Rep](./unit_2/w06d03/student_labs)|[Kingsmen](./unit_2/w06d03/homework)|
+| w06d4 |[](./unit_2/w06d04/morning_exercise)| [Heroku](./unit_2/w06d04/instructor_notes)| [](./unit_2/w06d04/student_labs)|[](./unit_2/w06d04/homework)|
+| w06d5 |[](./unit_2/w06d05/morning_exercise)| [BONUS - just share notes: Relational Data](./unit_2/w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
+<!--| w06d5 |[](./w06d05/morning_exercise)| [](./w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
 | w07d1 |[](./w07d01/morning_exercise)| [](./w07d01/instructor_notes)| [](./w07d01/student_labs)|[](./w07d01/homework)|
 | w07d3 |[](./w07d03/morning_exercise)| [](./w07d03/instructor_notes)| [](./w07d03/student_labs)|[](./w07d03/homework)|
 | w07d4 |[](./w07d04/morning_exercise)| [](./w07d04/instructor_notes)| [](./w07d04/student_labs)|[](./w07d04/homework)|

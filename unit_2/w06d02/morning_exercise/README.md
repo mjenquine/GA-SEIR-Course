@@ -1,120 +1,221 @@
+![general assembly logo](/ga_cog.png)
 
-Title: EJS Partials  <br>
-Type: Morning Exercise<br>
-Duration: "0:45"<br>
-Creator: Karolin Rafalski<br>
-Competencies: EJS Forms <br>
-Prerequisites: EJS , Node, Express, MongoDB<br>
+# EJS Partials 
+
+![partials](https://i.imgur.com/AgbJAmF.png)
+
+Making our EJS more DRY and more easily maintanable. 
+
+**Learning Objectives**
+
+- EJS Partials 
+
+**Prerequisites**
+
+- JavaScript
+- Express
+- Node
+- EJS
 
 ---
 
-## EJS Partials
+## Introduction 
 
-## Intro
-EJS allows you to create reusable elements that can go on multiple pages and will allow you to streamline your ejs page creation and updates.
+When building your apps so far during this unit, you may have noticed that if you wanted some pieces of consistent styling or wanted a certain element of your design visible across all your view, it required a lot of copy/pasting. 
 
-### EJS Partials
+For example: for every single page, you had to copy/paste the _entire_ HTML boilerplate. Or, if you want a navigation bar on every single page, you'd have to copy/paste the navigation bar html onto every single page. 
 
-#### Set Up
+You get the point, it's tedious and it's not DRY and if you make a change to a copy/pasted block of code on one EJS file, then you'd have to make the same changes in that block of code on _all_ the EJS files you copied it to. So, it's not easily managable, either, once projects start getting large. 
 
-We'll go back to Mongoose Store.
+However! The EJS developers anticipated this problem, and implemented a nice little feature called partials. 
 
--  `cd` into the directory `ejs-partials-mognoose-store` that is in the morning exercise folder for today
-- `npm install`
-- open two more Terminal tabs (one for `mongod` and one for `nodemon`)
-- start `mongod` in a new terminal window
-- start `nodemon`
-- `code .` in the last tab
-- go to `http://localhost:3000/products` in the browser - You should see an empty mongo store!
-- organize your windows so you can easily go between the browser, terminal and VS Code
-- go to `http://localhost:3000/products/seed/newproducts/viaseedfile` you should see JSON of the seed data
-- go back to `http://localhost:3000/products` (may need to reload page to see data/products)
-- now the mongoose store should have products!
+Partials allow you to create reusable elements that can go on multiple pages and will allow you to streamline your EJS page creation and updates. How does that work? Let's find out! 
 
+## Getting set up 
 
-**Note**: if you made a mistake, repopulated your db twice or just want to get my mongoose store out of your mongodb go here `http://localhost:3000/products/dropdatabase/cannotundo/areyoursure/reallysure/okthen`
+In order to see how useful partials are and how exactly to use them, what we'll do is refactor code that doesn't use partials. In this case, we'll be going back to a slightly more advanced version of gitPub. Starter code is provided for you
 
-#### First Partial
+> Note: Because we're just focusing on EJS partials for this exercise, the provided app is _not_ fully functioning with a proper mongo database or working create/delete routes. Hungry for more things to do in all your copious spare time? Try to make this app fully functional! 
 
-EJS partials let you create reusable EJS that you only have to edit in one place and it will update across all your pages where the partial is included
+**Getting the starter code ready** 
 
-- in the views folder: `mkdir partials`
-- then in the partials folder: `touch head.ejs`
+  - `cd` into today's `morning_exercise` and then into the `gitpub` directory 
+  - run `npm install` so you install all then necessary packages for this project 
+  - `atom .` inside the directory to open it up in atom 
+  - `nodemon` to run the project 
+  - in your browser, go to `http://localhost:3000/pub` - you should see a landing page that looks like the image below 
 
-Right now, only the `index` route has the CSS linked. Let's cut that code out of the head and paste it into our `head.ejs` file (don't forget to save all the files!)
-```
-    <meta charset="utf-8">
-    <title>Mongoose Store</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/skeleton.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="icon" href="/assets/$.png">
- ```
+---
 
-- Save and reload the page
-- Goodbye CSS!
-- Let's add it back into `index.ejs` as a partial
+## gitPub 
 
-```
-  <head>
-    <% include ../partials/head.ejs %>
-  </head>
-```
-- don't forget to save and reload the page
-- cool! Now let's copy paste that code onto the other three ejs pages: `edit.ejs`, `new.ejs`, and `show.ejs`
-- navigate to the index, show, edit and new routes and see that our css has returned Hooray!
+![](https://i.imgur.com/BUel0kH.jpg.png)
 
+If you look through the code / click through the gitPub pages, you'll notice there are several things that are or should be repeated throughout all pages of the app: 
 
-#### Header partial
-- Right now only our index page has a nav bar, let's follow the above steps and create a partial for the header
-- `touch nav.ejs` inside the `partials` folder
-- cut (out of `index.ejs`)
-```
-      <div class="row nav">
-        <a href="/products"><h1 id="store" class="six columns">The Mongoose Store</h1></a>
-        <span class="three columns">&nbsp;</span>
-        <a href="/products/new"><button type="button" name="button" class="new-product three columns">New Product</button></a>
-        <span class="one column">&nbsp;</span>
-      </div>
+- The css / everything inside the HTML `<head>` 
+- The header 
+- The footer 
+
+Now, consider the scenario where you want to make a change to the header. For example, let's say you want to add another link to the header navigation. Okay fine, all we have to do is add the link to the header on the `index.ejs`. 
+
+But, wait, now go to the show page -- uh-oh. The link we just added is no longer there. Okay, fine, we'll just add the link on `show.ejs too`. But if we do that, what do you think will happen on the new page? The link won't be there, so we'd have to change it there too! 
+
+Now pretend this is a large app with many different views that has the header on every single view - you'd have to make the change over and over again on every single view. 
+
+Now that one simple change that should have only taken a few seconds took a much longer time. 
+
+This is where partials come in super handy. They let you create reusable EJS that you only have to edit in _one place_ and it will update across all your pages where the partial is included.
+
+Let's create our first partial to really see how this works.
+
+### Creating the `<head>` partial 
+
+**In terminal make sure you're still in the `gitpub` directory and run:** 
+
+- `mkdir views/partials` 
+- `touch views/partials/head.ejs` 
+
+Right now, only our `index` view has styling. That's not a good look, so let's cut that code out of the index's `head` and paste it into our `head.ejs` file 
+
+```html
+<meta charset="utf-8">
+<title>gitPub</title>
+<!-- ============= FONTS ============= -->
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap" rel="stylesheet">
+<!-- ============= STYLES ============= -->
+<link rel="stylesheet" href="/css/styles.css">
 ```
 
-- paste it into `nav.ejs`
-- in your 4 ejs files:
- ```
- <% include ../partials/nav.ejs %>
+Now if we save and refresh our index, the CSS is gone! Oh no! But, no worries, we saved all that code in our `head.ejs` partial, and now all we need to do to utilize that partial is `include` it back into the head of our index.ejs using the following syntax: 
+
+```ejs
+<% include ./partials/head.ejs %>
+```
+
+Make sure you've saved all your files and refresh your index -- voila! Our CSS is back! We've successfully included our partial.
+
+Now, all we have to do is `include` the partial on all the other pages as well. Copy/paste the include into: 
+
+  - `new.ejs`
+  - `showDrinks.ejs` 
+  - `showFood.ejs`
+
+If you check each view in your browser, they should all now be styled! 
+
+### Creating the header partial 
+
+Alright, now let's clean up our files a bit so there's less repetition. We saw earlier that every single page has the `<header>`, so that's definitely a good candidate for a partial. 
+
+Let's do the same thing we just did:
+
+- Create a `header.ejs` file in our `partials` folder
+- Cut out the header code from all the files and paste it into the `header.ejs` file
+
+```html
+<header>
+  <h1>gitPub.io</h1>
+  <ul>
+    <li><a href="/pub">master branch</a></li>
+    <li><a href="/new">git add -an item</a></li>
+  </ul>
+</header>
+```
+
+- Include the header partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
+
+```ejs
+<% include ./partials/header.ejs %>
+```
+
+### Creating the footer partial 
+
+Our ejs files are looking so much cleaner already! But there's one more repetitive thing we can get rid of, so let's create a partial for the footer! 
+
+- Create a `footer.ejs` file in our `partials` folder
+- Cut out the footer code from all the files and paste it into the `footer.ejs` file
+
+```html
+<footer>
+  <span>℗ 2019</span>
+  <span>FORKED FRMO STAMFORD.</span>
+</footer>
+```
+
+- Include the footer partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
+
+```ejs
+<% include ./partials/footer.ejs %>
+```
+
+Sweet, our code looks so DRY! And -- oh, wait there's a typo in our footer. Let's fix that up. 
+
+**In footer.ejs**
+
+- Fix the typo: `FRMO` should be `FROM` 
+
+Now check all our pages --  nice, it's fixed for all of them and we only had to change it in that one file. 
+
+---
+
+## Other extra things to note
+
+### Using variables in partials
+
+Just like any other `.ejs` file, you can use variables inside your partials. You just have to make sure that wherever you use that partial, that variable is actually defined. 
+
+For example, let's say we want our tab titles to be variable depending on the page you're on. Our `<title>` is in our `head.ejs` partial, so let's go there!
+
+**In `head.ejs`**
+
+Let's create a variable called `tabTitle` that will determine what the title is. So, let's go ahead and put that in.
 
 ```
-- be sure to save save save all your files
-
-#### Footer partial
-- `touch footer.ejs` inside the `partials folder`
-- add
+<title>gitPub | <%=tabTitle%> </title>
 ```
-    <footer>
-        all rights reversed
-    </footer>
+
+If you try to view any of the pages now, it throws us an error saying tabTitle is not defined - let's define it! 
+
+**In `server.js`**
+
+We'll start in the index route first. In our `res.render` object, let's pass it another variable for tabTitle now. For the index, let's just give it a title of Home: 
+
+```js
+res.render('index.ejs', {
+  drinks: drinks,
+  tabTitle: 'Master Branch'
+}
 ```
-- now add the partials to the four ejs files using the same pattern we've used in our previous two partials
-- don't forget to save
 
+Now if we refresh our index in the browser, it works! Great! But, if we try to go to any other page, it gives us the not defined error again. But we just defined it, didn't we? 
 
-#### Editing a partial
-Whoops! Our footer says `all rights reversed` it should say `all rights reserved`.
+We did - but only in the index route! Variables for partials are passed down via their parent. 
 
-Let's update our `footer.ejs` file
-- click around the mongoose store, did the footer change on all your pages now?
-- If so sweet! If not, let's troubleshoot
+So, because we defined `tabTitle` in our index route, it passed it to `index.ejs`. Because `index.ejs` includes the `head.ejs` partial, it passed the variable down into the partial as well. 
 
+However, consider our show route. We did _not_ define the `tabTitle` variable there, so it wasn't passed down to `show.ejs`, and thus the `head.ejs` partial included _there_ does _not_ have access to the `tabTitle` variable, hence the error. 
 
-<hr>
+To fix it then, let's define the `tabTitle` on all our other views! 
 
-## Got Some Time Left? Let's work on a Hackerrank Challenge!
-<br>
-Some companies use HackerRank challenges as part of their interview process. Try one out to practice!
+**In the show route**
 
-- [Min Max Sum](https://www.hackerrank.com/challenges/mini-max-sum/problem)
+```js
+res.render('show.ejs', {
+  drink: drinks[req.params.id],
+  tabTitle: 'fooBar()'
+}
+```
 
+**In the new route**
 
-HackerRank's code submission process can take a little getting used to
+```js
+res.render('new.ejs', {
+  tabTitle: 'add -A'
+}
+```
 
-- [How to Solve HackerRank Problems](https://www.hackerrank.com/domains/algorithms/warmup)
+If you check all your views now, they should all work and have different titles depending on the page! :tada:
+
+---
+
+*Copyright 2019, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*

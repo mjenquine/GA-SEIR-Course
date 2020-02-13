@@ -1,269 +1,200 @@
-![](/ga_cog.png)
+# Big O Notation
 
----
-Title: Forms<br>
-Type: Morning Exercise<br>
-Creator: Jerrica Bobadilla <br>
-Competencies: CSS, HTML
 
----
+![](https://i.imgur.com/AHLnEHd.png)
+image from: https://www.bigocheatsheet.com
 
-# HTML/CSS Forms 
+We are going to be introducing more computer science concepts. These will suit you the best for interviews and further into your career. It's important to study and learn them and a number of these concepts are rather complicated and will take time to come together for you. At GA our focus is projects and skills first, rather than focusing on theory. We believe building things is one of the best way to learn to code and become a developer. However, it's important to set aside some time to learn core computing concepts so that you can continue to grow as a developer. 
 
-When making CRUD apps, you'll be using plenty of forms but they can be a bit tricky to style. So let's get some practice and see what kind of styling you can do with them by coding along with me. 
+What may be a little confusing is that we are going to start talking about optimization. But as you remember from unit 1, one of the biggest pieces of advice we gave was: Don't optimize too early! This is still true for your work. Focus on building first and then optimization.
 
-## ACTIVITY 
+Still: what does optimization mean? We're going to look at what it means through the lens of Big O this morning. 
 
-![](https://i.imgur.com/HWMBASw.png)
+One of the things computer scientists are trained to do is to find ways to make things faster, smaller, cheaper and more precise. One way to approach such problems is to consider the worst case scenario. Big O Notation is a way to denote the worst case scenario.
 
-Perhaps one of the most common uses for forms out there, today we'll be building out a registration form to look like the mockup above. 
+Big O comes from the discipline of math and is used to describe the relationship between two functions based on their growth rates.
 
-### Setup 
+Big O of Algorithms is measured by:
+- **Time complexity** - the amount of time it takes to execute. It is measured in the number of steps an algorithm takes rather than measures of time like seconds or minutes.
+- **Space complexity** - the amount of memory (RAM) required an algorithm needs to run.
 
-Starter code has been provided for you with all necessary files linked together. 
 
-1. `git pull upstream master`
-1. Navigate to the `morning_exercise/registration-form` folder for today.
-1. Open the entire folder in atom to follow along.
-1. Open the `index.html` in your browser.
+Each complexity can be described with notation like O(n): Where n represents the number of elements.
 
-Follow along while I style it live. Additionally, anytime you see a :sparkles:emoji in the notes below, that indicates a styling block for the activity! 
+Additionally, Big O can be represented visually with the execution time/memory on the y-axis and input size on the x-axis.
 
-## FIELDSET, LEGENDS, AND LABELS 
+![](https://i.imgur.com/SmB6APr.png)
 
-The `<fieldset>`, `<legend>` and `<label>` tags are designed for web accessibility and aiding screen readers to properly interpret the form. 
-  
-  - *Fieldsets* let you group parts of a form together.
-  - *Legend* defines what a fieldset is for. 
-  - *Labels* define what a specific input is looking for. 
-  
-#### More on Labels 
+As the input size increases the execution time can change, based on the algorithm being used.
 
-You can either _nest_ your input inside a label or you can _put the label first and then as a sibling put the corresponding input_, if you do it the second way the `<label>` must have a `for` attribute in the label tag and then the `<input>` must have an `id` attribute with a value that matches the value of the label's `for` attribute.
+For our introduction, we'll only consider time complexity, however on myGA and in your studies you should learn and consider space complexity as well.
 
-  - NESTED EXAMPLE: 
-    ```
-    <label>
-      Username
-      <input type="text"/>
-    </label>
-    ```
-  - SIBLING EXAMPLE: Note the matching `for="username"` & `id="username"` attributes to 'connect' the label to the input
-    ```
-    <label for="username">USERNAME</label>
-    <input type="text" id="username"/>
-    ```
-#### :sparkles:Let's Style Our Fieldsets, Legends, and Labels!
+We will look at 5 classes of complexity.
 
-**In our HTML:** Update all our inputs, textareas, and labels so that they have matching variables
-```
-<!-- username -->
-<label for="username">USERNAME</label>
-<input type="text" id="username"/>
-<!-- password -->
-<label for="password">PASSWORD</label>
-<input type="text" id="password">
-<!-- email -->
-<label for="email">E-MAIL</label>
-<input type="text" id="email"/>
 
-/* further down */
-<!-- biography -->
-<label for="biography">BIOGRAPHY</label>
-<!-- textarea for larger bodies of text -->
-<textarea id="biography"></textarea>
-```
+### Constant `O(1)`
 
-**In our CSS:**
-```
-fieldset {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 20px 0;
-}
-legend {
-  padding: 0px 10px;
-  font-family: 'Oswald';
-  font-weight: 500;
-  color: var(--purple);
-}
-label {
-  font-family: 'Oswald';
-  font-weight: 200;
-  color: var(--bright-pink);
-  display: block;
+```js
+const getFirstSongFromPlaylist = (array) => {
+  console.log(array[0])
 }
 ```
 
-## INPUT TYPES, STYLING INPUTS, AND PSEUDO CLASSES
+This algorithm has a Big O complexity of `constant`. No matter the size of the array 1 or 1 million, this always takes the same amount of time and memory to execute.
 
-There are a lot of different input types (see the resources below), but for today let's just focus on some of the most common ones: 
+This type of complexity is considered highly efficient.
 
-  - _text_ is just the default input type text box that you've all grown used to so far, it accepts any string.
-  - _password_ makes it so that whatever the user types into the input field is hidden like a password should be!
-  - _email_ makes it so that the form will automatically validate if the user actually entered an email upon submission.
-  - _submit_ makes the input a button and indicates that when the user clicks this button, the form should be submitted.
-    - Note: The default text inside a submit button is "submit", if you want it to say something different, add an attribute of `value="whatever you want the button to say"`
-  
-#### Styling Inputs 
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/8-Input-Size-Run-Time-Graph.png)
 
-There are a few ways to style inputs. 
 
-  - The simplest way is to just select `input`:
-    ```
-    input {
-      /* styles in here */
+### Linear `O(n)`
+
+```js
+const printSongs = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i])
+  }
+}
+```
+
+This algorithm has a Big O complexity of `linear`. For each added song to the array, the amount of time it takes to complete this is increased by 1 step.
+
+If the array (or playlist) has 1 item, it will take 1 step to complete. If the array has a million items it will take a million steps to complete.
+
+This type of complexity is considered pretty good efficiency.
+
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/6-Input-Size-Run-Time-Graph.png)
+
+### Quadratic Complexity `O(n^2)`
+
+```js
+  const PrintSongsWithinAlbums = () => {
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 0; j < array.length; j++) {
+        console.log(array[i][j])
+      }
     }
-    ```
-  - Since there are several types of inputs, we don't always want to style them all the same way using `input`. Instead, you can _select_ specific attributes using the following notation: `input[attribute="value"]`
-    ```
-    input[type="submit"] { 
-      /* styles in here */
+  }
+```
+
+This algorithm has a Big O complexity of `quadratic`. For each added item to the array, the amount of time it takes to complete this is increased by n to the n power!
+
+Imagine you wanted to print every song by an artist. The above function would loop through each album and then within each album, loop through each song. For each album the complexity doesn't increase just by 1 step, but by each album times each song on the album.
+
+As we think of the worst case scenario if every album has ten songs, if we have 10 albums, we go through the steps 10 times for the albums and then times for each song so for a collection of 10 albums we go through the algorithm 100 times. If we had 100 albums and still 10 songs, we'd go through this algorithm 1000 times...
+
+If we were to also have to go through artists, and now every artist has 10 albums and each album has 10 songs.
+
+More complexity:
+
+```
+  const PrintSongsWithinAlbumsByArtist = () => {
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 0; j < array[i].length; j++) {
+        for (let k = 0; k < arrarray[i][j].length; k++) {
+          console.log(array[i][j])
+        }
+      }
     }
-    ```
-
-#### Pseudo Classes 
-
-Pseudo classes are keywords tacked onto an element that specifies a special state of the element. They are not exclusive to forms (they can be used on almost any HTML element you want!), but they're very useful when trying to style forms. Let's take a look at two of the more common ones. 
-
-  - _:hover_ adds style onto whatever element you tack it onto when the user hovers over it 
-    ```
-    input[type="submit"]:hover {
-      /* styles entered here will be applied to the submit button only when the user hovers over it */
-    }
-    ```
-  - _:focus_ adds style onto whatever element you tack it onto whenever the user "focuses" on the element (typically when the user clicks on the element or selects it using tab)
-    ```
-    input[type="text"]:focus {
-      /* styles entered here will be applied to the text input form only when the user is focused on it */
-    }
-    ```
-    
-#### :sparkles:Let's Style Our Input Boxes! 
-
-**In our HTML:** Update the input type of our password and email fields
-```
-<input type="password" id="password">
-
-<input type="email" id="email"/>
+  }
 ```
 
-**In our CSS:**
-```
-input {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid var(--dusty-blue);
-}
-input:focus {
-  /* the outline property selects the default blue border that shows up on inputs. giving it a value of 0 gets rid of it */
-  outline: 0;
-  border: 1px solid var(--purple);
-}
-```
+Now we have a collection of artists, as we gain each artist with 10 albums and ten songs each artist will have 10 albums. Each time we add an artist we get 10 songs and 10 albums. With 10 artists we get 10 x 10 x 10 = 1000 steps. 
 
-_NOTE:_ Want to keep the outline blur effect? You can just change the color of the outline instead of getting rid of it by using the `outline-color` property! See more on outline [here](https://css-tricks.com/almanac/properties/o/outline/)
+This type of complexity is considered inefficient.
 
-#### :sparkles:Let's Style Our Submit Button! 
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/10-Input-Size-Run-Time-Graph.png)
 
-**In our HTML:** Update the submit button so that it has a value of REGISTER
-```
-<input type="submit" value="REGISTER">
-```
+### Logarithmic Complexity `O(log(n))`
 
-**In our CSS:**
-```
-input[type="submit"] {
-  width: 100%;
-  height: 50px;
-  background: var(--purple);
-  box-shadow: 2px 2px var(--bright-blue);
-  font-family: 'Oswald';
-  font-size: 1.3em;
-  color: whitesmoke;
-  border: 0px;
-  transition: 0.2s ease-in-out;
-}
-input[type="submit"]:hover {
-  cursor: pointer;
-  background: var(--bright-blue);
-  box-shadow: 2px 2px var(--purple);
+Imagine we are calling out to our favorite voice assistant to play a song for us. There are millions of songs out there. Let's say we're looking for `I Can't Get No Satisfaction`
+
+How is our assistant finding our song?
+
+Is it going randomly through every single song in the database?
+
+Is it looking by artist then by song (again without any organization)?
+
+In either scenario, you'd have to consider the worst-case scenario which is that the song you ask for is always the absolute last song found.
+
+What if the songs were organized alphabetically?
+
+Then we could perform a binary search.
+
+We would start at the middle and then check if there is a match. If it matches we're done!
+
+But with Big O we're always thinking about the worst case scenario and that our song will be the last song found.
+
+So we start in the middle, let's say that this middle is songs that start with the letter `M`, if our song starts with the letter `I` we can eliminate all the songs that start with M or further in the alphabet. Now we've cut down the number of items we must search by half.
+
+Let's set our next midpoint to be the middle of the remaining songs, and we get songs that start with the letter `F`. Since our song starts with the letter `I`, we can stop searching through songs starting with A - F, and have again, cut our search down by half.
+
+We would keep repeating, removing half of the songs we are looking through until we found our song. This more complicated process is more efficient than looking through every single song and can be represented
+
+```js
+function binarySearch(arr, item, first = 0, last = null) {
+    if (!last) last = arr.length
+    let midpoint = Math.floor((last - first) / 2) + first
+    if (arr[midpoint] === item) return midpoint
+    if (arr[midpoint] > item) return binarySearch(arr, item, first, midpoint)
+    if (arr[midpoint] < item) return binarySearch(arr, item, midpoint, last)
 }
 ```
 
-## TEXTAREA 
+In this way, if we have 16 songs, the number of steps would be 4 Log(2) of 16 = 4.
 
-Textarea is essentially just another type of input box, but is not an actual input element. Rather, it's its own element `<textarea>` and requires a closing tag `</textarea>` that inputs do not. Textareas are meant for larger bodies of text that shouldn't go in regular text inputs, for example: profile information, a review, etc. 
+If we have about 1.126 million songs, the number of steps would be just 50!
 
-#### Styling Textareas 
+This type of complexity is considered highly efficient.
 
-  - Textareas are relatively difficult to style because, typically, they can be resized by the user which may mess with the styling of your page. One way to mitigate that is by using the `resize` property
-    - `resize: none` makes it so that the user cannot resize the textarea at all 
-    - `resize: vertical` makes it so that the user can only resize it vertically 
-    - `resize: horizontal` makes it so that the user can only resize it horizontally
-    - If you don't set any of these, textareas are defaulted to resize both vertically and horizontally
-  - Alternatively, you can set a `max-height` or `max-width` so that the user cannot resize beyond a certain width
-    - Note, you may have to set a default height and width to get it to the size you originally want the textarea to be at when they first load the page
-  - Examples:
-     ```  
-     /* using resize none to make sure the textarea always stays a specific width/height */
-     textarea {
-      width: 200px;
-      height: 100px;
-      resize: none;
-     }
-     
-     /* using max-heights and max-widths to make it so that the user can only resize up to that point */
-     textarea {
-      width: 200px;
-      height: 100px;
-      max-width: 400px;
-      max-height: 150px;
-     }
-     ```
- 
- #### :sparkles: Let's Style Our Textarea!
- 
- **In our CSS**: We want our textarea to look identical to our `input` elements from earlier, so let's just tack on `textarea` to those styles instead of repeating ourselves! Then, specific to just our textarea, we don't want it to resize and we want a specific height:
- ```
- textarea {
-  resize: none;
-  height: 75px;
- }
- ```
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/9-Input-Size-Run-Time-Graph.png)
 
-## VALUE VS. PLACEHOLDER 
+### Factorial Complexity `O(n!)`
 
-`value` and `placeholder` are both attributes that you can add on to `input` and, to an extent, `textarea` elements. They're similar in that they place text into the forms, but different in how they do so. Let's see how: 
+Factorial means the product of all positive integers less than or equal to n.
 
-  - _value_ pre-fills out an input form with text that the user can actually manipulate or keep as is. 
-  - _placeholder_ is grayed out on the input form with text that typically should guide the user as to what type of info they should put inside of the input form. The user _cannot_ manipulate this text, in fact once they start typing into the input form, the placeholder should disappear completely.
-  
-#### Textarea "values" 
+Examples
 
-  - `<textarea>` elements, unlike inputs, do _not_ recognize the `value` attribute. If you want to pre-fill a textarea with text for the user to manipulate, you have to put the value between the `<textarea></textarea>` tags
-  - EXAMPLE: 
-    ```
-     /* input with pre-filled value */
-     <input type="text" value="hello world!">
+- 3 factorial is 3 x 2 x 1
+- 7 factorial is 7 x 6 x 5 x 4 x 3 x 2 x 1
 
-     /* textarea with pre-filled value */
-     <textarea>hello world!</textarea>
-    ```
-#### :sparkles: Let's Add a Placeholder to our Textarea!
+The complexity of an algorithm that is factorial increases faster than any other example. While there are real world examples of these types of algorithms, due to their complexity, they are not typically asked in coding interviews for jr positions and thus we won't include an example.
 
-**In our HTML:** Update it so that it has a placeholder with a value of whatever you want it to say.
+This type of complexity is considered inefficient.
+
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/7-Input-Size-Run-Time-Graph.png)
+
+## Summary
+
+We can look at this chart in myGA to look at how efficincy changes as input increases across the different types of classes of complexity.
+
+
+![](https://i.imgur.com/CExCK8P.png)
+
+Again, we can see that in most cases, when we are looking at 600 or less items, our computers can work through them quickly and our primary concern in this course should not be efficiency or optimization.
+
+Early optimization is problematic because it can be overwhelming to think about as you start to solve a problem or build an app and can prevent you from building a prototype in a reasonable amount of time.
+
+Additionally, as you build your app with optimization in mind you will inevitably try to solve problems you won't really have, which is bad for things like deadlines. And also since you don't yet know what all your problems will be, you must build in order to learn what you'll need to solve.
+
+We'll be having a lesson on agile development; which is an approach to developing software where requirements and solutions evolve through short deadlines and small goals. This allows developers to account for the necessary pivots as they develop applications.
+
+The approach that will serve you best in this course, and likely well into your career is by a quote from Addy Osmani
+
 ```
-<textarea id="biography" placeholder="Say something about yourself (e.g. Hi, my name is Connor. I'm the android sent by CyberLife)"></textarea>
+First do it,
+then do it right,
+then do it better
 ```
-    
 
-## RESOURCES
+Again focusing on just solving your problem first and foremost. Then going and finding the right way to do it and finally, finding ways to do it better.
 
-There's an overwhelming amount of form types and attributes that you can use, and we barely scratched the surface today. Text, textarea, password, and submit are the most common that you'll probably use in your apps, but if you'd like to see what else HTML forms have to offer, take a look at the resources below: 
 
-  - [Our student wiki page with a quick cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Stan-Lee/wiki/HTML-Forms-Cheatsheet)
-  - [W3Schools HTML Forms](https://www.w3schools.com/html/html_forms.asp)
-  - [MDN's entry on HTML Forms](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms)
+
+## Next
+
+Feeling like you need to hear it all again?
+- Go to myGA and study
+
+Ready to work through figuring out some Big O?
+- See the `big-o-activity` markdown

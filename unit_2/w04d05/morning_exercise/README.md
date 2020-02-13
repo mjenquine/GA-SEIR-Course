@@ -1,92 +1,194 @@
-![](/ga_cog.png)
+![ga](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/blob/master/ga_cog.png)
 
-<hr>
-
-Title: C.R.A.P. Web Design <br>
+---
+Title: Bootstrap - CSS Frameworks <br>
 Type: Morning Exercise<br>
-Creator: Kristyn Bryan<br>
-Adapted By: Cathleen Wright<br>
+Duration: "0:45"<br>
+Creator:<br>
+    Original creators: Kristyn Bryan & Greg Dunn, WDI-Funke<br>
+    Adapted by: Jerrica Bobadilla<br>
+Competencies: CSS Frameworks, Bootstrap<br>
+Prerequisites: CSS, HTML <br>
 
-<hr>
+---
 
-## C.R.A.P. Web Design
+# Morning Exercise
 
-The four principals that may be the most important for graphic designers are:
+## CSS Frameworks
 
-**C**ontrast<br>
-**R**epetition<br>
-**A**lignment<br>
-**P**roximity<br>
+A CSS framework can save you time when styling applications. A framework is really just a stylesheet that has been designed by someone else that you are implementing into your code.
 
-### Contrast
-Contrast is the most effective way to add visual interest to your page. Contrast is also crucial to the organization of information - a reader should always be able to glance at a document and instantly understand what's going on.
+To implement these styles, you simply add a class to the html element that you'd like to style and give it the class name stated in your framework's documentation.
 
-![contrast](https://i.imgur.com/iY9Erkh.png)
+In addition, you can make changes to the styles using your own stylesheet. Combine and conquer!
 
-#### Contrast using color
-The famous adverts for the iPod expertly used contrast to focus the viewers attention on the music player. The ads featured a silhouetted character on a brightly colored background. The iPod and earphones appear in white and stand out clearly against the silhouettes and colored backgrounds.
-
-![contrast2](https://i.imgur.com/BKZTLyV.png)
-
-A quick way to know if your design has optimum contrast is by looking at its grayscale version.
-
-![grayscale](https://i.imgur.com/cokSB0c.png)
-
-## Repetition
-Repetition is simply the process of repeating elements throughout a design, or several pieces of design collateral to give a unified look. Repetition can be practiced with the color, shape, texture, size, and other attributes of the elements in a design. It helps users familiarize with the way information is presented to them.
-
-![repetition](https://i.imgur.com/rv5uDCc.png)
-
-### Alignment
-Nothing should be placed on the page arbitrarily. Every item should have a visual connection with something else on the page. When items are aligned, the result is a stronger cohesive unit.
-
-Always find something else on the page to align with, even if the two objects are physically far away from each other.
-
-![alignment](https://i.imgur.com/6SXipqD.png)
-
-### Proximity
-Unity helps all the elements look like they belong together.  The concept of unity describes the relationship between the individual parts and the whole of a composition. Unity in design is a concept that stems from theories of visual perception and psychology, specifically those dealing with how the human brain organizes visual information into categories, or groups.
-
-When you create something, you already know which pieces of information are logically connected, you know which information should be emphasized and what can be de-emphasized. Express that information graphically by grouping it.
-
-![proximity](https://i.imgur.com/nuqubJn.png)
-
-![proximity2](https://i.imgur.com/ItQ6ujU.png)
-
-## Exercise
-
-You've been given starter code for a pretty awful looking website (`unit_2/w05d02/morning_exercise/starter_code/`).  Fix it up and make it C.R.A.P.!  
-
-_Don't modify any actual content of the html_, except to change the `src` of the `<img>` tag.  Feel free to add `<span>` tags, or classes and id's to call upon the content.  
-
-Completely stuck for ideas?  Pick your favorite hobby or season to theme your page.  
-
-## Resources
-
-#### Colors
-- [clrs.css](http://clrs.cc/)
-- [Coolors.co](https://coolors.co/)
-- [Trendy Web Color Palettes](https://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html)
+You can use Bootstrap to jazz up your projects, but we also want you to be familiar with it because, a lot of times when you jump into a company that has a pre-existing codebase, you will encounter the use of a CSS framework.
 
 
-#### Fonts and Icons
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome](http://fontawesome.io/)
-- [20 Best Web Fonts](https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html)
+### The framework that we will be looking at today:
 
-#### Images
-- [Pixabay](https://pixabay.com/)
-- [Unsplash](https://unsplash.com/)
-- [Pexels](https://www.pexels.com/royalty-free-images/)
+[Bootstrap](http://getbootstrap.com/)<br>
+  _Probably the most popular framework out there right now. Originally created by some guys who were working at Twitter._
 
-#### CSS
-- [Psuedo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+## Activity
 
-#### Chrome Extensions
-- [Eye Dropper](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en)
-- [Palette Creator](https://chrome.google.com/webstore/detail/palette-creator/oolpphfmdmjbojolagcbgdemojhcnlod?hl=en)
-- [High Contrast](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en)
+We're going to style this page using Bootstrap:
 
-### And remember...
+![unstyled page](https://i.imgur.com/sdRQg2x.png)
 
-![fonts matter](https://i.imgur.com/oprAaYd.png)
+To look something like this:
+
+![styled page](https://i.imgur.com/9imBki4.png)
+
+## Setup
+
+1. Use the files inside the `bootstrap_example` folder to code along with this morning's exercise.
+
+1. Open the folder in VS Code and open `index.html` in your browser
+
+## Let's Look at Bootstrap
+
+Bootstrap's website catalogs everything that you can use to style your application. Note that their styles are responsive. 
+
+To use Bootstrap, you can download a file and keep it in your application or use a link to their CDN.
+
+Bootstrap is a very robust framework! It has pretty much everything that you need (plus more). After this lesson, take some time to explore the site to see more of the offerings. Consider using it in your homework or projects.
+
+## Code along:
+
+1. Go to [Bootstrap's framework page](http://getbootstrap.com/) to get their stylesheets.
+
+>Direct link to documentation:
+https://getbootstrap.com/docs/4.2/getting-started/download/
+
+2. You could download the files (but let's not do that for this exercise):
+![](https://i.imgur.com/Y2bjh8G.png)
+
+3. Let's use the Bootstrap CDN link to get the style's to our page. Add the CDN link into your `index.html` file
+
+`<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">`
+
+6. Refresh your browser and take a look at what happened after just initially linking Bootstrap.
+
+7. We'll be using classes from the `Layout`, `Content`, and `Components` section. You can browse through these sections in the sidebar on Bootstrap's page to see some options for what we can do.
+
+## Nav bar
+
+>Direct link to documentation:
+https://getbootstrap.com/docs/4.2/components/navs/
+
+1. Add the `class="nav"` to the `ul` of your nav bar
+
+2. We also have to specify which `li` elements are nav items by adding the class `nav-item` 
+
+3. Further, we need to specify which `a` elements are nav links by adding the class `nav-link`
+
+4. We can add additional styling to this. Let's add the class `nav-tabs` to our`ul` to adjust the formatting and turn our links into navigation tabs.
+
+![nav](https://i.imgur.com/AXLSUlS.png)
+
+## Adjust the image
+
+>Direct link to documentation:
+https://getbootstrap.com/docs/4.2/content/images/
+
+1. If we wanted our image to be responsive, we could add the `class="img-fluid"`
+
+2. If we always want it to stay centered, tack on `class="text-center"` onto the image's parent `div`
+
+## Container
+
+>Direct link to documentation:
+https://getbootstrap.com/docs/4.2/layout/overview/
+
+1. Let's start by wrapping our site content in a container: `class = "container"`. What does this do?
+
+We can use .container for a responsive fixed width container.
+
+![container](https://i.imgur.com/VQT8U0F.png)
+
+If we want the container to span the entire width of the viewport, we can use `class="container-fluid"`
+
+![container fluid](https://i.imgur.com/nbdIF1f.png)
+
+## Bootstrap's grid
+Let's use the built-in grid system that Bootstrap supplies.
+
+>Direct link  to documentation: 
+https://getbootstrap.com/docs/4.2/layout/grid/
+
+1. On the three paragraphs below the Example header, let's put `class="row"` on a div that surrounds all three.
+
+2. Let's give each of these paragraphs a `class="col-sm"`
+
+![grid](https://i.imgur.com/DmpDs9U.png)
+
+## Update a button
+
+>Direct link  to documentation:
+https://getbootstrap.com/docs/4.2/components/buttons/
+
+Bootstrap has multiple button options:
+
+  - The primary button style:
+  `class="btn btn-primary"`
+
+  ![primary button](https://i.imgur.com/5UYSelU.png)
+
+  - Quickly style to denote an action (success, danger, warning, etc.)
+    - `class="btn btn-success"`
+    
+      ![button success](https://i.imgur.com/hdZdrF0.png)
+      
+    - `class="btn btn-danger"`
+    
+       ![button danger](https://i.imgur.com/8tSt2l4.png)
+       
+  - Change the style to an outlined button instead of filled
+    - `class="btn btn-outline-primary"`
+    
+        ![button outline](https://i.imgur.com/RikDvpo.png)
+
+  - Or change the size of the button
+      - `class="btn btn-primary btn-lg"`
+
+      ![button large](https://i.imgur.com/UCkuKtI.png)
+
+1. Choose one and add it in the `a` tag to turn the `Learn More` link to a button.
+
+#### Style the table
+
+>Direct link  to documentation:
+https://getbootstrap.com/docs/4.2/content/tables/
+
+1. Add Bootstrap's default table style: `class="table"`
+
+![table](https://i.imgur.com/h8zEAQU.png)
+
+2. Add the class `table-striped` to give our table zebra stripes
+
+![striped table](https://i.imgur.com/DHPEEsi.png)
+
+#### Sections that you want to showcase
+
+>Direct link  to documentation:
+https://getbootstrap.com/docs/4.2/components/jumbotron/
+
+Bootstrap has something called `jumbotron` which has styling to showcase a section.
+
+1. Let's add `class="jumbotron"` to the section marked as `callout` in our index.html.
+
+![jumbotron](https://i.imgur.com/2bPaxXf.png)
+
+NOTE: Bootstrap is fully responsive! Change the sizes of your screen to check it out.
+
+# Other CSS frameworks:
+
+[Skeleton](http://getskeleton.com/)<br>
+  _Lightweight framework that has a nice, simple grid system._
+
+[Materialize](http://materializecss.com/)<br>
+_This framework is difficult to manipulate, but I like it for the parralax and the cards._
+
+[Pure CSS](http://purecss.io/)<br>
+_Similar to skeleton, this is a light framework with a grid system and responsive design._

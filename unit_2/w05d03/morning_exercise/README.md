@@ -1,200 +1,308 @@
-# Big O Notation
+
+Title:Intro to Recursion<br>
+Type: Morning Exercise <br>
+Duration: "0:45"<br>
+Creator: Karolin Rafalski <br>
+Competencies:  Writing a Recursive function <br>
+Prerequisites: JavaScript or Ruby Fundamentals<br>
+
+---
+# Recursion
+
+♻️ To understand recursion, you must understand recursion ♻️
 
 
-![](https://i.imgur.com/AHLnEHd.png)
-image from: https://www.bigocheatsheet.com
+## Recursion definition
 
-We are going to be introducing more computer science concepts. These will suit you the best for interviews and further into your career. It's important to study and learn them and a number of these concepts are rather complicated and will take time to come together for you. At GA our focus is projects and skills first, rather than focusing on theory. We believe building things is one of the best way to learn to code and become a developer. However, it's important to set aside some time to learn core computing concepts so that you can continue to grow as a developer. 
+A function that calls itself is called recursive.
 
-What may be a little confusing is that we are going to start talking about optimization. But as you remember from unit 1, one of the biggest pieces of advice we gave was: Don't optimize too early! This is still true for your work. Focus on building first and then optimization.
+A recursive function calls itself to reduce a larger problem into a smaller one until it can be solved.
 
-Still: what does optimization mean? We're going to look at what it means through the lens of Big O this morning. 
+A recursive function must have two properties
+1. a simple base case (or cases) - which is a terminating scenario that does not use recursion to produce an answer
+2. A set of rules that reduce all other cases towards the base case
 
-One of the things computer scientists are trained to do is to find ways to make things faster, smaller, cheaper and more precise. One way to approach such problems is to consider the worst case scenario. Big O Notation is a way to denote the worst case scenario.
-
-Big O comes from the discipline of math and is used to describe the relationship between two functions based on their growth rates.
-
-Big O of Algorithms is measured by:
-- **Time complexity** - the amount of time it takes to execute. It is measured in the number of steps an algorithm takes rather than measures of time like seconds or minutes.
-- **Space complexity** - the amount of memory (RAM) required an algorithm needs to run.
+Recursion is found in mathematics and can look really scary. But we can use recursion with ease.
 
 
-Each complexity can be described with notation like O(n): Where n represents the number of elements.
 
-Additionally, Big O can be represented visually with the execution time/memory on the y-axis and input size on the x-axis.
+## Recursion Example #1
 
-![](https://i.imgur.com/SmB6APr.png)
+Let’s think about adding the following numbers
 
-As the input size increases the execution time can change, based on the algorithm being used.
-
-For our introduction, we'll only consider time complexity, however on myGA and in your studies you should learn and consider space complexity as well.
-
-We will look at 5 classes of complexity.
+1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10
 
 
-### Constant `O(1)`
+### Solving it by hand
+Average humans, do not add all the numbers all at once.  We add two numbers together, store that number, and then add the next number, until we are left with one number. When we have one number, that is our answer.
+
+So we do:
+```
+1  + 2   = 3
+3  + 3   = 6
+6  + 4   = 10
+10 + 5   = 15
+15 + 6   = 21
+21 + 7   = 28
+28 + 8   = 36
+36 + 9   = 45
+45 + 1   = 55
+55 + no numbers left means our answer is 55
+```
+
+### Solving it recursively
+We can express this with a recursive function that follows our above pattern really easily
+
+1. First, since we have a list of numbers (our test case), let’s express them as an array
+2. Second, define a function
 
 ```js
-const getFirstSongFromPlaylist = (array) => {
-  console.log(array[0])
+const numsToSum = [ 1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10 ];
+
+const sumNumbers = ( numsArr ) => {
+
 }
 ```
 
-This algorithm has a Big O complexity of `constant`. No matter the size of the array 1 or 1 million, this always takes the same amount of time and memory to execute.
-
-This type of complexity is considered highly efficient.
-
-![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/8-Input-Size-Run-Time-Graph.png)
-
-
-### Linear `O(n)`
+3. we need a base case
 
 ```js
-const printSongs = (array) => {
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i])
+const sumNumbers = ( numsArr ) => {
+ if ( numsArr.length === 0 ){
+ return sum;
+ }
+}
+```
+
+4. Holding onto our sum value
+
+We have to define our sum variable and we have to be able to access it over and over again, let’s pass it in our function
+If it isn’t defined, let’s give it a value of 0, otherwise it will equal the sum of the previous numbers.
+
+```js
+const sumNumbers = ( numsArr , sum ) => {
+sum = sum || 0;
+ if  (numsArr.length === 0 ){
+ return sum;
+ }
+}
+```
+
+5. Define a way (or rules) to decrease our complex problem down to the base case <br>
+Each time we add a number we have to remove it from the array, thus decreasing the array length and bring us closer to our base case. We’ll use the `shift()` method so it is taking the number from the start of the array, to match our previous calculations, but one could just as easily use `.pop()`
+
+```js
+const sumNumbers = ( numsArr , sum) => {
+sum = sum || 0;
+ if (numsArr.length === 0){
+ return sum;
+ }
+ sum += numsArr.shift();
+}
+```
+
+6.  Now that we’ve established our base case and a way to get down to our base case, we can now call our function
+
+```js
+const sumNumbers = ( numsArr , sum) => {
+sum = sum || 0;
+ if (numsArr.length === 0){
+ return sum;
+ }
+ sum += numsArr.shift();
+return sumNumbers ( numsArr , sum );
+}
+```
+7. Let’s test it!
+
+```
+sumNumbers (numsToSum);
+
+```
+
+## Recursion Example #2
+
+We can figure out if a positive integer is even or odd, if we keep subtracting 2 from the number.
+If the value 0 is reached, the number is even.
+If the value 1 is reached, the number is odd.
+
+```
+6
+6 - 2 = 4
+4 - 2 = 2
+2 - 2 = 0
+0 means the number is even
+
+5
+5 - 2 = 3
+3 - 2 = 1
+1 means the number is odd
+```
+
+
+Let's follow our steps above to write this recursive function
+
+1. define a number/test case
+Let's go with `10`
+
+2. define a function
+
+```js
+const testCase1 = 10;
+const isEven = ( num ) => {
+
+}
+```
+
+3. Define our base case(s)
+
+```js
+const testCase1 = 10;
+const isEven = ( num ) => {
+  if ( num === 0 ) {
+    return "the number is even";
+  }
+  if ( num === 1 ){
+    return "the number is odd";
   }
 }
 ```
 
-This algorithm has a Big O complexity of `linear`. For each added song to the array, the amount of time it takes to complete this is increased by 1 step.
-
-If the array (or playlist) has 1 item, it will take 1 step to complete. If the array has a million items it will take a million steps to complete.
-
-This type of complexity is considered pretty good efficiency.
-
-![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/6-Input-Size-Run-Time-Graph.png)
-
-### Quadratic Complexity `O(n^2)`
+4. We're going to 'hold on' to our progress a little differently this time, we're just going to keep calling the function with the num - 2 over and over again.
+5. This will also define the rules to decrease our complex problem down to our base case
+6. And call our function!
 
 ```js
-  const PrintSongsWithinAlbums = () => {
-    for (let i = 0; i < array.length; i++) {
-      for (let j = 0; j < array.length; j++) {
-        console.log(array[i][j])
-      }
-    }
+const testCase1 = 10;
+const isEven = ( num ) => {
+  if ( num === 0 ) {
+    return "the number is even";
   }
-```
-
-This algorithm has a Big O complexity of `quadratic`. For each added item to the array, the amount of time it takes to complete this is increased by n to the n power!
-
-Imagine you wanted to print every song by an artist. The above function would loop through each album and then within each album, loop through each song. For each album the complexity doesn't increase just by 1 step, but by each album times each song on the album.
-
-As we think of the worst case scenario if every album has ten songs, if we have 10 albums, we go through the steps 10 times for the albums and then times for each song so for a collection of 10 albums we go through the algorithm 100 times. If we had 100 albums and still 10 songs, we'd go through this algorithm 1000 times...
-
-If we were to also have to go through artists, and now every artist has 10 albums and each album has 10 songs.
-
-More complexity:
-
-```
-  const PrintSongsWithinAlbumsByArtist = () => {
-    for (let i = 0; i < array.length; i++) {
-      for (let j = 0; j < array[i].length; j++) {
-        for (let k = 0; k < arrarray[i][j].length; k++) {
-          console.log(array[i][j])
-        }
-      }
-    }
+  if ( num === 1 ){
+    return "the number is odd";
   }
-```
-
-Now we have a collection of artists, as we gain each artist with 10 albums and ten songs each artist will have 10 albums. Each time we add an artist we get 10 songs and 10 albums. With 10 artists we get 10 x 10 x 10 = 1000 steps. 
-
-This type of complexity is considered inefficient.
-
-![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/10-Input-Size-Run-Time-Graph.png)
-
-### Logarithmic Complexity `O(log(n))`
-
-Imagine we are calling out to our favorite voice assistant to play a song for us. There are millions of songs out there. Let's say we're looking for `I Can't Get No Satisfaction`
-
-How is our assistant finding our song?
-
-Is it going randomly through every single song in the database?
-
-Is it looking by artist then by song (again without any organization)?
-
-In either scenario, you'd have to consider the worst-case scenario which is that the song you ask for is always the absolute last song found.
-
-What if the songs were organized alphabetically?
-
-Then we could perform a binary search.
-
-We would start at the middle and then check if there is a match. If it matches we're done!
-
-But with Big O we're always thinking about the worst case scenario and that our song will be the last song found.
-
-So we start in the middle, let's say that this middle is songs that start with the letter `M`, if our song starts with the letter `I` we can eliminate all the songs that start with M or further in the alphabet. Now we've cut down the number of items we must search by half.
-
-Let's set our next midpoint to be the middle of the remaining songs, and we get songs that start with the letter `F`. Since our song starts with the letter `I`, we can stop searching through songs starting with A - F, and have again, cut our search down by half.
-
-We would keep repeating, removing half of the songs we are looking through until we found our song. This more complicated process is more efficient than looking through every single song and can be represented
-
-```js
-function binarySearch(arr, item, first = 0, last = null) {
-    if (!last) last = arr.length
-    let midpoint = Math.floor((last - first) / 2) + first
-    if (arr[midpoint] === item) return midpoint
-    if (arr[midpoint] > item) return binarySearch(arr, item, first, midpoint)
-    if (arr[midpoint] < item) return binarySearch(arr, item, midpoint, last)
+  return isEven( num - 2 );
 }
 ```
 
-In this way, if we have 16 songs, the number of steps would be 4 Log(2) of 16 = 4.
+7. Let's test it!
 
-If we have about 1.126 million songs, the number of steps would be just 50!
-
-This type of complexity is considered highly efficient.
-
-![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/9-Input-Size-Run-Time-Graph.png)
-
-### Factorial Complexity `O(n!)`
-
-Factorial means the product of all positive integers less than or equal to n.
-
-Examples
-
-- 3 factorial is 3 x 2 x 1
-- 7 factorial is 7 x 6 x 5 x 4 x 3 x 2 x 1
-
-The complexity of an algorithm that is factorial increases faster than any other example. While there are real world examples of these types of algorithms, due to their complexity, they are not typically asked in coding interviews for jr positions and thus we won't include an example.
-
-This type of complexity is considered inefficient.
-
-![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/7-Input-Size-Run-Time-Graph.png)
-
-## Summary
-
-We can look at this chart in myGA to look at how efficincy changes as input increases across the different types of classes of complexity.
-
-
-![](https://i.imgur.com/CExCK8P.png)
-
-Again, we can see that in most cases, when we are looking at 600 or less items, our computers can work through them quickly and our primary concern in this course should not be efficiency or optimization.
-
-Early optimization is problematic because it can be overwhelming to think about as you start to solve a problem or build an app and can prevent you from building a prototype in a reasonable amount of time.
-
-Additionally, as you build your app with optimization in mind you will inevitably try to solve problems you won't really have, which is bad for things like deadlines. And also since you don't yet know what all your problems will be, you must build in order to learn what you'll need to solve.
-
-We'll be having a lesson on agile development; which is an approach to developing software where requirements and solutions evolve through short deadlines and small goals. This allows developers to account for the necessary pivots as they develop applications.
-
-The approach that will serve you best in this course, and likely well into your career is by a quote from Addy Osmani
-
-```
-First do it,
-then do it right,
-then do it better
+```js
+isEven( testCase1 );
+isEven( 101 );
 ```
 
-Again focusing on just solving your problem first and foremost. Then going and finding the right way to do it and finally, finding ways to do it better.
+Problem from [Eloquent JavaScript](https://eloquentjavascript.net/03_functions.html) towards the bottom.
+
+## Your turn
+
+Sometimes, it is scary to do things that might cause an infinite loop or blow the stack- because it may be difficult to stop and cause your computer to freeze and you might have to restart it.
+
+[repl.it](https://repl.it/) is really nice because if you cause an infinite loop or try to blow the stack it'll stop pretty quickly and give you an error. You are welcome to do this in node, but if you are afraid of creating infinite loops, go on over to `repl.it` and get coding there.
+
+### Factorial
+
+The factorial of a positive integer, n, is the product of all positive integers less than or equal to to n.
+
+The factorial of 5 is 120
+> 5 x 4 x 3 x 2 x 1 = 120
+
+Write a recursive function `factorial` that returns the factorial of a given number
+
+Remember, you can get started with Karolin's 7 easy steps to writing a recursive function
+
+1. Establish a test case (for this example, you can choose 5, since we know the result will be 120)
+2. Write an empty function
+3. Define your base case(s) - What is our base case for this problem?
+4. Figure out how you will 'hold on' to your progress as you call the funtion again and again
+5. Define a way to reduce your complex case down to the base case (you may be able to combine step 4 into this)
+6. Call your function inside your function
+7. Test it!
+
+### Step Counting
+
+Suppose you want climb a staircase of N steps, and on each step you can take either 1 or 2 steps. How many distinct ways are there to climb the staircase? For example, if you wanted to climb 4 steps, you can take the following distinct number of steps:
+
+```
+1) 1, 1, 1, 1
+2) 1, 1, 2
+3) 1, 2, 1
+4) 2, 1, 1
+5) 2, 2
+```
+
+So there are 5 distinct ways to climb 4 steps. We want to write a function, using recursion, that will produce the answer for any number of steps.
+
+Problem from [Coderbyte](https://coderbyte.com/algorithm/step-by-step-solution-step-walking-using-recursion)
+
+### Fibonacci Sequence
+
+Fibonacci sequence
+The Fibonacci sequence is a sequence of integers in which the first and second terms are both equal to 1 and each subsequent term is the sum of the two preceding it. The first few terms are $1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...
+
+Write a function where you take a number and determine whether or not it is a Fibonacci number (return true/false)
+
+**Note** : This is a popular recursion problem that comes up often
+
+### Recursion "Branches"
+
+Consider this puzzle: by starting from the number 1 and repeatedly either adding 5 or multiplying by 3, an infinite amount of new numbers can be produced. How would you write a function that, given a number, tries to find a sequence of such additions and multiplications that produce that number? For example, the number 13 could be reached by first multiplying by 3 and then adding 5 twice, whereas the number 15 cannot be reached at all.
+
+Source:
+[Eloquent JavaScript](https://eloquentjavascript.net/03_functions.html) about 2/3 down
+
+### Hungry for More
 
 
+#### Array Flattener
 
-## Next
+Create a function that takes a multi-level array (of any depth) and flattens it to one level
 
-Feeling like you need to hear it all again?
-- Go to myGA and study
+```
+const arr = [1 ,2 ,[3 ,4, [5,[6]],7],8, [9, 10]];
 
-Ready to work through figuring out some Big O?
-- See the `big-o-activity` markdown
+flatten (arr);
+
+// [ 1 , 2, 3, 4, 5, 6, 7, 8 , 9 ,10 ];
+
+```
+
+#### Total Recall
+
+It is now time to push you understanding of functional programming to
+the next level. Write a function `recall(word)` which can be chain
+called like so
+
+```javascript
+recall(‘Sorry,’)(‘Your’)(‘whole’)(‘life’)(‘is’)(‘just’)(‘a’)(‘dream.’)(‘I’)(‘have’)(‘been’)(‘trying’)(‘to’)(‘tell’)(‘you,’)(‘someone’)(‘has’)(‘erased’)(‘your’)(‘memory.’)();
+
+// => “Sorry, Your whole life is just a dream. I have been trying to tell you, someone has erased your memory. ”
+```
+
+Notice that if you pass a string as an argument the function *saves*
+it. If you invoke it with no argument at the end it will log to the
+console all of the previous arguments concatenated together.
+
+### The Call Stack
+
+![call stack with recursion example](https://i.stack.imgur.com/P56ru.jpg)
+
+#### References
+
+[Eloquent JavaScript](https://eloquentjavascript.net/03_functions.html)
+
+[Coderbyte](https://coderbyte.com/algorithm/step-by-step-solution-step-walking-using-recursion)
+
+[Free Code Camp](https://medium.freecodecamp.org/how-recursion-works-explained-with-flowcharts-and-a-video-de61f40cb7f9)
+
+[CMSC 214](https://www.cs.umd.edu/class/fall2002/cmsc214/Tutorial/recursion.html)
+
+[Art of Problem Solving](http://artofproblemsolving.com/wiki/index.php?title=Fibonacci_sequence)
+
+[Wikipedia](https://en.wikipedia.org/wiki/Recursion)
+
+[Mooreccac](http://mooreccac.com/kcppdoc/Recursion.htm)
+
+[Stack Overflow Call Stack Concept](https://stackoverflow.com/questions/10057443/explain-the-concept-of-a-stack-frame-in-a-nutshell)
+
+Additional thanks to Thom Page!

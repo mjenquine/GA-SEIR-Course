@@ -44,7 +44,7 @@ To look something like this:
 
 1. Use the files inside the `bootstrap_example` folder to code along with this morning's exercise.
 
-1. Open the folder in VS Code and open `index.html` in your browser
+1. Open the folder in Atom and open `index.html` in your browser
 
 ## Let's Look at Bootstrap
 

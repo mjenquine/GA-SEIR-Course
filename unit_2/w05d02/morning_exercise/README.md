@@ -1,92 +1,200 @@
-![](/ga_cog.png)
-
-<hr>
-
-Title: C.R.A.P. Web Design <br>
-Type: Morning Exercise<br>
-Creator: Kristyn Bryan<br>
-Adapted By: Cathleen Wright<br>
-
-<hr>
-
-## C.R.A.P. Web Design
-
-The four principals that may be the most important for graphic designers are:
-
-**C**ontrast<br>
-**R**epetition<br>
-**A**lignment<br>
-**P**roximity<br>
-
-### Contrast
-Contrast is the most effective way to add visual interest to your page. Contrast is also crucial to the organization of information - a reader should always be able to glance at a document and instantly understand what's going on.
-
-![contrast](https://i.imgur.com/iY9Erkh.png)
-
-#### Contrast using color
-The famous adverts for the iPod expertly used contrast to focus the viewers attention on the music player. The ads featured a silhouetted character on a brightly colored background. The iPod and earphones appear in white and stand out clearly against the silhouettes and colored backgrounds.
-
-![contrast2](https://i.imgur.com/BKZTLyV.png)
-
-A quick way to know if your design has optimum contrast is by looking at its grayscale version.
-
-![grayscale](https://i.imgur.com/cokSB0c.png)
-
-## Repetition
-Repetition is simply the process of repeating elements throughout a design, or several pieces of design collateral to give a unified look. Repetition can be practiced with the color, shape, texture, size, and other attributes of the elements in a design. It helps users familiarize with the way information is presented to them.
-
-![repetition](https://i.imgur.com/rv5uDCc.png)
-
-### Alignment
-Nothing should be placed on the page arbitrarily. Every item should have a visual connection with something else on the page. When items are aligned, the result is a stronger cohesive unit.
-
-Always find something else on the page to align with, even if the two objects are physically far away from each other.
-
-![alignment](https://i.imgur.com/6SXipqD.png)
-
-### Proximity
-Unity helps all the elements look like they belong together.  The concept of unity describes the relationship between the individual parts and the whole of a composition. Unity in design is a concept that stems from theories of visual perception and psychology, specifically those dealing with how the human brain organizes visual information into categories, or groups.
-
-When you create something, you already know which pieces of information are logically connected, you know which information should be emphasized and what can be de-emphasized. Express that information graphically by grouping it.
-
-![proximity](https://i.imgur.com/nuqubJn.png)
-
-![proximity2](https://i.imgur.com/ItQ6ujU.png)
-
-## Exercise
-
-You've been given starter code for a pretty awful looking website (`unit_2/w05d02/morning_exercise/starter_code/`).  Fix it up and make it C.R.A.P.!  
-
-_Don't modify any actual content of the html_, except to change the `src` of the `<img>` tag.  Feel free to add `<span>` tags, or classes and id's to call upon the content.  
-
-Completely stuck for ideas?  Pick your favorite hobby or season to theme your page.  
-
-## Resources
-
-#### Colors
-- [clrs.css](http://clrs.cc/)
-- [Coolors.co](https://coolors.co/)
-- [Trendy Web Color Palettes](https://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html)
+# Big O Notation
 
 
-#### Fonts and Icons
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome](http://fontawesome.io/)
-- [20 Best Web Fonts](https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html)
+![](https://i.imgur.com/AHLnEHd.png)
+image from: https://www.bigocheatsheet.com
 
-#### Images
-- [Pixabay](https://pixabay.com/)
-- [Unsplash](https://unsplash.com/)
-- [Pexels](https://www.pexels.com/royalty-free-images/)
+We are going to be introducing more computer science concepts. These will suit you the best for interviews and further into your career. It's important to study and learn them and a number of these concepts are rather complicated and will take time to come together for you. At GA our focus is projects and skills first, rather than focusing on theory. We believe building things is one of the best way to learn to code and become a developer. However, it's important to set aside some time to learn core computing concepts so that you can continue to grow as a developer. 
 
-#### CSS
-- [Psuedo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+What may be a little confusing is that we are going to start talking about optimization. But as you remember from unit 1, one of the biggest pieces of advice we gave was: Don't optimize too early! This is still true for your work. Focus on building first and then optimization.
 
-#### Chrome Extensions
-- [Eye Dropper](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=en)
-- [Palette Creator](https://chrome.google.com/webstore/detail/palette-creator/oolpphfmdmjbojolagcbgdemojhcnlod?hl=en)
-- [High Contrast](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en)
+Still: what does optimization mean? We're going to look at what it means through the lens of Big O this morning. 
 
-### And remember...
+One of the things computer scientists are trained to do is to find ways to make things faster, smaller, cheaper and more precise. One way to approach such problems is to consider the worst case scenario. Big O Notation is a way to denote the worst case scenario.
 
-![fonts matter](https://i.imgur.com/oprAaYd.png)
+Big O comes from the discipline of math and is used to describe the relationship between two functions based on their growth rates.
+
+Big O of Algorithms is measured by:
+- **Time complexity** - the amount of time it takes to execute. It is measured in the number of steps an algorithm takes rather than measures of time like seconds or minutes.
+- **Space complexity** - the amount of memory (RAM) required an algorithm needs to run.
+
+
+Each complexity can be described with notation like O(n): Where n represents the number of elements.
+
+Additionally, Big O can be represented visually with the execution time/memory on the y-axis and input size on the x-axis.
+
+![](https://i.imgur.com/SmB6APr.png)
+
+As the input size increases the execution time can change, based on the algorithm being used.
+
+For our introduction, we'll only consider time complexity, however on myGA and in your studies you should learn and consider space complexity as well.
+
+We will look at 5 classes of complexity.
+
+
+### Constant `O(1)`
+
+```js
+const getFirstSongFromPlaylist = (array) => {
+  console.log(array[0])
+}
+```
+
+This algorithm has a Big O complexity of `constant`. No matter the size of the array 1 or 1 million, this always takes the same amount of time and memory to execute.
+
+This type of complexity is considered highly efficient.
+
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/8-Input-Size-Run-Time-Graph.png)
+
+
+### Linear `O(n)`
+
+```js
+const printSongs = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i])
+  }
+}
+```
+
+This algorithm has a Big O complexity of `linear`. For each added song to the array, the amount of time it takes to complete this is increased by 1 step.
+
+If the array (or playlist) has 1 item, it will take 1 step to complete. If the array has a million items it will take a million steps to complete.
+
+This type of complexity is considered pretty good efficiency.
+
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/6-Input-Size-Run-Time-Graph.png)
+
+### Quadratic Complexity `O(n^2)`
+
+```js
+  const PrintSongsWithinAlbums = () => {
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 0; j < array.length; j++) {
+        console.log(array[i][j])
+      }
+    }
+  }
+```
+
+This algorithm has a Big O complexity of `quadratic`. For each added item to the array, the amount of time it takes to complete this is increased by n to the n power!
+
+Imagine you wanted to print every song by an artist. The above function would loop through each album and then within each album, loop through each song. For each album the complexity doesn't increase just by 1 step, but by each album times each song on the album.
+
+As we think of the worst case scenario if every album has ten songs, if we have 10 albums, we go through the steps 10 times for the albums and then times for each song so for a collection of 10 albums we go through the algorithm 100 times. If we had 100 albums and still 10 songs, we'd go through this algorithm 1000 times...
+
+If we were to also have to go through artists, and now every artist has 10 albums and each album has 10 songs.
+
+More complexity:
+
+```
+  const PrintSongsWithinAlbumsByArtist = () => {
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 0; j < array[i].length; j++) {
+        for (let k = 0; k < arrarray[i][j].length; k++) {
+          console.log(array[i][j])
+        }
+      }
+    }
+  }
+```
+
+Now we have a collection of artists, as we gain each artist with 10 albums and ten songs each artist will have 10 albums. Each time we add an artist we get 10 songs and 10 albums. With 10 artists we get 10 x 10 x 10 = 1000 steps. 
+
+This type of complexity is considered inefficient.
+
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/10-Input-Size-Run-Time-Graph.png)
+
+### Logarithmic Complexity `O(log(n))`
+
+Imagine we are calling out to our favorite voice assistant to play a song for us. There are millions of songs out there. Let's say we're looking for `I Can't Get No Satisfaction`
+
+How is our assistant finding our song?
+
+Is it going randomly through every single song in the database?
+
+Is it looking by artist then by song (again without any organization)?
+
+In either scenario, you'd have to consider the worst-case scenario which is that the song you ask for is always the absolute last song found.
+
+What if the songs were organized alphabetically?
+
+Then we could perform a binary search.
+
+We would start at the middle and then check if there is a match. If it matches we're done!
+
+But with Big O we're always thinking about the worst case scenario and that our song will be the last song found.
+
+So we start in the middle, let's say that this middle is songs that start with the letter `M`, if our song starts with the letter `I` we can eliminate all the songs that start with M or further in the alphabet. Now we've cut down the number of items we must search by half.
+
+Let's set our next midpoint to be the middle of the remaining songs, and we get songs that start with the letter `F`. Since our song starts with the letter `I`, we can stop searching through songs starting with A - F, and have again, cut our search down by half.
+
+We would keep repeating, removing half of the songs we are looking through until we found our song. This more complicated process is more efficient than looking through every single song and can be represented
+
+```js
+function binarySearch(arr, item, first = 0, last = null) {
+    if (!last) last = arr.length
+    let midpoint = Math.floor((last - first) / 2) + first
+    if (arr[midpoint] === item) return midpoint
+    if (arr[midpoint] > item) return binarySearch(arr, item, first, midpoint)
+    if (arr[midpoint] < item) return binarySearch(arr, item, midpoint, last)
+}
+```
+
+In this way, if we have 16 songs, the number of steps would be 4 Log(2) of 16 = 4.
+
+If we have about 1.126 million songs, the number of steps would be just 50!
+
+This type of complexity is considered highly efficient.
+
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/9-Input-Size-Run-Time-Graph.png)
+
+### Factorial Complexity `O(n!)`
+
+Factorial means the product of all positive integers less than or equal to n.
+
+Examples
+
+- 3 factorial is 3 x 2 x 1
+- 7 factorial is 7 x 6 x 5 x 4 x 3 x 2 x 1
+
+The complexity of an algorithm that is factorial increases faster than any other example. While there are real world examples of these types of algorithms, due to their complexity, they are not typically asked in coding interviews for jr positions and thus we won't include an example.
+
+This type of complexity is considered inefficient.
+
+![](https://ga-instruction.s3.amazonaws.com/assets/tech/computer-science/big-o/english/7-Input-Size-Run-Time-Graph.png)
+
+## Summary
+
+We can look at this chart in myGA to look at how efficincy changes as input increases across the different types of classes of complexity.
+
+
+![](https://i.imgur.com/CExCK8P.png)
+
+Again, we can see that in most cases, when we are looking at 600 or less items, our computers can work through them quickly and our primary concern in this course should not be efficiency or optimization.
+
+Early optimization is problematic because it can be overwhelming to think about as you start to solve a problem or build an app and can prevent you from building a prototype in a reasonable amount of time.
+
+Additionally, as you build your app with optimization in mind you will inevitably try to solve problems you won't really have, which is bad for things like deadlines. And also since you don't yet know what all your problems will be, you must build in order to learn what you'll need to solve.
+
+We'll be having a lesson on agile development; which is an approach to developing software where requirements and solutions evolve through short deadlines and small goals. This allows developers to account for the necessary pivots as they develop applications.
+
+The approach that will serve you best in this course, and likely well into your career is by a quote from Addy Osmani
+
+```
+First do it,
+then do it right,
+then do it better
+```
+
+Again focusing on just solving your problem first and foremost. Then going and finding the right way to do it and finally, finding ways to do it better.
+
+
+
+## Next
+
+Feeling like you need to hear it all again?
+- Go to myGA and study
+
+Ready to work through figuring out some Big O?
+- See the `big-o-activity` markdown

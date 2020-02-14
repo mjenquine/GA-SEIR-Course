@@ -10,6 +10,12 @@
 	* If brew is already installed `brew upgrade`.
 
 * **Install Mongodb on Mac OS X:** `brew install mongodb`
+* If you have OSX Catalina
+```
+brew tap mongodb/brew
+brew install mongodb-community
+brew services start mongodb-community
+```
 
 ## Set data location
 

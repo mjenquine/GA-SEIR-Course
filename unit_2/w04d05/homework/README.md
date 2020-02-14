@@ -35,7 +35,7 @@ Practice the Basics of Express
 
 ## Getting Started
 
-In the `homework` directory for today, create a Javascript file `server.js`. Write your answers inside this one js file.
+In the `homework` directory for today, create a express directory and cd into it then create Javascript file `server.js`. Write your answers inside this one js file.
 
 * `npm init`. You should receive a `package.json`.
 

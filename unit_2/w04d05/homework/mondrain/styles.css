@@ -1,0 +1,128 @@
+* {
+
+  background-color: black;
+}
+body {
+
+}
+div {
+  margin: 5px;
+  border: 1px solid aqua;
+  width: 16%;
+}
+.section-one {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+.one-one {
+  width: 8%;
+  background-color: white;
+}
+.one-two {
+  width: 16%;
+  background-color: yellow;
+}
+.one-three {
+  width: 32%;
+  background-color: red;
+}
+.one-four {
+  width: 32%;
+  background-color: blue;
+}
+.one-five {
+  width: 12%;
+  background-color: yellow;
+}
+.one-six {
+  width: 12%;
+  background-color: white;
+}
+.section-two {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+.two-one {
+  width: 8%;
+  background-color: white;
+}
+.two-two {
+  width: 16%;
+  background-color: white;
+}
+.two-three {
+  width: 32%;
+  background-color: white;
+}
+.two-four {
+  width: 16%;
+  background-color: white;
+}
+.two-five {
+  width: 24%;
+  background-color: red;
+}
+.two-six {
+  width: 16%;
+  background-color: blue;
+}
+.two-seven {
+  width: 12%;
+  background-color: white;
+}
+.section-three {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+.three-one {
+  width: 8%;
+  background-color: white;
+}
+.three-two {
+  width: 12%;
+  background-color: white;
+}
+.three-three {
+  width: 48%;
+  background-color: blue;
+}
+.three-four {
+  width: 24%;
+  background-color: white;
+}
+.three-five {
+  width: 16%;
+  background-color: yellow;
+}
+.three-six {
+  width: 12%;
+  background-color: white;
+}
+.section-four {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+.four-one {
+  width: 8%;
+  background-color: white;
+}
+.four-two {
+  width: 16%;
+  background-color: red;
+}
+.four-three {
+  width: 48%;
+  background-color: yellow;
+}
+.four-four {
+  width: 36%;
+  background-color: white;
+}
+.four-five {
+  width: 12%;
+  background-color: white;
+}

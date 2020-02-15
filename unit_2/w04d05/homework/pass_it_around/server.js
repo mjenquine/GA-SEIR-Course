@@ -3,7 +3,7 @@ const app = express()
 const PORT = 3000
 
 app.get('/pass/:num', (req, res) => {
-  if (req.params.num > 90) {
+  if (req.params.num > 0) {
     res.send(`${req.params.num} Bottles of beer on the wall.  <html><p><a href='/pass/${Number(req.params.num - 1)}'>Take one down and pass it around</a></p></html>`)
   } else {
     res.send(`

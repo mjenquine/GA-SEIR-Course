@@ -20,30 +20,6 @@ app.get('/magic/:question', (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.listen(PORT, () => {
   console.log('listening on port', PORT);
 })

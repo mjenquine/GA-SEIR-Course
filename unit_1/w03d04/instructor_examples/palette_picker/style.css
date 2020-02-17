@@ -9,7 +9,7 @@ div {
 #color-palette, #my-palette {
     display: inline-block;
     width: 300px; height: 500px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .square {

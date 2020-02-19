@@ -9,12 +9,14 @@
     body {
       background: #EEE1C8;
     }
-    h1 {
+    h1, h2 {
       color: #0076C1;
     }
     </style>
+    <% let lowerCaseDrinks = allDrinks.name %>
+    <% let upperCaseDrinks = lowerCaseDrinks.charAt(0).toUpperCase() + lowerCaseDrinks.slice(1) %>
     <h1>Gitpub Drinks</h1>
-    <h2><%= allDrinks.name %></h2>
+    <h2><%= upperCaseDrinks %></h2>
     <img src="<%= allDrinks.image %>" alt="drink image">
     <h3><%= allDrinks.price %></h3>
     <a href="/drinks">Back to Gitpub List</a>

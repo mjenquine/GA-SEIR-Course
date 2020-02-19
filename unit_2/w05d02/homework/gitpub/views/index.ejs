@@ -9,7 +9,7 @@
     body {
       background: #EEE1C8;
     }
-    h1 {
+    h1, h2 {
       color: #0076C1;
     }
     </style>
@@ -17,9 +17,11 @@
     <h2>Drinks</h2>
     <ul>
       <% for (let i = 0; i < allDrinks.length; i++) {%>
+        <% let lowerCaseDrinks = allDrinks[i].name %>
+        <% let upperCaseDrinks = lowerCaseDrinks.charAt(0).toUpperCase() + lowerCaseDrinks.slice(1) %>
         <li>
           <a href="/drinks/<%=i%>">
-            <%= allDrinks[i].name %>
+            <%= upperCaseDrinks %>
           </a>
         </li>
       <%}%>

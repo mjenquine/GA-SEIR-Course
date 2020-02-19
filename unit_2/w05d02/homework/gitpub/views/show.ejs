@@ -2,9 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Gitpub Drinks</title>
   </head>
   <body>
-
+    <style type="text/css">
+    body {
+      background: #EEE1C8;
+    }
+    h1 {
+      color: #0076C1;
+    }
+    </style>
+    <h1>Gitpub Drinks</h1>
+    <h2><%= allDrinks.name %></h2>
+    <img src="<%= allDrinks.image %>" alt="drink image">
+    <h3><%= allDrinks.price %></h3>
+    <a href="/drinks">Back to Gitpub List</a>
   </body>
 </html>

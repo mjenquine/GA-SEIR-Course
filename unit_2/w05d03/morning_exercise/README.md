@@ -9,6 +9,8 @@ Prerequisites: JavaScript or Ruby Fundamentals<br>
 ---
 # Recursion
 
+![recursion](https://i.imgur.com/vWzZJ4K.png)
+
 ♻️ To understand recursion, you must understand recursion ♻️
 
 

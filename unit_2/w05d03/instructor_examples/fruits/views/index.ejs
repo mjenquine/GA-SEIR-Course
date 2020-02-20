@@ -6,6 +6,9 @@
   </head>
   <body>
     <h1>Index of Fruits</h1>
+    <nav>
+      <a href="/fruits/new">Create a New Fruit</a>
+    </nav>
     <ul>
     <% fruits.forEach((fruit, index) => { %>
       <li><a href="/fruits/<%=index%>"> <%= fruit.name %></a> </li>

@@ -1,0 +1,23 @@
+div {
+  border: 5px solid black;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue
+}
+
+.one {
+  height: 300px;
+}
+
+.two {
+  height: 150px;
+}

@@ -25,7 +25,10 @@ app.post('/budgets', (req, res) => {
 
 ////show
 app.get('/budgets/:index', (req, res) => {
-  res.send('hi again')
+  const lineItem = budget[req.params.index]
+  res.render('show.ejs', {
+    budget: lineItem
+  })
 })
 
 ////new

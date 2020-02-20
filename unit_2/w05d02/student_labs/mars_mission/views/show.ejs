@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Show Mission</title>
+  </head>
+  <body>
+    <h1>Show Mission Page</h1>
+    <p>
+      The <%= mission.missionType %> mission, <%= mission.name %>, launched on
+      <%= mission.launchDate %> by <%= mission.operator %>.
+      <img src="<%=mission.img%>" alt="">
+    </p>
+    <a href="/missions">back to index</a>
+  </body>
+</html>

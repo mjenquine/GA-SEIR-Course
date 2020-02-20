@@ -20,7 +20,13 @@ app.get('/budgets', (req, res) => {
 
 ////create
 app.post('/budgets', (req, res) => {
-  console.log(req.body);
+  budget.push(req.body)
+  res.redirect('/budgets')
+})
+
+////new
+app.get('/budgets/new', (req, res) => {
+  res.render('new.ejs')
 })
 
 ////show
@@ -30,12 +36,6 @@ app.get('/budgets/:index', (req, res) => {
     budget: lineItem
   })
 })
-
-////new
-app.get('/budgets/new', (req, res) => {
-  res.send('this works')
-})
-
 
 
 app.listen(PORT, () => {

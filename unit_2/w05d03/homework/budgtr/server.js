@@ -11,25 +11,25 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'))
 
 //routes
-
-//index
+////index
 app.get('/budgets', (req, res) => {
   res.send(expenditures)
 })
 
-//show
+////create
+app.post('/budgets', (req, res) => {
+  console.log(req.body);
+})
+
+////show
 app.get('/budgets/:index', (req, res) => {
   res.send('hi again')
 })
 
-
-
-
-
-
-
-
-
+////new
+app.get('/budgets/new', (req, res) => {
+  res.send('this works')
+})
 
 
 

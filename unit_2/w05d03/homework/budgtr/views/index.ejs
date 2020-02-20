@@ -8,6 +8,17 @@
     <title></title>
   </head>
   <body>
-
+    <div class="container">
+      <h1>Budgtr All</h1>
+    </div>
+    <table>
+      <% budget.forEach((budget, index) => { %>
+      <tr>
+        <td><%=budget.date%></td>
+        <td><a href="/budgets/<%=index%>"><%=budget.name%></a></td>
+        <td><%=budget.amount%></td>
+      </tr>
+      <% }) %>
+    </table>
   </body>
 </html>

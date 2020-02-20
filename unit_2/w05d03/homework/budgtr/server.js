@@ -4,7 +4,7 @@ const app = express()
 const PORT = 3000
 
 //data
-const expenditures = require('./models/budget.js')
+const budget = require('./models/budget.js')
 
 //middleware
 app.use(express.urlencoded({extended:false}))
@@ -13,7 +13,9 @@ app.use(express.static('public'))
 //routes
 ////index
 app.get('/budgets', (req, res) => {
-  res.send(expenditures)
+  res.render('index.ejs',{
+    budget: budget
+  })
 })
 
 ////create

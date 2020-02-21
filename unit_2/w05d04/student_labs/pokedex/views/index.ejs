@@ -10,12 +10,20 @@
     <div>
       <a href="/pokemon/new">Add New</a>
     </div>
-    <% pokemon.forEach((pokemon, index) => { %>
-      <a href="/pokemon/<%=index%>"><img src="<%=pokemon.img%>" height="75px" width="75px"></a>
-      <a href="/pokemon/<%=index%>/edit">EDIT</a>
-      <form action="/pokemon/<%=index%>?_method=DELETE" method="post">
-          <input type="submit" value="DELETE">
-      </form>
-    <% }) %>
+    <div class="index-wrapper">
+      <% pokemon.forEach((pokemon, index) => { %>
+      <div class="pokemon-index-view">
+        <div class="pokemon-view-pic">
+          <a href="/pokemon/<%=index%>"><img src="<%=pokemon.img%>" height="100px" width="100px"></a>
+        </div>
+        <div class="pokemon-view-func">
+          <a href="/pokemon/<%=index%>/edit">EDIT</a>
+          <form action="/pokemon/<%=index%>?_method=DELETE" method="post">
+              <input type="submit" value="DELETE">
+          </form>
+        </div>
+      </div>
+      <% }) %>
+    </div>
   </body>
 </html>

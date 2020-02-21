@@ -66,20 +66,3 @@ app.post('/pokemon', (req, res) => {
 app.listen(PORT, () => {
   console.log("listening");
 })
-//
-// {
-//   name: 'mj',
-//   type: 'grass',
-//   hp: '1',
-//   attack: '1',
-//   defense: '1'
-// }
-// {
-//   name: 'mj',
-//   type: 'grass',
-//   stats: {
-//     hp: '1',
-//     attack: '1',
-//     defense: '1'
-//   }
-// // }

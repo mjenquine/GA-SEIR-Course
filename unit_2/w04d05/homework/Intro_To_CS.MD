@@ -70,13 +70,13 @@ As always, we provide a lot of extra activities to accommodate the wide range of
 5. [Introduction to Sorting](https://my.generalassemb.ly/activities/818?from=dashboard&assignmentUuid=ef3ae77a-15d7-4035-b380-c8514d01858c)
 - Summary:
   - 20 minute lesson
-5. [Basic Sorting Algorithms](https://my.generalassemb.ly/activities/778?from=dashboard&assignmentUuid=ef3ae77a-15d7-4035-b380-c8514d01858c)
+6. [Basic Sorting Algorithms](https://my.generalassemb.ly/activities/778?from=dashboard&assignmentUuid=ef3ae77a-15d7-4035-b380-c8514d01858c)
 - Summary:
   - 30 minute lesson
-6. [Divide and Conquer Algorithms](https://my.generalassemb.ly/activities/778?from=dashboard&assignmentUuid=ef3ae77a-15d7-4035-b380-c8514d01858c)
+7. [Divide and Conquer Algorithms](https://my.generalassemb.ly/activities/778?from=dashboard&assignmentUuid=ef3ae77a-15d7-4035-b380-c8514d01858c)
 - Summary:
   - 30 minute lesson
-7. [Search Algorithms](https://my.generalassemb.ly/activities/778?from=dashboard&assignmentUuid=ef3ae77a-15d7-4035-b380-c8514d01858c)
+8. [Search Algorithms](https://my.generalassemb.ly/activities/778?from=dashboard&assignmentUuid=ef3ae77a-15d7-4035-b380-c8514d01858c)
 - Summary:
   - 30 minute lesson
 

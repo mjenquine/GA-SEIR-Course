@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title></title>
+  </head>
+  <body>
+    <h1><%=pokemon.name%></h1>
+    <img src="<%=pokemon.img%>" alt="" height="100px" width="100px">
+    <dl class="">
+      <dt>Type</dt>
+      <dd><%=pokemon.type%></dd>
+      <dt>HP</dt>
+      <dd><%=pokemon.stats.hp%></dd>
+      <dt>Attack Points</dt>
+      <dd><%=pokemon.stats.attack%></dd>
+      <dt>Defense</dt>
+      <dd><%=pokemon.stats.defense%></dd>
+    </dl>
+    <a href="/pokemon">Back</a>
+  </body>
+</html>

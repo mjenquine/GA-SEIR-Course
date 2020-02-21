@@ -33,6 +33,11 @@ app.get('/pokemon/:index/edit', (req, res) => {
     index: req.params.index
   })
 })
+//Delete
+app.delete('/pokemon/:index', (req, res) => {
+  pokemon.splice(req.params.index, 1)
+  res.redirect('/pokemon')
+})
 // Update
 app.put('/pokemon/:index', (req, res) => {
   pokemon[req.params.index] = req.body
@@ -46,12 +51,13 @@ app.put('/pokemon/:index', (req, res) => {
 })
 //CREATE
 app.post('/pokemon', (req, res) => {
+  console.log(req.body);
   req.body.stats = {
     hp: req.body.hp,
     attack: req.body.attack,
     defense: req.body.defense
   }
-  //console.log(req.body);
+  console.log(req.body);
   pokemon.push(req.body)
   res.redirect('/pokemon')
 })

@@ -29,7 +29,9 @@ Tonight's homework is in two parts, first start with [Mongo Burgers](mongo_burge
 Then once you finish Mongo Burgers, move on to [Mongoose Hotels](hotels_app/README.md) in the `hotels_app` folder
 
 Recommended: Continue your "Introduction to Computer Science" Modules on MyGA:
+
 https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_2/w04d05/homework/Intro_To_CS.MD
+
 (Big O Notation, Recursion, Introduction to Sorting)
 
 

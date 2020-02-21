@@ -55,7 +55,7 @@ When you create something, you already know which pieces of information are logi
 
 ## Exercise
 
-You've been given starter code for a pretty awful looking website (`unit_2/w05d02/morning_exercise/starter_code/`).  Fix it up and make it C.R.A.P.!  
+You've been given starter code for a pretty awful looking website (`unit_2/w05d05/morning_exercise/starter_code/`).  Fix it up and make it C.R.A.P.!  
 
 _Don't modify any actual content of the html_, except to change the `src` of the `<img>` tag.  Feel free to add `<span>` tags, or classes and id's to call upon the content.  
 

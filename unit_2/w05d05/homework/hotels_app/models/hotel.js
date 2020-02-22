@@ -32,4 +32,4 @@ const hotelSchema = new Schema (
 
 const Hotel = mongoose.model('Hotel', hotelSchema)
 
-module.export = Hotel
+module.exports = Hotel

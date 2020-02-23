@@ -1,5 +1,47 @@
-* {
-  /*border: 1px solid red;*/
-  /*margin: 0;*/
-  /*padding: 0;*/
+body{
+  font-family: 'Oswald';
+}
+header {
+  background: #1d2120;
+  color: #bcd5d1;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Karla';
+  font-size: 25px;
+  padding-left: 5px;
+  margin: 0;
+}
+nav {
+  background: #bcd5d1;
+  color: #5a5c51;
+}
+img {
+  height: 80px;
+  width: 125px;
+  border-radius: 50px;
+  border: 3px solid #ba9077;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+h2  {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+footer {
+  background: #1d2120;
+  color: #bcd5d1;
+  font-family: 'Karla';
+}
+li {
+  list-style: none;
+}
+ol {
+  display: flex;
+  justify-content: space-around;
+}
+hr {
+  background-color: #ba9077;
 }

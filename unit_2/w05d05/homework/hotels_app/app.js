@@ -55,3 +55,71 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 //   }
 //   db.close()
 // })
+
+//READ///////////////////////////////////////////////////////////////
+// Hotel.find((err, hotels) => {
+//   console.log(hotels);
+//   db.close()
+// })
+// Hotel.find({}, 'name -_id', (err, hotels) => {
+//   console.log(hotels);
+//   db.close()
+// })
+// Hotel.find({name: 'Mandarin Oriental'}, (err, hotel) => {
+//   console.log(hotel);
+//   db.close()
+// })
+// Hotel.find({vacancies: true}, {rating: 0}, (err, hotel) => {
+//   console.log(hotel);
+//   db.close()
+// })
+
+//DELETE//////////////////////////////////////////////////////////////
+// Hotel.findOneAndRemove({name: 'Hotelicopter'}, (err, hotel) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('This is a deleted Hotel', hotel);
+//   }
+//   db.close()
+// })
+// Hotel.findOneAndRemove({name: 'Hilbert\'s Hotel'}, (err, hotel) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('This is a deleted Hotel', hotel);
+//   }
+//   db.close()
+// })
+// Hotel.findOneAndRemove({location: 'Colorado Rockies'}, (err, hotel) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('This is a deleted Hotel', hotel);
+//   }
+//   db.close()
+// })
+// Hotel.findOneAndUpdate({name: 'The Great Northern'}, {rating: 5}, {new: true}, (err, hotel) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(hotel);
+//   }
+//   db.close()
+// })
+// Hotel.findOneAndUpdate({name: 'Motel Bambi'}, {vacancies: false}, {new: true}, (err, hotel) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(hotel);
+//   }
+//   db.close()
+// })
+// Hotel.findOneAndUpdate({location: 'White Bay, Oregon'}, {rating: 2}, {new: true}, (err, hotel) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(hotel);
+//   }
+//   db.close()
+// })

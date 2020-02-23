@@ -19,7 +19,7 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 //Create////////////////////////////////////
 //some starter data, starter data is often referred to as seed data
-// Hotel.create(hotelSeed, ( err , data ) => {
+// Hotel.insertMany(hotelSeed, ( err , data ) => {
 //       if ( err ) console.log ( err.message )
 //   console.log( "added provided hotel data" )
 //   }
@@ -30,3 +30,28 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 //    if ( err ) console.log( err.message );
 //     console.log ( `There are ${data} hotels in this database` );
 // });
+
+//Creating my first hotel with this information
+// const myFirstHotel = {
+//   name: 'Mandarin Oriental',
+//   location: 'San Francisco',
+//   rating: 5,
+//   tags: ['Luxury'],
+//   rooms: [
+//     {
+//       roomNumber: 101,
+//       size: 'King',
+//       price: 500,
+//       booked: false
+//     }
+//   ]
+// }
+//
+// Hotel.create(myFirstHotel, (error, hotel) => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log(hotel);
+//   }
+//   db.close()
+// })

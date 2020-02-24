@@ -3,12 +3,11 @@
 ## What the CRUD ?
 
 ---
-<div style="display:flex; flex-direction:column; align-items:center; margin:0 auto;">
-    <div>Title: What the Crud<br>
+
+    Title: What the Crud<br>
     Type: 2 Day Mini Project<br>
     Instructor: Arthur Bernier Jr <br>
-    Topics: Mongoose with Express <br></div>
-</div>
+    Topics: Mongoose with Express <br>
 
 ---
 
@@ -36,11 +35,39 @@
     4. Mongoose
     5. Embedded Javascript
 #### What do these 5 Technologies do?
-    1. NodeJS is primarily used for non-blocking, event-driven servers, because of its single-threaded nature. It's used for traditional web sites like the one we are mocking up and back-end API services (that we will build in unit 3), but was designed with real-time, push-based architectures in mind. You can use Node to create files, serve files, run code in the terminal etc. Their is no hard limit to what you can do, but everything we are doing is currently running using node. We use node when we run NPM Install to go to the npm directory and fetch the files we need and save them to our computer. We use node in order to use the `require` function to use Javascript written in other files in the files we are currently inside.
-    2. ExpressJS is built on top of the node. js framework and helps in fast-tracking development of server-based applications. Routes are used to divert users to different parts of the web applications based on the request made. Just like JQuery makes use of Client Side Javascript to make dom manipulation simple, Express lets us create web servers in minutes by doing alot of the NodeJS processes in the background.
-    3. MongoDB is used to store data in such a way that it provides high performance, high availability, and automatic scaling. MongoDB is extremely simple to install and implement. MongoDB uses JSON or BSON documents to store data, and we can interact with it using the shell
-    4. Mongoose is used to make a quick way that we can connect any Node.js application to MongoDB. If you remember we had to open up the mongo shell to talk to MongoDB. That would be highly inefficient. So instead Mongoose wrote some Node.js code that can connect with MongoDB's shell in the background for us and send those MongoDB commands to the MongoDB shell for us and all we have to use is write fairly simple JavaScript commands to tell it to do that.
-    5. EJS uses the flexibility of JS to create your html using Javascript on the server side with NodeJS and then delivers it to the browser fully formed. Unlike JQuery which waits for the document to load in the browser and then changes the rendered document. EJS can be used with JQUERY and ClientSideJS by including script tags with links to js files. These files should be used to do things like add event listeners that listen for user input via clicks, mousemoves, hover etc. to change the page, but shouldn't be used to create the page from scratch. This is primarily for SEO reasons because when search engines like Google reach a page they don't wait for JQUERY to add content, if they don't see the content immediately they won't index it.
+   #### 1. __NodeJS__ is primarily used for non-blocking, event-driven servers, because of its single-threaded nature.
+    It's used for traditional web sites like the one we are mocking up and back-end API services (
+    that we will build in unit 3), but was designed with real-time, push-based architectures in mind. 
+    You can use Node to create files, serve files, run code in the terminal etc. 
+    Their is no hard limit to what you can do, but everything we are doing is currently 
+    running using node. We use node when we run NPM Install to go to the npm directory and 
+    fetch the files we need and save them to our computer. We use node in order to use the `require` 
+    function to use Javascript written in other files in the files we are currently inside.
+    
+   #### 2. ExpressJS is built on top of the node. js framework and helps in fast-tracking development 
+    of server-based applications. Routes are used to divert users to different parts of the web
+    applications based on the request made. Just like JQuery makes use of Client Side Javascript 
+    to make dom manipulation simple, Express lets us create web servers in minutes by doing alot 
+    of the NodeJS processes in the background.
+    
+   #### 3. MongoDB is used to store data in such a way that it provides high performance, high 
+    availability, and automatic scaling. MongoDB is extremely simple to install and implement.
+    MongoDB uses JSON or BSON documents to store data, and we can interact with it using the shell
+    
+   #### 4. Mongoose is used to make a quick way that we can connect any Node.js application to MongoDB.
+    If you remember we had to open up the mongo shell to talk to MongoDB. That would be highly 
+    inefficient. So instead Mongoose wrote some Node.js code that can connect with MongoDB's 
+    shell in the background for us and send those MongoDB commands to the MongoDB shell for 
+    us and all we have to use is write fairly simple JavaScript commands to tell it to do that.
+    
+   #### 5. EJS uses the flexibility of JS to create your html using Javascript on the server side with 
+    NodeJS and then delivers it to the browser fully formed. Unlike JQuery which waits for the 
+    document to load in the browser and then changes the rendered document. EJS can be used with
+    JQUERY and ClientSideJS by including script tags with links to js files. These files should be
+    used to do things like add event listeners that listen for user input via clicks, mousemoves, 
+    hover etc. to change the page, but shouldn't be used to create the page from scratch. This is 
+    primarily for SEO reasons because when search engines like Google reach a page they don't wait 
+    for JQUERY to add content, if they don't see the content immediately they won't index it.
     
 ### All of our code is held together by Node.JS and nothing in your files is executed until you tell Node.JS to run the sequence of functions that you have established in your server.js file. The server.js is the brain of your entire application, and when you say `node server.js` it is the same as when you said `node app.js` and all your code contained were simple console.log statements.
 

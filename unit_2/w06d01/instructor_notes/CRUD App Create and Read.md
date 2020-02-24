@@ -4,10 +4,10 @@
 
 ---
 
-    Title: What the Crud<br>
-    Type: 2 Day Mini Project<br>
-    Instructor: Arthur Bernier Jr <br>
-    Topics: Mongoose with Express <br>
+    Title: What the Crud
+    Type: 2 Day Mini Project
+    Instructor: Arthur Bernier Jr 
+    Topics: Mongoose with Express 
 
 ---
 

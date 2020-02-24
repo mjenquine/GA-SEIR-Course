@@ -34,7 +34,14 @@ app.get('/logs/new', (req, res) => {
 ////Functional Routes
 
 //Create
-
+app.post('/logs/', (req, res) => {
+  if (req.body.isShipBroken === 'on') {
+    req.body.isShipBroken = true
+  } else {
+    req.body.isShipBroken = false
+  }
+  res.send(req.body)
+})
 
 //Update
 

@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const Logs = require('./models/logs.js')
+const Log = require('./models/logs.js')
 const PORT = 3000
 //Middleware
 app.use(express.urlencoded({extended: true}))
@@ -40,7 +40,9 @@ app.post('/logs/', (req, res) => {
   } else {
     req.body.isShipBroken = false
   }
-  res.send(req.body)
+  Log.create(req.body, (error, createdLog) => {
+    res.redirect('/logs')
+  })
 })
 
 //Update

@@ -1,6 +1,6 @@
 # CRUD App with Mongoose - Delete and Update
 
-## Lesson Objectives
+## Begin With The End in Mind
 
 Deletion:
 
@@ -20,7 +20,7 @@ Edit/Update:
 
 ![](https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2F1502826406%2F1708w-getty-fruit-closeup-CarstenSchanter-EyeEm.jpg)
 
-## Edit
+## Explanation ...
 
 
 |#|Action|URL|HTTP Verb|EJS view filename|
@@ -31,8 +31,10 @@ Edit/Update:
 |4| Create | /fruits/ | POST| none |
 |5| **Edit** |**/fruits/:id**|**GET**|**edit.ejs**|
 |6| **Update** |**/fruits/:id**|**PUT**|**none**|
-|7| Destroy | /fruits/:index | DELETE |none |
+|7| **Destroy** | **/fruits/:index** | **DELETE** |**none** |
 
+
+# Imitation ...
 ## Create a Delete Button
 
 In your index.ejs file

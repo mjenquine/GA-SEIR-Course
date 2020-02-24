@@ -82,9 +82,15 @@
 4. Edit ( A place where a non coder can edit information in the database)
 ![image](https://user-images.githubusercontent.com/38284764/75123113-92f4d200-5672-11ea-861c-ed89dd48a261.png)
 #### Functional Routes Not : no functional routes are get requests
-1. Create ( Makes a post request and adds a new piece of data to our database)
-2. Update ( makes a put request and changes a piece of data in our database)
-3. Delete ( makes a delete request and removes data from the database)
+1. Create ( Makes a post request and adds a new piece of data to our database) a form using this route as an action will exist on the `NEW` route's attached EJS file
+2. Update ( makes a put request and changes a piece of data in our database) a form on the `EDIT` routes attached ejs file will have the action to use this route.
+3. Delete ( makes a delete request and removes data from the database) a form on the `index` routes EJS file will have the action to call this route.
+
+#### Note just like you could make a function in Jquery that could create a div, and you could make a function that also could change that div, your routes are made the same way. Some routes will render a page to the user, some will perform a backend server functionality, but they all are pieces of code that we call. Whenever a user makes a request express asks 2 questions
+
+# What was the HTTP method : Get, Post, Put, Delete
+# What was the path : i.e. /fruits , /fruits/0, /fruits/new
+# After express gathers that information it then runs the functionality that matches that method and path
 
 
 #### We are making a rudimentary version of this

@@ -1,6 +1,6 @@
 # Express Router
 
-## Lesson Objectives
+## Beginning with the End in Mind
 
 1. Explain What Express.Router does for us
 1. Create External Controller File for Routes
@@ -13,6 +13,13 @@
 
 - Our server.js file is getting rather bloated
 - express.Router will let us put our routes in a separate file
+
+# Demonstration
+
+![image](https://user-images.githubusercontent.com/38284764/75126495-38667080-5688-11ea-80ea-b394b31ad583.png)
+
+
+# Imitation
 
 ## Create External Controller File for Routes
 

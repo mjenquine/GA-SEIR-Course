@@ -18,7 +18,9 @@ mongoose.connection.once('open', ()=> {
 ////Presentation Routes
 
 //Index
-
+app.get('/logs', (req, res) => {
+  res.send('hi')
+})
 
 //New
 app.get('/logs/new', (req, res) => {

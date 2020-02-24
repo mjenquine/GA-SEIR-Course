@@ -21,7 +21,9 @@ mongoose.connection.once('open', ()=> {
 
 
 //New
-
+app.get('/logs/new', (req, res) => {
+  res.render('new.ejs')
+})
 
 //Show
 

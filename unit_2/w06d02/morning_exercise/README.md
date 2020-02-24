@@ -90,7 +90,7 @@ Right now, only our `index` view has styling. That's not a good look, so let's c
 Now if we save and refresh our index, the CSS is gone! Oh no! But, no worries, we saved all that code in our `head.ejs` partial, and now all we need to do to utilize that partial is `include` it back into the head of our index.ejs using the following syntax: 
 
 ```ejs
-<% include ./partials/head.ejs %>
+<%- include ('./partials/head.ejs') %>
 ```
 
 Make sure you've saved all your files and refresh your index -- voila! Our CSS is back! We've successfully included our partial.
@@ -125,7 +125,7 @@ Let's do the same thing we just did:
 - Include the header partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
 
 ```ejs
-<% include ./partials/header.ejs %>
+<%- include ('./partials/header.ejs') %>
 ```
 
 ### Creating the footer partial 
@@ -145,7 +145,7 @@ Our ejs files are looking so much cleaner already! But there's one more repetiti
 - Include the footer partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
 
 ```ejs
-<% include ./partials/footer.ejs %>
+<%- include ('./partials/footer.ejs') %>
 ```
 
 Sweet, our code looks so DRY! And -- oh, wait there's a typo in our footer. Let's fix that up. 

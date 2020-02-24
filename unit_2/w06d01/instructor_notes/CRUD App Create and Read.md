@@ -27,7 +27,7 @@
 1. Have Index Page Link to Show Route
 1. Create show.ejs
 
-## Explanation
+# Explanation ....
 #### Current Technology Stack
     1. NodeJS
     2. ExpressJS
@@ -69,7 +69,7 @@
     primarily for SEO reasons because when search engines like Google reach a page they don't wait 
     for JQUERY to add content, if they don't see the content immediately they won't index it.
     
-## Demonstration
+# Demonstration ....
 ### All of our code is held together by Node.JS and nothing in your files is executed until you tell Node.JS to run the sequence of functions that you have established in your server.js file. The server.js is the brain of your entire application, and when you say `node server.js` it is the same as when you typed the command `node app.js`.
 
 ```javascript
@@ -139,11 +139,14 @@ fs.writeFile('anotherfile.txt', object.greeting, (err) => {
 # What was the path : i.e. /fruits , /fruits/0, /fruits/new
 # After express gathers that information it then runs the functionality that matches that method and path
 
+![image](https://user-images.githubusercontent.com/38284764/75124736-161c2500-567f-11ea-9130-2b35bb6f079b.png)
+
 
 #### We are making a rudimentary version of this
 
 
-## Imitation Lets Rebuild the fruits app with our Current Technology Stack.
+# Imitation ....
+## Lets Rebuild the fruits app with our Current Technology Stack.
 
 1. Create a directory for the app called `fruits` in `student_examples` and `cd` into it
 1. `npm init`

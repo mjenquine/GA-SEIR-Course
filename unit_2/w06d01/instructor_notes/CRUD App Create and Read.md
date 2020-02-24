@@ -92,7 +92,7 @@ module.exports = {
 // old app.js
 console.log('This is my app.js, i just have 1 command')
 
-const object = require('./otherfile.js)
+const object = require('./otherfile.js')
 
 console.log(`${object.greeting}`)
 ```
@@ -103,7 +103,7 @@ console.log(`${object.greeting}`)
 // old app.js
 console.log('This is my app.js, i just have 1 command')
 
-const object = require('./otherfile.js)
+const object = require('./otherfile.js')
 
 console.log(`${object.greeting}`)
 

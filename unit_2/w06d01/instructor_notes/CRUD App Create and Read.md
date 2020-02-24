@@ -11,7 +11,7 @@
 
 ---
 
-## Beginning with the End in Mind ( Our Terminal Learing Objectives
+## Beginning with the End in Mind ( Our Terminal Learing Objectives )
 
 1. Initialize a directory
 1. Start express

@@ -69,7 +69,54 @@
     primarily for SEO reasons because when search engines like Google reach a page they don't wait 
     for JQUERY to add content, if they don't see the content immediately they won't index it.
     
-### All of our code is held together by Node.JS and nothing in your files is executed until you tell Node.JS to run the sequence of functions that you have established in your server.js file. The server.js is the brain of your entire application, and when you say `node server.js` it is the same as when you said `node app.js` and all your code contained were simple console.log statements.
+## Demonstration
+### All of our code is held together by Node.JS and nothing in your files is executed until you tell Node.JS to run the sequence of functions that you have established in your server.js file. The server.js is the brain of your entire application, and when you say `node server.js` it is the same as when you typed the command `node app.js`.
+
+```javascript
+// old app.js
+console.log('This is my app.js, i just have 1 command')
+```
+#### We could run this piece of code with Node.js
+
+```javascript
+// otherfile
+
+module.exports = {
+    greeting: 'Whats really good'
+}
+```
+
+### using node we can import that other file with require
+
+``` javascript
+// old app.js
+console.log('This is my app.js, i just have 1 command')
+
+const object = require('./otherfile.js)
+
+console.log(`${object.greeting}`)
+```
+
+### we could also use nodejs to make a file with the data
+
+``` javascript
+// old app.js
+console.log('This is my app.js, i just have 1 command')
+
+const object = require('./otherfile.js)
+
+console.log(`${object.greeting}`)
+
+const fs = require('fs')
+
+fs.writeFile('anotherfile.txt', object.greeting, (err) => {
+    if (err) console.log(err);
+    console.log(`We made our file called another.txt`)
+  })
+```
+
+### Node will do whatever we tell it to do within reason.
+
 
 ### In our standard CRUD application we have routes some are presentational and some are functional
 #### Presentational Routes Note: all presentation routes are get requests

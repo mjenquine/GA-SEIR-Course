@@ -74,9 +74,13 @@
 ### In our standard CRUD application we have routes some are presentational and some are functional
 #### Presentational Routes Note: all presentation routes are get requests
 1. Index ( Shows a list of all of our stored data) a blog homepage
+![image](https://user-images.githubusercontent.com/38284764/75123109-86707980-5672-11ea-802a-b936206d6a24.png)
 2. Show ( Shows one individual piece of data) a blog read page
+![image](https://user-images.githubusercontent.com/38284764/75123110-8e301e00-5672-11ea-95c0-2dbdf7307e6f.png)
 3. New ( A place wher a non coder can add information to the database by filling out a form)
+![image](https://user-images.githubusercontent.com/38284764/75123114-98eab300-5672-11ea-86d4-bef764b90a55.png)
 4. Edit ( A place where a non coder can edit information in the database)
+![image](https://user-images.githubusercontent.com/38284764/75123113-92f4d200-5672-11ea-861c-ed89dd48a261.png)
 #### Functional Routes Not : no functional routes are get requests
 1. Create ( Makes a post request and adds a new piece of data to our database)
 2. Update ( makes a put request and changes a piece of data in our database)

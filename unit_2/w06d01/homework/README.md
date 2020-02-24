@@ -73,7 +73,7 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 1. Inside the `mongoose_store` folder, set up Express with MVC architecture with the appropriate folders for models, views, and controllers.
 
-1. You will need the seven RESTful routes. You can begin with your data-layer and test that everything works with cURL or Postman. Don't worry about what the BUY button does or where it goes just yet. Just set up your regular RESTful stuff.
+1. You will need the seven RESTful routes. You can begin with your data-layer and test that everything works with cURL. Don't worry about what the BUY button does or where it goes just yet. Just set up your regular RESTful stuff.
 
 1. You will need to make a Mongoose Schema in a products.js file for your products. The schema should have:
 

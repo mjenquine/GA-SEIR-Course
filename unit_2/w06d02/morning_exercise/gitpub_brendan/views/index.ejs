@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>gitPub</title>
+    <!-- ============= FONTS ============= -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <!-- ============= STYLES ============= -->
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="body-overlay">
+      <!-- ============ HEADER ============ -->
+      <header>
+        <h1>gitPub.io</h1>
+        <ul>
+          <li><a href="/pub">master branch</a></li>
+          <li><a href="/new">git add -an item</a></li>
+        </ul>
+      </header>
+      <!-- ============ MAIN ============ -->
+      <main>
+        <div>
+          <h1>fooBar()</h1>
+          <ul>
+            <% for(let i = 0; i < drinks.length; i++) { %>
+              <li><a href="/drinks/<%=i%>"><%= drinks[i].name %></a></li>
+            <% } %>
+          </ul>
+        </div>
+        <div>
+          <h1>fooD()</h1>
+          <ul>
+            <% for(let i = 0; i < food.length; i++) { %>
+              <li><a href="/food/<%=i%>"><%= food[i].name %></a></li>
+            <% } %>
+          </ul>
+        </div>
+      </main>
+      <!-- ============ FOOTER ============ -->
+      <footer>
+        <span>℗ 2019</span>
+        <span>FORKED FRMO STAMFORD.</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <link rel="stylesheet" href="/./style.css">
+  </head>
+  <body>
+    <header class="row">
+      <% if(money > 1000){%>
+        <h2 class="rich one-third column">Bank: <%=money%></h2>
+      <%} else if(money < 0) {%>
+        <h2 class="poor one-third column">Bank: <%=money%></h2>
+      <%} else {%>
+        <h2 class="one-third column">Bank: <%=money%></h2>
+      <%}%>
+      <h1 class="one-third column">Budgtr</h1>
+      <a href="/budgets/new">Add New Item</a>
+    </header>
+    <hr>
+    <div class="container">
+      <table>
+        <tbody class="item">
+          <% let index = 0 %>
+          <%  for(let item of items) { %>
+            <tr>
+              <td>Date: <%=item.date%></td>
+              <td><a href="/budgets/<%=index%>"><%=item.name%></a></td>
+              <td>Amount: <%=item.amount%></td>
+            </tr>
+            <% index++ %>
+          <%}%>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

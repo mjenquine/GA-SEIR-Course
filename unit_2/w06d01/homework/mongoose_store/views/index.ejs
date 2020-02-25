@@ -5,8 +5,18 @@
     <title>Products</title>
   </head>
   <body>
+    <nav>
+      <a href="/products/new">Create a New Product</a>
+    </nav>
     <h1>Products</h1>
-    <a href="/products/new">Create a New Product</a>
-    
+    <div>
+      <% for (let i = 0; i < products.length; i++) { %>
+        <div>
+          <h3><%=products[i].name%></h3>
+          <a href="/products/<%=products[i].id%>"><img src="<%=products[i].img%>" alt="product image"></a>
+          <h5>Price: $<%=products[i].price%></h5>
+        </div>
+      <%}%>
+    </div>
   </body>
 </html>

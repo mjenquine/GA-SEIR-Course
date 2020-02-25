@@ -15,7 +15,7 @@ mongoose.connection.once('open', ()=> {
 
 //Presentation Rountes////////////////////////////////
 //INDEX
-app.get('/fruits', (req, res) => {
+app.get('/products', (req, res) => {
   Product.find({}, (error, allProducts) => {
     res.render('index.ejs', {
       products: allProducts

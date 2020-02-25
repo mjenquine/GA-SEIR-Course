@@ -1,4 +1,4 @@
-# Express Router
+# Express Router and add CSS and Partials
 
 ## Beginning with the End in Mind
 
@@ -8,6 +8,7 @@
 1. Require Mongoose in Controller File
 1. Use Controller File in Server.js
 1. Remove References to Base of Controller's URLs
+1. Add style and partials
 
 ## Explain What Express.Router does for us
 
@@ -206,4 +207,11 @@ router.put('/:id', (req, res)=>{
 });
 
 module.exports = router;
+```
+# Lets add our partials and CSS and JS
+```javascript
+// Use what you learned from The Amazing Brendan to do this, 
+//The CSS has already been provided
+// Also lets just add a quick document.getElementById or 
+//query selector and change something simple on our page.
 ```

@@ -12,7 +12,13 @@
     </nav>
     <ul>
     <% fruits.forEach((fruit, index) => { %>
-      <li><a href="/fruits/<%=index%>"> <%= fruit.name %></a> </li>
+      <li>
+        <a href="/fruits/<%=index%>"> <%= fruit.name %></a>
+        <form action="/fruits/<%=index%>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE">
+        </form>
+        <a href="/fruits/<%=index %>/edit">Edit</a>
+      </li>
     <% }) %>
     </ul>
   </body>

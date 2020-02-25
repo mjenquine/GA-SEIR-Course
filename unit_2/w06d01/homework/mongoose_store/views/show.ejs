@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%=product.name.toUpperCase()%></title>
+  </head>
+  <body>
+    <div>
+      <a href="/products">Back to Products</a>
+    </div>
+    <div>
+      <h1><%=product.name%></h1>
+      <img src="<%=product.img%>" alt="Product Image">
+      <h4><%=product.description%></h4>
+      <h4>Price: $<%=product.price%></h4>
+      <% if(product.qty > 0) {%>
+          <h3><%=product.qty%></h3>
+          <button type="button" name="button">BUY</button>
+      <%} else {%>
+            <h3>SOLD OUT</h3>
+          <%}%>
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

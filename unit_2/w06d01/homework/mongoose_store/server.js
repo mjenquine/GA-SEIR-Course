@@ -27,10 +27,10 @@ app.get('/products/new', (req, res) => {
   res.render('new.ejs')
 })
 //SHOW
-app.get('/fruits/:id', (req, res) => {
+app.get('/products/:id', (req, res) => {
   Product.findById(req.params.id, (error, foundProduct) => {
     res.render('show.ejs', {
-      products: foundProduct
+      product: foundProduct
     })
   })
 })

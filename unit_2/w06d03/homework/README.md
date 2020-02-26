@@ -65,7 +65,7 @@
 <details><summary>Hint</summary>
 ![](https://i.imgur.com/nhE1RUM.png)
 </details>
-[Hint!](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Stitch/blob/master/unit_2/w06d05/instructor_notes/code-along/BONUSREADME4.md)
+[Hint!](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_2/w06d03/homework/hint1.md)
 - Add authorization check to controllers/sessions.js (if user is NOT logged-in send them to `/` route)
 - Add authentication check to the `logs.js`controller
 - Make it so that only the logged in user can edit/delete their posts
@@ -73,4 +73,5 @@
 - If it is a public post allow other users to like it
 - Only allow users to like a post one time
 - Allow users to unlike a post
-- Add a relation between user and logs [Hint](https://mongoosejs.com/docs/populate.html), [Hint 2](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Avocado-Toast/tree/master/unit_2/w06d02/instructor_notes)
+
+- Add a relation between user and logs [Hint](https://mongoosejs.com/docs/populate.html), [Hint 2](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/tree/master/unit_2/w06d04/instructor_notes)

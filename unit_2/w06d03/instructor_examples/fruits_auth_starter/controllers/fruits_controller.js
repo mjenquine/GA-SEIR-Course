@@ -3,19 +3,17 @@ const Fruit = require('../models/fruits.js')
 const fruits = express.Router()
 
 // NEW
+// localhost:3000/fruits/new
 fruits.get('/new', (req, res) => {
-  res.render(
-    'fruits/new.ejs'
-    // , {currentUser: req.session.currentUser}
-  )
+  res.render('fruits/new.ejs', { currentUser: req.session.currentUser })
 })
 
 // EDIT
 fruits.get('/:id/edit', (req, res) => {
   Fruit.findById(req.params.id, (error, foundFruit) => {
     res.render('fruits/edit.ejs', {
-      fruit: foundFruit
-      // ,currentUser: req.session.currentUser
+      fruit: foundFruit,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -31,8 +29,8 @@ fruits.delete('/:id', (req, res) => {
 fruits.get('/:id', (req, res) => {
   Fruit.findById(req.params.id, (error, foundFruit) => {
     res.render('fruits/show.ejs', {
-      fruit: foundFruit
-      // ,  currentUser: req.session.currentUser
+      fruit: foundFruit,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -70,8 +68,8 @@ fruits.post('/', (req, res) => {
 fruits.get('/', (req, res) => {
   Fruit.find({}, (error, allFruits) => {
     res.render('fruits/index.ejs', {
-      fruits: allFruits
-      // ,currentUser: req.session.currentUser
+      fruits: allFruits,
+      currentUser: req.session.currentUser
     })
   })
 })

@@ -14,7 +14,7 @@ Early in your coding journey, you likely encountered a problem to write a functi
 
 It is likely that you had a solution where you looped over your word and checked each letter to see if there was a match. Probably some variation of this:
 
-*If you'd like to code along `cd w08d03`, `cd morning_exercise` and `touch app.js`.*
+*If you'd like to code along `cd w06d04`, `cd morning_exercise` and `atom regular-expressions.js`.*
 
 ```js
 const patternMatch = (word) => {
@@ -417,9 +417,9 @@ Let's break it down one more time:
 - `/` start regular expression
 - `[01]` can be `0` or `1`
 - `\d` can be 0-9
-- `(-?|\/)` either a `?` or nothing or a `/`
+- `(-?|\/)` either a `-` or nothing or a `/`
 - `\d\d` two more digits
-- `(-?|\/)` either a `?` or nothing or a `/`
+- `(-?|\/)` either a `-` or nothing or a `/`
 - `\d{2,4}`
 - `/` end regular expression
 
@@ -443,7 +443,7 @@ You are near the end of your time in a bootcamp and soon you'll be tasked with l
 
 - My favorite code-along tutorial, that'll start you learning regular expressions from the beginning:
   - [regexone](https://regexone.com/)
-- Try your hand at some code golf on these simple examples 
+- Try your hand at some code golf on these simple examples
   - [Eloquent JavaScript Regular Expressions](http://eloquentjavascript.net/09_regexp.html)
     - You can use your `patternMatch` function or you can try either regex site to try to match the following
     - car and cat
@@ -465,8 +465,8 @@ console.log(text.search(/Aloha/i));
 ```
 
 - Another method is `.replace` which will match a pattern and then replace it with something.
-  The Oxford Dictonary states that these are the most commonly misspelled words and how they are misspelled:
-  
+  The Oxford Dictionary states that these are the most commonly misspelled words and how they are misspelled:
+
 |Correct spelling	|Common misspelling|
 |:-:|:-:|
 |disappear	|	dissapear|

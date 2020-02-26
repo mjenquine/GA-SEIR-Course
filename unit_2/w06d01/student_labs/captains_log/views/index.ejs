@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Captain's Log</title>
+  </head>
+  <body>
+    <h1>Captain's Logs</h1>
+    <button type="button" name="button">
+      <a href="/logs/new">Create a New Log</a>
+    </button>
+    <% for (let i = 0; i < logs.length; i++) { %>
+      <li>
+        <a href="/logs/<%=logs[i].id%>">
+          <%=logs[i].title%>
+        </a>
+
+      </li>
+    <%}%>
+  </body>
+</html>

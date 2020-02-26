@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><%=log.title.toUpperCase(); %></title>
+    </head>
+    <body>
+        <h1><%=log.title; %></h1>
+        <h3><%=log.entry; %></h3>
+          <%if (log.isShipBroken === true) { %>
+            <h3>The ship is broken</h3>
+          <%} else {%>
+              <h3>The ship is not broken</h3>
+              <%}%>
+
+        <form action="/logs/<%=log.id%>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE"/>
+        </form>
+        <nav>
+          <button type="button" name="button"><a href="/logs">BACK TO LOGS</a></button>
+        </nav>
+        <script src="/js/show/app.js" charset="utf-8"></script>
+    </body>
+</html>

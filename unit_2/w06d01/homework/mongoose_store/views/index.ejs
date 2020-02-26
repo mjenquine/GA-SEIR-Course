@@ -2,21 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mongoose Outfitter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-    <nav>
+    <nav class="hero is-primary">
       <a href="/products/new">Create a New Product</a>
     </nav>
-    <h1>Mongoose Outfitter</h1>
-    <div>
-      <% for (let i = 0; i < products.length; i++) { %>
+    <section class="section">
+      <h1 class="title is-1">Mongoose Outfitter</h1>
+      <div class="container">
         <div>
-          <h3><%=products[i].name%></h3>
-          <a href="/products/<%=products[i].id%>"><img src="<%=products[i].img%>" alt="product image"></a>
-          <h5>Price: $<%=products[i].price%></h5>
+          <% for (let i = 0; i < products.length; i++) { %>
+            <div>
+              <h3 class="title"><%=products[i].name%></h3>
+              <a href="/products/<%=products[i].id%>"><img src="<%=products[i].img%>" alt="product image"></a>
+              <h5>Price: $<%=products[i].price%></h5>
+            </div>
+          <%}%>
         </div>
-      <%}%>
-    </div>
+      </div>
+    </section>
   </body>
 </html>

@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bulma": "^0.8.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "method-override": "^3.0.0",

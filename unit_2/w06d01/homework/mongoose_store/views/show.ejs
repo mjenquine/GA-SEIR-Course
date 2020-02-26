@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title><%=product.name.toUpperCase()%></title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mongoose Outfitter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
   <body>
     <div>
       <a href="/products">Back to Products</a>
@@ -16,17 +20,18 @@
       <% if(product.qty > 0) {%>
           <h4><%=product.qty%> in stock</h4>
           <form action="/products/buy/<%=product.id%>?_method=Put" method="POST">
-            <input type="submit" name="" value="BUY">
+            <input class="button is-primary" type="submit" name="" value="BUY">
           </form>
       <%} else {%>
             <h3>SOLD OUT</h3>
           <%}%>
       <br>
-      <button type="button" name="button">
+      <button class="button is-primary" type="button" name="button">
         <a href="/products/<%=product.id %>/edit">Edit</a>
       </button>
+      <br><br>
       <form action="/products/<%=product.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE"/>
+        <input class="button is-primary" type="submit" value="DELETE"/>
       </form>
     </div>
   </body>

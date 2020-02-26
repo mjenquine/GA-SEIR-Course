@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Product</title>
+  </head>
+  <body>
+    <h1>Edit Product</h1>
+    <form action="/products/<%=product.id%>?_method=Put" method="POST">
+      Name: <input type="text" name="name" value="<%=product.name%>">
+      Description: <input type="text" name="description" value="<%=product.description%>">
+      Image URL: <input type="url" name="img" value="<%=product.img%>">
+      Price: <input type="number" name="price" value="<%=product.price%>">
+      Quantity: <input type="number" name="qty" value="<%=product.qty%>">
+      <input type="submit" name="" value="Edit Item">
+    </form>
+  </body>
+</html>

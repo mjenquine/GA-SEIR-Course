@@ -1,15 +1,25 @@
+// DEPENDENCIES
 const express = require('express')
 const Fruit = require('../models/fruits.js')
 const fruits = express.Router()
 
+// Make custom middleware to check for session/logged in user
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 // NEW
 // localhost:3000/fruits/new
-fruits.get('/new', (req, res) => {
+fruits.get('/new', isAuthenticated, (req, res) => {
   res.render('fruits/new.ejs', { currentUser: req.session.currentUser })
 })
 
 // EDIT
-fruits.get('/:id/edit', (req, res) => {
+fruits.get('/:id/edit', isAuthenticated, (req, res) => {
   Fruit.findById(req.params.id, (error, foundFruit) => {
     res.render('fruits/edit.ejs', {
       fruit: foundFruit,
@@ -19,24 +29,29 @@ fruits.get('/:id/edit', (req, res) => {
 })
 
 // DELETE
-fruits.delete('/:id', (req, res) => {
+fruits.delete('/:id', isAuthenticated, (req, res) => {
   Fruit.findByIdAndRemove(req.params.id, (err, deletedFruit) => {
     res.redirect('/fruits')
   })
 })
 
 // SHOW
+// longhand way
 fruits.get('/:id', (req, res) => {
-  Fruit.findById(req.params.id, (error, foundFruit) => {
-    res.render('fruits/show.ejs', {
-      fruit: foundFruit,
-      currentUser: req.session.currentUser
+  if (req.session.currentUser) {
+    Fruit.findById(req.params.id, (error, foundFruit) => {
+      res.render('fruits/show.ejs', {
+        fruit: foundFruit,
+        currentUser: req.session.currentUser
+      })
     })
-  })
+  } else {
+    res.redirect('/sessions/new')
+  }
 })
 
 // UPDATE
-fruits.put('/:id', (req, res) => {
+fruits.put('/:id', isAuthenticated, (req, res) => {
   if (req.body.readyToEat === 'on') {
     req.body.readyToEat = true
   } else {
@@ -53,7 +68,7 @@ fruits.put('/:id', (req, res) => {
 })
 
 // CREATE
-fruits.post('/', (req, res) => {
+fruits.post('/', isAuthenticated, (req, res) => {
   if (req.body.readyToEat === 'on') {
     req.body.readyToEat = true
   } else {

@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>gitPub</title>
-    <!-- ============= FONTS ============= -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <%- include ('./partials/head.ejs')%>
   </head>
   <body>
     <div class="body-overlay">
       <!-- ============ HEADER ============ -->
-      <header>
-        <h1>gitPub.io</h1>
-        <ul>
-          <li><a href="/pub">master branch</a></li>
-          <li><a href="/new">git add -an item</a></li>
-        </ul>
-      </header>
+      <%- include ('./partials/header.ejs')%>
       <!-- ============ MAIN ============ -->
       <main class="show-main">
         <h1>fooD()</h1>
@@ -25,10 +16,7 @@
         <a href="/pub" class="back-btn">go back</a>
       </main>
       <!-- ============ FOOTER ============ -->
-      <footer>
-        <span>℗ 2019</span>
-        <span>FORKED FRMO STAMFORD.</span>
-      </footer>
+      <%- include ('./partials/footer.ejs')%>
     </div>
   </body>
 </html>

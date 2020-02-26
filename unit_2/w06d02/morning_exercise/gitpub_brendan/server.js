@@ -55,20 +55,24 @@ app.get('/pub', (req, res) => {
 // get drinks show individual
 app.get('/drinks/:id', (req, res) => {
   res.render('showDrinks.ejs', {
-    drink: drinks[req.params.id]
+    drink: drinks[req.params.id],
+    tabTitle: 'fooBar()...'
   })
 })
 
 // get food show individual
 app.get('/food/:id', (req, res) => {
   res.render('showFood.ejs', {
-    food: food[req.params.id]
+    food: food[req.params.id],
+    tabTitle: 'fooD()'
   })
 })
 
 // get new
 app.get('/new', (req, res) => {
-  res.render('new.ejs')
+  res.render('new.ejs', {
+    tabTitle: 'add -A'
+  })
 })
 
 

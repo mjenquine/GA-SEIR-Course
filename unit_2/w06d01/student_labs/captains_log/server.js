@@ -39,7 +39,7 @@ app.use('/users', userController)
 
 //Index Route
 app.get('/', (req, res) => {
-  res.redirect('/fruits')
+  res.redirect('/logs')
 })
 //Listen
 app.listen(PORT, (req, res) => {

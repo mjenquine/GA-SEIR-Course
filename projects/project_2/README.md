@@ -35,7 +35,8 @@ For this project, you will be making a full CRUD app using the technologies outl
 
 * Add additional relationships (models can be related in a one-to-many relationship, for example)
   - [Optional notes on having two models, part one](/unit_2/w06d04/instructor_notes/FIRST_MODEL.md), [part two](/unit_2/w06d04/instructor_notes/SECOND_MODEL.md)
-  - [Optional notes on relating two models](/unit_2/w06d04/instructor_notes/BUILD.md)
+  - [Optional notes on relationships](/unit_2/w06d04/instructor_notes/RELATIONSHIP.md)
+  - [Optional notes on sub docs](/unit_2/w06d04/instructor_notes/SUB_DOCUMENTS.md)
 * Include **sign up/log in** functionality, with encrypted passwords & an authorization flow
 * Use EJS Partials
 * Include portfolio-quality styling

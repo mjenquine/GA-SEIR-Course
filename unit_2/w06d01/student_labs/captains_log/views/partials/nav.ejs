@@ -1,13 +1,15 @@
-<ul>
-  <% if (currentUser) { %>
-  <li>Welcome <%= currentUser.username %></li>
-  <li>
-    <form action="/sessions?_method=DELETE" method="POST">
-      <input type="submit" value="Log Out">
-    </form>
-  </li>
-  <% } else { %>
-  <li><a href="/users/new">Sign Up</a></li>
-  <li><a href="/sessions/new">Log In</a></li>
-  <% } %>
-</ul>
+<section class="hero is-primary">
+  <div class="container">
+    <% if (currentUser) { %>
+    <div>Welcome <%= currentUser.username %></div>
+    <div>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Log Out">
+      </form>
+    </div>
+    <% } else { %>
+    <div><a href="/users/new">Sign Up</a></div>
+    <div><a href="/sessions/new">Log In</a></div>
+    <% } %>
+  </div>
+</section>

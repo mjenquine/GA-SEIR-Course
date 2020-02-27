@@ -1,3 +1,4 @@
+// DEPENDENCIES
 const mongoose = require('mongoose')
 
 const fruitSchema = new mongoose.Schema({

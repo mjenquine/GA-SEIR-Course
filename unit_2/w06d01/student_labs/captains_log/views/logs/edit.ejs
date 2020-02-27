@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Log</title>
+  </head>
+  <body>
+    <h1>Edit Log</h1>
+    <form action="/logs/<%=log.id%>?_method=PUT" method="POST">
+      Title: <input type="text" name="title" value="<%=log.title%>">
+      Entry: <input type="textarea" name="entry" value="<%=log.entry%>">
+      Is Ship Broken: <input type="checkbox" name="isShipBroken" >
+      <input type="submit" name="" value="Edit Log">
+    </form>
+  </body>
+</html>

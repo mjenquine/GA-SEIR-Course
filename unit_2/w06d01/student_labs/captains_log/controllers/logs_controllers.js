@@ -8,16 +8,25 @@ const logs = express.Router()
 
 ////Presentation Routes
 
-
+logs.get('/', (req, res) => {
+  Log.find({}, (error, allLogs) => {
+    if (error) {
+      res.send('Ooops')
+    }
+    res.render('logs/index.ejs', {
+    logs: allLogs
+    })
+  })
+})
 //New
 logs.get('/new', (req, res) => {
-  res.render('new.ejs')
+  res.render('logs/new.ejs')
 })
 
 //Show
 logs.get('/:id', (req, res) => {
     Log.findById(req.params.id, (error, foundLog) => {
-      res.render('show.ejs', {
+      res.render('logs/show.ejs', {
         log: foundLog
       })
     })
@@ -26,7 +35,7 @@ logs.get('/:id', (req, res) => {
 //Edit
 logs.get('/:id/edit', (req, res) => {
   Log.findById(req.params.id, (error, foundLog) => {
-    res.render('edit.ejs', {
+    res.render('logs/edit.ejs', {
       log: foundLog
     })
   })

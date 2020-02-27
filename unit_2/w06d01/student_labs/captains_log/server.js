@@ -39,14 +39,7 @@ app.use('/users', userController)
 
 //Index Route
 app.get('/', (req, res) => {
-  Log.find({}, (error, allLogs) => {
-    if (error) {
-      res.send('Ooops')
-    }
-    res.render('index.ejs', {
-    logs: allLogs
-    })
-  })
+  res.redirect('/fruits')
 })
 //Listen
 app.listen(PORT, (req, res) => {

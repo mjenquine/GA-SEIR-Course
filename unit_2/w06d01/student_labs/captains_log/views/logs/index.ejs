@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Captain's Log</title>
+    <%- include ('../partials/head.ejs') %>
   </head>
   <body>
+    <nav>
+      <%- include ('../partials/nav.ejs') %>
+    </nav>
     <h1>Captain's Logs</h1>
     <button type="button" name="button">
       <a href="/logs/new">Create a New Log</a>

@@ -2,41 +2,50 @@ const express = require('express')
 const Log = require('../models/logs.js')
 const logs = express.Router()
 
+const isAuthenticated = (req, res, next) => {
+  console.log(req.session.currentUser);
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 ///////////////////////////////////////////////////////////////
 //                   Routes
 ///////////////////////////////////////////////////////////////
 
 ////Presentation Routes
-
+//Index
 logs.get('/', (req, res) => {
   Log.find({}, (error, allLogs) => {
     if (error) {
       res.send('Ooops')
     }
     res.render('logs/index.ejs', {
-    logs: allLogs
+    logs: allLogs, currentUser: req.session.currentUser
     })
   })
 })
 //New
-logs.get('/new', (req, res) => {
-  res.render('logs/new.ejs')
+logs.get('/new', isAuthenticated, (req, res) => {
+  res.render('logs/new.ejs', { currentUser: req.session.currentUser})
 })
 
 //Show
-logs.get('/:id', (req, res) => {
+logs.get('/:id', isAuthenticated, (req, res) => {
     Log.findById(req.params.id, (error, foundLog) => {
       res.render('logs/show.ejs', {
-        log: foundLog
+        log: foundLog, currentUser: req.session.currentUser
       })
     })
   })
 
 //Edit
-logs.get('/:id/edit', (req, res) => {
+logs.get('/:id/edit', isAuthenticated, (req, res) => {
   Log.findById(req.params.id, (error, foundLog) => {
     res.render('logs/edit.ejs', {
-      log: foundLog
+      log: foundLog, currentUser: req.session.currentUser
     })
   })
 })
@@ -44,7 +53,7 @@ logs.get('/:id/edit', (req, res) => {
 ////Functional Routes
 
 //Create
-logs.post('/', (req, res) => {
+logs.post('/', isAuthenticated, (req, res) => {
   if (req.body.isShipBroken === 'on') {
     req.body.isShipBroken = true
   } else {
@@ -56,7 +65,7 @@ logs.post('/', (req, res) => {
 })
 
 //Update
-logs.put('/:id', (req, res) => {
+logs.put('/:id', isAuthenticated, (req, res) => {
   if (req.body.isShipBroken === 'on') {
     req.body.isShipBroken = true
   } else {
@@ -73,7 +82,7 @@ logs.put('/:id', (req, res) => {
 })
 
 //Delete
-logs.delete('/:id', (req, res) => {
+logs.delete('/:id', isAuthenticated, (req, res) => {
   Log.findByIdAndRemove(req.params.id, (error, deletedlog) => {
     res.redirect('/logs')
   })

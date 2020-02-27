@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>New Log</title>
+    <%- include ('../partials/head.ejs') %>
   </head>
   <body>
+    <nav>
+      <%- include ('../partials/nav.ejs') %>
+    </nav>
     <h1>New Log</h1>
     <form action="/logs" method="POST">
       Title: <input type="text" name="title" >

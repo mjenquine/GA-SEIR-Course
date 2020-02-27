@@ -8,17 +8,7 @@ const logs = express.Router()
 
 ////Presentation Routes
 
-//Index
-logs.get('/', (req, res) => {
-  Log.find({}, (error, allLogs) => {
-    if (error) {
-      res.send('Ooops')
-    }
-    res.render('index.ejs', {
-    logs: allLogs
-    })
-  })
-})
+
 //New
 logs.get('/new', (req, res) => {
   res.render('new.ejs')
@@ -75,7 +65,7 @@ logs.put('/:id', (req, res) => {
 
 //Delete
 logs.delete('/:id', (req, res) => {
-  Log.findByIdAndRemove(req.params.id, (error, deletedFruit) => {
+  Log.findByIdAndRemove(req.params.id, (error, deletedlog) => {
     res.redirect('/logs')
   })
 })
@@ -84,4 +74,4 @@ logs.delete('/:id', (req, res) => {
 //                   End Routes
 ///////////////////////////////////////////////////////////////////
 
-module.exports = fruits
+module.exports = logs

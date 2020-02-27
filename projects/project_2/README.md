@@ -3,10 +3,9 @@
 # Project #2: Building Your First Full-Stack Application
 
 ## Attendance
-There is only one mandatory attendance check during the project week, but as always please make sure you're working on your project every day! **Be sure to also be available during the regular class hours in case your instructor needs to reach out to you.**
-
-  - **Tuesday, March 3** Project presentation day! You're required to show up in the classroom zoom at 10AM ET to present your projects.
- (Don't forget about Outcomes on presentation day!)
+There are two mandatory attendance checks during the project week, but as always please make sure you're working on your project every day! **Be sure to also be available during the regular class hours in case your instructor needs to reach out to you.**
+  - **Tuesday, March 3** Outcomes!
+  - **Thursday, March 5** Project presentation day! You're required to show up in the classroom zoom at 10AM ET to present your projects.
  
 _Failure to make attendance check will result in an unexcused absence for both morning and afternoon_.
 
@@ -68,7 +67,7 @@ You will be sharing your app and your code.  Be prepared to answer questions fro
 ## Meetings with instructors
 _Your instructor will contact you to setup a meeting time to approve your project._
 
-**Thursday, Feb 27 - Mandatory**<br>
+**Friday, Feb 28 Before Lunch - Mandatory**<br>
 You will meet with an instructor to get your app idea approved. 
 
 _How to prepare for project approval_

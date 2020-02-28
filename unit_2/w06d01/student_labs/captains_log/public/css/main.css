@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  /* border: 1px solid gold; */
+  background: #2C3531;
+  color: #D1E8E2;
+  font-family: 'Ubuntu', sans-serif;
+}
+.nav  {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #116466;
+  height: 3em;
+}
+.nav div {
+  height: 100%;
+  display: block;
+  background-color: #116466;
+}
+
+.nav a {
+  text-decoration: none;
+  background-color: #116466;
+}
+
+.nav input {
+  background-color: #116466;
+}
+.index-button {
+  margin: 1em;
+  font-size: 18px;
+}
+.logs {
+  margin: 1em 2em;
+  padding: .5em;
+}

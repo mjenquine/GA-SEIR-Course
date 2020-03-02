@@ -52,7 +52,7 @@
 | w06d3 |[EJS Partials](./unit_2/w06d03/morning_exercise)| [Sessions, Authentication](./unit_2/w06d03/instructor_notes)| [Auth Rep](./unit_2/w06d03/student_labs)|[Kingsmen](./unit_2/w06d03/homework)|
 | w06d4 |[](./unit_2/w06d04/morning_exercise)| [Heroku](./unit_2/w06d04/instructor_notes)| [](./unit_2/w06d04/student_labs)|[](./unit_2/w06d04/homework)|
 | w06d5 |[](./unit_2/w06d05/morning_exercise)| [BONUS - just share notes: Relational Data](./unit_2/w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
-<!--| w06d5 |[](./w06d05/morning_exercise)| [](./w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
+| w06d5 |[](./w06d05/morning_exercise)| [](./w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
 | w07d1 |[](./w07d01/morning_exercise)| [](./w07d01/instructor_notes)| [](./w07d01/student_labs)|[](./w07d01/homework)|
 | w07d3 |[](./w07d03/morning_exercise)| [](./w07d03/instructor_notes)| [](./w07d03/student_labs)|[](./w07d03/homework)|
 | w07d4 |[](./w07d04/morning_exercise)| [](./w07d04/instructor_notes)| [](./w07d04/student_labs)|[](./w07d04/homework)|

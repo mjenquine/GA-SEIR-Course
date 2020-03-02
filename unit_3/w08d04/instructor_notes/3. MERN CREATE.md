@@ -1,0 +1,122 @@
+## MERN Stack Create
+
+
+
+Let's add a which we'll make as a separate component
+
+add `NewForm.js` into the components folder
+
+**NewForm.js**
+```js
+import React from 'react'
+
+class NewForm extends React.Component {
+  render () {
+    return (
+
+    )
+  }
+}
+
+export default NewForm
+```
+
+Add constructor to store state
+
+```js
+class NewForm extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      name: ''
+    }
+  }
+```
+
+```js
+<form onSubmit={this.handleSubmit}>
+  <label htmlFor="name"></label>
+  <input type="text" id="name" name="name" onChange={this.handleChange} value={this.state.name} placeholder="add a holiday"/>
+  <input type="submit" value="Add a Reason to Celebrate"/>
+</form>
+```
+
+**App.js**
+```js
+import NewForm from './components/NewForm.js'
+// further down
+return (
+  <div className='container'>
+   <h1>Holidays! Celebrate!</h1>
+   <NewForm />
+   <table>
+```
+
+Let's build out our `handleSubmit` and `handleChange` functions
+
+First let's bind them in the constructor
+
+```js
+this.handleChange = this.handleChange.bind(this)
+this.handleSubmit = this.handleSubmit.bind(this)
+```
+
+Now let's build our functionality
+
+```js
+handleChange (event) {
+  this.setState({ [event.currentTarget.id]: event.currentTarget.value})
+}
+```
+
+To submit, we have to prevent the default behavior of the form.
+
+We also have to send this data back up to our app component so it can be passed down to the list.
+
+**App.js**
+```js
+// constructor
+   this.handleAddHoliday = this.handleAddHoliday.bind(this)
+// further down
+handleAddHoliday(holiday) {
+  const copyHolidays = [...this.state.holidays]
+  copyHolidays.unshift(holiday)
+  this.setState({
+    holidays: copyHolidays,
+    name: ''
+  })
+}
+// further down (in render)
+<NewForm handleAddHoliday={this.handleAddHoliday}/>
+
+```
+
+We then have to make a fetch request. When we are just making a get request, we just use one argument, a string, where we are making our request. However, for any other action, we have to add a second argument, an object.
+
+We'll have to add a method, a body (the data from our form), and some headers.
+
+
+**THEN** when we get a response we need to convert it to json. This is an extra step we didn't have to take when we used `$.ajax`. Fetch is ultra-lightweight so we have to write a bit more code. You could use jQuery, axious, ky or other libraries, but our app is simple so let's just use fetch.
+
+**THEN**
+we want to take that json-ed response and add our new holiday to our list
+
+
+```js
+handleSubmit (event) {
+  event.preventDefault()
+  fetch(baseURL + '/holidays', {
+    method: 'POST',
+    body: JSON.stringify({name: this.state.name}),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then (res => res.json())
+    .then (resJson => {
+      this.props.handleAddHoliday(resJson)
+      this.setState({
+        name: ''
+      })
+  }).catch (error => console.error({'Error': error}))
+}
+```

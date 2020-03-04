@@ -115,7 +115,7 @@ See more information about when the method was defined implemented:
 
 <hr>
 
-## Let's Get Coding!
+## Watch and Learn!
 
  Note: As of 1/23/2017 All the following examples work in both node.js and Chrome.
 

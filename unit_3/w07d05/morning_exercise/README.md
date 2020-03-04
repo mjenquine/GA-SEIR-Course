@@ -46,13 +46,10 @@ It is also time to move past fundamentals and start building your skills of lear
    - strict mode (legacy)
    - understanding MDN
    - polyfills and shims
-   - babel/transpiling
    - IFFE
    - Block level scoping with let
-   - const
    - default value setting
    - arrow functions
-   - argument object
    - spread and rest operators
    - swap (desconstucting method)
    - Classes
@@ -107,11 +104,6 @@ See more information about when the method was defined implemented:
 
 ### When can I use these new standards?
  Now! But it depends where. Node.js support most/nearly all new things. [Chrome and Safari, at this moment in time, have been keeping up well](http://caniuse.com/#search=es6). But new features are being added and tested. To be sure that code will run across many platforms (don't forget the people who still use IE), many people have come to rely on transpilers/compilers. Transpilers/Compilers take 'dialects' of standard code (incuding ES6, coffeescript, typescript and more) and convert the code for you. A popular one for ES6 is [Babel](https://babeljs.io/), they have both repl (Read, Evaluate, Print, Loop) and an npm module/gem.
-
-
- **BABEL REPL DEMO**
- ![babel repl](https://i.imgur.com/SKLMkIU.png)
-
 
 <hr>
 
@@ -208,28 +200,7 @@ console.log('the value of kES6 outside the for loop is: `ReferenceError: kES6 is
  }
  ```
  Why is not including a `let` in front of the first `z` considered a poor practice?
-
-
-### Const
-
-Another new way to declare a variable. This will block the value from being reassigned.
-
-Note: when a value is not meant to be reassigned (like pi), a common convention is to have the variable name in all caps.
-
-```js
-const PI = 3.14;
- // PI = "pie" //TypeError: Assignment to constant variable.
-
-const whatsForLunch = [ "Nuts", "Coffee" ]
-whatsForLunch.push( "Yogurt" )
-console.log( whatsForLunch)
-whatsForLunch.shift();
-console.log( whatsForLunch )
-//whatsForLunch = ["salad"]; //TypeError: Assignment to constant variable.
-
-// Awesomesauce!
-```
-
+``
 
 ### Default values
 When creating a constructor and you wanted a default value, you previously had to write something like this:
@@ -392,28 +363,6 @@ Array.isArray(arr); //true
 //Sweet!
 ```
 
-### Argument Object
-This isn't an ES6 thing, but should help expand your knowledge of arguments in JS.
-
-The arguments object is an array-like object (but not fully an array, so you cannot always call array methods on it) when you create functions in the ES5 way. It allows for a lot of flexibility in the number of arguments a function can take:
-
-```js
-function sum (){
-  var count = 0;
-  var sum = 0;
-  while (count < arguments.length ){
-    sum += arguments[count];
-    count ++;
-  }
-  return sum;
-}
-
-console.log(sum (1,2,3,4,5,6,7,8,9,10)); //55
-
-//💥💥💥
-
-```
-
 ### Spread and Rest Operators
 The syntax is the same, but depending on what you are doing, it will act differently. The spread operator will take values and spread them into an array. The rest operator will gather values into an array
 
@@ -457,25 +406,6 @@ console.log(sumOnlyNums (44, false, 'pizza', 45, {season: "winter"}, [1,2,3,4,5,
 What's going on in the above function? What is nums? what is sum? Are they arrays? Numbers? Objects? What method could you call to check if one (or the other, or both) are arrays?
 
 Also, those arrow functions look really nice, is there a `this` that they are binding or are they just there to make this code look cleaner? Play around with this function to learn!
-
-
-### Template Literals  (String Interpolation)
-
-```js
-var n = "Karolin"
-
-
-//Simple variable:
-console.log (`Hello ${n}.`);
-
-function yell(s){
-  return s.toUpperCase();
-}
-
-//You can even call a function!
-console.log (`Hello ${yell(  `${n}` )}!`);
-
-```
 
 ### Swap values: File under `Destructuring Assignment`
 
@@ -577,7 +507,7 @@ console.log('is `a` equal to anotherOriginalArray[0]:', anotherOriginalArray[0] 
 ### Support for Classes
 A term you may have not encountered yet is syntatic sugar. Syntatic sugar means a nicer way to write something that functions the same as an older syntax.
 
-Classes are a new way to write prototypes/prototypal inheritance in JavaScript. However, even though this syntax looks rather different, under the hood it still works the same way as prototypes/prototypal inheritance. 
+Classes are a new way to write prototypes/prototypal inheritance in JavaScript. However, even though this syntax looks rather different, under the hood it still works the same way as prototypes/prototypal inheritance.
 
 ```js
 class Cat {

@@ -52,7 +52,6 @@ It is also time to move past fundamentals and start building your skills of lear
    - arrow functions
    - spread and rest operators
    - swap (desconstucting method)
-   - Classes
    - Object literal extensions
 
 

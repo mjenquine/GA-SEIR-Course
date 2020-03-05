@@ -2,9 +2,10 @@
 const express = require('express')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const session = require('express-session')
 
 // CONFIGURATION
-
+require('dotenv').config()
 const app = express()
 const db = mongoose.connection
 const PORT = process.env.PORT
@@ -13,6 +14,11 @@ const mongodbURI = process.env.MONGODBURI
 // MIDDLEWARE
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }))
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
 
 // DATABASE
 mongoose.connect(
@@ -37,6 +43,11 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 const fruitsController = require('./controllers/fruits_controller.js')
 app.use('/fruits', fruitsController)
 
+const sessionsController = require('./controllers/sessions_controller.js')
+app.use('/sessions', sessionsController)
+
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
 // Routes
 app.get('/', (req, res) => {
   res.redirect('/fruits')

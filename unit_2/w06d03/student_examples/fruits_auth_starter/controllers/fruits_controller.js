@@ -2,43 +2,49 @@ const express = require('express')
 const Fruit = require('../models/fruits.js')
 const fruits = express.Router()
 
+const isAuthenticated = (req, res, next) => {
+  console.log(req.session.currentUser);
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
 // NEW
-fruits.get('/new', (req, res) => {
+fruits.get('/new', isAuthenticated, (req, res) => {
   res.render(
-    'fruits/new.ejs'
-    // , {currentUser: req.session.currentUser}
+    'fruits/new.ejs', {currentUser: req.session.currentUser}
   )
 })
 
 // EDIT
-fruits.get('/:id/edit', (req, res) => {
+fruits.get('/:id/edit', isAuthenticated, (req, res) => {
   Fruit.findById(req.params.id, (error, foundFruit) => {
     res.render('fruits/edit.ejs', {
-      fruit: foundFruit
-      // ,currentUser: req.session.currentUser
+      fruit: foundFruit, currentUser: req.session.currentUser
     })
   })
 })
 
 // DELETE
-fruits.delete('/:id', (req, res) => {
+fruits.delete('/:id', isAuthenticated, (req, res) => {
   Fruit.findByIdAndRemove(req.params.id, (err, deletedFruit) => {
     res.redirect('/fruits')
   })
 })
 
 // SHOW
-fruits.get('/:id', (req, res) => {
-  Fruit.findById(req.params.id, (error, foundFruit) => {
-    res.render('fruits/show.ejs', {
-      fruit: foundFruit
-      // ,  currentUser: req.session.currentUser
+fruits.get('/:id', isAuthenticated, (req, res) => {
+    Fruit.findById(req.params.id, (error, foundFruit) => {
+      res.render('fruits/show.ejs', {
+        fruit: foundFruit,  currentUser: req.session.currentUser
+      })
     })
-  })
 })
 
 // UPDATE
-fruits.put('/:id', (req, res) => {
+fruits.put('/:id', isAuthenticated, (req, res) => {
   if (req.body.readyToEat === 'on') {
     req.body.readyToEat = true
   } else {
@@ -55,7 +61,7 @@ fruits.put('/:id', (req, res) => {
 })
 
 // CREATE
-fruits.post('/', (req, res) => {
+fruits.post('/', isAuthenticated, (req, res) => {
   if (req.body.readyToEat === 'on') {
     req.body.readyToEat = true
   } else {
@@ -70,8 +76,7 @@ fruits.post('/', (req, res) => {
 fruits.get('/', (req, res) => {
   Fruit.find({}, (error, allFruits) => {
     res.render('fruits/index.ejs', {
-      fruits: allFruits
-      // ,currentUser: req.session.currentUser
+      fruits: allFruits, currentUser: req.session.currentUser
     })
   })
 })

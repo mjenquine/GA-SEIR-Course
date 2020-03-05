@@ -99,7 +99,7 @@ class App extends Component {
 - TIP: Run a console.log between the render and return statements in your Receipts component to help locate your data
 
 ```js
-class Receipts extends Component {
+class Receipt1 extends Component {
     render(){
         console.log(this.props);
         return(
@@ -112,7 +112,7 @@ class Receipts extends Component {
 Hungry for More: render the toppings
 
 
-- Make two more Receipt components so that you get a veiw like this (a little css provided for clarity, but not required)
+- Make two more Receipt components so that you get a view like this (a little css provided for clarity, but not required)
 
 ![korilla receipts rendered Mark](https://i.imgur.com/27V4KW8.png)
 

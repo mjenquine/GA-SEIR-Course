@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><%=log.title%>:</h1>
+    <p><%=log.entry%></p>
+    <h2>Ship Status:</h2>
+    <% if (log.shipIsBroken === true) {%>
+      <img src="http://i.imgur.com/R23iJqB.jpg" alt="">
+    <%} else {%>
+      <img src="https://i.ytimg.com/vi/opg3GeMhgPY/maxresdefault.jpg" alt="">
+    <%}%>
+    <a href="/logs"><button>Back to Log Entries</button></a>
+  </body>
+</html>

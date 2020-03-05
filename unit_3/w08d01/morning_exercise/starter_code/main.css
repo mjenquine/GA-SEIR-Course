@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+}
+
+.header {
+  background-color: #c6d0d8;
+  color: #8a1756;
+}
+
+.main {
+  color: #1da6ac;
+}
+
+.leftSidebar {
+  background-color: #1da6ac;
+  color: white;
+}
+
+.rightSidebar {
+  background-color: #1da6ac;
+  color: white;
+}
+
+.footer {
+  background-color: #8a1756;
+  color: white;
+}
+

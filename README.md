@@ -52,23 +52,22 @@
 | w06d3 |[EJS Partials](./unit_2/w06d03/morning_exercise)| [Sessions, Authentication](./unit_2/w06d03/instructor_notes)| [Auth Rep](./unit_2/w06d03/student_labs)|[Kingsmen](./unit_2/w06d03/homework)|
 | w06d4 |[](./unit_2/w06d04/morning_exercise)| [Heroku](./unit_2/w06d04/instructor_notes)| [](./unit_2/w06d04/student_labs)|[](./unit_2/w06d04/homework)|
 | w06d5 |[](./unit_2/w06d05/morning_exercise)| [BONUS - just share notes: Relational Data](./unit_2/w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
-<!--| w06d5 |[](./w06d05/morning_exercise)| [](./w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
+| w06d5 |[](./w06d05/morning_exercise)| [](./w06d05/instructor_notes)| [](./w06d05/student_labs)|[](./w06d05/homework)|
 | w07d1 |[](./w07d01/morning_exercise)| [](./w07d01/instructor_notes)| [](./w07d01/student_labs)|[](./w07d01/homework)|
 | w07d3 |[](./w07d03/morning_exercise)| [](./w07d03/instructor_notes)| [](./w07d03/student_labs)|[](./w07d03/homework)|
 | w07d4 |[](./w07d04/morning_exercise)| [](./w07d04/instructor_notes)| [](./w07d04/student_labs)|[](./w07d04/homework)|
 
-<!--### Unit 3-->
-<!--| Day | Morning Exercise | Lectures | Labs | Homework |-->
-<!--|:---:|:-----------:|:-------:|:-----------:|:-----------:|-->
-<!--| w07d3 |[Intro to Big-O](./unit_3/w07d03/morning_exercise)| [Intro to Angular, AJAX to 3rd Party](./unit_3/w07d03/instructor_notes)| [New Data Representation](./unit_3/w07d03/student_labs)|[Angular Basics (Fast Lane & jService)](./unit_3/w07d03/homework)|-->
-<!--| w07d4 |[Recursion](./unit_3/w07d04/morning_exercise)| [Build an Express API, Consuming an Express API with Angular (Create)](./unit_3/w07d04/instructor_notes)| [Animal Shelter pt.1](./unit_3/w07d04/student_labs)|[Bookmark'd](./unit_3/w07d04/homework)|-->
-<!--| w07d5 |[Happy Fun Ball (Git Branching/Merging)](./unit_3/w07d05/morning_exercise)| [Consuming an Express API with Angular (Read, Edit, Delete)](./unit_3/w07d05/instructor_notes)| [Animal Shelter pt.2](./unit_3/w07d05/student_labs)|[Bookmark'd & HFB](./unit_3/w07d05/homework)|-->
-<!--| w08d1 |[Paired Programming](./unit_3/w08d01/morning_exercise)| [Full CRUD Build](./unit_3/w08d01/instructor_notes)| [Holiday's App](./unit_3/w08d01/student_labs)|[Coder's Choice](./unit_3/w08d01/homework)|-->
-<!--| w08d2 |[Project Management](./unit_3/w08d02/morning_exercise)| [MEAN Stack Auth](./unit_3/w08d02/instructor_notes)| [Animal Shelter Con't](./unit_3/w08d02/student_labs)|[Secured Bookmarks](./unit_3/w08d02/homework)|-->
-<!--| w08d3 |[Regular Expression](./unit_3/w08d03/morning_exercise)| [Advanced Angular](./unit_3/w08d03/instructor_notes)| [](./unit_3/w08d03/student_labs)|[](./unit_3/w08d03/homework)|-->
-<!--| w09d3 |[](./unit_3/w09d03/morning_exercise)| [Setup for PHP / Postgres](./unit_3/w09d03/instructor_notes)| [](./unit_3/w09d03/student_labs)|[PHP Tutorials](./unit_3/w09d03/homework)|-->
-<!---->
-<!---->
+ ### Unit 3
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w07d5 |[Bubble Sort](./unit_3/w07d05/morning_exercise)| [JSX](./unit_3/w07d05/instructor_notes)| []()|[Convert Captains Log to JSX](./unit_3/w07d05/homework)|
+| w08d1 |[ES NEXT](./unit_3/w08d01/morning_exercise)| [Intro to React: Components](./unit_3/w08d01/instructor_notes)| [React Static Components, Korillia Reciepts](./unit_3/w08d01/student_labs) |[Groceries](./unit_3/w08d01/homework)|
+| w08d2 |[Happy Fun Ball (Git Branching/Merging)](./unit_3/w08d02/morning_exercise)| [CRA, Props and more](./unit_3/w08d02/instructor_notes)| [Audubon + Police Box](./unit_3/w08d02/student_labs)|[Finish Police Box](./unit_3/w08d02/homework)|
+| w08d3 |[Linked Lists](./unit_3/w08d03/morning_exercise)| [Props/State/Lifting State](./unit_3/w08d03/instructor_notes)| [Heirloom + React Taco](./unit_3/w08d03/student_labs)|[jService](./unit_3/w08d03/homework)|
+| w08d4 |[Binary Search Tree](./unit_3/w08d04/morning_exercise)| [API/Consuming with React](./unit_3/w08d04/instructor_notes)| [Animal Shelter](./unit_3/w08d04/student_labs)|[Bookmarks](./unit_3/w08d04/homework)|
+| w08d5 |[Paired](./unit_3/w08d05/morning_exercise)| [Consuming API with React cont.](./unit_3/w08d05/instructor_notes)| [Coders Choice](./unit_3/w08d05/student_labs)|[Paired Homework](./unit_3/w08d05/homework)|
+| w09d1 |[Project Management](./unit_3/w09d01/morning_exercise)| [React Router](./unit_3/w09d01/instructor_notes)| [](./unit_3/w09d01/student_labs)|[](./unit_3/w09d01/homework)|
+
 <!--### Unit 4 -->
 <!--| Day | Morning Exercise | Lectures | Labs | Homework |-->
 <!--|:---:|:-----------:|:-------:|:-----------:|:-----------:|-->

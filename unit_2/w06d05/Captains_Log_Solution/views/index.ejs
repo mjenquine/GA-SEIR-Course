@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="logout">
+      <form class="" action="/sessions?_method=DELETE" method="post">
+        <input type="submit" name="" value="Logout">
+      </form>
+    </div>
+    <h1>Logs</h1>
+    <% for (let i = 0; i < logs.length; i++) {%>
+      <ul>
+        <li><a href="/logs/<%=logs[i].id%>"><%=logs[i].title%></a></li>
+      </ul>
+      <form class="" action="/logs/<%=logs[i].id%>?_method=DELETE" method="post">
+        <input type="submit" name="" value="Delete">
+      </form>
+      <a href="/logs/<%=logs[i].id%>/edit"><button>Edit a Log</button></a>
+    <%}%>
+
+    <a href="/logs/new"><button>Create New Entry</button></a>
+  </body>
+</html>

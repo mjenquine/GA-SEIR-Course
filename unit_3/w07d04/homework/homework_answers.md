@@ -2,13 +2,13 @@
 ---
 
 ## What is a Single-Page Application (SPA)?
-A SPA does not load entire new pages in the browser. Instead it dynamically rewrites the current web page with new data from the web server.
+* A SPA does not load entire new pages in the browser. Instead it dynamically rewrites the current web page with new data from the web server.
 ---
 ## What is a Multi-Page Application (MPA)?
-MPA works in a traditional way. Every change requests rendering a new page from the server in the browser.
+* MPA works in a traditional way. Every change requests rendering a new page from the server in the browser.
 ---
 ## When we built our Unit 2 apps, were they a SPA or MPA, why?
-MPA. Our controllers rendered new pages per display route.
+* MPA. Our controllers rendered new pages per display route.
 ---
 ## Give two pros of a SPA
 * Mature open source libraries are available that support the building of an SPA. This reduces the amount of javascript that developers have to write
@@ -20,7 +20,7 @@ MPA. Our controllers rendered new pages per display route.
 * Browser history can be difficult to track making the use of back/forward challenging
 * Spead of initial load
 * Analytic tools rely heavily on new page loads
-*
+
 ---
 ## Give two pros of a MPA
 * These applications hame many levels of UI
@@ -37,8 +37,8 @@ MPA. Our controllers rendered new pages per display route.
 * It replaced the websites crashy login system with a functional and less expensive one
 ---
 ## What does 'API' stand for? *
-Application programming interface
+* Application programming interface
 ---
 ## What is an API? *
-Allows a third party to extend the use of functionality of their software to other users and sites.
+* Allows a third party to extend the use of functionality of their software to other users and sites.
 ---

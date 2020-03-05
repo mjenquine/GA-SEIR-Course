@@ -504,39 +504,7 @@ console.log('is `a` equal to anotherOriginalArray[0]:', anotherOriginalArray[0] 
 ```
 </details>
 
-### Support for Classes
-A term you may have not encountered yet is syntatic sugar. Syntatic sugar means a nicer way to write something that functions the same as an older syntax.
 
-Classes are a new way to write prototypes/prototypal inheritance in JavaScript. However, even though this syntax looks rather different, under the hood it still works the same way as prototypes/prototypal inheritance.
-
-```js
-class Cat {
-  constructor(name) {
-    this.name = name;
-  }
-  makesNoises() {
-    return (`${this.name} meows`);
-  }
-  purrs(){
-    return (`${this.name} purrs`);
-  }
-}
-
-class Lion extends Cat {
-  makesNoises() {
-    return `${this.name} roars!`;
-  }
-}
-
-var merlin = new Cat("Merlin");
-var charlie = new Lion("Charlie");
-
-console.log(merlin.makesNoises());
-console.log(charlie.makesNoises());
-console.log(charlie.purrs());
-console.log(merlin.purrs());
-
-```
 ### Object literal upgrades
 
 

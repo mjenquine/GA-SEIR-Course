@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><%=fruit.name.toUpperCase(); %></title>
+    </head>
+    <body>
+        <h1><%=fruit.name; %> show page</h1>
+        The <%=fruit.name; %> is  <%=fruit.color; %>.
+        <% if(fruit.readyToEat === true){ %>
+            It is ready to eat
+        <% } else { %>
+            It is not ready to eat
+        <% } %>
+        <nav>
+            <a href="/fruits">Back to Fruits Index</a>
+        </nav>
+        <div id="changeStuff">
+          Stuff
+        </div>
+        <script src="/js/show/app.js"></script>
+    </body>
+</html>

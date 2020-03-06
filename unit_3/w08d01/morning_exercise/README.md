@@ -47,7 +47,7 @@ You can always check out [caniuse.com](http://caniuse.com/) and [shouldiprefix](
 ### Getting Started
 
 #### Starter-Code Directory
-- cd into w10d02 `morning_exercise` folder
+- cd into w08d01 `morning_exercise` folder
 - atom .
 - Inside there are two files `index.html` and `main.css`
 - `main.css` is the only file you will edit this morning
@@ -55,7 +55,7 @@ You can always check out [caniuse.com](http://caniuse.com/) and [shouldiprefix](
 
 *(Fun fact: Firefox includes a Grid Inspector, you can open it there if you have it - or you can check-out my example)*
 
-#### What we have to start with 
+#### What we have to start with
 ![](https://i.imgur.com/dziDSG5.png)
 
 #### Let's start by adding in our grid
@@ -65,7 +65,7 @@ main.css
   display: grid;
 }
 ```
-We don't see any changes yet because we haven't defined our grid. 
+We don't see any changes yet because we haven't defined our grid.
 
 ## Creating Our Grid
 
@@ -132,8 +132,8 @@ In this case we don't need to explicitly define how many rows we would like for 
 
 #### Finally we will create a grid within a grid for our `.footer` section
 
- Let's start by placing the footer in our original grid. This time let's use `grid-area` to accomplish this. 
- 
+ Let's start by placing the footer in our original grid. This time let's use `grid-area` to accomplish this.
+
 Grid-area can be used as shorthand for row start / col start / row end / col end.
 
  ```
@@ -144,7 +144,7 @@ Grid-area can be used as shorthand for row start / col start / row end / col end
 
 You might notice we used two different methods of specification within our grid area.  
 
-We used regular numbers to specify start and stop for the first 3 values, the fourth uses `span`. Which declares how many rows/columns you want your grid to take up. 
+We used regular numbers to specify start and stop for the first 3 values, the fourth uses `span`. Which declares how many rows/columns you want your grid to take up.
 
 Now we can make the `.footer` section into it's own grid in order to place our footer items in the desired places.
 
@@ -210,8 +210,8 @@ This will specify the size of the grid lines.
 
 ```
 .container {
-  grid-column-gap: 10px; 
-  grid-row-gap: 15px; 
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
 }
 ```
 
@@ -219,15 +219,15 @@ This will specify the size of the grid lines.
 
 ```
 .container {
-  grid-gap: 15px 10px; 
+  grid-gap: 15px 10px;
 }
 ```
 
 ![](https://imgur.com/IWP8yuV.png)
 
-## Final Thoughts 
+## Final Thoughts
 
-That is all we are going to go over today, though Grid has many more useful features that you can utilize. Take some time to review and learn more about Grid using the resources below. 
+That is all we are going to go over today, though Grid has many more useful features that you can utilize. Take some time to review and learn more about Grid using the resources below.
 
 
 ## References

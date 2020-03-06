@@ -45,7 +45,7 @@ Here is a table of our commonly used git commands that we've used in this course
 | git | log| --oneline |  Shows a log of commits of a repo (--oneline shows a truncated message)_`q` to exit_|
 | git | status |  |  Shows the state of files in a repo (untracked, modified, staged)|
 
-[Link to our wiki with a more complete list of git commands](https://git.generalassemb.ly/sei-stamford/cerf/wiki/Git-Cheatsheet)
+[Link to a more complete list of git commands](https://www.git-tower.com/blog/git-cheat-sheet/)
 
 Note: `fork` is not on this list because `fork` is not a git command; it is github-specific for copying a repository on github to a new location on github.
 
@@ -99,17 +99,17 @@ As a professional developer, you will do whatever it takes to finish this projec
 ###### Browser - github:
 - Fork Happy-Fun-Ball (make a copy of this remote repository to your github account):
  - [Go here](https://git.generalassemb.ly/Web-Development-Immersive-Remote/hfb) and click fork (upper right) to fork it to your personal repo (Don't worry! You can totally delete it after the lesson!)
-  <details><summary>Show Screenshot</summary> 
-  
+  <details><summary>Show Screenshot</summary>
+
   ![Upper right on github](https://i.imgur.com/TjcbBOB.png)
-  
+
   </details>
 - Navigate to YOUR version on YOUR github repo
 - Click the 'clone or download' button (on the right, below fork).
   <details><summary>Show Screenshot</summary>
-  
+
   ![Copy or Clone button](https://i.imgur.com/6uAnb0R.png)
-  
+
 </details>
 This will give you the option to copy the link to your clipboard and make it ready to paste in the command line.
 - REMEMBER: This should be from YOUR repo (the link to be copied should be `git@github.com:your-github-handle/hfb.git`)
@@ -125,7 +125,7 @@ This will give you the option to copy the link to your clipboard and make it rea
     - `index.html` and
     - `main.css` are in your folder (`README.md` & `hfb.png` will also be there)
   - `git status`
-  
+
 <details><summary>Example output</summary>  
 
 `On branch master`<br>
@@ -190,18 +190,18 @@ We can configure git to have autocorrect, if it is not already set as a default.
 
 ###### Browser - github:
 - See your new branch on github (it should be there, refresh if you don't see it. If you still don't see it, let me know and we'll trouble shoot)
-It will be a new message along the top of github OR from clicking the `Branch: master` button <details><summary> Screeshot </summary> 
+It will be a new message along the top of github OR from clicking the `Branch: master` button <details><summary> Screeshot </summary>
 
 ![pull-down menu](https://i.imgur.com/oIptMUM.png)
 
 </details>
 
 ###### Command line:
-- `code .`open the files in VS Code
-- `open index.html`open index.html in the browser (remember you can do `open i` and then press `tab` to autocomplete index.html)
+- `atom .`open the files in Atom
+- `open index.html` open index.html in the browser (remember you can do `open i` and then press `tab` to autocomplete index.html)
 
 #### Part 3 - Organize yourself
-We are going to be going between the browser, the command line and VS Code frequently. Be sure you can work efficiently and effectively by setting up a good workflow! Start by organizing your browser, command line and VS Code so that you can easily switch between them (don't forget to use Spectacle). Close extra tabs and browser windows.  <details><summary> Here is how I worked on this project(You will have to also account for Zoom and Slack): </summary>
+We are going to be going between the browser, the command line and Atom frequently. Be sure you can work efficiently and effectively by setting up a good workflow! Start by organizing your browser, command line and Atom so that you can easily switch between them (remember to use Spectacle). Close extra tabs and browser windows.  <details><summary> Here is how I worked on this project(You will have to also account for Zoom and Slack): </summary>
 
 ![window organization](https://i.imgur.com/WAUMTBR.png)
 
@@ -212,9 +212,8 @@ We are going to be going between the browser, the command line and VS Code frequ
 - Color Names (we'll be referring to this a few times, there is a link below)
 - All other tabs are closed, no other Browser windows are open
 
-**VS Code:**
+**Atom:**
 - directory tree (toggle view: `⌘\`).
-  -  See all VS Code shortcuts : `⌘⇧P`
 - index.html
 -  main.css
 
@@ -231,7 +230,7 @@ Your first new feature!  Working in `index.html`, you will add a link to `main.c
 - `git branch` - to check that you are on the `dev` branch. This command will show all the branches and highlight the one you are on. <details><summary>Example output:</summary>
 
  ![example output of `git branch`](https://i.imgur.com/2bKy3zL.png)
- 
+
 </details>
 
 
@@ -242,10 +241,10 @@ Your first new feature!  Working in `index.html`, you will add a link to `main.c
 </details>
 
 #### Part 2 - Work on New Feature
-###### VS Code - index.html :
+###### Atom - index.html :
 - In the index.html - between the` </title>` and `</head>` tags, let's insert a link to our css :
 - `<link rel="stylesheet" href="main.css">`
-- `⌘S` - Save our changes in VS Code
+- `⌘S` - Save our changes in Atom
 
 ###### Browser - index.html:
 - `⌘R` - Reload our browser view of the `index.html`
@@ -322,8 +321,8 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 - `git checkout dev` (Notice: no `-b`)
 - `git pull origin dev`
 
-- Check VS Code (`index.html` has the link to CSS)
-- Your browser view (`index.html` is displaying with CSS loaded - don't forget to `⌘R`/refresh your browser to be sure you are seeing the updated version)
+- Check Atom (`index.html` has the link to CSS)
+- Your browser view (`index.html` is displaying with CSS loaded - remember to `⌘R`/refresh your browser to be sure you are seeing the updated version)
 
 - If everything looks good, let's merge these changes into the master branch
 
@@ -363,7 +362,7 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 - `git checkout master`(Notice: no `-b`)
 - `git pull origin master`
 
-###### VS Code/Browser
+###### Atom/Browser
 - Check to make sure everything has updated as expected (`index.html` has link to css and when you refresh the browser, the CSS still loads)
 
 ### New Feature - Update the colors
@@ -379,9 +378,9 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 
   ** GOTCHA: Branches can be created off any other branch. Be sure you are on the branch that you want to branch off of before creating a new branch!
 
-###### VS Code - index.html:
+###### Atom - index.html:
 - You probably noticed that index.html had a typo! On (or around) line 19 `class="pr"` should actually be `class="price"`.
-- Let's update that! (Don't forget `⌘S`/save) Now, it's not really our task, or our file to work on, but we're just being proactive and  helpful! What could possibly be wrong with that?
+- Let's update that! (Remember `⌘S`/save) Now, it's not really our task, or our file to work on, but we're just being proactive and  helpful! What could possibly be wrong with that?
 
 ###### Command line:
 - Let's go ahead and
@@ -389,7 +388,7 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 - `git add index.html` and
 - `git commit -m 'fixed typo in index.html'`, there! We added our changes and put in a descriptive commit message. We are undoubtedly awesome.
 
-###### VS Code - main.css:
+###### Atom - main.css:
 - Now let's update the colors in the `body`, let's change `color` (font color), and `background-color` to whatever our heart desires. [Go ahead and use hexadecimal colors, rgb, hsl or some of the standard web colors.]( http://htmlcolorcodes.com/color-names/)
 
 Make changes here in main.css ![main.css](https://i.imgur.com/1WY4xj8.png)
@@ -407,7 +406,7 @@ Make changes here in main.css ![main.css](https://i.imgur.com/1WY4xj8.png)
 ###### Command line:
 - `git checkout dev` (Notice: no `-b`)
 
-###### VS Code - main.css:
+###### Atom - main.css:
 - See that our changes are gone
 
 ###### Browser - index.html:
@@ -415,17 +414,17 @@ Make changes here in main.css ![main.css](https://i.imgur.com/1WY4xj8.png)
 
 Let's get back to our changes!
 ###### Command line:
-- `git checkout color-updates` (don't forget you can use `tab` to autocomplete branch names too!)
+- `git checkout color-updates` (remember you can use `tab` to autocomplete branch names too!)
 
-Go through VS Code and the browser to see that your changes have come back
+Go through Atom and the browser to see that your changes have come back
 
-###### VS Code - main.css:
+###### Atom - main.css:
 - Let's make one more color change, now that we are on our color-updates branch. `.price` change the color from orange, to whatever color you want
 - Can't find `.price`?
-- `⌘F` will open a find/replace tab at the bottom of VS Code and let you look for `.price`
+- `⌘F` will open a find/replace tab at the bottom of Atom and let you look for `.price`
 - `esc` to close the find/replace tab
 - make your changes (we are changing the color of elements with the class of `price`)
-- `⌘S` -Don't forget to save your file
+- `⌘S` -Remember to save your file
 - Refresh your browser to see your changes
 
 ### Starting on a New Feature When We Haven't Finished Our Previous One
@@ -450,7 +449,7 @@ Let's make a new branch off of the dev branch to hotfix this major problem! **
 -  `git checkout dev`
 - `git checkout -b price-fix` to make a new branch off of dev (and automatically be switched to the new branch) **
 
-###### VS Code - index.hmtl:
+###### Atom - index.hmtl:
 - Update the price of happy fun ball from `$14.95` to `$24.95` (~ line 19 of `index.html`)
 - `⌘S`/save
 
@@ -504,9 +503,9 @@ ERROR! Merge conflict! Example output:
 
 ### Merge Conflict (and Resolution)!
 
-###### VS Code - index.html :
+###### Atom - index.html :
 
-- View the conflict in VS Code
+- View the conflict in Atom
 
 ![index.html file](https://i.imgur.com/itPVnM1.png)
 
@@ -547,7 +546,7 @@ Note: your numbers/letters after the `>>>>>>>` should be different
 
 ### Finishing and Merging Your Color Updates
 
-###### VS Code main.csss:
+###### Atom main.csss:
 - Make your final updates to `main.css`
 
 ###### Command line:
@@ -567,12 +566,12 @@ Note: your numbers/letters after the `>>>>>>>` should be different
 - `git checkout dev`
 - `git pull origin dev`
 
-###### VS Code index.html/main.css :
+###### Atom index.html/main.css :
 - Take the time to review that the changes to the dev branch that you wanted are there and there are no errors or bugs
 - **Only working code should ever be merged to master!**
 
 - If everything is ok, go ahead and merge the changes to master
-- If you made changes, don't forget to
+- If you made changes, remember to
 - `git add` and
 -  `git commit -m ''`
 

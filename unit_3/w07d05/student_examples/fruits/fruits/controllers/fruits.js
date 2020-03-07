@@ -16,7 +16,7 @@ PRESENTATIONAL ROUTES
               res.send('OOPs you have boo boo')
             }
             console.log(allFruits)
-            res.render('index.ejs', {
+            res.render('Index', {
               fruits: allFruits
             })// end the res.render
           })// this is the fruits call back
@@ -25,7 +25,7 @@ PRESENTATIONAL ROUTES
 
         // New  is connected Create [ Create has the functionality]
         router.get('/new', (req, res) => {
-          res.render('new.ejs')
+          res.render('New')
         })
 
         // SEED
@@ -54,7 +54,7 @@ PRESENTATIONAL ROUTES
         // Show
         router.get('/:id', (req, res) => {
           Fruit.findById(req.params.id, (error, foundFruit) => {
-            res.render('show.ejs', {
+            res.render('Show', {
               fruit: foundFruit
             })
           })
@@ -63,7 +63,7 @@ PRESENTATIONAL ROUTES
         // Edit
         router.get('/:id/edit', (req, res)=>{
           Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
-            res.render('edit.ejs', {
+            res.render('Edit', {
             fruit: foundFruit //pass in found fruit
         });
     });

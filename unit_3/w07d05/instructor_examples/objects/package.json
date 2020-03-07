@@ -1,12 +1,11 @@
 {
-  "name": "fruits",
+  "name": "objects",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "xiaolin": "echo \"Xiaolin\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +13,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
-    "method-override": "^3.0.0",
-    "mongoose": "^5.9.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   }

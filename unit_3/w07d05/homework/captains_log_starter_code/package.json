@@ -1,21 +1,21 @@
 {
-  "name": "fruits",
+  "name": "captains_log",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "xiaolin": "echo \"Xiaolin\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
+    "express-session": "^1.17.0",
     "method-override": "^3.0.0",
-    "mongoose": "^5.9.2",
+    "mongoose": "^5.4.6",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   }

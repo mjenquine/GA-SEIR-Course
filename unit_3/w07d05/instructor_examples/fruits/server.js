@@ -15,6 +15,8 @@ const PORT = 3000;
   Express Middleware i.e
   Body Parser, Static, Method Override etc
 *******************************************************************/
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));// _method is the query param we use to tell express.js what method we actually want to use
 app.use(express.static('public'));

@@ -24,7 +24,7 @@ app.use(methodOverride('_method'));
 // const morgan = require('morgan')
 // morgan('tiny')
 //Require Other Files
-
+app.use(express.static('public'));
 
 const logsController = require('./controllers/logs')
 // const usersController = require('./controllers/users');

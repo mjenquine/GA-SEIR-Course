@@ -5,7 +5,6 @@ class Default extends React.Component {
     return (
       <html>
         <head>
-          <script src="/js/app.js" charset="utf-8"></script>
           <script src="https://kit.fontawesome.com/f7fdf9e41c.js" crossorigin="anonymous"></script>
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
           <title> Captain's Logs </title>
@@ -13,7 +12,9 @@ class Default extends React.Component {
         <body>
           <div class="container">
             <br></br>
-            <h1>Captain's Logs</h1>
+            <div class="jumbotron">
+              <h1>Captain's Logs</h1>
+            </div>
             <br></br>
             <ul class="nav nav-tabs">
               <li class="nav-item">
@@ -26,6 +27,7 @@ class Default extends React.Component {
             <br></br>
             {this.props.children}
           </div>
+          <script src="/js/app.js" charset="utf-8"></script>
         </body>
       </html>
     )

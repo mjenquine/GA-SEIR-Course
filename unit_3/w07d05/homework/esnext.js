@@ -21,14 +21,11 @@
 // console.log(model);
 // console.log(honk);
 
-
-
 // Go through the MDN docs, find one method that is standard, one that is obsolete, one that is depreciated, and one that is experimental and write down he name and icon used for each type.
 // standard - string.prototype.match() no icon 
 // obsolete - string.prototype.quote() - trash can 
 // depricated - string.prototype.link() - thumbs down
 // experimental - Promise.any() - beaker 
-
 
 // Get the min of an array of numbers, if it is negative return 'the min is negative', if its positive return 'the min is positive'.
 // let arr1 = [2, 1, 10, 6, -2, 1]
@@ -64,19 +61,37 @@
 // belongings.push(key)
 // console.log('Timmy now has they gold key', belongings[belongings.length -1] === 'a golden key')
 
-
-
 // Create an empty object and using the new ES6 syntax insert the given variables into the object
 
-const rAndR = 'tent'
-const healing = 'pepto bismol'
-const weapon= 'boomerang'
-const music = 'keyboard'
-const  style = 'pointy hat'
+// function CampingGear (rAndR, healing, weapon, music, style){
+//   this.rAndR = rAndR,
+//   this.healing = healing,
+//   this.weapon = weapon,
+//   this.music = music, 
+//   this.style = style
+// }
+
+// const rAndR = 'tent'
+// const healing = 'pepto bismol'
+// const weapon= 'boomerang'
+// const music = 'keyboard'
+// const style = 'pointy hat'
+
+// list1 = new CampingGear (rAndR, healing, weapon, music, style)
+
+// console.log(list1);
 
 // Use the rest operator to take any number of arguments, get the strings, sort them alphabetically, and return them as one string.
 
-let args = ['super', 99, 'cali', {toy: 'kite'}, 'fragil', 'istic', false, 'expiali', 'do', [8,6,7,5,3,0,9], 'cious']
+
+// //our arguments are already an arry. I'm not sure how to use a rest opperator here
+// let args = ['super', 99, 'cali', {toy: 'kite'}, 'fragil', 'istic', false, 'expiali', 'do', [8,6,7,5,3,0,9], 'cious']
+
+// function oneLongString (){
+// const string = args.filter(words => typeof words === 'string').sort().join('')
+// console.log(string);
+// }
+// oneLongString()
 
 // Use the two given arrays to solve the following problems using the short arrow function syntax.
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
@@ -84,13 +99,23 @@ const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
 const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
 
 // Use the Filter method to filter the nums array for numbers less than 4.
+// const numsLessThanFour = nums.filter(arg => arg < 4)
+// console.log(numsLessThanFour);
 
 // Use the Filter method to filter words that have an even length.
+// const wordsEvenLength = panagram.filter(arg => arg.length % 2 === 0)
+// console.log(wordsEvenLength);
 
 // Use the For Each method to log each value in the nums array by 3.
 
+//I believe the question is missing a word. I'm assuming we were supposed to mult/divide/increase each num by 3. I just used mult in my example. 
+// nums.forEach(element => {
+//   console.log(element * 3);
+// });
 // Use the For Each method to log each word with an exclamation point at end of the word.
-
+// panagram.forEach(element => {
+//   console.log(element + '!');
+// });
 
 //=============== HUNGRY FOR MORE ===============//
 

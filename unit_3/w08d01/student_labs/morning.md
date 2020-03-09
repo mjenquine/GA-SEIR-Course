@@ -16,7 +16,7 @@ Try to recreate this wireframe with React. Be sure to create a few components (e
 ## Get Started
 
 ### Set up
-- `create-react-app dashboard`
+- `npx create-react-app dashboard`
 - `cd dashboard `
 - `rm -rf .git` (since we're already in the class repo)
 - `atom .`

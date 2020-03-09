@@ -13,6 +13,8 @@ Build a prototype of this short order receipts tracker.
 Remember to `npm start` to start your server.\
 Remember to `git add` and `git commit`
 
+NOTE: This markdown is using `import React, { Component } from 'react';` to import React, instead of `import React from 'react'`. So instead of using `class App extends React.Component` it uses `class App extends Component`. Feel free to do it either way! Find what feels best to you. 
+
 
 ## Part 2: Sample Receipts
 

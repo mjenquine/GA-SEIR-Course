@@ -1,0 +1,100 @@
+/* * {
+  border: 1px solid gold;
+} */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --dark-cerulean: #124e78;
+  --maastricht-blue: #0b132b;
+  --yankees-blue: #1c2541;
+  --sea-serpent: #5bc0be;
+  --aquamarine: #6fffe9;
+  --react: #00d8ff;
+}
+
+html {
+  background: var(--yankees-blue);
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.container > div {
+  display: flex;
+  background: var(--yankees-blue);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 60vh;
+  align-items: flex-start;
+}
+
+.app {
+  display: flex;
+  background: var(--yankees-blue);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 60vh;
+  align-items: flex-start;
+}
+
+.board {
+  flex-basis: 60%;
+  display: grid;
+  grid-template-columns: 15vw 15vw 15vw;
+  grid-template-rows: 15vw 15vw 15vw;
+  color: white;
+  justify-items: stretch;
+  justify-content: center;
+}
+
+.board div {
+  display: flex;
+  align-itmes: center;
+  border: 3px solid var(--react);
+}
+
+h1 {
+  flex-basis: 100%;
+}
+
+h4,
+h3 {
+  text-align: center;
+  flex-basis: 100%;
+  align-self: center;
+}
+
+.X,
+.O {
+  flex-basis: 45%;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.X {
+  color: var(--sea-serpent);
+}
+
+.O {
+  color: var(--aquamarine);
+}
+h1 {
+  flex-basis: 60%;
+  color: var(--react);
+  text-align: center;
+}

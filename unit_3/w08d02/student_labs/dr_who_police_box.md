@@ -23,19 +23,7 @@ tardis = {
 - Take a few minutes to read over
 [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 - Do the activity and reread this article and try to figure out how the pieces go together.
-
-## Set Up
-
-- `mkdir tardis`
-- `cd tardis`
-- `touch app.js index.html main.css`
-- html boilerplate
-- add cdn links
-- link app.js and main.css
-- div with an id of `container`
-- `ReactDOM.render()` - select the div with the id of container of where to load the React components
-
-If you feel would feel more comfortable, go ahead and use CRA. This is much more of a thinking/testing concepts lab/hw, so a sandbox/simple recommended, but if you feel like you want more practice with CRA, go for it.  
+ 
 
 To aid in visualization here is some css.
 

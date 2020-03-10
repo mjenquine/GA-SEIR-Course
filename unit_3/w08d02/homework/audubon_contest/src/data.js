@@ -1,19 +1,19 @@
 const birds = [
   {
     birdName: 'Royal Flycatcher',
-    image: 'http://media.galaxant.com/000/072/608/desktop-1410170762.png',
+    image: 'https://i.redd.it/se8xbj9kryk41.jpg',
     user: 'Veloria',
     approved: false
   },
   {
     birdName: 'Resplendent Quetzal',
-    image: 'http://media.galaxant.com/000/072/604/desktop-1410170753.png',
+    image: 'https://i.redd.it/abxoob2ftvk41.jpg',
     user: 'Allison',
     approved: false
   },
   {
     birdName: 'Livingstone\'s Turaco',
-    image: 'http://media.galaxant.com/000/072/594/desktop-1410170731.png',
+    image: 'https://i.redd.it/vu3xqvfrnrj41.jpg',
     user: 'Rosa',
     approved: true
   },

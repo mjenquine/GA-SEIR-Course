@@ -141,6 +141,7 @@ export default class AppMain extends React.Component {
 The commit message should read: <br>
 "Created 3 Components".
 <hr>
+### Next Steps
 1. Import Your Components in the correct places
 1. Think about your architecture Only The CardContainer should go into App.Js
 1. Only CardList should go into CardContainer.js

@@ -1,22 +1,22 @@
 const groceries = [
   {
-  item: 'avocado',
+  item: 'Avocado',
   brand: 'Avocados from Mexico',
-  units: '5',
+  units: '5ea',
   quantity: 0,
   isPurchased: false
   },
   {
     item: 'Soy Milk',
     brand: '365',
-    units: '1',
+    units: '1ea',
     quantity: 0,
     isPurchased: false
   },
   {
     item: 'Peanuts',
     brand: 'Planters',
-    units: '1',
+    units: '1lb',
     quantity: 0,
     isPurchased: false
   }

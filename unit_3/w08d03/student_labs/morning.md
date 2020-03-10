@@ -132,7 +132,7 @@ export default class AppMain extends React.Component {
 2. CardList.js
 3. CardContainer.js
 
-#### Your Card Component should an Li element
+#### Your Card Component should an div element
 #### Your CardList Should Be a UL element
 #### Your CardContainer Should Be A Div
 

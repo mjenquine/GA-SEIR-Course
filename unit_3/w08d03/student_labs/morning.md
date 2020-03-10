@@ -178,11 +178,12 @@ export default App;
 ```
 
 ### note : now how would you set up the other components
-
+### after you think about it and write on a piece of paper and discuss it with your team
+# do it...... set them up properly then commit
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Structured my 3 Components in App.js".
+"Structured my 3 Components".
 <hr>
 
 ## Add Data  to src/data.js

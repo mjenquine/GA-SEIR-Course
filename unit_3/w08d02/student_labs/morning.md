@@ -7,7 +7,7 @@ Your local Audubon Society has reached out to you to help them put together an o
 They want members of the public to go out and take photos of birds and submit them to their website. The best bird photo will honored with a premium Audubon Society membership!
 
 ## Deliverables
-
+- Using CRA set up your files, add in your birds and make sure to remove .git
 (Note: we'll work on this lab this morning and for hw)
 
 - Users should be able to **Create** a new bird (species, image and person who submitted the image)

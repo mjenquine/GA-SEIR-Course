@@ -13,10 +13,9 @@ class App extends Component {
       isPurchased: false
     }
     this.handleChange = this.handleChange.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleChange(event) {
-    console.log(event.target.value);
     this.setState({ [event.target.id]: event.target.value})
   }
   handleSubmit(event) {
@@ -28,6 +27,7 @@ class App extends Component {
       quantity: this.state.quantity,
       isPurchased: this.state.isPurchased
     }
+    console.log(newItem);
     this.setState({
       groceries: [newItem, ...this.state.groceries],
       item: '',

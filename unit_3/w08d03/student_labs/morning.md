@@ -353,7 +353,7 @@ The commit message should read: <br>
 
 ### Now here comes the magic
 
-1.Make a function in App.js that can change a good character evil, and an evil character bad and pass it down as a prop from App to CardContainer, to CardList to Card
+1.Make a function in App.js that can change a good character evil, and an evil character good and pass that function down as a prop from App to CardContainer, to CardList to Card
 
 1. Add a button on your Card Component that can 'flip alegiance' by calling that function
 2. In Card Container now instead of eachlist being identical ad a filter method that will only show Good Character on the left and Evil Characters on the Right.... but show Neutral Characters on both sides

@@ -80,7 +80,7 @@ export default class AppHeader  extends React.Component{
 }
 ```
 
-
+## Inside Main.js
 ```js
 import React from "react";
 

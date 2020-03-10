@@ -1,6 +1,7 @@
 # SUPER HERO AND VILLIAN GROUP LAB
 #### SOLO WORK IS NOT ALLOWED, Join Forces in your breakout rooms
 
+![characters](https://media.git.generalassemb.ly/user/15881/files/9930b280-62f0-11ea-950c-455225ebcde2)
 
 
 # Set up
@@ -259,13 +260,19 @@ const data = [
     alias: 'Wolverine',
     alegiance: 'Good',
     temperment: 'Chaotic'
+  },
+  {
+    name: 'Anakin Skywalker',
+    alias: 'Darth Vader',
+    alegiance: 'Evil',
+    temperment: 'Lawful'
   }
 ]
 
 ```
 ## import this data in the App.js and pass it down CardContainer and have CardContainer pass it to CardList and have CardList pass one individual person to each card as the prop 'person' so that in Card.js it can use the data as this.props.person
 
-
+![forceghost](https://media.git.generalassemb.ly/user/15881/files/1c053d80-62f0-11ea-87a1-55c8801db730)
 ## Arthur appears as a force ghost
 ```
 sorry not going to show you this step, but you have the power to do it ::: vanishes:::
@@ -332,7 +339,7 @@ The commit message should read: <br>
    </div>
 </div>
 ```
-
+![forceghost](https://media.git.generalassemb.ly/user/15881/files/1c053d80-62f0-11ea-87a1-55c8801db730)
 ## Arthur appears as a force ghost
 ```js
 not going to give you this answer but I have faith in you, remember your training ::: disappears into the force:::

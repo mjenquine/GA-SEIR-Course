@@ -38,6 +38,7 @@ class App extends Component {
     })
   }
   render () {
+    console.log(groceries);
     return (
       <div>
         <h1> Grocery List </h1>
@@ -99,7 +100,5 @@ class App extends Component {
     )
   }
 }
-
-
 
 export default App;

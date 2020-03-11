@@ -1,6 +1,7 @@
 import React from "react";
 import AppHeader from "./components/Header.js";
 import AppMain from "./components/Main.js";
+import CardContainer from "./components/CardContainer.js";
 
 class App extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class App extends React.Component {
       <div className="App">
         <AppHeader />
         <AppMain h1="All of these can be dynamic h1" h2="This is the h2" h3="this is the h3">
-            <div>This can be your components that you build</div>
+            <CardContainer />
         </AppMain>
       </div>
     );

@@ -7,14 +7,32 @@ class App extends Component {
   constructor (props) {
     super (props)
     this.state = {
-      url: "http://jservice.io/api/random",
       score: 0,
       jeopardyQuestion: {}
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.getQuestion = this.getQuestion.bind(this)
   }
-  handleSubmit (event) {
-    this.setState({})
+  getQuestion (event) {
+    event.preventDefault()
+    this.setState({
+      url: "http://jservice.io/api/random"
+      },
+      () => {
+        fetch(this.state.url)
+        .then(response => {
+          return response.json()
+        })
+        .then(
+          (response) => {
+            this.setState({jeopardyQuestion: response})
+          }
+        ).catch (
+          (err) => {
+            console.error(err)
+          }
+        )
+      }
+    )
   }
 
 

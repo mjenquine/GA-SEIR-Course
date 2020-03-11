@@ -28,7 +28,7 @@ Make a Jeopardy Trivia App using jService!
 
 1. Make one button add the points to the score and the other to subtract points from the score (just add or subtract 1 point - using the points value from jService is Hungry for More)
 
-1. Add a little style and color to your app.
+1. Add a little style and color to your app. If you've spent less than 4 hours on the homework- give it portfolio quality styling.
 
 # Hungry for More?
 

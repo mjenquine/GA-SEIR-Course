@@ -4,7 +4,7 @@ import CardList from './CardList.js'
 class CardContainer extends Component {
   render () {
     return (
-      <CardList />
+      <CardList data={this.props.data}/>
     )
   }
 }

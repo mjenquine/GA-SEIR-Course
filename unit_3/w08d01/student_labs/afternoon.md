@@ -8,10 +8,12 @@ Build a prototype of this short order receipts tracker.
 
 ## Part 1: Get Started
 
-`create-react-app korilla` then `cd korilla` then `rm -rf .git` (since we're already in the class repo) and follow the notes from class/lab to create an App component that renders
+`npx create-react-app korilla` then `cd korilla` then `rm -rf .git` (since we're already in the class repo) and follow the notes from class/lab to create an App component that renders
  an `h1` with some text inside it.\
 Remember to `npm start` to start your server.\
 Remember to `git add` and `git commit`
+
+NOTE: This markdown is using `import React, { Component } from 'react';` to import React, instead of `import React from 'react'`. So instead of using `class App extends React.Component` it uses `class App extends Component`. Feel free to do it either way! Find what feels best to you.
 
 
 ## Part 2: Sample Receipts

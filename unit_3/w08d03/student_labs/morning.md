@@ -1,269 +1,371 @@
+# SUPER HERO AND VILLIAN GROUP LAB
+#### SOLO WORK IS NOT ALLOWED, Join Forces in your breakout rooms
+
+![characters](https://media.git.generalassemb.ly/user/15881/files/9930b280-62f0-11ea-950c-455225ebcde2)
+
+
 # Set up
 
-Use Create React App (and don't forget to remove the .git)
-
-**OR**
-
-1. `mkdir heirloom-app`
-1. `cd heirloom-app`
-1. `touch app.js index.html`
-1. `atom .`
-1. `index.html`
-  1. html boilerplate
-  1. react cdn links
-  1. add `main` tag to body
-  1. link `app.js`
-1. `app.js`
-  1. `RectDom.render()` an `h1` element (e.g. `        <h1> Heirloom Furniture Restoration </h1>`) and have it render inside the `main` tag in the html
-1. start a server (`python SimpleHTTPServer`, or `python http.server` or npm `http-server`)
 
 
-If you are using CREATE REACT APP, clear out all their stuff and just have an h1 element:
+1. `cd into the lifting-state-lab folder and run npm install then after install run npm start`
+``` bash
+$ npm install
+$ npm run start
+```
+## Examine your code.... Read these pre-steps carefully
 
-You should now have an h1 element render in the DOM
+  1.  In your Src Folder you will see that you have an App.Js file and a components folder with Header.JS and Main.js
+  1.  Take Note that Main.js file accepts 3 props and is also accepts children. You should be placing all things you create inside the AppMain Component
+  1. Notice also that Header.js and Main.js bothe export components named AppHeader and AppMain. this is on purpose so that you can see that its not the name of the file but the name of the EXPORTED COMPONENT that matters when creating your JSX.
+  1. Notice also that you have some assets in this folder that you can use to work on the assignment in the public folder
+  1. Your Assets include images and css. The CSS is already added to the page and the js is also please ignore those and do not touch these assets
+  1. You do however have images. Use these to your hearts content especially the faces.
+  1. Also you have access to bootstrap but its been re-styled with Sass ( your welcome) but the class names from bootstrap work , like row, col-md-6,  col-md-3 , card, jumbotron
 
-- **Optional** : Bored of plain html? Feel like you need some css practice? Set a timer for 10 minutes and add a `index.css` file, include a google font, background color and font color. If you have some leftover time try to style some thing else, a special style for the h1? You'll be using a `ul` and `li`s as well, maybe some other colors or fonts there?
-
-## Inside the App class
+## Inside the App.js it should look like this
 
 
 
 ```js
+import React from "react";
+import AppHeader from "./components/Header.js";
+import AppMain from "./components/Main.js";
+
 class App extends React.Component {
-  render () {
+  render() {
     return (
-      <div className='container'>
-        <h1 className='shop-name'>Heirloom Furniture Restoration</h1>
+      <div className="App">
+        <AppHeader />
+        <AppMain h1="All of these can be dynamic h1" h2="This is the h2" h3="this is the h3">
+            <div>This can be your components that you build</div>
+        </AppMain>
       </div>
-    )
+    );
   }
 }
 
+export default App;
+
+
 ```
-<hr>
-&#x1F534; **Commit your work** <br>
-The commit message should read: <br>
-"First Component Created".
-<hr>
 
-## Add State to the App Component
-
-[State should be set in the constructor](https://reactjs.org/docs/state-and-lifecycle.html)
+## Inside Header
 
 ```js
-constructor (props) {
-  super(props)
-  this.state = {chair: "Grandma's Favorite Chair"}
-}
-```
-<hr>
-&#x1F534; **Commit your work** <br>
-The commit message should read: <br>
-"State Added"
-<hr>
-
-## Create a Furniture Component and Pass Props
-
-1. Create a `Furniture` class
-1. have the render function return a `ul` with one `li`
-element inside of it. This `li` element should render {this.props.chair} as `Grandma's Favorite Chair`
-
-![rendered html](https://i.imgur.com/ZiWWkw4.png)
+import React from 'react'
 
 
-Check your react dev tools too
-
-Expected Appearance
-
-
-![](https://camo.githubusercontent.com/3ea69eb7b5c08bbbaf14cdeca4f993e1d28855f0/68747470733a2f2f692e696d6775722e636f6d2f4e356e743145412e706e67)
-
-<hr>
-&#x1F534; **Commit your work** <br>
-The commit message should read: <br>
-"Furniture Componenet and Props".
-<hr>
-
-## Write a Function that is Called by a Click Event
-
-1. inside the App class
-
-```js
-
-restore () {
-  console.log('clicked it and the value of this is:', this)
-}
-```
-1. Add a click event to the `li` in the Furniture component
-1. Not working? Make sure you pass it from App to Furniture
-1. `this` is undefined/null? Make sure you add the function to the constructor and bind `this`
-
-Once the function is called on and this has the expected value:
-1. Let's give that `restore` function some more functionality. This app is going to help people figure out how best to restore their heirloom pieces
-1. Obviously, in 2018, the best way to restore furniture is to paint it white. Let's add the code to do that
-
-```js
-restore () {
-  this.setState({
-    chair: `Paint ${this.state.chair} white`
-  })
-}
-```
-
-On click of the `li` it should now update to read
-![white](https://i.imgur.com/sDBr6Bh.png)
-
-1. It isn't obvious that we have to click the li element to get the recommendation:
-in the furniture component, inside the li, let's add a button that says Recommendation, and let's move the click event to the button
-
-1. Nice but we can click the button many times, which makes the advice come out a bit, weird
-
-![weird](https://i.imgur.com/Ica0RDg.png)
-
-
-1. let's fix this by only allowing the button to show up if `recommendationMade` is false
-1. Let's update our state to have a key `recommendationMade` with a property of false to start
-1. add a ternary operator to determine whether or not a button should be displayed in the Furniture component
-1. use the react dev tools to toggle true false
-![react dev tools toggle true false](https://i.imgur.com/eFdOzK9.png)
-1. not working? did you pass this property down from App?
-
-<hr>
-&#x1F534; **Commit your work** <br>
-The commit message should read: <br>
-"Function on Click"
-<hr>
-
-## Add More Items To restore
-
-Expand state to:
-```js
-this.state = {
-  furniture: [
-    {
-      piece: "Grandma's Favorite Chair",
-      recommendationMade: false,
-      id: 1
-    },
-    {
-      piece: 'Grand Armoire',
-      recommendationMade: false,
-      id: 2
-    },
-    {
-      piece: 'Fainting Couch',
-      recommendationMade: false,
-      id: 3
-    },
-    {
-      piece: 'Fabergé Egg',
-      recommendationMade: false,
-      id: 4
-    }
-  ]
-}
-```
-
-1. Make a new class component `ListItem`
-1. refactor your code so that you are able to generate all the list items based on the data. The data should just render the data for `piece` right now
-1. don't forget to assign `key` to the map elements. You can use `index` or you can also consider using `id` from the data. Since most of the time you'll be getting data from a database and that data will have an id, it is a nice option to fave
-
-Once you are rendering the list without errors it is time to think about restoring the functionality we had
-
-<hr>
-&#x1F534; **Commit your work** <br>
-The commit message should read: <br>
-"Rendering List Items"
-<hr>
-
-1. Return the recommendation button
-1. Add a `console.log` to the `restore` function and console log `this`
-1. remember to pass the prop from Furniture to List Item
-1. Get the click function to console.log
-
-1. then try to get the right `recommendationMade` to toggle - this will be a multi-step process:
-
-1. We probably want to pass the value of the item. We can't pass it through `this.props.restore` because we can't add an argument this way. But we can define an anonymous function and call our desired function with our arguments that way.
-[Handling Events in React](https://reactjs.org/docs/handling-events.html)
-
-1. don't forget to add a parameter to the restore function
-
-So what we want right now is to click the button and see the item
-![click item and see](https://i.imgur.com/9Z7jyZh.png)
-
-<details><summary>Hints and Major Spoilers: ListItem Class</summary>
-
-
-```
-
-class ListItem extends React.Component {
-  render () {
+export default class AppHeader  extends React.Component{
+  render() {
     return (
-      <li>
-        {this.props.item.piece}
-        {this.props.item.recommendationMade}
-        {this.props.item.recommendationMade ? '' : <button onClick={item => this.props.restore(this.props.item)}>Recommendation</button> }
-      </li>
+      <nav className="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg"  color-on-scroll="100">
+        <div className="container">
+          <div className="navbar-translate">
+          <a className="navbar-brand" href="https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/tree/master/unit_3/w08d03">
+            WAVERIDER Class Lab its Lit </a>
+
+            <button className="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="sr-only">Toggle navigation</span>
+                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            </div>
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a href="#" className="nav-link">
+                  <i className="material-icons">apps</i> Be Creative
+                  </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     )
+  }
+}
+```
+
+## Inside Main.js
+```js
+import React from "react";
+
+export default class AppMain extends React.Component {
+  render() {
+    return (
+      <div>
+        <div
+          className="page-header header-filter"
+          data-parallax="true"
+          style={{backgroundImage: `url('assets/img/bg3.jpg')`}}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 ml-auto mr-auto">
+                <div className="brand text-center">
+                  <h1>{this.props.h1}</h1>
+                  <h3 className="title text-center">{this.props.h3}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="main main-raised">
+          <div className="container">
+            <div className="section text-center">
+              <h2 className="title">{this.props.h2}</h2>
+              {this.props.children}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
 ```
 
-</details>
+### Now what you want to do is add three components to the Components folder
+1. Card.js
+2. CardList.js
+3. CardContainer.js
 
-1. It should be quite easy to update the item...something like:
-```
-item.recommendationMade = !item.recommendationMade
-```
-
-1. We have to call` this.setState({})` at the end of our `restore` function to update our state and thus update our data and view
-
-  ![updated view](https://i.imgur.com/WNnWqqT.png)
-
-  <hr>
-&#x1F534; **Commit your work** <br>
-The commit message should read: <br>
-"Restored Restore Function Functionality"
-<hr>
-
-## Add More Furniture Through a Form
-
-1. Should we make a new component just for a single input form? Nah, having one massive and complex component isn't the react way, but over-normalizing and making every html element a component isn't useful either
-1. In our App component let's set up a form - two inputs, one text, one submit, right below the `h1`
-1. write two functions, one for handling the item input change and another for the item input submit
-1. add a new property to `this.state` in the app component called `newItem` and set it to an empty string
-1. the text input will have an onChange event listener that will call the corresponding function
-1. the form will have an on submit that will call the corresponding function, remember to prevent the default behavior for submit, see if you can empty the input after submit as well
-1. on submit be sure to create an object that matches our other data and try shifting it into our furniture array
+#### Your Card Component should an div element
+#### Your CardList Should Be a UL element
+#### Your CardContainer Should Be A Div
 
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Able To Add More Items"
+"Created 3 Components".
 <hr>
 
+
+### Next Steps
+1. Import Your Components in the correct places
+1. Think about your architecture Only The CardContainer should go into App.Js
+1. Only CardList should go into CardContainer.js
+1. Only Card should go into Card List
+
+
+#### The expected Architecture of Your page is to have A Two Column Container, That Container should have 1 Card List on the left side and the other CardList on the right side, Inside the CardLists they should render a list of data that they received as props and should show an individual Card for each piece of data
+
+#### Sound confusing..... Sound cryptic.... If it does take some time to wireframe it. Don't over think it doesn't need to be styled yet just add the jsx that could produce the expected architecture the same way you would write up your html from unit 1, we'll get our Flexbox (or CSS Grid) on later 
+
+## Hint
+
+```js
+import React from "react";
+import AppHeader from "./components/Header.js";
+import AppMain from "./components/Main.js";
+import CardContainer from "./components/CardContainer.js"
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <AppHeader />
+        <AppMain h1="All of these can be dynamic h1" h2="This is the h2" h3="this is the h3">
+            <CardContainer />
+        </AppMain>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+```
+
+### note : now how would you set up the other components
+### after you think about it and write on a piece of paper and discuss it with your team
+# do it...... set them up properly then commit
+<hr>
+&#x1F534; **Commit your work** <br>
+The commit message should read: <br>
+"Structured my 3 Components".
+<hr>
+
+## Add Data  to src/data.js
+
+
+```js
+
+const data = [
+  {
+   name: 'Clark Kent',
+   alias: 'Superman',
+   alegiance: 'Good',
+   temperment: 'Lawful'
+  },
+  {
+    name: 'Diana Prince',
+    alias: 'Wonder Woman',
+    alegiance: 'Good',
+    temperment: 'Neutral'
+  },
+  {
+    name: 'Bruce Wayne',
+    alias: 'Batman',
+    alegiance: 'Good',
+    temperment: 'Chaotic'
+  },
+  {
+    name: 'Tony Stark',
+    alias: 'Iron Man',
+    alegiance: 'Neutral',
+    temperment: 'Lawful'
+  },
+  {
+    name: 'Jon Osterman',
+    alias: 'Dr. Manhattan',
+    alegiance: 'Neutral',
+    temperment: 'Neutral'
+  },
+  {
+    name: 'Bruce Banner',
+    alias: 'The Hulk',
+    alegiance: 'Neutral',
+    temperment: 'Chaotic'
+  },
+  {
+    name: 'Victor Von Doom',
+    alias: 'Dr. Doom',
+    alegiance: 'Evil',
+    temperment: 'Lawful'
+  },
+  {
+    name: 'Unknown',
+    alias: 'The Joker',
+    alegiance: 'Evil',
+    temperment: 'Chaotic'
+  },
+  {
+    name: 'Steve Rogers',
+    alias: 'Captain America',
+    alegiance: 'Good',
+    temperment: 'Lawful'
+  },
+  {
+    name: 'Peter Parker',
+    alias: 'Spider-Man',
+    alegiance: 'Good',
+    temperment: 'Neutral'
+  },
+  {
+    name: 'James "Logan" Howlett',
+    alias: 'Wolverine',
+    alegiance: 'Good',
+    temperment: 'Chaotic'
+  },
+  {
+    name: 'Anakin Skywalker',
+    alias: 'Darth Vader',
+    alegiance: 'Evil',
+    temperment: 'Lawful'
+  }
+]
+
+```
+## import this data in the App.js and pass it down CardContainer and have CardContainer pass it to CardList and have CardList pass one individual person to each card as the prop 'person' so that in Card.js it can use the data as this.props.person
+
+![forceghost](https://media.git.generalassemb.ly/user/15881/files/1c053d80-62f0-11ea-87a1-55c8801db730)
+## Arthur appears as a force ghost
+```
+sorry not going to show you this step, but you have the power to do it ::: vanishes:::
+```
+
+## Lets fix our Card.js Component so that it can accept one item of our person prop
+
+```js
+
+import React from 'react'
+
+export default class Card extends React.Component{
+  render() {
+    return (
+<div className="card">
+  <div className="card-header">
+    <h4 className="card-title">{this.props.person.alias}</h4>
+    <p className="category">{`${this.props.person.temperment} ${this.props.person.alegiance}`}</p>
+  </div>
+  <div className="card-body">
+    <p clasName="card-text">
+      Name:{this.props.person.name}
+    </p>
+    <p clasName="card-text">
+      Alias:{this.props.person.alias}
+    </p>
+    <p clasName="card-text">
+      Alegiance:{this.props.person.alegiance}
+    </p>
+    <p clasName="card-text">
+      Temperment:{this.props.person.temperment}
+    </p>
+  </div>
+</div>;
+
+    )
+  }
+}
+
+
+
+```
+
+<hr>
+&#x1F534; **Commit your work** <br>
+The commit message should read: <br>
+"Updated My Card.js and Added a Data Element".
+<hr>
+
+
+## Now that we know what our Card.js looks like set up your CardList.js and your CardContainer.js
+
+###### Major hints
+1. Card Container doesn't do anything it should just have 2 card lists in it and it should accept props from App.js file
+1. Card List should accept props and all it should do is have a MAP in the return of your render function in between the ul tags that renders a card that is wrapped in an li tag.....
+1. Card Container is where you should be adding your structure to make this 2 columns for example look at the html snippet below
+```html
+ <div class="row">
+   <div class="col-md-6">
+      hmmmm maybe a list would go great here fellow Waverider
+   </div>
+   <div class="col-md-6">
+      hmmmm maybe a list would go great here fellow Waverider
+   </div>
+</div>
+```
+![forceghost](https://media.git.generalassemb.ly/user/15881/files/1c053d80-62f0-11ea-87a1-55c8801db730)
+## Arthur appears as a force ghost
+```js
+not going to give you this answer but I have faith in you, remember your training ::: disappears into the force:::
+```
+
+<hr>
+&#x1F534; **Commit your work** <br>
+The commit message should read: <br>
+"My CardList and CardContainer work".
+<hr>
+
+### Now here comes the magic
+
+1.Make a function in App.js that can change a good character evil, and an evil character good and pass that function down as a prop from App to CardContainer, to CardList to Card
+
+1. Add a button on your Card Component that can 'flip alegiance' by calling that function
+2. In Card Container now instead of eachlist being identical ad a filter method that will only show Good Character on the left and Evil Characters on the Right.... but show Neutral Characters on both sides
+
+<hr>
+&#x1F534; **Commit your work** <br>
+The commit message should read: <br>
+"I AM THE MASTER OF MY FATE CAPTAIN OF MY DESTINY I SMITED YOU VILE REACT Even with Arthurs intentionally vague instructions through teamwork and GRIT".<br>
+Yes really write that I'll be watching
+<hr>
 
 # Hungry for More
-
-## Delete an Item
-
-It's hungry for more! Figure it out! You can do it!
-
-<hr>
-&#x1F534;
-
-**Commit your work**
-
-<br>
-The commit message should read:
-
-<br>
-"I did it. HFM. YAY ME"
-
-
-<hr>
-
-## Practice CSS
-
-Style your app some more
+### Help your Waverider Shipmates finish
+### Use the Material kit Docs and internet images to make this cooler [__material kit__](https://demos.creative-tim.com/material-kit/docs/2.0/components/card.html)
+### Make it 3 Columns Good, evil and Neutral or Put only True neutral and Lawful Neutral with Good and Chaotic Neutral with Evil... or something you decide

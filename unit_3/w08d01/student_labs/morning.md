@@ -16,50 +16,25 @@ Try to recreate this wireframe with React. Be sure to create a few components (e
 ## Get Started
 
 ### Set up
-- `mkdir dashboard`
+- `npx create-react-app dashboard`
 - `cd dashboard `
-- `touch app.js index.html`
+- `rm -rf .git` (since we're already in the class repo)
 - `atom .`
-
-**index.html**
-- add html boilerplate
-- add script tags
-- add a `main` tag inside the `body`
-
-```html
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-<script type="text/babel" src="app.js"></script>
-```
+- `npm start` to start your server
 
 **app.js**
 
-- render and `h1` tag using react to test it:
+- render an `h1` tag using react to test it:
 
-```jsx
-ReactDOM.render(
-  <h1>Commence Dashboard Creation!</h1>,
-  document.querySelector('main')
-);
+```js
+class App extends React.Component {
+  render(){
+    return (
+      <h1>Hello World!</h1>
+    )
+  }
+}
 ```
-
-#### Run a simple server:
-- If you have python 2.x
-  - `python -m SimpleHTTPServer`
-
-- If you have python 3.x
-  - `python -m http.server [<portNo>]`
-    ex:`python -m http.server 8080`
-
-- If you want to use npm
-    - Install, if you haven't already, with `npm install -g http-server` (might need to run `sudo npm install -g http-server`)
-    - run `http-server -o`
-
-#### Important Note
-- To see updates you must refresh your browser, all three of the servers above do cache things, so you may have to do a hard refresh (hold shift key when doing a refresh) to see your changes. Remember `command shift r` as the hot keys
-
 
 
 ### Dark Theme!

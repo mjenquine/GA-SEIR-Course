@@ -434,9 +434,9 @@ Also, those arrow functions look really nice, is there a `this` that they are bi
 ```js
 //If you wanted to swap the value of x and y with es5,
 //you had to do
-var x = true
-var y = false
-var temp
+let x = true
+let y = false
+let temp
 
 temp = x
 x = y
@@ -445,13 +445,10 @@ y = temp
 //will return x and y to original values in this case
 [x, y] = [y, x]
 
+// console.log(x, y)
 // NEATO!
 ```
 
-<details><summary>Note</summary>
-The reason this is special and new is because we have to
-remember that array values are normally passed by reference.
-It is also unusual to have an array that is not assigned to a variable
 
 ### Unpacking Objects: File under `Destructuring Assignment`
 
@@ -479,7 +476,14 @@ However, now we can pull out the value
 ```js
 const { price } = someLongObjectName
 
-console.log(price)
+// console.log(price)
+
+const {memory: ram} = someLongObjectName
+```
+```js
+// rename
+const {ram: memory} = someLongObjectName
+console.log(memory)
 ```
 
 We can also pull out more than one value
@@ -488,6 +492,22 @@ We can also pull out more than one value
 const { brand, year } = someLongObjectName
 console.log(brand)
 console.log(year)
+```
+
+We can pull the nested object out:
+
+```js
+
+const nestedObject = {
+  rabbit: {
+    hat: 'rabbit',
+    rabbitCape: 'fancy',
+  }
+}
+const tryToPullRabbitProperties = nestedObject.rabbit
+const pullRabbitProperties = {...nestedObject}
+console.log(tryToPullRabbitProperties)
+console.log(pullRabbitProperties)
 ```
 
 ## Passed By Reference (arrays and objects)

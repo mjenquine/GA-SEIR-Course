@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import DivOne from './DivOne.js'
 
 class App extends Component {
   constructor(props) {
@@ -10,35 +10,18 @@ class App extends Component {
         caps: false,
       }
     }
-    this.changeIt = this.changeIt.bind(this)
+    
   }
-  changeIt (text) {
-    if (this.state.tardis.caps) {
-      this.setState({
-        tardis: {
-          name: text.toLowerCase(),
-          caps: false
-        }
-      })
-    } else {
-      this.setState({
-        tardis: {
-          name: text.toUpperCase(),
-          caps: true
-        }
-      })
-    }
-  }
-
   render () {
     return (
       <div>
-        <div onClick={()=> this.changeIt(this.state.tardis.name)}>
-          <h3>{this.state.tardis.name}</h3>
-        </div>
+        <DivOne tardis={this.state.tardis}/>
       </div>
     )
   }
 }
+
+
+
 
 export default App;

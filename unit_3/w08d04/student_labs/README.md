@@ -74,3 +74,4 @@ Now that we have an API, we want to actually connect it to a front-end. So, let'
 ## Stretch Goals
 1. Practice HTML/CSS by giving your animal shelter site some sweet styling
 1. Figure out how to add `personalityTraits` like 'friendly', 'shy', 'only slightly evil',
+1. Filter so that you can have a dropdown that contains all species available and when you select one it should only display animals of that species.

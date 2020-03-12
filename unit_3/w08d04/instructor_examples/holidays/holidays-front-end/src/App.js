@@ -2,6 +2,7 @@ import React from 'react'
 import './css/normalize.css'
 import './css/skeleton.css'
 import './css/index.css'
+import NewForm from './components/NewForm.js'
 // import ballons from './images/two-balloon-icons-68911.png'
 // import pencil from './images/simpleiconDOTcom-pen-15-64x64.png'
 // import Show from './components/Show.js'
@@ -25,6 +26,7 @@ class App extends React.Component {
       holidays: []
     }
     this.getHolidays = this.getHolidays.bind(this)
+    this.handleAddHoliday = this.handleAddHoliday.bind(this)
   }
   componentDidMount(){
     this.getHolidays()
@@ -41,10 +43,18 @@ class App extends React.Component {
       console.error(e)
     }
   }
+  handleAddHoliday(holiday) {
+    const copyHolidays = [holiday, ...this.state.holidays]
+    this.setState({
+      holidays: copyHolidays,
+      name: ''
+    })
+}
  render () {
    return (
      <div className='container'>
       <h1>Holidays! Celebrate!</h1>
+        <NewForm handleAddHoliday={this.handleAddHoliday} baseURL={baseURL}/>
         <table>
     <tbody>
       { this.state.holidays.map(holiday => {

@@ -6,12 +6,12 @@ import './css/index.css'
 // import pencil from './images/simpleiconDOTcom-pen-15-64x64.png'
 // import Show from './components/Show.js'
 // import UpdateForm from './components/UpdateForm.js'
-let baseURL = process.env.REACT_APP_BASEURL
+let baseURL = ''
 //alternate baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
 } else {
-  baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
+  baseURL = 'your heroku bakend url here'
 }
 console.log('current base URL:', baseURL)
 class App extends React.Component {
@@ -20,6 +20,10 @@ class App extends React.Component {
     this.state = {
       holidays: []
     }
+    this.getHolidays = this.getHolidays.bind(this)
+  }
+  componentDidMount(){
+    this.getHolidays()
   }
   async getHolidays (){
     try {
@@ -36,6 +40,18 @@ class App extends React.Component {
    return (
      <div className='container'>
       <h1>Holidays! Celebrate!</h1>
+      <table>
+       <tbody>
+         { this.state.holidays.map(holiday => {
+             return (
+               <tr key={holiday._id} >
+                 <td> {holiday.name }</td>
+               </tr>
+             )
+           })
+         }
+       </tbody>
+      </table>
      </div>
    )
   }

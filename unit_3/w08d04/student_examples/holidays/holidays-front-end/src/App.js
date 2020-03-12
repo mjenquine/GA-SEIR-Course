@@ -7,26 +7,37 @@ import './css/index.css'
 // import Show from './components/Show.js'
 // import UpdateForm from './components/UpdateForm.js'
 let baseURL = process.env.REACT_APP_BASEURL
-
 //alternate baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
-
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3004'
+  baseURL = 'http://localhost:3003'
 } else {
   baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
 }
-
 console.log('current base URL:', baseURL)
-
 class App extends React.Component {
- render () {
+  constructor(props) {
+    super(props)
+    this.state = {
+      holidays: []
+    }
+  }
+  async getHolidays (){
+    try {
+    // the async request code you want to try
+    let response = await fetch(`${baseURL}/holidays`)
+    let data = await response.json()
+    this.setState({holidays: data})
+    } catch (e) {
+    // what happens when you catch an error
+    console.error(e)
+    }
+  }
+  render () {
    return (
      <div className='container'>
       <h1>Holidays! Celebrate!</h1>
      </div>
    )
- }
-
+  }
 }
-
 export default App

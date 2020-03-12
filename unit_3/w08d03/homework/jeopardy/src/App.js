@@ -25,6 +25,7 @@ class App extends Component {
         .then(
           (response) => {
             this.setState({jeopardyQuestion: response})
+            console.log(this.state.jeopardyQuestion);
           }
         ).catch (
           (err) => {
@@ -42,7 +43,10 @@ class App extends Component {
       <div>
         <Header />
         <Score />
-        <Game />
+        <Game
+          jeopardyQuestion={this.state.jeopardyQuestion}
+          getQuestion={this.getQuestion}
+          />
       </div>
     )
   }

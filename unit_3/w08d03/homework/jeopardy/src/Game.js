@@ -8,7 +8,7 @@ class Game extends Component {
           <div>Let's play!</div>
         </div>
         <div>
-          <button>Get Question</button>
+          <button onClick={this.props.getQuestion}>Get Question</button>
         </div>
         <div>
           <div>Category:</div>

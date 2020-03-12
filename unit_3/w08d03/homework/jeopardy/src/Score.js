@@ -8,9 +8,9 @@ class Score extends Component {
           <div>Score: {this.props.score}</div>
         </div>
         <div>
-          <button>Decrease</button>
-          <button>Increase</button>
-          <button>Reset</button>
+          <button onClick={() => {this.props.decreaseScore(this.props.score)}}>Decrease</button>
+          <button onClick={() => {this.props.increaseScore(this.props.score)}}>Increase</button>
+          <button onClick={() => {this.props.resetScore(this.props.score)}}>Reset</button>
         </div>
       </div>
     )

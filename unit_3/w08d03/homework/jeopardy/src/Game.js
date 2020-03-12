@@ -42,12 +42,13 @@ class Game extends Component {
         </div>
         <div>
           Question:
-          {
-            this.props.jeopardyQuestion.map((arr, index) => {
-              return (
-              <span key={index}>{arr[0].answer}</span>
-              )
-            })
+          {this.props.isToggleOn
+            ? <button onClick={this.props.handleClick}>Click to Reveal Question</button>
+            : this.props.jeopardyQuestion.map((arr, index) => {
+                return (
+                  <span key={index}>{arr[0].answer}</span>
+                )
+              })
           }
         </div>
       </div>

@@ -8,10 +8,14 @@ class App extends Component {
     super (props)
     this.state = {
       score: 0,
-      jeopardyQuestion: []
+      jeopardyQuestion: [],
+      isToggleOn: true
     }
     this.getQuestion = this.getQuestion.bind(this)
     this.decreaseScore = this.decreaseScore.bind(this)
+    this.increaseScore = this.increaseScore.bind(this)
+    this.resetScore = this.resetScore.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
   getQuestion (event) {
     this.setState({
@@ -24,7 +28,12 @@ class App extends Component {
         })
         .then(
           (response) => {
-            this.setState({jeopardyQuestion: [response]})
+            this.setState(
+              {
+                jeopardyQuestion: [response],
+                isToggleOn: true
+              }
+            )
             console.log(this.state.jeopardyQuestion);
           }
         ).catch (
@@ -34,16 +43,21 @@ class App extends Component {
         )
       }
     )
+    console.log(this.state.isToggleOn);
   }
-  decreaseScore (prevState) {
-    this.setState({score: prevState.score - 1})
+  decreaseScore (score) {
+    this.setState({score: score - 1})
   }
-  increaseScore (prevState) {
-    this.setState({score: prevState.score + 1})
+  increaseScore (score) {
+    this.setState({score: score + 1})
   }
-  resetScore (prevState) {
+  resetScore (score) {
     this.setState({score: 0})
   }
+  handleClick (toggle) {
+    this.setState({isToggleOn: !this.state.isToggleOn})
+    console.log(this.state.isToggleOn);
+    }
 
 
   render () {
@@ -58,7 +72,9 @@ class App extends Component {
           />
         <Game
           jeopardyQuestion={this.state.jeopardyQuestion}
+          isToggleOn={this.state.isToggleOn}
           getQuestion={this.getQuestion}
+          handleClick={this.handleClick}
           />
       </div>
     )

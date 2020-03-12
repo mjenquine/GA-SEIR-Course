@@ -24,6 +24,10 @@ class App extends React.Component {
     this.state = {
       holidays: []
     }
+    this.getHolidays = this.getHolidays.bind(this)
+  }
+  componentDidMount(){
+    this.getHolidays()
   }
 
   async getHolidays (){
@@ -41,6 +45,18 @@ class App extends React.Component {
    return (
      <div className='container'>
       <h1>Holidays! Celebrate!</h1>
+        <table>
+    <tbody>
+      { this.state.holidays.map(holiday => {
+          return (
+            <tr key={holiday._id} >
+              <td> {holiday.name }</td>
+            </tr>
+          )
+        })
+      }
+    </tbody>
+  </table>
      </div>
    )
  }

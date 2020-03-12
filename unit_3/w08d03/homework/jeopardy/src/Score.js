@@ -5,7 +5,7 @@ class Score extends Component {
     return (
       <div>
         <div>
-          <div>Score:</div>
+          <div>Score: {this.props.score}</div>
         </div>
         <div>
           <button>Decrease</button>

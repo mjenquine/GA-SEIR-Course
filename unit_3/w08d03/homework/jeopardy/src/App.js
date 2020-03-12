@@ -8,12 +8,12 @@ class App extends Component {
     super (props)
     this.state = {
       score: 0,
-      jeopardyQuestion: {}
+      jeopardyQuestion: []
     }
     this.getQuestion = this.getQuestion.bind(this)
+    this.decreaseScore = this.decreaseScore.bind(this)
   }
   getQuestion (event) {
-    event.preventDefault()
     this.setState({
       url: "http://jservice.io/api/random"
       },
@@ -24,7 +24,7 @@ class App extends Component {
         })
         .then(
           (response) => {
-            this.setState({jeopardyQuestion: response})
+            this.setState({jeopardyQuestion: [response]})
             console.log(this.state.jeopardyQuestion);
           }
         ).catch (
@@ -35,14 +35,27 @@ class App extends Component {
       }
     )
   }
-
+  decreaseScore (prevState) {
+    this.setState({score: prevState.score - 1})
+  }
+  increaseScore (prevState) {
+    this.setState({score: prevState.score + 1})
+  }
+  resetScore (prevState) {
+    this.setState({score: 0})
+  }
 
 
   render () {
     return (
       <div>
         <Header />
-        <Score />
+        <Score
+          score={this.state.score}
+          decreaseScore={this.decreaseScore}
+          increaseScore={this.increaseScore}
+          resetScore={this.resetScore}
+          />
         <Game
           jeopardyQuestion={this.state.jeopardyQuestion}
           getQuestion={this.getQuestion}

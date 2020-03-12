@@ -11,16 +11,44 @@ class Game extends Component {
           <button onClick={this.props.getQuestion}>Get Question</button>
         </div>
         <div>
-          <div>Category:</div>
+          Category:
+          {
+            this.props.jeopardyQuestion.map((arr, index) => {
+              return (
+              <span key={index}>{arr[0].category.title}</span>
+              )
+            })
+          }
         </div>
         <div>
-          <div>Points:</div>
+          Points:
+          {
+            this.props.jeopardyQuestion.map((arr, index) => {
+              return (
+              <span key={index}>{arr[0].value}</span>
+              )
+            })
+          }
         </div>
         <div>
-          <div>Answer:</div>
+          Answer:
+          {
+            this.props.jeopardyQuestion.map((arr, index) => {
+              return (
+              <span key={index}>{arr[0].question}</span>
+              )
+            })
+          }
         </div>
         <div>
-          <button>Click to Reveal Question</button>
+          Question:
+          {
+            this.props.jeopardyQuestion.map((arr, index) => {
+              return (
+              <span key={index}>{arr[0].answer}</span>
+              )
+            })
+          }
         </div>
       </div>
     )

@@ -106,7 +106,7 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 - Plan how you will tackle this project together
 - Remember this is just a weekend homework. Keep it simple but make it watertight and polish it, rather than trying to add another model or some other big feature!
 ### Resources
-- [Class Wiki](/wiki)
+- [Class Wiki](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/wiki)
 - [Happy Fun Ball](/unit_3/w08d02/morning_exercise)
 - [GitHub Guides](https://guides.GitHub.com/introduction/flow/?utm_source=onboarding-series&utm_medium=email&utm_content=read-the-guide-cta&utm_campaign=learn-GitHub-flow-email)
 - [Another GitHub cheatsheet](https://education.GitHub.com/git-cheat-sheet-education.pdf)

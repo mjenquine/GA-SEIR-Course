@@ -15,6 +15,13 @@ Competencies: Agile, Scrum, Trello<br>
 
 # Agile Development
 
+What is Agile Development?
+As [Atlassian.com](https://www.atlassian.com/agile) states:
+> Agile is an iterative approach to project management and software development that helps teams deliver value to their customers faster and with fewer headaches. Instead of betting everything on a "big bang" launch, an agile team delivers work in small, but consumable, increments.
+
+Wikipedia will also add:
+>  It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change.
+
 Agile development uses four clear [delivery vehicles](https://www.atlassian.com/agile/delivery-vehicles) to bring structure to any agile project:
 
 - epics
@@ -69,7 +76,7 @@ The work of all Kanban teams revolves around a Kanban board, a tool used to visu
 
 ![kanban board](https://i.imgur.com/4kfEDN2.png)
 
-### The Different Types of Project Management 
+### The Different Types of Project Management
 
 <details><summary>A comic from toggl</summary>
 
@@ -90,13 +97,13 @@ There are few different tools that can be used to plan scrum development.  Real-
 For building smaller applications and don't need all the fancy stuff that comes with [Jira](https://www.atlassian.com/software/jira), we recommend [Trello](https://trello.com/) to mimic the flow that most of you will be using during production!  Each column is referred to as a "list" and inside the list sit "cards". Each of these cards is meant to contain information to create one feature of your application.
 
 - Each User Story will be a Trello Card
-- Only one person may take ownership of a card 
+- Only one person may take ownership of a card
 - Only one card should be claimed at a time.
 - Depending how you decide to do this with your team, each card may also represent a branch in Github (this is how it works in Jira).
 
 - The User Story cards can contain:
   - The details for the story in the description section
-  - Use the Checklist to track tasks or steps necessary to complete the story. 
+  - Use the Checklist to track tasks or steps necessary to complete the story.
 
 
 ![Jira Example](https://i.imgur.com/AZYkGcP.png)
@@ -105,19 +112,19 @@ For building smaller applications and don't need all the fancy stuff that comes 
 
 ![in Progress](https://i.imgur.com/uVHY2Ml.png)
 
-### Github Issues & Waffle.io
+### Github Project Boards
 
-You can choose to just use the issues or you can work with it through [Waffle.io](https://waffle.io/) which is a more visually appealing site (closer to what you see with Jira and Trello).
+In addition to Jira and Trello, Github now also offers a Project Board feature which can be integrated with Github Issues.
 
-![what it looks like on Github](https://i.imgur.com/ZFtuGX5.png)
+You can find the link to projects in the menu at the top of the screen:
 
-![waffle screen](https://i.imgur.com/cy2nesq.png)
+![](https://i.imgur.com/RGk8CJK.png)
 
-### Github & Zenhub
+And when you create a board, it will look something like this:
 
-Similar to the relationship between Waffle.io and Github, [Zenhub](https://www.zenhub.com/) is another Agile project management tool that you can use.
+![Example Github Project Board](https://i.imgur.com/eE78ePv.png)
 
-![zenhub](https://i.imgur.com/2LTpOKA.png)
+If you'd like to read more about the power of and options available with Github Project Boards, visit [github.com/features/project-management](https://github.com/features/project-management/)
 
 <hr>
 
@@ -168,9 +175,9 @@ By hiding the figures in this way, the group can avoid the cognitive bias of anc
 
 You're creating a dating app with a small group!  How do you get started?!
 
-1. Decide with your partners whether to create Github Issues (with or without Waffle.io or Zenhub) **OR** create a Trello account.  Everyone should have access to the planning board on their own machine (not just via screen share).  
+1. Decide with your partners whether to create a Github Project Board **OR** create a Trello account.  Everyone should have access to the planning board on their own machine (not just via screen share).  
 
-    - **Github:** If you want to use Github issues, _one_ person should create a repo and add your partners as a Collaborators in the Settings with their GitHub @handle.  Everyone should have access to the repo in GitHub on their machine (not just via screen share).  _Make sure to use GitHub, not GitHub Enterprise!  You do not have to clone or fork this repo locally, and the owner can delete it after this morning exercise._
+    - **Github:** If you want to use Github, _one_ person should create a repo and add your partners as a Collaborators in the Settings with their GitHub @handle.  Everyone should have access to the repo and Project Board in GitHub on their machine (not just via screen share).  _Make sure to use GitHub, not GitHub Enterprise!  You do not have to clone or fork this repo locally, and the owner can delete it after this morning exercise._
 
     - **Trello:** When making your Trello account, be sure to take note of your screenname OR update the screenname that they automatically assign to you to something that you will remember (and that is at least semi-professional).
 
@@ -186,16 +193,14 @@ You're creating a dating app with a small group!  How do you get started?!
 
 ## Planning Boards
 
-- [Trello](https://trello.com/) 
+- [Trello](https://trello.com/)
 - [Jira](https://www.atlassian.com/software/jira)
-- [Mastering GitHub Issues](https://guides.github.com/features/issues/)
-- [Zenhub](https://www.zenhub.com/)
-- [Waffle.io](waffle.io)
+- [GitHub Project Boards](https://guides.github.com/features/project-management/)
 - [Comparison of Scrum software](https://en.wikipedia.org/wiki/Comparison_of_Scrum_software)
 
 ## References
 - [Epics, stories, versions, and sprints](https://www.atlassian.com/agile/delivery-vehicles)
-- [History of Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) 
+- [History of Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development))
 - [Origin of Daily Stand-Up](https://www.linkedin.com/pulse/20140926150354-136414-the-origin-of-the-daily-stand-up/)
 - [Scrum Poker](https://en.wikipedia.org/wiki/Planning_poker)
 - [Scrum Poker](https://www.mountaingoatsoftware.com/tools/planning-poker)

@@ -11,7 +11,7 @@ Prerequisites: Basic Git, HTML, CSS, JS<br>
 ---
 ## Collaborating with GitHub
 ## Intro
-GitHub allows for amazing collaboration to happen! For tonight’s homework, you will be asked to complete the task in groups of 2. For this morning’s exercise, we will work together to get you setup to help collaboration this evening go smoothly.
+GitHub allows for amazing collaboration to happen! For this weekend's homework, you will be asked to complete the task in groups of 2. For this morning’s exercise, we will work together to get you setup to help collaboration go smoothly.
 ## Deliverables
 ### Coder's Choice HW
 Using collaboration via GitHub, each pair will create a new repo **outside the class repo** and collaborate to create the homework. Each person must make significant contributions to the functionality of the homework to get a passing grade.
@@ -19,14 +19,14 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 - set up the repo
 - all members add something to the README.md
 - make your functioning server.js file
-  - don't forget your npm modules etc...
+  - Remember your npm modules etc...
 - make sure everyone has a very basic server running via one member writing the `server.js` and sharing the file via GitHub/git work flow
 - You will have two branches to work with for the morning exercise. The `master` branch is 'production quality' code it should be bug and error free - only push functioning code here. You will also have a dev branch - members should be merging their code together on the `dev` branch - then checking that their code works together. If it does, push it to `master` if it doesn't work, fix the code and try again.
 ## Setup
 #### Make a plan/assign tasks
 - Let's read the homework together
-- [Tonight's Homework](/unit_3/w08d03/homework)
-- [How to tell if you're working in groups](/projects/working_in_groups.md)
+- [Tonight's Homework](/unit_3/w08d05/homework)
+- [How to tell if you're working in groups](/projects/project_3/working_in_groups.md)
 - To be sure everyone is getting practice pulling and pushing be sure to keep communication open on who is working on what task
 - _Note:_ It is fine for the group to screenshare and work on one file simultaneously - feel free to create a way of working together that will help you get the deliverable complete
 - _Note:_ Two people working on the same file at the same time is the most likely way to get a merge conflict! Communicate well to avoid this sort of time-suck!
@@ -46,7 +46,7 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 - add them and wait
 - GitHub will send them an email and they must respond in order to gain access to the repo
 - make sure your collaborator(s) have accepted your invite and let them clone the repo
-- don't forget to `git clone` to get your own local version
+- remember to `git clone` to get your own local version
 #### The Collaborator's tasks (if there is more than one collaborator - _have one person do these steps at a time and then move on to the next collaborator_)
 - Go to a location in your terminal that is OUTSIDE of the class repo in preparation for cloning the owner's repo
     note: you do not need to make a subfolder. Cloning will make your repo folder at the level where you're at
@@ -73,7 +73,7 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 - `touch .gitignore`
 - In atom, within `.gitignore`
     - `node_modules`
-    - _it is critical to do this BEFORE adding/creating node modules vial `npm install`_
+    - _it is critical to do this BEFORE adding/creating node modules via `npm install`_
 - `npm install express`
 - `git status`
     - you should see all your files (`server.js`, `package.json`, `package-lock.json`) available for `git add` and `git commit`.  You SHOULD NOT see `node_modules` being added!  If they are, double check your `.gitignore` file.
@@ -104,9 +104,9 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 ### Next Steps
 - Agree on what your app will be about
 - Plan how you will tackle this project together
-- Remember this is a one evening homework, keep it simple but make it watertight and polish it, rather than trying to add another model or some other big feature!
+- Remember this is just a weekend homework. Keep it simple but make it watertight and polish it, rather than trying to add another model or some other big feature!
 ### Resources
-- [Class Wiki](https://git.generalassemb.ly//sei-stamford/cerf/wiki/Git-Cheatsheet)
-- [Happy Fun Ball](/unit_3/w08d01/morning_exercise)
+- [Class Wiki](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/wiki)
+- [Happy Fun Ball](/unit_3/w08d02/morning_exercise)
 - [GitHub Guides](https://guides.GitHub.com/introduction/flow/?utm_source=onboarding-series&utm_medium=email&utm_content=read-the-guide-cta&utm_campaign=learn-GitHub-flow-email)
 - [Another GitHub cheatsheet](https://education.GitHub.com/git-cheat-sheet-education.pdf)

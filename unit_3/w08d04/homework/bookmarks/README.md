@@ -49,6 +49,7 @@ Listed below is the basic required functionality that your Bookmark'd app should
       - Create: Posting a new bookmark
       - Delete: Deleting a bookmark
       - Update: Updating a bookmark
+      - MAKE SURE TO TEST ALL ROUTES WITH CURL
 
 #### React Frontend User Stories
   - As a user, I can see a list of all my bookmarks when I visit the page

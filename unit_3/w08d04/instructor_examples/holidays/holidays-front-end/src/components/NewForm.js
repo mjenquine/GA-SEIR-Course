@@ -29,7 +29,7 @@ async handleSubmit (event) {
             name: ''
           })
         }catch(e){
-          console.e({'Error': e})
+          console.error({'Error': e})
         }
       }
 

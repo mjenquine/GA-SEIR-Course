@@ -6,7 +6,7 @@ Title: Coder's Choice MERN CRUD <br>
 Type: Homework<br>
 Duration: 4+ hours <br>
 Creator: Kristyn Bryan<br>
-Course: WDIR-Space-Ghost<br>
+Course: SEI-Waverider <br>
 Competencies: Mongo, Express, React, Node, CRUD<br>
 
 ---

@@ -8,7 +8,6 @@ The assignment for tonight's homework
 
 Build a bookmark app that lets you add a title and a link to helpful websites in your coding journey.
 
-###### :red_circle: Please note that this is a two days Homework. Refer to the submission guidelines at the end
 
 #### Learning Objectives
 

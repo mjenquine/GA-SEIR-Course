@@ -27,7 +27,15 @@ class App extends React.Component {
   }
 
   async getHolidays (){
-
+    try {
+      // the async request code you want to try
+      let response = await fetch(`${baseURL}/holidays`)
+      let data = await response.json()
+      this.setState({holidays: data})
+    }catch(e){
+      // what happens when you get an error
+      console.error(e)
+    }
   }
  render () {
    return (

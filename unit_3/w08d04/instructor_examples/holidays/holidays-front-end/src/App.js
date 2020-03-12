@@ -11,7 +11,7 @@ let baseURL = process.env.REACT_APP_BASEURL
 //alternate baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
 
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3004'
+  baseURL = 'http://localhost:3003'
 } else {
   baseURL = 'https://fathomless-sierra-68956.herokuapp.com'
 }
@@ -19,6 +19,16 @@ if (process.env.NODE_ENV === 'development') {
 console.log('current base URL:', baseURL)
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      holidays: []
+    }
+  }
+
+  async getHolidays (){
+
+  }
  render () {
    return (
      <div className='container'>

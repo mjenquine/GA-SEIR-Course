@@ -36,11 +36,17 @@ class NewForm extends Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="title"></label>
-        <input type="text" id="title" name="title" onChange={this.handleChange} value={this.state.title} placeholder="Website Name"/>
-        <label htmlFor="url"></label>
-        <input type="text" id="url" name="url" onChange={this.handleChange} value={this.state.url} placeholder="http://"/>
-        <input type="submit" value="Add your development resource"/>
+        <div className="row">
+          <div className="col">
+            <input type="text" className="form-control" id="title" name="title" onChange={this.handleChange} value={this.state.title} placeholder="Website Name"/>
+          </div>
+          <div className="col">
+            <input type="text" className="form-control" id="url" name="url" onChange={this.handleChange} value={this.state.url} placeholder="http://"/>
+          </div>
+          <div className="col">
+            <input className="btn btn-primary" type="submit" value="Add your development resource"/>
+          </div>
+        </div>
       </form>
     )
   }

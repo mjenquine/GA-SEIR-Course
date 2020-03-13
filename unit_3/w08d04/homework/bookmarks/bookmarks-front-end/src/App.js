@@ -45,13 +45,16 @@ class App extends Component {
   }
   render () {
     return (
-      <div>
-        <h1>Bookmarks</h1>
+      <div className="container">
+        <div className="jumbotron">
+          <h1 className="display-4">Developer Bookmarks</h1>
+        </div>
         <NewForm
         handleAddBookmark={this.handleAddBookmark}
         baseURL={baseURL}
         />
-        <table>
+        <br></br>
+        <table className="table table-striped table-hover">
           <tbody>
             {this.state.bookmarks.map(bookmark => {
               return (
@@ -62,6 +65,11 @@ class App extends Component {
             })}
           </tbody>
         </table>
+        <footer className="footer mt-auto py-3">
+          <div className="container">
+            <span className="text-muted">Created by Mark Jenquine</span>
+          </div>
+        </footer>
       </div>
     )
   }

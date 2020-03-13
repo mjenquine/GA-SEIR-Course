@@ -7,7 +7,8 @@ bookmarks.get('/', (req, res) => {
     if (err) {
       res.status(400).json({error: err.message})
     }
-    res.status
+    res.status(200).send(foundBookmarks)
+    console.log(foundBookmarks);
   })
 })
 

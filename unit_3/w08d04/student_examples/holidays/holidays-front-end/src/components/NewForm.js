@@ -1,54 +1,35 @@
 import React from 'react'
-
 class NewForm extends React.Component {
   constructor (props) {
-    super(props)
-    this.state = {
-      name: ''
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+  super(props)
+  this.state = {
+    name: ''
   }
-  handleChange (event) {
-    this.setState({ [event.currentTarget.id]: event.currentTarget.value})
-  }
-  handleSubmit (event) {
+this.handleChange = this.handleChange.bind(this)
+this.handleSubmit = this.handleSubmit.bind(this)
+}
+handleChange (event) {
+ this.setState({ [event.currentTarget.id]: event.currentTarget.value})
+}
+async handleSubmit (event) {
     event.preventDefault()
-    fetch(this.props.baseURL + '/holidays', {
-      method: 'POST',
-      body: JSON.stringify({name: this.state.name}),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then (res => res.json())
-      .then (resJson => {
-        this.props.handleAddHoliday(resJson)
-        this.setState({
-          name: ''
-        })
-    }).catch (error => console.error({'Error': error}))
-  }
-
-
-  async handleSubmit (event) {
-      event.preventDefault()
-      try{
+    try{
       let response =   await fetch(this.props.baseURL + '/holidays', {
           method: 'POST',
           body: JSON.stringify({name: this.state.name}),
           headers: {
               'Content-Type': 'application/json'
-          }
-    })
-    let data =  await response.json()
-    this.props.handleAddHoliday(data)
-        this.setState({
-          name: ''
-        })
-   }catch(e){
-      console.error({'Error': e})
-   }
-  }
+            }
+          })
+          let data =  await response.json()
+          this.props.handleAddHoliday(data)
+          this.setState({
+            name: ''
+          })
+        }catch(e){
+          console.error({'Error': e})
+        }
+      }
   render () {
     return (
       <form onSubmit={this.handleSubmit}>

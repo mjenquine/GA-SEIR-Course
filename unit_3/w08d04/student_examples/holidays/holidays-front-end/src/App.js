@@ -15,6 +15,9 @@ if (process.env.NODE_ENV === 'development') {
   baseURL = 'your heroku bakend url here'
 }
 console.log('current base URL:', baseURL)
+
+
+
 class App extends React.Component {
   constructor(props) {
     super(props)

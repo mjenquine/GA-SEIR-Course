@@ -1,6 +1,7 @@
 const holidays = require('express').Router()
 const Holiday = require('../models/holidays.js')
 
+/* Index */
 holidays.get('/', (req, res) => {
   Holiday.find({}, (err, foundHolidays) => {
     if (err) {
@@ -12,7 +13,7 @@ holidays.get('/', (req, res) => {
 
 /* Create Route */
 
-holidays.post('/', async (req, res) => {
+holidays.post('/', (req, res) => {
   Holiday.create(req.body, (error, createdHoliday) => {
     if (error){
       res.status(400).json({error: error.message})

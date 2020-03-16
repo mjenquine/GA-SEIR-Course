@@ -7,7 +7,8 @@ const cors = require('cors')
 
 /* middleware */
 app.use(express.json())
-const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
+const whitelist = ['http://localhost:3000']
+
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {

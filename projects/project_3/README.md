@@ -1,6 +1,6 @@
 ![](/ga_cog.png)
 
-# Project #3: MEAN Stack - Group Project
+# Project #3: MERN Stack - Group Project
 
 ## Attendance
 There are only three mandatory attendance checks during project week, but as always please make sure you're working on your project every day!

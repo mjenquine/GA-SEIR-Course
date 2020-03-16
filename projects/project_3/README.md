@@ -1,6 +1,6 @@
 ![](/ga_cog.png)
 
-# Project #3: MEAN Stack - Group Project
+# Project #3: MERN Stack - Group Project
 
 ## Attendance
 There are only three mandatory attendance checks during project week, but as always please make sure you're working on your project every day!
@@ -80,13 +80,8 @@ Before you begin coding, make a new GitHub repo for your project. _Take the foll
 
 5. Make sure your `server.js` and `package.json` are in the **root** of your project repository
 
-    <details><summary> Expected File Structure </summary>
 
-    ![Suggested File Structure](https://i.imgur.com/jY7cBLB.png)
-
-    </details>
-
-6. **To set up your shared database for deployment, [please follow these notes](setting_up_collab_db.md). You will NEED to do this before starting anything else on your project.**
+6. **To set up your shared database for deployment, [please follow these notes](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_3/w09d01/instructor_notes/Create%20React%20App%20%26%20Heroku.md). You will NEED to do this before starting anything else on your project.**
 
 ## Technical Demonstration
 

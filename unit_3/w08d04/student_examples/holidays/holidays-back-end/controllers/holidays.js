@@ -13,7 +13,7 @@ holidays.get('/', (req, res) => {
 })
 
 //Create
-holidays.post('/', async(req, res) => {
+holidays.post('/', (req, res) => {
   Holiday.create(req.body, (error, createdHoliday) => {
     if (error) {
       res.status(400).json({error: error.message})

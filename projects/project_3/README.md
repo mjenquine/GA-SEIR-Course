@@ -86,7 +86,7 @@ Before you begin coding, make a new GitHub repo for your project. _Take the foll
 
     </details>
 
-6. **To set up your shared database for deployment, [please follow these notes]('https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_3/w09d01/instructor_notes/Create%20React%20App%20%26%20Heroku.md'). You will NEED to do this before starting anything else on your project.**
+6. **To set up your shared database for deployment, [please follow these notes](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Waverider/blob/master/unit_3/w09d01/instructor_notes/Create%20React%20App%20%26%20Heroku.md). You will NEED to do this before starting anything else on your project.**
 
 ## Technical Demonstration
 

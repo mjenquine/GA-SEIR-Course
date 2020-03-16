@@ -68,9 +68,7 @@ Now that we have an API, we want to actually connect it to a front-end. So, let'
 1. Recommended that you go in the same order as we are in class
 1. Don't forget to configure CORS
 
-
-> :cat: Afternoon Lab ends here, if you finish early, feel free to try and carry on with [tomorrow's lab](/unit_3/w08d02/student_labs/README.md), or try some of the stretch goals below.
-
 ## Stretch Goals
 1. Practice HTML/CSS by giving your animal shelter site some sweet styling
 1. Figure out how to add `personalityTraits` like 'friendly', 'shy', 'only slightly evil',
+1. Have a dropdown that contains all species available, when you select one it should only display animals of that species.

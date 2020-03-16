@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Merienda:400,700|Sirin+Stencil');
+
+:root {
+  --honeydew: #F1FAEE;
+  --light-blue: #A8DADC;
+  --queen-blue: #457b9D;
+	--dark-imperial-blue: #123C69;
+	--space-cadet: #1D3557;
+  --desire: #E63946;
+}
+
+html {
+	background: var(--queen-blue);
+	background: linear-gradient(rgba(69, 123, 157, .5),rgba(69, 123, 157, .5)),
+	url('../images/swirl_pattern.png');
+	color: var(--space-cadet);
+	font-family: 'Merienda', cursive;
+	text-align: center;
+}
+
+.menu, main {
+	font-family: 'Great Vibes', cursive;
+	background: linear-gradient(rgba(241, 250, 238, .5),rgba(241, 250, 238, .5)), url('../images/cream_dust.png');
+	padding: 2%;
+	margin-bottom: 3em;
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+main span {
+  font-family: 'Great Vibes', cursive;
+}
+
+hr {
+	margin-bottom: 3em;
+}
+
+h1 {
+	font-family: 'Great Vibes', cursive;
+	font-size: 4em;
+	margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1, h2 {
+	text-shadow:  2px 2px 1px var(--light-blue);
+}
+
+h2, h3 {
+		font-family: 'Serin Stencil', cursive;
+}
+
+h3	{
+	font-size: 3em;
+}
+
+h6 {
+  font-family: 'Serin Stencil', cursive;
+  font-size: 1em;
+}
+
+.info {
+  background-color: var(--light-blue);
+  padding: .5em;
+}
+
+
+dd {
+		font-family: 'Sirin Stencil', cursive;
+		font-size: 1.2em;
+		margin: inherit;
+}
+
+dt {
+	font-size: 2em;
+}
+
+.container {
+	width: 70%;
+	margin: auto;
+}
+
+.contact main {
+  font-size: 2em;
+}
+
+.contact span {
+  	font-family: 'Merienda', cursive;
+    font-size: .5em;
+}
+
+nav {
+  display:flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  margin-top: 1em;
+  font-family: 'Merienda', cursive;
+  text-decoration: none;
+  color:  var(--dark-imperial-blue);
+}
+
+nav a:hover {
+  color: ghostwhite;
+}
+
+
+address {
+  font-size: 2em;
+  margin-top: 2em;
+  line-height: 2em;
+}
+
+.about main {
+  font-size: 1.2em;
+	font-family: 'Serin Stencil', cursive;
+  padding: 2em;
+  text-align: justify;
+}

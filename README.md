@@ -68,16 +68,16 @@
 | w08d5 |[Paired](./unit_3/w08d05/morning_exercise)| [Consuming API with React cont.](./unit_3/w08d05/instructor_notes)| [Coders Choice](./unit_3/w08d05/student_labs)|[Paired Homework](./unit_3/w08d05/homework)|
 | w09d1 |[Project Management](./unit_3/w09d01/morning_exercise)| [React Router](./unit_3/w09d01/instructor_notes)| [](./unit_3/w09d01/student_labs)|[](./unit_3/w09d01/homework)|
 
-<!--### Unit 4 -->
-<!--| Day | Morning Exercise | Lectures | Labs | Homework |-->
-<!--|:---:|:-----------:|:-------:|:-----------:|:-----------:|-->
-<!--| w10d1 |[SASS](./unit_4/w10d01/morning_exercise)| [Intro to PHP](./unit_4/w10d01/instructor_notes)| [JS/PHP - Look at the Differences](./unit_4/w10d01/student_labs)|[PHP Basics](./unit_4/w10d01/homework)|-->
-<!--| w10d2 |[CSS Grid](./unit_4/w10d02/morning_exercise)| [](./unit_4/w10d02/instructor_notes)| [Landscaper](./unit_4/w10d02/student_labs)|[Landscaper Cont.](./unit_4/w10d02/homework)|-->
-<!--| w10d3 |[Practice CSS Grid](./unit_4/w10d03/morning_exercise)| [SQL Basics](./unit_4/w10d03/instructor_notes)| [Computers and Televisions, Airports and Airplanes](./unit_4/w10d03/student_labs)|[Carmen, NFL](./unit_4/w10d03/homework)|-->
-<!--| w10d4 |[Luhn Algorithm](./unit_4/w10d04/morning_exercise)| [Full CRUD on People](./unit_4/w10d04/instructor_notes)| [Full CRUD on Locations, Sunship.io](./unit_4/w10d04/student_labs)|[Locations](./unit_4/w10d04/homework)|-->
-<!--| w10d5 |[SQL Zoo](./unit_4/w10d05/morning_exercise)| [Nested Models](./unit_4/w10d05/instructor_notes)| [Hello, Stock Prices Database](./unit_4/w10d05/student_labs)|[Regifter](./unit_4/w10d05/homework)|-->
-<!--| w11d1 |[Recursion Exercise](./unit_4/w11d01/morning_exercise)| [](./unit_4/w11d01/instructor_notes)| [Art Museum](./unit_4/w11d01/student_labs)|[Art Museum Cont.](./unit_4/w11d01/homework)|-->
-<!--| w11d2 |[ES Next](./unit_4/w11d02/morning_exercise)| [React Basics (Components, CSS, State)](./unit_4/w11d02/instructor_notes)| [React Static Dashboard, Korilla Receipts](./unit_4/w11d02/student_labs)|[React Groceries](./unit_4/w11d02/homework)|-->
-<!--| w11d3 |[Inerstion/Merge](./unit_4/w11d03/morning_exercise)| [Create React App, Props](./unit_4/w11d03/instructor_notes)| [Audubon Society Contest, Dr. Who's Police Box](./unit_4/w11d03/student_labs)|[Labs Cont.](./unit_4/w11d03/homework)|-->
-<!--| w11d4 |[100 Goblins](./unit_4/w11d04/morning_exercise)| [Prop/State Management/Lifting State Up](./unit_4/w11d04/instructor_notes)| [Ollivanders, React Taco](./unit_4/w11d04/student_labs)|[jService React Style](./unit_4/w11d04/homework)|-->
-<!--| w11d5 |[](./unit_4/w11d05/morning_exercise)| [Intergrate React w/ PHP](./unit_4/w11d05/instructor_notes)| [](./unit_4/w11d05/student_labs)|[](./unit_4/w11d05/homework)|-->
+### Unit 4
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w09d5 |[]()| [Install](./unit_4/w09d05/instructor_notes)| []()|[Ruby Tutorials](./unit_4/w09d05/homework)|
+| w10d1 |[SASS](./unit_4/w10d01/morning_exercise)| [Intro to Ruby](./unit_4/w10d01/instructor_notes)| [JS/Ruby - Look at the Differences](./unit_4/w10d01/student_labs)|[Ruby Basics](./unit_4/w10d01/homework)|
+| w10d2 |[SASS Practice](./unit_4/w10d02/morning_exercise)| [Ruby Classes](./unit_4/w10d02/instructor_notes)| [Labs](./unit_4/w10d02/student_labs)|[Ruby Blackjack](./unit_4/w10d02/homework)|
+| w10d3 |[Linked Lists](./unit_4/w10d03/morning_exercise)| [SQL Basics](./unit_4/w10d03/instructor_notes)| [Computers and Televisions, Airports and Airplanes](./unit_4/w10d03/student_labs)|[Carmen, NFL](./unit_4/w10d03/homework)|
+| w10d4 |[Binary Search Tree](./unit_4/w10d04/morning_exercise)| [Into to Rails](./unit_4/w10d04/instructor_notes)| [Blog](./unit_4/w10d04/student_labs)|[Regifter](./unit_4/w10d04/homework)|
+| w10d5 |[SQL Zoo](./unit_4/w10d05/morning_exercise)| [Controllers](./unit_4/w10d05/instructor_notes)| [Books](./unit_4/w10d05/student_labs)|[Glitch in the Matrix](./unit_4/w10d05/homework)|
+| w11d1 |[Airports](./unit_4/w11d01/morning_exercise)| [Scaffold/Rails+React](./unit_4/w11d01/instructor_notes)| [Sunship.io](./unit_4/w11d01/student_labs)|[React & Rails 4eva](./unit_4/w11d01/homework)|
+| w11d2 |[100 Goblins](./unit_4/w11d02/morning_exercise)| [Database Relationship](./unit_4/w11d02/instructor_notes)| [Products + Reviews](./unit_4/w11d02/student_labs)|[IceScript IceCream](./unit_4/w11d02/homework)|
+| w11d3 |[Problem Solving](./unit_4/w11d03/morning_exercise)| [Many to Many](./unit_4/w11d03/instructor_notes)| []()|[]()|
+| w11d4 |[]()| [Grapevine Build](./unit_4/w11d04/instructor_notes)| []()|[]()|

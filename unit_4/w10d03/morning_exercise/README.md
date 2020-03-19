@@ -339,7 +339,7 @@
 </body>
 ​
 ​
-``` javascript
+```javascript
 // Linked list
 ​
 class Node {
@@ -487,7 +487,7 @@ class LinkedList {
       counter++;
     }
   }
-// If your absolutely starving
+// If you're absolutely starving
   *[Symbol.iterator]() {
     let node = this.head;
     while (node) {
@@ -496,4 +496,4 @@ class LinkedList {
     }
   }
 }
-​
+```

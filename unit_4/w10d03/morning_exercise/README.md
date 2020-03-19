@@ -22,6 +22,7 @@
 ​
 ![linked-list](https://media.git.generalassemb.ly/user/15881/files/c1409700-692a-11ea-98b9-15dab7ba6fff)
 ​
+# Linked List Constructor
 <table>
   <thead>
     <tr>
@@ -47,12 +48,13 @@
   </tbody>
 </table>
 
-### Linked List Constructor Example
+##### Example:
 ``` javascript
   const list = new LinkedList();
   list.head // null
 ```
 
+# Node Constructor
 <table>
   <thead>
     <tr>
@@ -79,7 +81,7 @@
   </tbody>
 </table>
 
-### Node Constructor Example
+##### Example:
 ``` javascript
 const n = new Node('Hi');
 n.data // 'Hi'
@@ -88,6 +90,7 @@ const n2 = new Node('There', n);
 n.next // returns n
 ```
 
+# Insert First
 <table>
   <thead>
     <tr>
@@ -111,12 +114,13 @@ n.next // returns n
   </tbody>
 </table>
 
-### Insert First Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('Hi There'); // List has one node
 ```
 
+# Size
 <table>
   <thead>
     <tr>
@@ -138,7 +142,7 @@ list.insertFirst('Hi There'); // List has one node
   </tbody>
 </table>
 
-### Size Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('a');
@@ -147,6 +151,7 @@ list.insertFirst('c');
 list.size(); // returns 3
 ```
 
+# Get First
 <table>
   <thead>
     <tr>
@@ -168,7 +173,7 @@ list.size(); // returns 3
   </tbody>
 </table>
 
-### Get First Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('a');
@@ -176,6 +181,7 @@ list.insertFirst('b');
 list.getFirst(); // returns Node instance with data 'a'
 ```
 
+# Get Last
 <table>
   <thead>
     <tr>
@@ -203,7 +209,7 @@ list.getFirst(); // returns Node instance with data 'a'
   </tbody>
 </table>
 
-### Get Last Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('a');
@@ -211,6 +217,7 @@ list.insertFirst('b');
 list.getLast(); // returns node with data 'a'
 ```
 
+# Clear
 <table>
   <thead>
     <tr>
@@ -238,7 +245,7 @@ list.getLast(); // returns node with data 'a'
   </tbody>
 </table>
 
-### Clear Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('a');
@@ -247,6 +254,7 @@ list.clear();
 list.size(); // returns 0
 ```
 
+# Remove First
 <table>
   <thead>
     <tr>
@@ -275,7 +283,7 @@ list.size(); // returns 0
   </tbody>
 </table>
 
-### Remove First Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('a');
@@ -284,6 +292,7 @@ list.removeFirst();
 list.getFirst(); // returns node with data 'a'
 ```
 
+# Remove Last
 <table>
   <thead>
     <tr>
@@ -311,7 +320,7 @@ list.getFirst(); // returns node with data 'a'
   </tbody>
 </table>
 
-### Remove Last Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('a');
@@ -321,6 +330,7 @@ list.size(); // returns 1
 list.getLast(); // returns node with data of 'b'
 ```
 
+# Insert Last
 <table>
   <thead>
     <tr>
@@ -348,7 +358,7 @@ list.getLast(); // returns node with data of 'b'
   </tbody>
 </table>
 
-### Insert Last Example
+##### Example:
 ``` javascript
 const list = new LinkedList();
 list.insertFirst('a');
@@ -357,6 +367,7 @@ list.insertLast('c');
 list.getLast(); // returns node with data 'C'
 ```
 
+# Get At
 <table>
   <thead>
     <tr>
@@ -384,7 +395,7 @@ list.getLast(); // returns node with data 'C'
   </tbody>
 </table>
 
-### Get At Example
+##### Example:
 ``` javascript
 const list = new List();
 list.insertFirst('a');
@@ -393,6 +404,7 @@ list.insertFirst('c');
 list.getAt(1); // returns node with data 'b'
 ```
 
+# Remove At
 <table>
   <thead>
     <tr>
@@ -420,7 +432,7 @@ list.getAt(1); // returns node with data 'b'
   </tbody>
 </table>
 
-### Remove At Example
+##### Example:
 ``` javascript
 const list = new List();
 list.insertFirst('a');
@@ -430,6 +442,7 @@ list.removeAt(1);
 list.getAt(1); // returns node with data 'a'
 ```
 
+# Insert At
 <table>
   <thead>
     <tr>
@@ -459,7 +472,7 @@ list.getAt(1); // returns node with data 'a'
   </tbody>
 </table>
 
-### Insert At Example
+##### Example:
 ``` javascript
 const list = new List();
 list.insertFirst('a');

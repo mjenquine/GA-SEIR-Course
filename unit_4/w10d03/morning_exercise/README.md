@@ -46,7 +46,8 @@
     </tr>
   </tbody>
 </table>
-### Example
+
+### Linked List Constructor Example
 ``` javascript
   const list = new LinkedList();
   list.head // null
@@ -59,7 +60,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -75,18 +75,18 @@
       If 'next' is not provided to the constructor, then default its
       value to be 'null'.
     </td>
-    <td>
-      <pre>
-        const n = new Node('Hi');
-        n.data // 'Hi'
-        n.next // null
-        const n2 = new Node('There', n);
-        n.next // returns n
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Node Constructor Example
+``` javascript
+const n = new Node('Hi');
+n.data // 'Hi'
+n.next // null
+const n2 = new Node('There', n);
+n.next // returns n
+```
 
 <table>
   <thead>
@@ -95,7 +95,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -108,15 +107,15 @@
       node to the 'head' property.  Make sure to handle the case in which
       the linked list already has a node assigned to the 'head' property.
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('Hi There'); // List has one node
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Insert First Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('Hi There'); // List has one node
+```
 
 <table>
   <thead>
@@ -125,7 +124,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -136,18 +134,18 @@
     <td>
       Returns the number of nodes in the linked list.
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.insertFirst('c');
-        list.size(); // returns 3
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Size Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertFirst('c');
+list.size(); // returns 3
+```
 
 <table>
   <thead>
@@ -156,7 +154,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -167,17 +164,17 @@
     <td>
       Returns the first node of the linked list.
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.getFirst(); // returns Node instance with data 'a'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Get First Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.getFirst(); // returns Node instance with data 'a'
+```
 
 <table>
   <thead>
@@ -186,7 +183,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -203,17 +199,17 @@
     <td>
       Returns the last node of the linked list
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.getLast(); // returns node with data 'a'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Get Last Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.getLast(); // returns node with data 'a'
+```
 
 <table>
   <thead>
@@ -222,7 +218,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -239,18 +234,18 @@
     <td>
       Empties the linked list of any nodes.
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.clear();
-        list.size(); // returns 0
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Clear Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.clear();
+list.size(); // returns 0
+```
 
 <table>
   <thead>
@@ -259,7 +254,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -277,18 +271,18 @@
       Removes only the first node of the linked list.  The list's head should
       now be the second element.
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.removeFirst();
-        list.getFirst(); // returns node with data 'a'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Remove First Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.removeFirst();
+list.getFirst(); // returns node with data 'a'
+```
 
 <table>
   <thead>
@@ -297,7 +291,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -314,19 +307,19 @@
     <td>
       Removes the last node of the chain
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.removeLast();
-        list.size(); // returns 1
-        list.getLast(); // returns node with data of 'b'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Remove Last Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.removeLast();
+list.size(); // returns 1
+list.getLast(); // returns node with data of 'b'
+```
 
 <table>
   <thead>
@@ -335,7 +328,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -352,18 +344,18 @@
     <td>
       Inserts a new node with provided data at the end of the chain
     </td>
-    <td>
-      <pre>
-        const list = new LinkedList();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.insertLast('c');
-        list.getLast(); // returns node with data 'C'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Insert Last Example
+``` javascript
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertLast('c');
+list.getLast(); // returns node with data 'C'
+```
 
 <table>
   <thead>
@@ -372,7 +364,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -389,18 +380,18 @@
     <td>
       Returns the node at the provided index
     </td>
-    <td>
-      <pre>
-        const list = new List();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.insertFirst('c');
-        list.getAt(1); // returns node with data 'b'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Get At Example
+``` javascript
+const list = new List();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertFirst('c');
+list.getAt(1); // returns node with data 'b'
+```
 
 <table>
   <thead>
@@ -409,7 +400,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -426,19 +416,19 @@
     <td>
       Removes node at the provided index
     </td>
-    <td>
-      <pre>
-        const list = new List();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.insertFirst('c');
-        list.removeAt(1);
-        list.getAt(1); // returns node with data 'a'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Remove At Example
+``` javascript
+const list = new List();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertFirst('c');
+list.removeAt(1);
+list.getAt(1); // returns node with data 'a'
+```
 
 <table>
   <thead>
@@ -447,7 +437,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -466,19 +455,19 @@
       If index is out of bounds, add the node to the end
       of the list.
     </td>
-    <td>
-      <pre>
-        const list = new List();
-        list.insertFirst('a');
-        list.insertFirst('b');
-        list.insertFirst('c');
-        list.insertAt('Hi', 1)
-        list.getAt(1); // returns node with data 'Hi'
-      </pre>
-    </td>
   </tr>
   </tbody>
 </table>
+
+### Insert At Example
+``` javascript
+const list = new List();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertFirst('c');
+list.insertAt('Hi', 1)
+list.getAt(1); // returns node with data 'Hi'
+```
 
 ```javascript
 // Linked list

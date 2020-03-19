@@ -1,4 +1,4 @@
-# LINKED LISTS
+don't# LINKED LISTS
 
 ​
 
@@ -11,9 +11,11 @@
 
 ## Why Linked Lists?
 
-1.
-
-​
+1. You need to insert/delete in constant time.
+1. You don't know how many items are going to be in the list. With Arrays you may need to re-declare and copy the memory of the array.
+1. You don't need random access to elements
+1. You want to be able to insert elements into any position in the list.
+   ​
 
 ## What is a Linked List?
 

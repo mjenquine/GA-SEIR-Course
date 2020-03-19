@@ -22,37 +22,6 @@
 ​
 ![linked-list](https://media.git.generalassemb.ly/user/15881/files/c1409700-692a-11ea-98b9-15dab7ba6fff)
 ​
-​
-​
-​
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" ></link>
-</head>
-<body>
-    <tbody>
-
-    </tbody>
-  </table>
-​
-  <h1>LinkedList Class API</h1>
-  <table class="table">
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </tbody>
-  </table>
-</body>
-////////////////////////////////
 <table>
   <thead>
     <tr>
@@ -84,7 +53,6 @@
     </tr>
   </tbody>
 </table>
-
 
 <table>
   <thead>

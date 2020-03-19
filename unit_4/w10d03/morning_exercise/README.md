@@ -347,6 +347,7 @@ class Node {
     this.next = next;
   }
 }
+
 class LinkedList {
   constructor() {
     this.head = null;
@@ -363,9 +364,11 @@ class LinkedList {
     }
     return counter;
   }
+  
   getFirst() {
     return this.head;
   }
+  
   getLast() {
     if (!this.head) {
       return null;

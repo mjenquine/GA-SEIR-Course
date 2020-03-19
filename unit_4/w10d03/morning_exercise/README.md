@@ -29,7 +29,6 @@
       <td>Arguments</td>
       <td>Returns</td>
       <td>Directions</td>
-      <td>Example</td>
     </tr>
   </thead>
   <tbody>
@@ -44,15 +43,14 @@
         is a reference to the first node of the linked list.  By default
         'head' should be 'null'.
       </td>
-      <td>
-        <pre>
-          const list = new LinkedList();
-          list.head // null
-        </pre>
-      </td>
     </tr>
   </tbody>
 </table>
+### Example
+``` javascript
+  const list = new LinkedList();
+  list.head // null
+```
 
 <table>
   <thead>

@@ -1,66 +1,81 @@
 # LINKED LISTS
+
 ​
+
 ## Lesson Objectives
-​
+
 1. Explain what a Linked list is
 1. Demonstrate what a link does
 1. Give an example of what a link list implementation can do
+1. Explain why we would use a Linked List
+
+## Why Linked Lists?
+
+1.
+
 ​
-​
+
 ## What is a Linked List?
-  1. A simple often used data structure that has 3 necessary properties
-  1. A head
-  1. A tail
-  1. A size or length property
-​
+
+1.  A simple often used data structure that has 3 necessary properties
+1.  A head
+1.  A tail
+1.  A size or length property
+    ​
+
 ## Linked List Architecture
-  1. Linked List consist of element known as nodes
-  1. Each node points to the next node in the list if there is no next node it point to null
-  1. Nodes have one property known as value or data and contain some primitive value or object value
-​
-​
-​
-![linked-list](https://media.git.generalassemb.ly/user/15881/files/c1409700-692a-11ea-98b9-15dab7ba6fff)
-​
-# Linked List Constructor
-<table>
-  <thead>
-    <tr>
-      <td>Function</td>
-      <td>Arguments</td>
-      <td>Returns</td>
-      <td>Directions</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>constructor</td>
-      <td>-</td>
-      <td>(LinkedList)</td>
-      <td>
-        Create a class to represent a linked list.  When created,
-        a linked list should have *no* head node associated with it.
-        The LinkedList instance will have one property, 'head', which
-        is a reference to the first node of the linked list.  By default
-        'head' should be 'null'.
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+1.  Linked List consist of element known as nodes
+1.  Each node points to the next node in the list if there is no next node it point to null
+1.  Nodes have one property known as value or data and contain some primitive value or object value
+
+
+    ​
+    ​
+    ​
+    ![linked-list](https://media.git.generalassemb.ly/user/15881/files/c1409700-692a-11ea-98b9-15dab7ba6fff)
+    ​
+    # Linked List Constructor
+    <table>
+      <thead>
+        <tr>
+          <td>Function</td>
+          <td>Arguments</td>
+          <td>Returns</td>
+          <td>Directions</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>constructor</td>
+          <td>-</td>
+          <td>(LinkedList)</td>
+          <td>
+            Create a class to represent a linked list.  When created,
+            a linked list should have *no* head node associated with it.
+            The LinkedList instance will have one property, 'head', which
+            is a reference to the first node of the linked list.  By default
+            'head' should be 'null'.
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
 ##### Example:
-``` javascript
-  class LinkedList {
-    constructor() {
-      this.head = null;
-    }
-  }
 
-  const list = new LinkedList();
-  list.head // null
+```javascript
+class LinkedList {
+  constructor() {
+    this.head = null
+  }
+}
+
+const list = new LinkedList()
+list.head // null
 ```
 
 # Node Constructor
+
 <table>
   <thead>
     <tr>
@@ -88,22 +103,24 @@
 </table>
 
 ##### Example:
-``` javascript
+
+```javascript
 class Node {
   constructor(data, next = null) {
-    this.data = data;
-    this.next = next;
+    this.data = data
+    this.next = next
   }
 }
 
-const n = new Node('Hi');
+const n = new Node('Hi')
 n.data // 'Hi'
 n.next // null
-const n2 = new Node('There', n);
+const n2 = new Node('There', n)
 n.next // returns n
 ```
 
 # Insert First
+
 <table>
   <thead>
     <tr>
@@ -128,21 +145,19 @@ n.next // returns n
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
+
+```javascript
+  // Goes inside of Linked Lists
   insertFirst(data){
     this.head = new Node(data, this.head)
   }
-}
 
-const list = new LinkedList();
-list.insertFirst('Hi There'); // List has one node
+const list = new LinkedList()
+list.insertFirst('Hi There') // List has one node
 ```
 
 # Size
+
 <table>
   <thead>
     <tr>
@@ -165,24 +180,18 @@ list.insertFirst('Hi There'); // List has one node
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
+
+```javascript
   size() {
-    let counter = 0;
-    let node = this.head;
+    let counter = 0
+    let node = this.head
     while (node) {
-      counter++;
-      node = node.next;
+      counter++
+      node = node.next
     }
-    return counter;
+    return counter
   }
-}
+
 
 const list = new LinkedList();
 list.insertFirst('a');
@@ -192,6 +201,7 @@ list.size(); // returns 3
 ```
 
 # Get First
+
 <table>
   <thead>
     <tr>
@@ -214,27 +224,12 @@ list.size(); // returns 3
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
+
+```javascript
   getFirst() {
     return this.head;
   }
-}
+
 
 const list = new LinkedList();
 list.insertFirst('a');
@@ -243,6 +238,7 @@ list.getFirst(); // returns Node instance with data 'a'
 ```
 
 # Get Last
+
 <table>
   <thead>
     <tr>
@@ -271,26 +267,8 @@ list.getFirst(); // returns Node instance with data 'a'
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
+
+```javascript
   getLast() {
     if (!this.head) {
       return null;
@@ -303,7 +281,7 @@ class LinkedList {
       node = node.next;
     }
   }
-}
+
 
 const list = new LinkedList();
 list.insertFirst('a');
@@ -312,6 +290,7 @@ list.getLast(); // returns node with data 'a'
 ```
 
 # Clear
+
 <table>
   <thead>
     <tr>
@@ -340,42 +319,11 @@ list.getLast(); // returns node with data 'a'
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
-  getLast() {
-    if (!this.head) {
-      return null;
-    }
-    let node = this.head;
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
-  }
+
+```javascript
   clear() {
     this.head = null;
   }
-}
 
 const list = new LinkedList();
 list.insertFirst('a');
@@ -385,6 +333,7 @@ list.size(); // returns 0
 ```
 
 # Remove First
+
 <table>
   <thead>
     <tr>
@@ -414,49 +363,14 @@ list.size(); // returns 0
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
-  getLast() {
-    if (!this.head) {
-      return null;
-    }
-    let node = this.head;
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
-  }
-  clear() {
-    this.head = null;
-  }
+
+```javascript
   removeFirst() {
    if (!this.head) {
      return;
    }
-
    this.head = this.head.next;
  }
-}
 
 const list = new LinkedList();
 list.insertFirst('a');
@@ -466,6 +380,7 @@ list.getFirst(); // returns node with data 'a'
 ```
 
 # Remove Last
+
 <table>
   <thead>
     <tr>
@@ -494,48 +409,8 @@ list.getFirst(); // returns node with data 'a'
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
-  getLast() {
-    if (!this.head) {
-      return null;
-    }
-    let node = this.head;
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
-  }
-  clear() {
-    this.head = null;
-  }
-  removeFirst() {
-   if (!this.head) {
-     return;
-   }
 
-   this.head = this.head.next;
- }
+```javascript
  removeLast() {
     if (!this.head) {
       return;
@@ -554,7 +429,6 @@ class LinkedList {
     }
     previous.next = null;
   }
-}
 
 const list = new LinkedList();
 list.insertFirst('a');
@@ -565,6 +439,7 @@ list.getLast(); // returns node with data of 'b'
 ```
 
 # Insert Last
+
 <table>
   <thead>
     <tr>
@@ -593,66 +468,8 @@ list.getLast(); // returns node with data of 'b'
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
-  getLast() {
-    if (!this.head) {
-      return null;
-    }
-    let node = this.head;
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
-  }
-  clear() {
-    this.head = null;
-  }
-  removeFirst() {
-   if (!this.head) {
-     return;
-   }
 
-   this.head = this.head.next;
- }
- removeLast() {
-    if (!this.head) {
-      return;
-    }
-
-    if (!this.head.next) {
-      this.head = null;
-      return;
-    }
-
-    let previous = this.head;
-    let node = this.head.next;
-    while (node.next) {
-      previous = node;
-      node = node.next;
-    }
-    previous.next = null;
-  }
+```javascript
   insertLast(data) {
     const last = this.getLast();
 
@@ -664,7 +481,6 @@ class LinkedList {
       this.head = new Node(data);
     }
   }
-}
 
 const list = new LinkedList();
 list.insertFirst('a');
@@ -674,6 +490,7 @@ list.getLast(); // returns node with data 'C'
 ```
 
 # Get At
+
 <table>
   <thead>
     <tr>
@@ -702,77 +519,8 @@ list.getLast(); // returns node with data 'C'
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
-  getLast() {
-    if (!this.head) {
-      return null;
-    }
-    let node = this.head;
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
-  }
-  clear() {
-    this.head = null;
-  }
-  removeFirst() {
-   if (!this.head) {
-     return;
-   }
 
-   this.head = this.head.next;
- }
- removeLast() {
-    if (!this.head) {
-      return;
-    }
-
-    if (!this.head.next) {
-      this.head = null;
-      return;
-    }
-
-    let previous = this.head;
-    let node = this.head.next;
-    while (node.next) {
-      previous = node;
-      node = node.next;
-    }
-    previous.next = null;
-  }
-  insertLast(data) {
-    const last = this.getLast();
-
-    if (last) {
-      // There are some existing nodes in our chain
-      last.next = new Node(data);
-    } else {
-      // The chain is empty!
-      this.head = new Node(data);
-    }
-  }
+```javascript
   getAt(index) {
     let counter = 0;
     let node = this.head;
@@ -786,7 +534,6 @@ class LinkedList {
     }
     return null;
   }
-}
 
 const list = new List();
 list.insertFirst('a');
@@ -796,6 +543,7 @@ list.getAt(1); // returns node with data 'b'
 ```
 
 # Remove At
+
 <table>
   <thead>
     <tr>
@@ -824,90 +572,8 @@ list.getAt(1); // returns node with data 'b'
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
-  getLast() {
-    if (!this.head) {
-      return null;
-    }
-    let node = this.head;
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
-  }
-  clear() {
-    this.head = null;
-  }
-  removeFirst() {
-   if (!this.head) {
-     return;
-   }
 
-   this.head = this.head.next;
- }
- removeLast() {
-    if (!this.head) {
-      return;
-    }
-
-    if (!this.head.next) {
-      this.head = null;
-      return;
-    }
-
-    let previous = this.head;
-    let node = this.head.next;
-    while (node.next) {
-      previous = node;
-      node = node.next;
-    }
-    previous.next = null;
-  }
-  insertLast(data) {
-    const last = this.getLast();
-
-    if (last) {
-      // There are some existing nodes in our chain
-      last.next = new Node(data);
-    } else {
-      // The chain is empty!
-      this.head = new Node(data);
-    }
-  }
-  getAt(index) {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      if (counter === index) {
-        return node;
-      }
-
-      counter++;
-      node = node.next;
-    }
-    return null;
-  }
+```javascript
   removeAt(index) {
     if (!this.head) {
       return;
@@ -924,7 +590,6 @@ class LinkedList {
     }
     previous.next = previous.next.next;
   }
-}
 
 const list = new List();
 list.insertFirst('a');
@@ -935,6 +600,7 @@ list.getAt(1); // returns node with data 'a'
 ```
 
 # Insert At
+
 <table>
   <thead>
     <tr>
@@ -965,106 +631,8 @@ list.getAt(1); // returns node with data 'a'
 </table>
 
 ##### Example:
-``` javascript
-class LinkedList {
-  constructor() {
-    this.head = null;
-  }
-  insertFirst(data){
-    this.head = new Node(data, this.head)
-  }
-  size() {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      counter++;
-      node = node.next;
-    }
-    return counter;
-  }
-  getFirst() {
-    return this.head;
-  }
-  getLast() {
-    if (!this.head) {
-      return null;
-    }
-    let node = this.head;
-    while (node) {
-      if (!node.next) {
-        return node;
-      }
-      node = node.next;
-    }
-  }
-  clear() {
-    this.head = null;
-  }
-  removeFirst() {
-   if (!this.head) {
-     return;
-   }
 
-   this.head = this.head.next;
- }
- removeLast() {
-    if (!this.head) {
-      return;
-    }
-
-    if (!this.head.next) {
-      this.head = null;
-      return;
-    }
-
-    let previous = this.head;
-    let node = this.head.next;
-    while (node.next) {
-      previous = node;
-      node = node.next;
-    }
-    previous.next = null;
-  }
-  insertLast(data) {
-    const last = this.getLast();
-
-    if (last) {
-      // There are some existing nodes in our chain
-      last.next = new Node(data);
-    } else {
-      // The chain is empty!
-      this.head = new Node(data);
-    }
-  }
-  getAt(index) {
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      if (counter === index) {
-        return node;
-      }
-
-      counter++;
-      node = node.next;
-    }
-    return null;
-  }
-  removeAt(index) {
-    if (!this.head) {
-      return;
-    }
-
-    if (index === 0) {
-      this.head = this.head.next;
-      return;
-    }
-
-    const previous = this.getAt(index - 1);
-    if (!previous || !previous.next) {
-      return;
-    }
-    previous.next = previous.next.next;
-  }
+```javascript
   insertAt(data, index) {
     if (!this.head) {
       this.head = new Node(data);
@@ -1080,7 +648,6 @@ class LinkedList {
     const node = new Node(data, previous.next);
     previous.next = node;
   }
-}
 
 const list = new List();
 list.insertFirst('a');
@@ -1090,155 +657,139 @@ list.insertAt('Hi', 1)
 list.getAt(1); // returns node with data 'Hi'
 ```
 
+# Full Linked List Example
+
 ```javascript
 // Linked list
 class Node {
   constructor(data, next = null) {
-    this.data = data;
-    this.next = next;
+    this.data = data
+    this.next = next
   }
 }
 
 class LinkedList {
   constructor() {
-    this.head = null;
+    this.head = null
   }
   insertFirst(data) {
-    this.head = new Node(data, this.head);
+    this.head = new Node(data, this.head)
   }
   size() {
-    let counter = 0;
-    let node = this.head;
+    let counter = 0
+    let node = this.head
     while (node) {
-      counter++;
-      node = node.next;
+      counter++
+      node = node.next
     }
-    return counter;
+    return counter
   }
 
   getFirst() {
-    return this.head;
+    return this.head
   }
 
   getLast() {
     if (!this.head) {
-      return null;
+      return null
     }
-    let node = this.head;
+    let node = this.head
     while (node) {
       if (!node.next) {
-        return node;
+        return node
       }
-      node = node.next;
+      node = node.next
     }
   }
 
   clear() {
-    this.head = null;
+    this.head = null
   }
 
   removeFirst() {
     if (!this.head) {
-      return;
+      return
     }
 
-    this.head = this.head.next;
+    this.head = this.head.next
   }
 
   removeLast() {
     if (!this.head) {
-      return;
+      return
     }
 
     if (!this.head.next) {
-      this.head = null;
-      return;
+      this.head = null
+      return
     }
 
-    let previous = this.head;
-    let node = this.head.next;
+    let previous = this.head
+    let node = this.head.next
     while (node.next) {
-      previous = node;
-      node = node.next;
+      previous = node
+      node = node.next
     }
-    previous.next = null;
+    previous.next = null
   }
 
   insertLast(data) {
-    const last = this.getLast();
+    const last = this.getLast()
 
     if (last) {
       // There are some existing nodes in our chain
-      last.next = new Node(data);
+      last.next = new Node(data)
     } else {
       // The chain is empty!
-      this.head = new Node(data);
+      this.head = new Node(data)
     }
   }
 
   getAt(index) {
-    let counter = 0;
-    let node = this.head;
+    let counter = 0
+    let node = this.head
     while (node) {
       if (counter === index) {
-        return node;
+        return node
       }
 
-      counter++;
-      node = node.next;
+      counter++
+      node = node.next
     }
-    return null;
+    return null
   }
 
   removeAt(index) {
     if (!this.head) {
-      return;
+      return
     }
 
     if (index === 0) {
-      this.head = this.head.next;
-      return;
+      this.head = this.head.next
+      return
     }
 
-    const previous = this.getAt(index - 1);
+    const previous = this.getAt(index - 1)
     if (!previous || !previous.next) {
-      return;
+      return
     }
-    previous.next = previous.next.next;
+    previous.next = previous.next.next
   }
 
   insertAt(data, index) {
     if (!this.head) {
-      this.head = new Node(data);
-      return;
+      this.head = new Node(data)
+      return
     }
 
     if (index === 0) {
-      this.head = new Node(data, this.head);
-      return;
+      this.head = new Node(data, this.head)
+      return
     }
 
-    const previous = this.getAt(index - 1) || this.getLast();
-    const node = new Node(data, previous.next);
-    previous.next = node;
-  }
- // If your hungry for more
-  forEach(fn) {
-    let node = this.head;
-    let counter = 0;
-    while (node) {
-      fn(node, counter);
-      node = node.next;
-      counter++;
-    }
-  }
-// If you're absolutely starving
-  *[Symbol.iterator]() {
-    let node = this.head;
-    while (node) {
-      yield node;
-      node = node.next;
-    }
+    const previous = this.getAt(index - 1) || this.getLast()
+    const node = new Node(data, previous.next)
+    previous.next = node
   }
 }
 ```

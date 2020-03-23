@@ -37,7 +37,9 @@ don't# LINKED LISTS
     ​
     ![linked-list](https://media.git.generalassemb.ly/user/15881/files/c1409700-692a-11ea-98b9-15dab7ba6fff)
     ​
-    # Linked List Constructor
+
+# Linked List Constructor
+
     <table>
       <thead>
         <tr>

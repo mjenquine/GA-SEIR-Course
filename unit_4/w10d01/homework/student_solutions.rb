@@ -47,3 +47,21 @@
 # print colors.sample
 # print colors.reverse
 # colors.each { |i| puts i.upcase }
+
+##############################################################
+##############           Methods               ###############
+##############################################################
+
+# def find_area height, width
+#   puts height * width
+# end
+#
+# find_area 4, 4
+
+# nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+#
+# def multiply_each_by_five arr
+#   puts arr.map { |i| i * 5 }
+# end
+#
+# multiply_each_by_five nums

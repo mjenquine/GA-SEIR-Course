@@ -41,10 +41,7 @@ This game will be made up of two players. One will be a person interacting with 
   - use symbols (google which work with ruby/ your console)
 
 ### Card Properties
- - a value that is between 1 - 11 that is readable, it should not be allowed to be overwritten when created
-
- **Bonus**
- - a face: cards 2-10 have the same face as their value, but Jack, Queen, and King have a value of 10. An Ace has a starting value of 11
+ - a value that is between 2 - 11 that is readable, it should not be allowed to be overwritten when created
 
  ### Shuffle the Deck
  - Research how to shuffle the values in the array, the cards should be shuffled before playing

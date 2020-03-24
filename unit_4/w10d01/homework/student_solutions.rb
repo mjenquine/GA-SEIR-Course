@@ -66,6 +66,10 @@
 #
 # multiply_each_by_five nums
 
+##############################################################
+##############      Methods with a hash        ###############
+##############################################################
+
 # book = {
 #   title: 'The Great Gatsby',
 #   author: 'F Scott Fitzgerald',
@@ -95,3 +99,18 @@
 #   puts item1[:price] + item2[:price]
 # end
 # print_item_sums table, lamp
+
+##############################################################
+##############          Check Prime            ###############
+##############################################################
+
+# require 'prime'
+#
+# def check_prime? x
+#   puts Prime.instance.prime?(x)
+# end
+# check_prime? 5
+#
+# Prime.each(100) do |prime|
+#   puts prime
+# end

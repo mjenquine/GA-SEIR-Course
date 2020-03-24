@@ -1,6 +1,6 @@
-don't# LINKED LISTS
+# LINKED LISTS
 
-​
+
 
 ## Lesson Objectives
 
@@ -12,10 +12,12 @@ don't# LINKED LISTS
 ## Why Linked Lists?
 
 1. You need to insert/delete in constant time.
-1. You don't know how many items are going to be in the list. With Arrays you may need to re-declare and copy the memory of the array.
 1. You don't need random access to elements
 1. You want to be able to insert elements into any position in the list.
-   ​
+
+## Real World Example
+1. One real world example of a linked list in use would be something like Photoshop where you can undo and redo things you have done. 
+   
 
 ## What is a Linked List?
 
@@ -23,7 +25,7 @@ don't# LINKED LISTS
 1.  A head
 1.  A tail
 1.  A size or length property
-    ​
+    
 
 ## Linked List Architecture
 
@@ -32,12 +34,17 @@ don't# LINKED LISTS
 1.  Nodes have one property known as value or data and contain some primitive value or object value
 
 
-    ​
-    ​
-    ​
+    
     ![linked-list](https://media.git.generalassemb.ly/user/15881/files/c1409700-692a-11ea-98b9-15dab7ba6fff)
+<<<<<<< HEAD
     ​
+
+# Linked List Constructor
+
+=======
+    
     # Linked List Constructor
+>>>>>>> 365f989120e93cef207d7ac3d37fc1465af84538
     <table>
       <thead>
         <tr>

@@ -15,9 +15,9 @@ This game will be made up of two players. One will be a person interacting with 
 
 ## Players
 
-- Using classes, make a human player, a player should have a name, a bankroll (start with 100 - keep it as an integer don't worry about converting to money), and a hand (an array to store cards). The player name, bankroll amount and hand should be accessable.
+- Using classes, make a human player, a player should have a name, a bankroll (start with 100 - keep it as an integer don't worry about converting to money), and a hand (an array to store cards). The player name, bankroll amount and hand should be accessible.
 
-- Using classes, make a computer player called the house, the house should have a name, a bankroll (start with 10000 - keep it as an interger, don't worry about converting it to money), and a hand (an array to store cards). The player name, bankroll amount and hand should be accessable.
+- Using classes, make a computer player called the house, the house should have a name, a bankroll (start with 10000 - keep it as an integer, don't worry about converting it to money), and a hand (an array to store cards). The player name, bankroll amount and hand should be accessible.
 
 ## The Deck
 - Create an empty array that will hold your card objects. This can just be an array, it does not need to be a class
@@ -26,7 +26,7 @@ This game will be made up of two players. One will be a person interacting with 
 - Using classes, make 52 card objects which should be made up of 4 sets of 13 cards.
   - Hint: as you make each card, put it into your deck array
 - Cards should have at least one property `value`
-- Cards can have more properties like `face` and `suit`, but these are not needed for the core functionality of your game. Try pracicing YAGNI (You Ain't Gonna Need It). Perhaps in building your cards, your solution will make more sense to have one or both properties, but don't add them just for the sake of adding them.
+- Cards can have more properties like `face` and `suit`, but these are not needed for the core functionality of your game. Try practicing YAGNI (You Ain't Gonna Need It). Perhaps in building your cards, your solution will make more sense to have one or both properties, but don't add them just for the sake of adding them.
 
 ### 13 cards:
   - cards 2 - 10 have the same face and value (a card with a face of 2 is worth 2 points)
@@ -51,12 +51,12 @@ This game will be made up of two players. One will be a person interacting with 
 - Create a console game that lets a player choose their name and then starts the game
 - Make sure the console is printing informative messages to allow the player to know what is happening and what to do next
 - Each player gets two random cards
-- The player with the larger sum of their wins the round
+- The player with the larger sum wins the round
  - Hint: What if the Player class had a method that summed the values of the two cards? Note, there are also numerous other ways to solve it, but this would let you practice with class methods.
-  - Hint 2: Practice YAGNI (You Ain't Gonna Need It), for now your game just needs to sum 2 cards, find the simplest solution to do that. Don't worry about coming up with a soution that will let you sum any number of cards until you get to the point where you need to be able to do it(that's in the bonus section).
+  - Hint 2: Practice YAGNI (You Ain't Gonna Need It), for now your game just needs to sum 2 cards, find the simplest solution to do that. Don't worry about coming up with a solution that will let you sum any number of cards until you get to the point where you need to be able to do it(that's in the bonus section).
 - By default a round is worth 10 dollars.
   - If the human player wins, 10 dollars should be subtracted from the house and added to the player
-  - If the human player loses, 10 dollars should be subtrated from the player and added to the house
+  - If the human player loses, 10 dollars should be subtracted from the player and added to the house
 - If there is a tie, let the players know there is a tie and no bankrolls are affected
 - The game ends after one round
 

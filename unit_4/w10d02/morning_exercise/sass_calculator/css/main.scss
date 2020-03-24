@@ -1,0 +1,59 @@
+$green : #00471B;
+$cream : #EEE1C6;
+$blue : #0077C0;
+$black : #000000;
+
+* {
+  // border: 1px solid gold;
+}
+body {
+  max-width: 400px;
+  border: 10px solid $blue;
+  border-radius: 20px;
+  padding: 2px;
+}
+.numbers-functions {
+  display: flex;
+
+}
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.number {
+  width: 80px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  background-color: $green;
+  border: 2px solid $black;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+.function {
+  width: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  background-color: $green;
+  border: 2px solid $black;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+p {
+  font-size: 30px;
+  color: $cream;
+}
+.display {
+  background-color: $cream;
+  color: $green;
+  height: 40px;
+  font-size: 40px;
+  padding: .25em 0 .25em .25em;
+  border-radius: 10px;
+}

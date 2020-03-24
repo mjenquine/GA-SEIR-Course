@@ -125,7 +125,7 @@ const n = new Node('Hi')
 n.data // 'Hi'
 n.next // null
 const n2 = new Node('There', n)
-n.next // returns n
+n2.next // returns n
 ```
 
 # Insert First

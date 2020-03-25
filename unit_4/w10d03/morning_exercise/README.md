@@ -14,9 +14,11 @@
 1. You need to insert/delete in constant time.
 1. You don't need random access to elements
 1. You want to be able to insert elements into any position in the list.
+1. In Javascript, they essentially take away functionality from an array but in other languages you may want to use a linked list since you may need to declare an array size unlike in Javascript and with a linked list you dont need to declare a size.
 
 ## Real World Example
 1. One real world example of a linked list in use would be something like Photoshop where you can undo and redo things you have done. 
+1. Imagine you make a game and store all of the levels in an array, you would be able to randomly access the final level and skip the rest of the game. With a linked list you have to traverse through all of the levels or "Nodes" to get to the final level.
    
 
 ## What is a Linked List?
@@ -125,7 +127,7 @@ const n = new Node('Hi')
 n.data // 'Hi'
 n.next // null
 const n2 = new Node('There', n)
-n.next // returns n
+n2.next // returns n
 ```
 
 # Insert First

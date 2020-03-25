@@ -18,7 +18,7 @@ holidays.post('/', (req, res) => {
     if (error){
       res.status(400).json({error: error.message})
     }
-    res.status(200).send(createdHoliday)
+    res.status(200).json(createdHoliday)
   })
 })
 

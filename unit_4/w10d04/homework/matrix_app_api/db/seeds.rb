@@ -5,12 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+# Character.create([
+#
+# 	{ name: "Neo", description: "known as The One" },
+# 	{ name: "Trinity", description: "Trinity first appears in the first film in the trilogy" },
+# 	{ name: "Morpheus", description: "He is portrayed by Laurence Fishburne" },
+# 	{ name: "Agent Smith", description: "Smith appears to have been deleted by Neo" },
+#
+# ])
 
-Character.create([
 
-	{ name: "Neo", description: "known as The One" },
-	{ name: "Trinity", description: "Trinity first appears in the first film in the trilogy" },
-	{ name: "Morpheus", description: "He is portrayed by Laurence Fishburne" },
-	{ name: "Agent Smith", description: "Smith appears to have been deleted by Neo" },
 
-])
+Vehicle.create([
+  { name: "Nebuchadnezzar", style: "Spaceship"}
+  ])

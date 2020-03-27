@@ -8,9 +8,9 @@
 
 Character.create([
 
-	{ name: "Neo", description: false },
-	{ name: "Trinity", description: false },
-	{ name: "Morpheus", description: false },
-	{ name: "Agent Smith", description: false },
+	{ name: "Neo", description: "known as The One" },
+	{ name: "Trinity", description: "Trinity first appears in the first film in the trilogy" },
+	{ name: "Morpheus", description: "He is portrayed by Laurence Fishburne" },
+	{ name: "Agent Smith", description: "Smith appears to have been deleted by Neo" },
 
 ])

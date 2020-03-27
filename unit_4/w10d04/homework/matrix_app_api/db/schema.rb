@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_015332) do
+ActiveRecord::Schema.define(version: 2020_03_27_002818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "matrix_characters", force: :cascade do |t|
+  create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "img_url"

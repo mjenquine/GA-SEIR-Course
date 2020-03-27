@@ -1,5 +1,5 @@
 <hr>
-Title: Books app morning lab<br>
+Title: Books app<br>
 Duration: 1-1.5 hrs<br>
 Creator: Thom Page<br>
 Topics: Rails controllers and routing<br>
@@ -7,9 +7,9 @@ Topics: Rails controllers and routing<br>
 
 ![](https://i.imgur.com/mS4bLMs.png)
 
-# MORNING LAB
+# Homework
 
-In this lab you will
+In this homework you will
 
 * **generate** a model instead of making it from scratch
 * **use Faker** to seed data
@@ -19,7 +19,7 @@ In this lab you will
 
 ## Make a Books App
 
-In `student_labs` we will make an app called `books_app_api`
+In `homework` we will make an app called `books_app_api`
 
 * Make a new Rails app called `books_app_api`. Remember the `--api` and `--skip-git` flags. Set `postgresql` as the database.
 

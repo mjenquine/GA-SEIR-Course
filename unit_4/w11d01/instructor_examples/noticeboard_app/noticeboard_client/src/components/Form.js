@@ -53,6 +53,7 @@ class Form extends React.Component {
           id={'phone'}
        />
        <input type='submit'value="add a notice"/>
+      {this.props.children}
       </form>
     )
   }

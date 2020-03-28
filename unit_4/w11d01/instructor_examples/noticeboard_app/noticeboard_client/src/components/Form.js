@@ -19,6 +19,11 @@ class Form extends React.Component {
     event.preventDefault()
     this.props.handleSubmit(event, this.state)
     this.props.toggleForm && this.props.toggleForm()
+    this.setState({
+      title: '',
+      author: '',
+      phone: ''
+    })
   }
   render () {
     return (

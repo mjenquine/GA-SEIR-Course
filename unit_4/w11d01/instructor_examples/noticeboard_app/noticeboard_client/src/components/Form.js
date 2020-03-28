@@ -15,16 +15,15 @@ class Form extends React.Component {
   handleChange (event) {
     this.setState({[event.target.id] : event.target.value})
   }
-  handleSubmit (event){
+  handleSubmit(event) {
     event.preventDefault()
-    this.props.handleSubmit(
-      event,
-      {
-        title: this.state.title,
-        author: this.state.author,
-        phone: this.state.phone
-      }
-    )
+    this.props.handleSubmit(event, this.state)
+    this.props.toggleForm && this.props.toggleForm()
+    this.setState({
+      title: '',
+      author: '',
+      phone: ''
+    })
   }
   render () {
     return (
@@ -54,6 +53,7 @@ class Form extends React.Component {
           id={'phone'}
        />
        <input type='submit'value="add a notice"/>
+      {this.props.children}
       </form>
     )
   }

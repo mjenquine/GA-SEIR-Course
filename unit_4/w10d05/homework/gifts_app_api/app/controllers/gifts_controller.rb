@@ -9,7 +9,10 @@ class GiftsController < ApplicationController
     render json: { status: 200, gift: gift }
   end
 
-  
+  def random
+    gift = Gift.pluck(:id)
+    render json: { status: 200, gift.sample }
+  end
 
   def create
     gift = Gift.new(gift_params)

@@ -27,8 +27,6 @@ Let's hope they don't say yuck! Let's hope they can have a good time together! &
 
 Above is a potential frontend for the Dating App. The layout has a header, a column on the left, a column on the right, a middle column with the main content, and a footer. ie. The "[Holy Grail](https://en.wikipedia.org/wiki/Holy_Grail_(web_design))" layout.
 
-Here is a [Quick video of the expected Dating App functionality, with a few bonus flourishes](https://youtu.be/jLCder5O6Ls)
-
 ## The App
 Note that step-by-step directions are below. Refer to the *Start Here* section to begin.
 

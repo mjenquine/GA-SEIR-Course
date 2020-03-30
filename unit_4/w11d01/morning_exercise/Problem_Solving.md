@@ -56,9 +56,11 @@
  ```javascript
  // Answers
  /*************
- Write a function called same, which accepts two arrays. The function should 
-return true if every value in the array has its corresponding value squared in the second array. 
-The frequency of values must be the same.
+ Write a function called same, which accepts two arrays. 
+ The function should return true if every value in
+ the array has its corresponding value squared in
+ the second array. 
+ The frequency of values must be the same.
  **************/
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
@@ -105,7 +107,10 @@ same([1,2,3], [1,9]) // false
 same([1,2,1], [4,4,1]) // false (must be same frequency)
 
 /********************
-Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist
+Write a function called sumZero which accepts a sorted array
+of integers. The function should find the first pair where 
+the sum is 0. Return an array that includes both values 
+that sum to zero or undefined if a pair does not exist
 *********************/
 
 function sumZero(arr){
@@ -144,7 +149,9 @@ sumZero([-2,0,1,3]) // undefined
 sumZero([1,2,3]) // undefined
 
 /******************
-Write a function called maxSubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
+Write a function called maxSubarraySum which accepts an 
+array of integers and a number called n. The function 
+should calculate the maximum sum of n consecutive elements in the array.
 *******************/
 function maxSubarraySum(arr, num) {
   if ( num > arr.length){
@@ -201,7 +208,11 @@ function search(arr, val){
 // Time O(N)
 
 /********************
-Given a sorted array of integers, write a function called search, that accepts a value and returns the index where the value passed to the function is located. If the value is not found, return -1
+Given a sorted array of integers, write a 
+function called search, that accepts a value 
+and returns the index where the value passed 
+to the function is located. 
+If the value is not found, return -1
 *********************/
 
 function search(array, val) {

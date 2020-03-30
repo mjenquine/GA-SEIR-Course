@@ -35,8 +35,10 @@
  ```
  
  ```javascript
-// Write a function that takes in a string and returns the count of each character in the string in an object
-// Note: The time complexity can not exceed Linear Time, don’t distinguish between lowercase and uppercase and don’t count spaces
+// Write a function that takes in a string and returns the count of 
+// each character in the string in an object
+// Note: The time complexity can not exceed Linear Time, don’t 
+// distinguish between lowercase and uppercase and don’t count spaces
 // count(“Hello World”) 
 // returns {h: 1, e: 1, l:3, o: 2, w: 1, r:1, d:1 }
 

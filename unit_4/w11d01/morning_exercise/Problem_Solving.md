@@ -27,7 +27,7 @@
   
  # Excercises
  
- ```javscript
+ ```javascript
 // Write a function that accepts 3 numbers and returns their sum 
 // Note: time and space complexity must be constant 
 // sum(1,2,3) // returns 6

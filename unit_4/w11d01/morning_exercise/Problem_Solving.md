@@ -1,4 +1,6 @@
 # Problem Solving, Unstumpability vs Infallibility, The Zeigarnik Effect and What would Sherlock Do?
+![Problem Solving](https://media.git.generalassemb.ly/user/15881/files/d48e1500-71fc-11ea-884d-e304b93a1a6f)
+
 
 # Beginning with The End in Mind
 

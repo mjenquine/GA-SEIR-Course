@@ -32,7 +32,7 @@ You can draw one:
 - on a whiteboard
 - with an app
 
-Recommended whiteboard app: [WebWhiteboard.com](https://www.webwhiteboard.com/board/tgb3vjeu)
+Recommended whiteboard app: [WebWhiteboard.com](https://www.webwhiteboard.com)
 
 Considerations:
 

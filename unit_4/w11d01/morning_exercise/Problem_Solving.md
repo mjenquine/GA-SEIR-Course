@@ -68,7 +68,7 @@ function same(arr1, arr2){
     return true
 }
 
-// ONsquared
+// O(N^2)
 
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
@@ -92,7 +92,7 @@ function same(arr1, arr2){
     }
     return true
 }
-- O(n)
+// O(n)
 
 same([1,2,3], [4,1,9]) // true
 same([1,2,3], [1,9]) // false
@@ -213,7 +213,7 @@ function search(array, val) {
     return -1;
 }
 
-Time - Log(N) Binary Search
+// Time - Log(N) Binary Search
 
 
 

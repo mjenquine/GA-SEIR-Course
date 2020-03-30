@@ -56,7 +56,9 @@
  ```javascript
  // Answers
  /*************
- Write a function called same, which accepts two arrays. The function should return true if every value in the array has its corresponding value squared in the second array. The frequency of values must be the same.
+ Write a function called same, which accepts two arrays. The function should 
+return true if every value in the array has its corresponding value squared in the second array. 
+The frequency of values must be the same.
  **************/
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
@@ -242,7 +244,8 @@ search([1,2,3,4,5,6],11) // -1
 ```
 Implement a function called countUniqueValues, which accepts a sorted array, 
 and counts the unique values in the array. 
-There can be negative numbers in the array, but it will always be sorted use Multiple Pointers Approach
+There can be negative numbers in the array, 
+but it will always be sorted use Multiple Pointers Approach
 
 countUniqueValues([1,1,1,1,1,2]) // 2
 countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]) // 7
@@ -252,7 +255,8 @@ countUniqueValues([-2,-1,-1,0,1]) // 4
 ```
 
 ```
-Given two strings, write a function to determine if the second string is an anagram of the first. 
+Given two strings, write a function to determine if the second 
+string is an anagram of the first. 
 An anagram is a word, phrase, or name formed by rearranging the letters of another, 
 such as cinema, formed from iceman. Use a frequency counter
 

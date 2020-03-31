@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pints_sold: 1
+  pints_made: 1
+  profit_per_pint: 9.99
+  month: MyString
+
+two:
+  pints_sold: 1
+  pints_made: 1
+  profit_per_pint: 9.99
+  month: MyString

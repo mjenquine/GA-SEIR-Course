@@ -1,10 +1,10 @@
-# Integrating React w/PHP - Part 2: Fetching and Displaying Data
+# Integrating React w/Rails - Part 2: Fetching and Displaying Data
 
 ### Lesson objectives
 
 _After this lesson, students will be able to:_
 
-  - Fetch data from the php backend
+  - Fetch data from the rails backend
   - Display said fetched data
 
 ## An Overview

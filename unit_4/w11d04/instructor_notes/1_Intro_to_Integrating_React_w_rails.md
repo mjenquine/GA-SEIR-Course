@@ -1,13 +1,12 @@
-# Integrating React w/PHP - Part 1: An Overview and Setup
+# Integrating React w/Rails - Part 1: An Overview and Setup
 
-Today, we will be learning how to put everything we've learned this unit together into one app. We will primarily be focusing on how to get your React frontend to interact with your PHP backend.
+Today, we will be learning how to put everything we've learned this unit together into one app. We will primarily be focusing on how to get your React frontend to interact with your Rails backend.
 
 ### Lesson objectives
 
 _After this lesson, students will:_
 
-  - Understand the basics of integrating React _into_ PHP and interacting with the backend
-  - Set up given php/react starter code
+  - Understand the basics of integrating React _into_ Rails and interacting with the backend
 
 ## The Basics
 
@@ -16,7 +15,7 @@ Believe it of not, you've already learned all the tools you'll need for this bui
 For example, you've already learned...
 
 - [How to use the `fetch` method to get data](../../w11d04/instructor_notes/4.%20React_AJAX.md)
-- How to build a PHP API using postgres
+- How to build a Rails API using postgres
 
 So, the majority of the build we'll be doing today will be review and to help you understand how all the pieces fit together.
 
@@ -44,8 +43,8 @@ Included in the starter code is a fully working, basic one-model (posts) API for
 
 _Relevant files:_
 
-- `models/posts.php`
-- `controllers/posts.php`
+- `app/models/post.rb`
+- `app/controllers/posts_controller.rb`
 
 _PG Columns:_
 

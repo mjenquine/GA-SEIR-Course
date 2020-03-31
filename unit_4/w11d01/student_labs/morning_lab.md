@@ -32,6 +32,8 @@ You can draw one:
 - on a whiteboard
 - with an app
 
+Recommended whiteboard app: [WebWhiteboard.com](https://www.webwhiteboard.com)
+
 Considerations:
 
 [resource](https://www.lucidchart.com/pages/enhanced-entity-relationship-diagram#discovery__top)

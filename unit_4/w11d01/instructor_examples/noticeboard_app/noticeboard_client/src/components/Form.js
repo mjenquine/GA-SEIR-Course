@@ -12,6 +12,16 @@ class Form extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
+  componentDidMount(){
+    if(this.props.notice) {
+      this.setState({
+        title: this.props.notice.title,
+        author: this.props.notice.author,
+        phone: this.props.notice.phone,
+        id: this.props.notice.id
+      })
+    }
+  }
   handleChange (event) {
     this.setState({[event.target.id] : event.target.value})
   }
@@ -52,7 +62,10 @@ class Form extends React.Component {
           value={this.state.phone}
           id={'phone'}
        />
-       <input type='submit'value="add a notice"/>
+       <input
+        type='submit'
+        value={this.props.notice ? "update this notice" : "add a notice"}
+        />
       {this.props.children}
       </form>
     )

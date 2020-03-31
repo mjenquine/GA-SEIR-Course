@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
 
-class Daters extends Component {
-  state = {
-    daters: []
-  }
-  componentDidMount() {
-    this.getDaters()
-  }
-  getDaters () {
-    fetch('http://localhost:3000/users'
-  )
-    .then(res => res.json())
-    .then(jsonedDaters => this.setState({daters: jsonedDaters}))
-    .catch( error => console.error(error))
-  }
+class RightDaters extends Component {
+
   render () {
     return (
       <>
-        {this.state.daters.map( dater => {
+        {this.props.daters.slice(3).map( dater => {
           return (
             <div key={dater.id}>
               <h3>Name: {dater.name} </h3>
@@ -36,4 +24,4 @@ class Daters extends Component {
   }
 }
 
-export default Daters;
+export default RightDaters;

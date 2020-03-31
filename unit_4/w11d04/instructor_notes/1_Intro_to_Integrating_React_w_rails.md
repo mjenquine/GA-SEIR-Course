@@ -89,20 +89,19 @@ _Relevant Files_
 
 Now that we know what's actually in our starter code, let's get set up!
 
-  - Create the `grapevine` database
-  - Connect to `grapevine`
-  - Create the `posts` table:
+  - Create the `grapevine` database (rails db:create)
+  - Connect to the rails console (rails c or rails console)
+  - Insert some data into the database:
   ```sql
-  CREATE TABLE posts (id SERIAL, name VARCHAR(256), image VARCHAR(256), body TEXT);
-  INSERT INTO posts (name, image, body) VALUES ('Brendan', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Brendans post');
-  INSERT INTO posts (name, image, body) VALUES ('Karolin', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Karolins post');
-  INSERT INTO posts (name, image, body) VALUES ('Matt', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Matts post');
-  INSERT INTO posts (name, image, body) VALUES ('Aegean', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Aegeans post');
+  Post.create(name:"Brendan", image: "N/A", body: "Brendans Post")
+  Post.create(name:"Karolin", image: "N/A", body: "Karolins Post")
+  Post.create(name:"Arthur", image: "N/A", body: "Arthurs Post")
+  Post.create(name:"Ayla", image: "N/A", body: "Aylas Post")
   
   ```
-  - You can close down psql now
-- Connect MAMP to the php backend
-- Open https://localhost:8888/posts in your browser to make sure your database was seeded correctly
+  - You can close down the rails console now
+- Run rails s
+- Open https://localhost:3000/posts in your browser to make sure your database was seeded correctly
 
 You're now all set with the starter code!
 

@@ -1,10 +1,10 @@
-# Integrating React w/PHP - Part 2: Fetching and Displaying Data
+# Integrating React w/Rails - Part 2: Fetching and Displaying Data
 
 ### Lesson objectives
 
 _After this lesson, students will be able to:_
 
-  - Fetch data from the php backend
+  - Fetch data from the rails backend
   - Display said fetched data
 
 ## An Overview
@@ -129,10 +129,10 @@ Now that we have our data, we can get to displaying it. Let's map out all our da
 render () {
   return (
     <main>
-      {this.state.posts.map((postData) => (
+      {this.state.posts.map((post) => (
         <Post
-          key={postData.id}
-          postData={postData}
+          key={post.id}
+          postData={post}
         />
       ))}
     </main>
@@ -149,11 +149,11 @@ render () {
   return (
     <article>
       <div className="post-header">
-        <img src={this.props.postData.image} alt=""/>
-        <h1>{this.props.postData.name} said...</h1>
+        <img src={this.props.post.image} alt=""/>
+        <h1>{this.props.post.name} said...</h1>
       </div>
       <div className="post-body">
-        {this.props.postData.body}
+        {this.props.post.body}
       </div>
       <div className="post-options">
         <ul>

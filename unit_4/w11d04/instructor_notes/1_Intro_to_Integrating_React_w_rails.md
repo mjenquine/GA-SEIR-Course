@@ -1,13 +1,12 @@
-# Integrating React w/PHP - Part 1: An Overview and Setup
+# Integrating React w/Rails - Part 1: An Overview and Setup
 
-Today, we will be learning how to put everything we've learned this unit together into one app. We will primarily be focusing on how to get your React frontend to interact with your PHP backend.
+Today, we will be learning how to put everything we've learned this unit together into one app. We will primarily be focusing on how to get your React frontend to interact with your Rails backend.
 
 ### Lesson objectives
 
 _After this lesson, students will:_
 
-  - Understand the basics of integrating React _into_ PHP and interacting with the backend
-  - Set up given php/react starter code
+  - Understand the basics of integrating React _into_ Rails and interacting with the backend
 
 ## The Basics
 
@@ -16,7 +15,7 @@ Believe it of not, you've already learned all the tools you'll need for this bui
 For example, you've already learned...
 
 - [How to use the `fetch` method to get data](../../w11d04/instructor_notes/4.%20React_AJAX.md)
-- How to build a PHP API using postgres
+- How to build a Rails API using postgres
 
 So, the majority of the build we'll be doing today will be review and to help you understand how all the pieces fit together.
 
@@ -44,8 +43,8 @@ Included in the starter code is a fully working, basic one-model (posts) API for
 
 _Relevant files:_
 
-- `models/posts.php`
-- `controllers/posts.php`
+- `app/models/post.rb`
+- `app/controllers/posts_controller.rb`
 
 _PG Columns:_
 
@@ -90,20 +89,19 @@ _Relevant Files_
 
 Now that we know what's actually in our starter code, let's get set up!
 
-  - Create the `grapevine` database
-  - Connect to `grapevine`
-  - Create the `posts` table:
+  - Create the `grapevine` database (rails db:create)
+  - Connect to the rails console (rails c or rails console)
+  - Insert some data into the database:
   ```sql
-  CREATE TABLE posts (id SERIAL, name VARCHAR(256), image VARCHAR(256), body TEXT);
-  INSERT INTO posts (name, image, body) VALUES ('Brendan', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Brendans post');
-  INSERT INTO posts (name, image, body) VALUES ('Karolin', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Karolins post');
-  INSERT INTO posts (name, image, body) VALUES ('Matt', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Matts post');
-  INSERT INTO posts (name, image, body) VALUES ('Aegean', 'https://miro.medium.com/max/544/1*2W2WwkCMUCZ6j8QgfK4x1w.png', 'Body of Aegeans post');
+  Post.create(name:"Brendan", image: "N/A", body: "Brendans Post")
+  Post.create(name:"Karolin", image: "N/A", body: "Karolins Post")
+  Post.create(name:"Arthur", image: "N/A", body: "Arthurs Post")
+  Post.create(name:"Ayla", image: "N/A", body: "Aylas Post")
   
   ```
-  - You can close down psql now
-- Connect MAMP to the php backend
-- Open https://localhost:8888/posts in your browser to make sure your database was seeded correctly
+  - You can close down the rails console now
+- Run rails s
+- Open https://localhost:3000/posts in your browser to make sure your database was seeded correctly
 
 You're now all set with the starter code!
 

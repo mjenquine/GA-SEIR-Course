@@ -169,7 +169,7 @@ The general `fetch` syntax for PUT is the exact same as POST. We just have to ch
 
 ```js
   handleUpdate = async updateData => {
-    let response = await fetch('http://localhost:3000/posts', {
+    let response = await fetch(`http://localhost:3000/posts/${updateData.id}`, {
       body: JSON.stringify(updateData),
       method: 'PUT',
       headers: {

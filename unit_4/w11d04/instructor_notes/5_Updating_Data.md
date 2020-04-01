@@ -54,7 +54,7 @@ Now, we just need to set the `formInputs` state depending on the view.
 
 #### In `App.js` handleView method
 
-Add a variable `postData` as an argument to `handleView`. Now, when we call on `handleView` after clicking on the `edit post` button, we can pass up the post's data.
+Add a variable `post` as an argument to `handleView`. Now, when we call on `handleView` after clicking on the `edit post` button, we can pass up the post's data.
 
 Then, set a default `formInputs` object with empty strings for when the view is either home or addPost.
 
@@ -63,7 +63,7 @@ Next, in the editPost case, we of course want to change the `formInputs` object 
 And finally, add `formInputs` to `setState`
 
 ```js
-  handleView = (view, postData) => {
+  handleView = (view, post) => {
     // declare an empty variable
     let pageTitle = ''
     let formInputs = {
@@ -83,10 +83,10 @@ And finally, add `formInputs` to `setState`
       case 'editPost':
         pageTitle = 'what did you really say?'
         formInputs = {
-          name: postData.name,
-          image: postData.image,
-          body: postData.body,
-          id: postData.id
+          name: post.name,
+          image: post.image,
+          body: post.body,
+          id: post.id
         }
         break
       default:
@@ -108,7 +108,7 @@ If you try and test it now, it will error since we haven't actually lifted any `
 #### In `Post.js` render method
 
 ```jsx
-<li onClick={() => {this.props.handleView('editPost', this.props.postData)}}>edit post</li>
+<li onClick={() => {this.props.handleView('editPost', this.props.post)}}>edit post</li>
 ```
 
 If you test it, it should now switch to the form view _but_ the inputs are still empty.

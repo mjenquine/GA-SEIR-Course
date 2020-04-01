@@ -44,6 +44,13 @@ rails new trading_app_api --api -d postgresql --skip-git --skip-active-storage
 
 Go into the project directory
 
+add this to gemfile :
+```ruby
+gem 'awesome_print'
+gem 'rb-readline'
+```
+then run `bundle` in your command line in your rails project
+
 ```
 rails db:create
 ```
@@ -307,21 +314,6 @@ Don't worry that it all looks funny. Just imagine it's doing the same thing as i
 
 
 ## RAILS CONSOLE QUERIES
-
-* Optional, make Rails console look nicer
-
-Gemfile
-
-```ruby
-gem 'awesome_print'
-```
-
-trouble running `rails c`
-add `gem 'rb-readline'` into gemfile and run bundle
-
-Put it in a development/test group if you like.
-
-* Bundle
 
 `rails c`
 

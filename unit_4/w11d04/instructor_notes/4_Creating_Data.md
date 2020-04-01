@@ -143,9 +143,9 @@ Knowing that is now useful because now we can just take a copy of the previous s
 #### In `Main.js` handleCreate method's second promise
 
 ```js
-this.setState(prevState => {
-  prevState.posts = jsonedPost
-  return { posts: prevState.posts }
+    this.setState(prevState => {
+      return { posts: [...prevState.posts, data] }
+    })
 })
 ```
 

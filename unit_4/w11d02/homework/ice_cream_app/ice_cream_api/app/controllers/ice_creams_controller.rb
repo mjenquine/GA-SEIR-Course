@@ -3,7 +3,7 @@ class IceCreamsController < ApplicationController
 
   # GET /ice_creams
   def index
-    @ice_creams = IceCream.all
+    @ice_creams = IceCream.all.to_json(inclued: :pints)
 
     render json: @ice_creams
   end

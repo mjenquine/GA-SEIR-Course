@@ -9,6 +9,7 @@ class PintsController < ApplicationController
 
   # POST /pints
   def create
+    p pint_params
     @pint = Pint.new(pint_params)
 
     if @pint.save
@@ -40,6 +41,6 @@ class PintsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def pint_params
-      params.require(:pint).permit(:pints_sold, :pints_made, :profit_per_pint, :month)
+      params.require(:pints).permit(:pints_sold, :pints_made, :profit_per_pint, :month, :ice_cream_id)
     end
 end

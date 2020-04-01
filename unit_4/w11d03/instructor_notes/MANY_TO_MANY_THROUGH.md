@@ -451,6 +451,8 @@ class Trader < ApplicationRecord
 end
 ```
 
+![makes_sense](https://media.makeameme.org/created/oooohhhh-dat-makes.jpg)
+
 Restart rails console. And when that doesn't work, use the full code from before, and you can see that a commodity and a trader have many ledgers.
 
 

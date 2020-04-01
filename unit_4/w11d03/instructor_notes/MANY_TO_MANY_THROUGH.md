@@ -421,7 +421,9 @@ A single ledger does not have multiple traders or multiple commodities. A ledger
 [More on many to many relationships, through, and through source](https://www.sitepoint.com/master-many-to-many-associations-with-activerecord/)
 <br>
 
-* To understand it better, you can see the errors that occur if you first just ask for
+* To understand it better,(IF your the type that likes to break stuff lol.... You know who I'm talking about) you can see the errors that occur if you first just ask for
+
+![forceghost](https://media.git.generalassemb.ly/user/15881/files/1c053d80-62f0-11ea-87a1-55c8801db730)
 
 ```ruby
 class Commodity < ApplicationRecord

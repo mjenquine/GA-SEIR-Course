@@ -57,7 +57,7 @@ Now let's add it as an onclick to the `delete post` button in Post
 #### In `Post.js` render method
 
 ```jsx
-<li onClick={() => {this.props.handleDelete(this.props.postData.id)}}>delete post</li>
+<li onClick={() => {this.props.handleDelete(this.props.post.id)}}>delete post</li>
 ```
 
 And done! It works! Technically, you could end it here. But, again, we don't want to make any extra backend calls if it's easily avoidable. We already cheated with update, so let's just fix delete at least.

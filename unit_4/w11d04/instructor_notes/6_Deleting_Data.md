@@ -26,19 +26,16 @@ We'll change it later so we don't make too many extra calls.
 #### In `Main.js`
 
 ```js
-handleDelete = (id) => {
-  fetch(`${baseUrl}/posts/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    }
-  })
-    .then(json => {
-      this.fetchPosts()
+  handleDelete = async id => {
+    let response = await fetch(`http://localhost:3000/posts/${id}`, {
+      method: 'DELETE',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
     })
-    .catch(err => console.log(err))
-}
+    this.fetchPosts()
+  }
 ```
 
 #### In `Main.js` render method, pass it to Post
@@ -46,7 +43,7 @@ handleDelete = (id) => {
 ```jsx
 <Post
   key={postData.id}
-  postData={postData}
+  post={post}
   handleView={this.props.handleView}
   handleDelete={this.handleDelete}
 />

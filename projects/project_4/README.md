@@ -56,7 +56,7 @@ Attendance will be taken as usual. You must be in your breakout room, working on
 ## How to Submit Your Project
 Your project is due Today, Friday April 3rd at 6:00pm ET.
 
-:heavy_check_mark: *One* group member should fill out [this google sheet](#) with all information required as usual. There will be no presentations.
+:heavy_check_mark: *One* group member should fill out [this google sheet](https://docs.google.com/spreadsheets/d/1mDY2HED643n3jddV1lfUxF7cTn_OJrYkPkrkyVBnSUc/edit#gid=0) with all information required as usual. There will be no presentations.
 
 ## File Setup
 

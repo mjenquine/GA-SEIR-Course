@@ -110,7 +110,7 @@ ALSO, remember: a **technical demonstration** of your app which:
 
 ## Project due date is April 14th
 
-As usual, fill out your project information via the [google presentation sheet](#) and remember this is the order in which you'll be presenting! Presentation day is also graduation day! You'll present your final projects (portfolio included), and then we'll have a few graduation day activities. Attendance is of course mandatory!
+As usual, fill out your project information via the [google presentation sheet](https://docs.google.com/spreadsheets/d/1BTnAOs3VA2bQy_4x2NFI96NLHFAywfqUnkgjGuYIJs4/edit#gid=0) and remember this is the order in which you'll be presenting! Presentation day is also graduation day! You'll present your final projects (portfolio included), and then we'll have a few graduation day activities. Attendance is of course mandatory!
 
 ## Meetings with instructors
 _Your instructor will contact you to setup a meeting time to approve your final project.  

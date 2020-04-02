@@ -4,7 +4,7 @@
 
 ## Schedule
 
-**Wednesday, December 18th through Wednesday, January 8th**
+**Friday, April 5th through Tuesday, April 14th**
 
 - During these weeks, there is no required attendance outside of **Outcomes on Wednesdays at 4:30PM**
 - Your instructor may check-in with you at least once

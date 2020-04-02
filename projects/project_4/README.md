@@ -1,4 +1,4 @@
-# Project #4: PHP/React - Group Project
+# Project #4: Rails/React - Group Project
 
 ## Overview
 

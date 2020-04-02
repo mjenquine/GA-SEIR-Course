@@ -1,8 +1,8 @@
-# Project #4: Rails/React - Group Project
+# Rails/React - Group Project
 
 ## Overview
 
-For your 4th project, you will be collaborating to make a full CRUD app built with a React frontend and a Rails backend. You will have all day to complete this lab.
+For this project you will be collaborating to make a full CRUD app built with a React frontend and a Rails backend. You will have all day to complete this lab.
 
 ## Attendance
 

@@ -118,7 +118,8 @@ _Your instructor will contact you to setup a meeting time to approve your final 
 
 **What you should work on before meeting with an instructor:**
 
-- Create new Github repos outside of your class repository (also, remember to make a `.gitignore` file, as needed)
+- Decide which new technology you will be teaching yourself and do a little research on it
+- Create a new Github repo(or repos) outside of your class repository (also, remember to make a `.gitignore` file, as needed)
 - Create your user stories and add them to your README.md
 - Write what features will meet MVP and then list out other features as stretch goals
 - Make wireframes and add them to your README.md (or put images and add links)
@@ -141,23 +142,23 @@ _Your instructor will contact you to setup a meeting time to approve your final 
 
   <br>
 
-  * Create a **Trello board** and break down the user stories into cards
+  * **Create a Trello board** and break down the user stories into cards
 
   <br>
 
-  * **Use your Development Tools** (console.log, inspector, alert statements, etc) to debug and solve problems
+  * **Work through / review the lessons and markdowns from class** for help and inspiration!
 
   <br>
 
-  * Work through the lessons in class for help and inspiration! Think about adding relevant code to your application each day - you are given 5 days so that you can work on it in small chunks, COMMIT OFTEN. We will be looking at your commit dates and comments are part of your scoring.
+  * **Create a schedule** Think about adding relevant code to your application each day.
 
   <br>
 
-  * **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version. Commit every time you get a new feature working!
+  * **Commit early, commit often.** If you break something, you can always go back in time to a previous version. We will be looking at your commit dates. Commits and comments are part of your scoring.
 
   <br>
 
-  * **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
+  * **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into and the new technology you'll be teaching yourself.
 
   <br>
 
@@ -177,3 +178,5 @@ _Your instructor will contact you to setup a meeting time to approve your final 
 2. Seek out help with your classmates
 3. Seek out help with our class TA
 4. Seek out help with your instructor
+
+In just a few weeks time you'll be on your own. Debugging is a very important skill to have and practice. Getting help from an instructor should no longer be your first or second course of action. If you get really stuck and do need to consult an instructor, be prepared to explain the problem and what you've done to try to solve it. 

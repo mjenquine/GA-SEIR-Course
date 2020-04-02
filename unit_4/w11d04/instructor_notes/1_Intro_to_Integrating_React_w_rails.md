@@ -35,23 +35,16 @@ The app we'll be making is a very simple noticeboard-esque app as shown above. I
 - See all posts on the index
 - Toggle between seeing all posts and seeing the edit or create form
 
-## About the API  
+## API Setup
 
-Included in the starter code is a fully working, basic one-model (posts) API for us to use during this integration build. Let's take a look at what's given
-
-### Model: Posts
-
-_Relevant files:_
-
-- `app/models/post.rb`
-- `app/controllers/posts_controller.rb`
-
-_PG Columns:_
-
-- id (SERIAL)
-- name (VARCHAR 256)
-- image (VARCHAR 256)
-- body (TEXT)
+- In the student_examples folder ```rails new grapevine_api --api -d postgresql --skip-git```
+- cd into grapevine_api
+- rails db:create
+- rails g scaffold posts name image body
+- rails db:migrate
+- rails c and then run Post.create(name: "Test", image: "N/A", body: "Test")
+- rails s
+- go to http://localhost:3000/posts to make sure you have your test piece of data
 
 
 ## About the Frontend

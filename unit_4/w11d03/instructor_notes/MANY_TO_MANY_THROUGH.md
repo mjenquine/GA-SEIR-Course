@@ -44,6 +44,13 @@ rails new trading_app_api --api -d postgresql --skip-git --skip-active-storage
 
 Go into the project directory
 
+add this to gemfile :
+```ruby
+gem 'awesome_print'
+gem 'rb-readline'
+```
+then run `bundle` in your command line in your rails project
+
 ```
 rails db:create
 ```
@@ -308,21 +315,6 @@ Don't worry that it all looks funny. Just imagine it's doing the same thing as i
 
 ## RAILS CONSOLE QUERIES
 
-* Optional, make Rails console look nicer
-
-Gemfile
-
-```ruby
-gem 'awesome_print'
-```
-
-trouble running `rails c`
-add `gem 'rb-readline'` into gemfile and run bundle
-
-Put it in a development/test group if you like.
-
-* Bundle
-
 `rails c`
 
 [alternative to official docs console guide](https://pragmaticstudio.com/tutorials/rails-console-shortcuts-tips-tricks)
@@ -429,7 +421,9 @@ A single ledger does not have multiple traders or multiple commodities. A ledger
 [More on many to many relationships, through, and through source](https://www.sitepoint.com/master-many-to-many-associations-with-activerecord/)
 <br>
 
-* To understand it better, you can see the errors that occur if you first just ask for
+* To understand it better,(IF your the type that likes to break stuff lol.... You know who I'm talking about) you can see the errors that occur if you first just ask for
+
+![forceghost](https://media.git.generalassemb.ly/user/15881/files/1c053d80-62f0-11ea-87a1-55c8801db730)
 
 ```ruby
 class Commodity < ApplicationRecord
@@ -456,6 +450,8 @@ class Trader < ApplicationRecord
   has_many :commodities, through: :ledgers
 end
 ```
+
+![makes_sense](https://media.makeameme.org/created/oooohhhh-dat-makes.jpg)
 
 Restart rails console. And when that doesn't work, use the full code from before, and you can see that a commodity and a trader have many ledgers.
 

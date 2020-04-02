@@ -84,43 +84,34 @@ Similar to the GET request, however, the POST request will also have two promise
 Let's take a look at the general format altogether:  
 
 ```js
-fetch('API URL HERE', {
-  body: JSON.stringify(data),
+let response = await fetch('API URL HERE', {
+  body: JSON.stringify(createData),
   method: 'POST',
   headers: {
     'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/json'
   }
 })
-  .then(createdItem => {
-    return createdItem.json()
-  })
-  .then(jsonedItem => {
-    // whatever you want to do with the json data here
-  })
-  .catch(err => console.log(err))
+  let data = await response.json()
+  //Do some stuff here
 ```
 
 Let's go ahead and use that format to make a POST request within our `handleCreate` method. For now, to make sure that we created successfully, let's just call on our `fetchPosts` method in the second promise so that our state should update with the new task.
 
 ```js
-handleCreate(createData) {
-  fetch(`${baseUrl}/posts`, {
-    body: JSON.stringify(createData),
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(createdPost => {
-    return createdPost.json()
-  })
-  .then(jsonedPost => {
+handleCreate = async createData => {
+    let response = await fetch('http://localhost:3000/posts', {
+      body: JSON.stringify(createData),
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    let data = await response.json()
+    console.log(data)
     this.fetchPosts()
-  })
-  .catch(err => console.log(err))
-}
+  }
 ```
 
 Nice, it works! We made 2 calls to our database, however, for just that one action. While that's totally fine for a small app like this, it's not the 'react way' and we generally want to limit the amount of database calls we make anyway. Instead we should utilize state.
@@ -152,9 +143,9 @@ Knowing that is now useful because now we can just take a copy of the previous s
 #### In `Main.js` handleCreate method's second promise
 
 ```js
-this.setState(prevState => {
-  prevState.posts = jsonedPost
-  return { posts: prevState.posts }
+    this.setState(prevState => {
+      return { posts: [...prevState.posts, data] }
+    })
 })
 ```
 

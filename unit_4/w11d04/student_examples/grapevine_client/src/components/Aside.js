@@ -16,8 +16,8 @@ class Aside extends React.Component {
       <aside>
         <h1>NAVIGATE</h1>
         <ul>
-          <li>home</li>
-          <li>add post</li>
+          <li onClick={() => {this.props.handleView('home')}}>home</li>
+          <li onClick={() => {this.props.handleView('addPost')}}>add post</li>
         </ul>
       </aside>
     )
